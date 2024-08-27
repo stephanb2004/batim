@@ -5,10 +5,11 @@ license="Academic Free License v3.0"
 [[mods]]
 modId="bendymod"
 version="1.0.0"
-displayName="Bendymod"
+displayName="Bendy And The Crafting Machine"
 credits="Created using mod maker MCreator - https://mcreator.net/about"
 displayURL="https://mcreator.net"
-authors="boivi, MCreator"
+logoFile="logo.png"
+authors="DrLoganblox07, MarceloGToonz, MCreator"
 
 [[dependencies.bendymod]]
     modId="minecraft"
@@ -19,4 +20,10 @@ authors="boivi, MCreator"
 
 
 
+[[dependencies.bendymod]]
+    modId="geckolib"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 

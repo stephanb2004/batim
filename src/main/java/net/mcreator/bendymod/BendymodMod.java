@@ -13,6 +13,8 @@
  */
 package net.mcreator.bendymod;
 
+import software.bernie.geckolib3.GeckoLib;
+
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
@@ -28,6 +30,12 @@ import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
+
+import net.mcreator.bendymod.init.BendymodModTabs;
+import net.mcreator.bendymod.init.BendymodModItems;
+import net.mcreator.bendymod.init.BendymodModEntities;
+import net.mcreator.bendymod.init.BendymodModBlocks;
+import net.mcreator.bendymod.init.BendymodModBlockEntities;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -45,9 +53,15 @@ public class BendymodMod {
 
 	public BendymodMod() {
 		MinecraftForge.EVENT_BUS.register(this);
-
+		BendymodModTabs.load();
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
+		BendymodModBlocks.REGISTRY.register(bus);
+		BendymodModItems.REGISTRY.register(bus);
+		BendymodModEntities.REGISTRY.register(bus);
+		BendymodModBlockEntities.REGISTRY.register(bus);
+
+		GeckoLib.initialize();
 	}
 
 	private static final String PROTOCOL_VERSION = "1";

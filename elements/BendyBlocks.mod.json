@@ -1,0 +1,11 @@
+{
+  "_fv": 43,
+  "_type": "tab",
+  "definition": {
+    "name": "Bendy Blocks",
+    "icon": {
+      "value": "CUSTOM:StudioFloor"
+    },
+    "showSearch": false
+  }
+}

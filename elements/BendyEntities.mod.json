@@ -1,0 +1,11 @@
+{
+  "_fv": 43,
+  "_type": "tab",
+  "definition": {
+    "name": "Bendy Entities",
+    "icon": {
+      "value": "CUSTOM:Bendy.spawn_egg"
+    },
+    "showSearch": false
+  }
+}

@@ -1,1 +1,27 @@
-{}
+{
+  "item.bendymod.studio_axe": "Studio Axe",
+  "entity.bendymod.ink_bendy": "Ink Bendy",
+  "itemGroup.tabbendy_entities": "Bendy Entities",
+  "entity.bendymod.boris_buddy": "Buddy Boris",
+  "block.bendymod.studio_planked_wall": "Studio Planked Wall",
+  "block.bendymod.studio_blank_wall_slab": "Studio Blank Wall Slab",
+  "entity.bendymod.searcher": "Searcher",
+  "item.bendymod.boris_buddy_spawn_egg": "Buddy Boris Spawn Egg",
+  "block.bendymod.studio_blank_wall_stairs": "Studio Blank Wall Stairs",
+  "block.bendymod.studio_planked_wall_broken": "Studio Planked Wall (Broken)",
+  "entity.bendymod.sammy_lawrence": "Sammy Lawrence",
+  "itemGroup.tabbendy_blocks": "Bendy Blocks",
+  "itemGroup.tabbendy_props": "Bendy Props",
+  "block.bendymod.studio_floor": "Studio Floor",
+  "item.bendymod.sammy_lawrence_spawn_egg": "Sammy Lawrence Spawn Egg",
+  "item.bendymod.bendy_spawn_egg": "Bendy Spawn Egg",
+  "item.bendymod.searcher_spawn_egg": "Searcher Spawn Egg",
+  "block.bendymod.studio_ceiling": "Studio Ceiling",
+  "block.bendymod.cutout_bendy": "Cutout Bendy",
+  "entity.bendymod.bendy": "Bendy",
+  "block.bendymod.studio_blank_wall": "Studio Blank Wall",
+  "item.bendymod.ink_bendy_spawn_egg": "Ink Bendy Spawn Egg",
+  "block.bendymod.cutout_sinny": "Cutout Sinny",
+  "block.bendymod.studio_floor_slab": "Studio Floor Slab",
+  "block.bendymod.studio_floor_stairs": "Studio Floor Stairs"
+}

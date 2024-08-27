@@ -1,0 +1,11 @@
+{
+  "_fv": 43,
+  "_type": "tab",
+  "definition": {
+    "name": "Bendy Props",
+    "icon": {
+      "value": "CUSTOM:StudioAxe"
+    },
+    "showSearch": false
+  }
+}

@@ -1,0 +1,157 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 512,
+				"texture_height": 512,
+				"visible_bounds_width": 8,
+				"visible_bounds_height": 6.5,
+				"visible_bounds_offset": [0, 2.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [7, 80, -21], "size": [2, 2, 2], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "inkmachine",
+					"pivot": [0, 0, 0],
+					"rotation": [0, -90, 0],
+					"cubes": [
+						{"origin": [-20, 0, -31.75], "size": [64, 80, 64], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "spigot",
+					"parent": "inkmachine",
+					"pivot": [-22, 31.5, -6.75],
+					"cubes": [
+						{"origin": [-44, 29.5, -11.75], "size": [32, 27, 24], "pivot": [-22, 31.5, -6.75], "rotation": [0, 0, -32.5], "uv": [193, 0]},
+						{"origin": [-45, 27.5, -13.75], "size": [5, 31, 28], "pivot": [-22, 31.5, -6.75], "rotation": [0, 0, -32.5], "uv": [0, 145]}
+					]
+				},
+				{
+					"name": "deposit",
+					"parent": "inkmachine",
+					"pivot": [-28, 0, -7.75],
+					"cubes": [
+						{"origin": [-68, 0, -28.75], "size": [48, 9, 58], "uv": [163, 145]}
+					]
+				},
+				{
+					"name": "pipes",
+					"parent": "inkmachine",
+					"pivot": [0.21819, 52.43898, 0.25],
+					"cubes": [
+						{"origin": [20, 64, 32.75], "size": [25, 11, 8], "uv": [0, 205]},
+						{"origin": [-12, 43, 31.75], "size": [45, 11, 8], "pivot": [0.5, 48.5, 35.75], "rotation": [0, 0, -42.5], "uv": [0, 242]},
+						{"origin": [-28, 37, 32.25], "size": [25, 11, 8], "uv": [107, 242]},
+						{"origin": [-28, 37, 20.25], "size": [8, 11, 12], "uv": [39, 145]},
+						{"origin": [-28, 37, -31.75], "size": [8, 11, 12], "uv": [257, 76]},
+						{"origin": [-28, 37, -39.75], "size": [25, 11, 8], "uv": [107, 242]},
+						{"origin": [-12, 43, -39.25], "size": [45, 11, 8], "pivot": [0.5, 48.5, -35.25], "rotation": [0, 0, -42.5], "uv": [0, 242]},
+						{"origin": [20, 64, -40.25], "size": [25, 11, 8], "uv": [0, 205]}
+					]
+				},
+				{
+					"name": "bigcogs",
+					"parent": "inkmachine",
+					"pivot": [-7.625, 17.75, 0.25],
+					"cubes": [
+						{"origin": [-19, 7, 35.25], "size": [22, 22, 0], "uv": [163, 145]},
+						{"origin": [-16, 9, 32], "size": [17, 17, 6], "uv": [0, 31]},
+						{"origin": [-16, 9, -37.5], "size": [17, 17, 6], "uv": [0, 31]},
+						{"origin": [-18.5, 7, -34.75], "size": [22, 22, 0], "uv": [163, 145]}
+					]
+				},
+				{
+					"name": "smallcogs",
+					"parent": "inkmachine",
+					"pivot": [11.5, 16.5, 0.25],
+					"cubes": [
+						{"origin": [3, 9, -34.75], "size": [17, 17, 0], "uv": [0, 262]},
+						{"origin": [5, 10, -37.75], "size": [13, 13, 6], "uv": [257, 100]},
+						{"origin": [3, 9, 35.25], "size": [17, 17, 0], "uv": [35, 262]},
+						{"origin": [5, 10, 32.25], "size": [13, 13, 6], "uv": [257, 100]}
+					]
+				},
+				{
+					"name": "pump",
+					"parent": "inkmachine",
+					"pivot": [-24, 68.5, 0.25],
+					"cubes": [
+						{"origin": [-26, 62, 0.25], "size": [4, 12, 0], "uv": [54, 0]}
+					]
+				},
+				{
+					"name": "pump_valve",
+					"parent": "pump",
+					"pivot": [-24, 73.5, 0.25],
+					"cubes": [
+						{"origin": [-23, 69, -0.75], "size": [4, 9, 2], "pivot": [-21, 73.5, 0.25], "rotation": [0, 0, 90], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "thing",
+					"parent": "inkmachine",
+					"pivot": [-28, 34, -6.75],
+					"cubes": [
+						{"origin": [-27, 61, 9.25], "size": [6, 5, 6], "uv": [196, 168]},
+						{"origin": [-27, 61, -2.75], "size": [6, 2, 6], "uv": [0, 55]},
+						{"origin": [-27, 61, -13.75], "size": [6, 5, 6], "uv": [193, 52]},
+						{"origin": [-29, 20, -19.75], "size": [9, 41, 41], "uv": [202, 213]}
+					]
+				},
+				{
+					"name": "small_pipes",
+					"parent": "thing",
+					"pivot": [-13, 1, -39.75],
+					"cubes": [
+						{"origin": [-25, 7, 32.25], "size": [3, 22, 3], "pivot": [-24, 8, 33.75], "rotation": [47.5, 0, 0], "uv": [41, 0]},
+						{"origin": [-24, 1, 32.25], "size": [3, 7, 3], "uv": [26, 0]},
+						{"origin": [-21, 1, 32.25], "size": [3, 3, 3], "uv": [25, 55]},
+						{"origin": [-25, 7, -34.75], "size": [3, 22, 3], "pivot": [-24, 8, -33.25], "rotation": [-47.5, 0, 0], "uv": [47, 26]},
+						{"origin": [-24, 1, -34.75], "size": [3, 7, 3], "uv": [44, 52]},
+						{"origin": [-21, 1, -34.75], "size": [3, 3, 3], "uv": [67, 169]}
+					]
+				},
+				{
+					"name": "reel_thingies",
+					"parent": "inkmachine",
+					"pivot": [-8.5, 69, 0.25],
+					"cubes": [
+						{"origin": [-14, 61, 32.25], "size": [11, 16, 5], "uv": [257, 120]},
+						{"origin": [-14, 61, -36.75], "size": [11, 16, 5], "uv": [169, 257]}
+					]
+				},
+				{
+					"name": "side_thingies",
+					"parent": "inkmachine",
+					"pivot": [29, 0, 31.25],
+					"cubes": [
+						{"origin": [-12, 14, -39.5], "size": [9, 9, 3], "uv": [0, 158]},
+						{"origin": [21, 0, -39.75], "size": [13, 15, 8], "uv": [257, 52]},
+						{"origin": [-12, 14, 36.5], "size": [9, 9, 3], "uv": [0, 145]},
+						{"origin": [21, 0, 31.25], "size": [13, 15, 8], "uv": [257, 52]},
+						{"origin": [43, 2.5, -7.25], "size": [5, 15, 15], "uv": [0, 0]},
+						{"origin": [-20, 0, -40.25], "size": [41, 16, 80], "uv": [0, 145]}
+					]
+				},
+				{
+					"name": "fluid",
+					"parent": "inkmachine",
+					"pivot": [-47.5, 25.5, 0.25],
+					"cubes": [
+						{"origin": [-55.5, 9, 0.25], "size": [16, 33, 0], "pivot": [-47.5, 25.5, 0.25], "rotation": [0, -45, 0], "uv": [163, 168], "mirror": true},
+						{"origin": [-55.5, 9, 0.25], "size": [16, 33, 0], "pivot": [-47.5, 25.5, 0.25], "rotation": [0, 45, 0], "uv": [163, 168]}
+					]
+				}
+			]
+		}
+	]
+}

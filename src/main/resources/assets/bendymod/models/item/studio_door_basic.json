@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "bendymod:blocks/studio_basicdoor_bottom"
+  },
+  "render_type": "solid"
+}

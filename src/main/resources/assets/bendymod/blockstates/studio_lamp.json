@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "bendymod:custom/studio_lamp_particle"
+    },
+    "facing=east": {
+      "model": "bendymod:custom/studio_lamp_particle",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "bendymod:custom/studio_lamp_particle",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "bendymod:custom/studio_lamp_particle",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "bendymod:custom/studio_lamp_particle",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "bendymod:custom/studio_lamp_particle",
+      "x": 90
+    }
+  }
+}

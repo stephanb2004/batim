@@ -395,36 +395,512 @@
         ]
       },
       "path": "~/Entities"
+    },
+    {
+      "name": "StudioDoorBasic",
+      "type": "block",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "studio_door_basic",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/models/item/studio_door_basic.json",
+          "src/main/resources/assets/bendymod/models/block/studio_door_basic_bottom_right_open.json",
+          "src/main/java/net/mcreator/bendymod/block/StudioDoorBasicBlock.java",
+          "src/main/resources/assets/bendymod/models/block/studio_door_basic_bottom_left.json",
+          "src/main/resources/assets/bendymod/models/block/studio_door_basic_top_left.json",
+          "src/main/resources/assets/bendymod/models/block/studio_door_basic_top_right_open.json",
+          "src/main/resources/assets/bendymod/blockstates/studio_door_basic.json",
+          "src/main/resources/assets/bendymod/models/block/studio_door_basic_bottom_right.json",
+          "src/main/resources/assets/bendymod/models/block/studio_door_basic_top_left_open.json",
+          "src/main/resources/assets/bendymod/models/block/studio_door_basic_bottom_left_open.json",
+          "src/main/resources/assets/bendymod/models/block/studio_door_basic_top_right.json"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "StudioDoorSegmented",
+      "type": "block",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "studio_door_segmented",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/models/block/studio_door_segmented_bottom_right.json",
+          "src/main/resources/assets/bendymod/models/block/studio_door_segmented_bottom_right_open.json",
+          "src/main/resources/assets/bendymod/models/block/studio_door_segmented_top_right.json",
+          "src/main/resources/assets/bendymod/models/block/studio_door_segmented_bottom_left.json",
+          "src/main/resources/assets/bendymod/models/block/studio_door_segmented_top_left_open.json",
+          "src/main/java/net/mcreator/bendymod/block/StudioDoorSegmentedBlock.java",
+          "src/main/resources/assets/bendymod/models/item/studio_door_segmented.json",
+          "src/main/resources/assets/bendymod/models/block/studio_door_segmented_bottom_left_open.json",
+          "src/main/resources/assets/bendymod/blockstates/studio_door_segmented.json",
+          "src/main/resources/assets/bendymod/models/block/studio_door_segmented_top_left.json",
+          "src/main/resources/assets/bendymod/models/block/studio_door_segmented_top_right_open.json"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "InkMachine",
+      "type": "animatedblock",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ink_machine",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/block/renderer/InkMachineTileRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/display/InkMachineDisplayItem.java",
+          "src/main/resources/assets/bendymod/models/item/ink_machine.json",
+          "src/main/java/net/mcreator/bendymod/block/model/InkMachineBlockModel.java",
+          "src/main/resources/assets/bendymod/blockstates/ink_machine.json",
+          "src/main/java/net/mcreator/bendymod/block/renderer/InkMachineDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/InkMachineBlock.java",
+          "src/main/resources/assets/bendymod/models/custom/ink_machine_particle.json",
+          "src/main/java/net/mcreator/bendymod/block/model/InkMachineDisplayModel.java",
+          "src/main/java/net/mcreator/bendymod/block/entity/InkMachineTileEntity.java"
+        ]
+      },
+      "path": "~/Blocks/Props"
+    },
+    {
+      "name": "Speaker",
+      "type": "animatedblock",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speaker",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/block/renderer/SpeakerDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/SpeakerTileRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/display/SpeakerDisplayItem.java",
+          "src/main/java/net/mcreator/bendymod/block/model/SpeakerDisplayModel.java",
+          "src/main/java/net/mcreator/bendymod/block/model/SpeakerBlockModel.java",
+          "src/main/java/net/mcreator/bendymod/block/entity/SpeakerTileEntity.java",
+          "src/main/resources/assets/bendymod/blockstates/speaker.json",
+          "src/main/resources/assets/bendymod/models/item/speaker.json",
+          "src/main/resources/assets/bendymod/models/custom/speaker_particle.json",
+          "src/main/java/net/mcreator/bendymod/block/SpeakerBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Props"
+    },
+    {
+      "name": "StudioLamp",
+      "type": "animatedblock",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "studio_lamp",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/models/item/studio_lamp.json",
+          "src/main/java/net/mcreator/bendymod/block/model/StudioLampDisplayModel.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/StudioLampDisplayItemRenderer.java",
+          "src/main/resources/assets/bendymod/models/custom/studio_lamp_particle.json",
+          "src/main/java/net/mcreator/bendymod/block/StudioLampBlock.java",
+          "src/main/java/net/mcreator/bendymod/block/model/StudioLampBlockModel.java",
+          "src/main/java/net/mcreator/bendymod/block/display/StudioLampDisplayItem.java",
+          "src/main/resources/assets/bendymod/blockstates/studio_lamp.json",
+          "src/main/java/net/mcreator/bendymod/block/entity/StudioLampTileEntity.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/StudioLampTileRenderer.java"
+        ]
+      },
+      "path": "~/Blocks/Props"
+    },
+    {
+      "name": "Dresser",
+      "type": "animatedblock",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dresser",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/block/renderer/DresserTileRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/model/DresserBlockModel.java",
+          "src/main/resources/assets/bendymod/models/custom/dresser_particle.json",
+          "src/main/java/net/mcreator/bendymod/block/renderer/DresserDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/display/DresserDisplayItem.java",
+          "src/main/java/net/mcreator/bendymod/block/DresserBlock.java",
+          "src/main/java/net/mcreator/bendymod/block/entity/DresserTileEntity.java",
+          "src/main/resources/assets/bendymod/blockstates/dresser.json",
+          "src/main/resources/assets/bendymod/models/item/dresser.json",
+          "src/main/java/net/mcreator/bendymod/block/model/DresserDisplayModel.java"
+        ]
+      },
+      "path": "~/Blocks/Props"
+    },
+    {
+      "name": "InkPipeHorizontal",
+      "type": "animatedblock",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ink_pipe_horizontal",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/block/entity/InkPipeHorizontalTileEntity.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/InkPipeHorizontalDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/InkPipeHorizontalBlock.java",
+          "src/main/java/net/mcreator/bendymod/block/model/InkPipeHorizontalDisplayModel.java",
+          "src/main/java/net/mcreator/bendymod/block/model/InkPipeHorizontalBlockModel.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/InkPipeHorizontalTileRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/display/InkPipeHorizontalDisplayItem.java",
+          "src/main/resources/assets/bendymod/models/custom/ink_pipe_horizontal_particle.json",
+          "src/main/resources/assets/bendymod/blockstates/ink_pipe_horizontal.json",
+          "src/main/resources/assets/bendymod/models/item/ink_pipe_horizontal.json"
+        ]
+      },
+      "path": "~/Blocks/Props"
+    },
+    {
+      "name": "InkPipeVertical",
+      "type": "animatedblock",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ink_pipe_vertical",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/models/item/ink_pipe_vertical.json",
+          "src/main/java/net/mcreator/bendymod/block/model/InkPipeVerticalBlockModel.java",
+          "src/main/resources/assets/bendymod/models/custom/ink_pipe_vertical_particle.json",
+          "src/main/java/net/mcreator/bendymod/block/display/InkPipeVerticalDisplayItem.java",
+          "src/main/java/net/mcreator/bendymod/block/model/InkPipeVerticalDisplayModel.java",
+          "src/main/resources/assets/bendymod/blockstates/ink_pipe_vertical.json",
+          "src/main/java/net/mcreator/bendymod/block/renderer/InkPipeVerticalTileRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/InkPipeVerticalDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/entity/InkPipeVerticalTileEntity.java",
+          "src/main/java/net/mcreator/bendymod/block/InkPipeVerticalBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Props"
+    },
+    {
+      "name": "InkPipeStraight",
+      "type": "animatedblock",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ink_pipe_straight",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/blockstates/ink_pipe_straight.json",
+          "src/main/java/net/mcreator/bendymod/block/renderer/InkPipeStraightDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/model/InkPipeStraightDisplayModel.java",
+          "src/main/java/net/mcreator/bendymod/block/display/InkPipeStraightDisplayItem.java",
+          "src/main/resources/assets/bendymod/models/item/ink_pipe_straight.json",
+          "src/main/java/net/mcreator/bendymod/block/InkPipeStraightBlock.java",
+          "src/main/resources/assets/bendymod/models/custom/ink_pipe_straight_particle.json",
+          "src/main/java/net/mcreator/bendymod/block/model/InkPipeStraightBlockModel.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/InkPipeStraightTileRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/entity/InkPipeStraightTileEntity.java"
+        ]
+      },
+      "path": "~/Blocks/Props"
+    },
+    {
+      "name": "LeverPower",
+      "type": "animatedblock",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lever_power",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/block/entity/LeverPowerTileEntity.java",
+          "src/main/java/net/mcreator/bendymod/block/model/LeverPowerBlockModel.java",
+          "src/main/resources/assets/bendymod/models/item/lever_power.json",
+          "src/main/java/net/mcreator/bendymod/block/renderer/LeverPowerTileRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/model/LeverPowerDisplayModel.java",
+          "src/main/java/net/mcreator/bendymod/block/LeverPowerBlock.java",
+          "src/main/resources/assets/bendymod/blockstates/lever_power.json",
+          "src/main/resources/assets/bendymod/models/custom/lever_power_particle.json",
+          "src/main/java/net/mcreator/bendymod/block/renderer/LeverPowerDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/display/LeverPowerDisplayItem.java"
+        ]
+      },
+      "path": "~/Blocks/Props/Switches"
+    },
+    {
+      "name": "LeverStudio",
+      "type": "animatedblock",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lever_studio",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/block/renderer/LeverStudioTileRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/LeverStudioDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/display/LeverStudioDisplayItem.java",
+          "src/main/java/net/mcreator/bendymod/block/entity/LeverStudioTileEntity.java",
+          "src/main/java/net/mcreator/bendymod/block/model/LeverStudioBlockModel.java",
+          "src/main/resources/assets/bendymod/models/item/lever_studio.json",
+          "src/main/java/net/mcreator/bendymod/block/LeverStudioBlock.java",
+          "src/main/resources/assets/bendymod/models/custom/lever_studio_particle.json",
+          "src/main/java/net/mcreator/bendymod/block/model/LeverStudioDisplayModel.java",
+          "src/main/resources/assets/bendymod/blockstates/lever_studio.json"
+        ]
+      },
+      "path": "~/Blocks/Props/Switches"
+    },
+    {
+      "name": "Valve",
+      "type": "animatedblock",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "valve",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/block/ValveBlock.java",
+          "src/main/java/net/mcreator/bendymod/block/model/ValveDisplayModel.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/ValveTileRenderer.java",
+          "src/main/resources/assets/bendymod/models/custom/valve_particle.json",
+          "src/main/resources/assets/bendymod/models/item/valve.json",
+          "src/main/java/net/mcreator/bendymod/block/model/ValveBlockModel.java",
+          "src/main/java/net/mcreator/bendymod/block/entity/ValveTileEntity.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/ValveDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/display/ValveDisplayItem.java",
+          "src/main/resources/assets/bendymod/blockstates/valve.json"
+        ]
+      },
+      "path": "~/Blocks/Props/Switches"
+    },
+    {
+      "name": "Record",
+      "type": "animatedblock",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "record",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/block/renderer/RecordTileRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/entity/RecordTileEntity.java",
+          "src/main/resources/assets/bendymod/models/item/record.json",
+          "src/main/resources/assets/bendymod/blockstates/record.json",
+          "src/main/java/net/mcreator/bendymod/block/display/RecordDisplayItem.java",
+          "src/main/resources/assets/bendymod/models/custom/record_particle.json",
+          "src/main/java/net/mcreator/bendymod/block/model/RecordBlockModel.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/RecordDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/RecordBlock.java",
+          "src/main/java/net/mcreator/bendymod/block/model/RecordDisplayModel.java"
+        ]
+      },
+      "path": "~/Blocks/Props"
+    },
+    {
+      "name": "TrashBin",
+      "type": "animatedblock",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trash_bin",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/models/item/trash_bin.json",
+          "src/main/resources/assets/bendymod/blockstates/trash_bin.json",
+          "src/main/java/net/mcreator/bendymod/block/TrashBinBlock.java",
+          "src/main/resources/assets/bendymod/models/custom/trash_bin_particle.json",
+          "src/main/java/net/mcreator/bendymod/block/renderer/TrashBinTileRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/TrashBinDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/model/TrashBinBlockModel.java",
+          "src/main/java/net/mcreator/bendymod/block/model/TrashBinDisplayModel.java",
+          "src/main/java/net/mcreator/bendymod/block/entity/TrashBinTileEntity.java",
+          "src/main/java/net/mcreator/bendymod/block/display/TrashBinDisplayItem.java"
+        ]
+      },
+      "path": "~/Blocks/Props"
+    },
+    {
+      "name": "JumbledPaper",
+      "type": "animatedblock",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jumbled_paper",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/block/renderer/JumbledPaperDisplayItemRenderer.java",
+          "src/main/resources/assets/bendymod/models/item/jumbled_paper.json",
+          "src/main/resources/assets/bendymod/blockstates/jumbled_paper.json",
+          "src/main/resources/assets/bendymod/models/custom/jumbled_paper_particle.json",
+          "src/main/java/net/mcreator/bendymod/block/renderer/JumbledPaperTileRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/model/JumbledPaperBlockModel.java",
+          "src/main/java/net/mcreator/bendymod/block/JumbledPaperBlock.java",
+          "src/main/java/net/mcreator/bendymod/block/model/JumbledPaperDisplayModel.java",
+          "src/main/java/net/mcreator/bendymod/block/display/JumbledPaperDisplayItem.java",
+          "src/main/java/net/mcreator/bendymod/block/entity/JumbledPaperTileEntity.java"
+        ]
+      },
+      "path": "~/Blocks/Props"
+    },
+    {
+      "name": "Boards",
+      "type": "animatedblock",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boards",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/models/custom/boards_particle.json",
+          "src/main/java/net/mcreator/bendymod/block/renderer/BoardsTileRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/BoardsDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/display/BoardsDisplayItem.java",
+          "src/main/java/net/mcreator/bendymod/block/model/BoardsBlockModel.java",
+          "src/main/java/net/mcreator/bendymod/block/model/BoardsDisplayModel.java",
+          "src/main/resources/assets/bendymod/blockstates/boards.json",
+          "src/main/java/net/mcreator/bendymod/block/BoardsBlock.java",
+          "src/main/resources/assets/bendymod/models/item/boards.json",
+          "src/main/java/net/mcreator/bendymod/block/entity/BoardsTileEntity.java"
+        ]
+      },
+      "path": "~/Blocks/Props"
+    },
+    {
+      "name": "BaconSoup",
+      "type": "animateditem",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bacon_soup",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/item/BaconSoupItem.java",
+          "src/main/java/net/mcreator/bendymod/item/model/BaconSoupItemModel.java",
+          "src/main/resources/assets/bendymod/models/item/bacon_soup.json",
+          "src/main/java/net/mcreator/bendymod/item/renderer/BaconSoupItemRenderer.java"
+        ]
+      },
+      "path": "~/Blocks/Props"
+    },
+    {
+      "name": "Radio",
+      "type": "animatedblock",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "radio",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/block/model/RadioBlockModel.java",
+          "src/main/java/net/mcreator/bendymod/block/display/RadioDisplayItem.java",
+          "src/main/java/net/mcreator/bendymod/block/entity/RadioTileEntity.java",
+          "src/main/resources/assets/bendymod/blockstates/radio.json",
+          "src/main/java/net/mcreator/bendymod/block/renderer/RadioDisplayItemRenderer.java",
+          "src/main/resources/assets/bendymod/models/custom/radio_particle.json",
+          "src/main/java/net/mcreator/bendymod/block/model/RadioDisplayModel.java",
+          "src/main/java/net/mcreator/bendymod/block/RadioBlock.java",
+          "src/main/resources/assets/bendymod/models/item/radio.json",
+          "src/main/java/net/mcreator/bendymod/block/renderer/RadioTileRenderer.java"
+        ]
+      },
+      "path": "~/Blocks/Props"
+    },
+    {
+      "name": "CassettePlayer",
+      "type": "animatedblock",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cassette_player",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/block/renderer/CassettePlayerTileRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/display/CassettePlayerDisplayItem.java",
+          "src/main/java/net/mcreator/bendymod/block/model/CassettePlayerBlockModel.java",
+          "src/main/resources/assets/bendymod/models/item/cassette_player.json",
+          "src/main/java/net/mcreator/bendymod/block/renderer/CassettePlayerDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/model/CassettePlayerDisplayModel.java",
+          "src/main/java/net/mcreator/bendymod/block/entity/CassettePlayerTileEntity.java",
+          "src/main/java/net/mcreator/bendymod/block/CassettePlayerBlock.java",
+          "src/main/resources/assets/bendymod/blockstates/cassette_player.json",
+          "src/main/resources/assets/bendymod/models/custom/cassette_player_particle.json"
+        ]
+      },
+      "path": "~/Blocks/Props"
+    },
+    {
+      "name": "Desk",
+      "type": "animatedblock",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "desk",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/blockstates/desk.json",
+          "src/main/java/net/mcreator/bendymod/block/renderer/DeskDisplayItemRenderer.java",
+          "src/main/resources/assets/bendymod/models/item/desk.json",
+          "src/main/java/net/mcreator/bendymod/block/model/DeskBlockModel.java",
+          "src/main/java/net/mcreator/bendymod/block/entity/DeskTileEntity.java",
+          "src/main/resources/assets/bendymod/models/custom/desk_particle.json",
+          "src/main/java/net/mcreator/bendymod/block/model/DeskDisplayModel.java",
+          "src/main/java/net/mcreator/bendymod/block/display/DeskDisplayItem.java",
+          "src/main/java/net/mcreator/bendymod/block/DeskBlock.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/DeskTileRenderer.java"
+        ]
+      },
+      "path": "~/Blocks/Props"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "block.bendymod.studio_door_basic": "Studio Basic Door",
+      "block.bendymod.valve": "Valve",
+      "block.bendymod.ink_pipe_horizontal": "Ink Pipe (Horizontal)",
+      "block.bendymod.desk": "Desk",
       "item.bendymod.studio_axe": "Studio Axe",
       "entity.bendymod.ink_bendy": "Ink Bendy",
+      "block.bendymod.lever_power": "Power Lever",
       "itemGroup.tabbendy_entities": "Bendy Entities",
+      "block.bendymod.cassette_player": "Cassette Player",
+      "block.bendymod.trash_bin": "Trash Bin",
       "entity.bendymod.boris_buddy": "Buddy Boris",
+      "block.bendymod.boards": "Boards",
+      "block.bendymod.dresser": "Dresser",
       "block.bendymod.studio_planked_wall": "Studio Planked Wall",
       "block.bendymod.studio_blank_wall_slab": "Studio Blank Wall Slab",
       "entity.bendymod.searcher": "Searcher",
+      "block.bendymod.record": "Record",
       "item.bendymod.boris_buddy_spawn_egg": "Buddy Boris Spawn Egg",
       "block.bendymod.studio_blank_wall_stairs": "Studio Blank Wall Stairs",
+      "item.bendymod.bacon_soup": "Bacon Soup",
       "block.bendymod.studio_planked_wall_broken": "Studio Planked Wall (Broken)",
+      "block.bendymod.jumbled_paper": "Jumbled Paper",
       "entity.bendymod.sammy_lawrence": "Sammy Lawrence",
+      "block.bendymod.speaker": "Speaker",
       "itemGroup.tabbendy_blocks": "Bendy Blocks",
+      "block.bendymod.ink_pipe_vertical": "Ink Pipe (Vertical)",
       "itemGroup.tabbendy_props": "Bendy Props",
       "block.bendymod.studio_floor": "Studio Floor",
+      "block.bendymod.studio_door_segmented": "Studio Segmented Door",
       "item.bendymod.sammy_lawrence_spawn_egg": "Sammy Lawrence Spawn Egg",
       "item.bendymod.bendy_spawn_egg": "Bendy Spawn Egg",
       "item.bendymod.searcher_spawn_egg": "Searcher Spawn Egg",
       "block.bendymod.studio_ceiling": "Studio Ceiling",
+      "block.bendymod.ink_pipe_straight": "Ink Pipe (Straight)",
       "block.bendymod.cutout_bendy": "Cutout Bendy",
       "entity.bendymod.bendy": "Bendy",
       "block.bendymod.studio_blank_wall": "Studio Blank Wall",
       "item.bendymod.ink_bendy_spawn_egg": "Ink Bendy Spawn Egg",
       "block.bendymod.cutout_sinny": "Cutout Sinny",
+      "block.bendymod.studio_lamp": "Studio Lamp",
       "block.bendymod.studio_floor_slab": "Studio Floor Slab",
+      "block.bendymod.ink_machine": "Ink Machine",
+      "block.bendymod.radio": "Radio",
+      "block.bendymod.lever_studio": "Studio Lever",
       "block.bendymod.studio_floor_stairs": "Studio Floor Stairs"
     }
   },
@@ -433,7 +909,17 @@
     "children": [
       {
         "name": "Blocks",
-        "children": []
+        "children": [
+          {
+            "name": "Props",
+            "children": [
+              {
+                "name": "Switches",
+                "children": []
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "Entities",

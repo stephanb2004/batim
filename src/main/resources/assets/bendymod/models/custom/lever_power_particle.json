@@ -1,0 +1,7 @@
+
+{
+  "parent": "bendymod:displaysettings/lever.item",
+  "textures": {
+    "particle": "bendymod:blocks/switch_power"
+  }
+}

@@ -14,7 +14,7 @@
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
-    "itemTexture": "",
+    "itemTexture": "studio_basicdoor_item",
     "particleTexture": "",
     "blockBase": "Door",
     "tintType": "No tint",

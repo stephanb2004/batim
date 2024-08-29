@@ -1,0 +1,11 @@
+{
+  "parent": "block/grass_block",
+  "textures": {
+    "bottom": "bendymod:blocks/studio_floor1",
+    "top": "bendymod:blocks/studio_floor1",
+    "side": "bendymod:blocks/studio_floor1",
+    "overlay": "bendymod:blocks/studio_wall_broken",
+    "particle": "bendymod:blocks/studio_floor1"
+  },
+  "render_type": "cutout"
+}

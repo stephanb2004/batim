@@ -10,6 +10,7 @@ credits="Created using mod maker MCreator - https://mcreator.net/about"
 displayURL="https://mcreator.net"
 logoFile="logo.png"
 authors="DrLoganblox07, MarceloGToonz, MCreator"
+description="Bring the world of the Bendy And The Ink Machine franchise into Minecraft!"
 
 [[dependencies.bendymod]]
     modId="minecraft"

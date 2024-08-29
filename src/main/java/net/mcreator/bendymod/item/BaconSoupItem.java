@@ -16,12 +16,12 @@ import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.client.renderer.block.model.ItemTransforms;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 
 import net.mcreator.bendymod.item.renderer.BaconSoupItemRenderer;
+import net.mcreator.bendymod.init.BendymodModTabs;
 
 import java.util.function.Consumer;
 import java.util.List;
@@ -34,7 +34,7 @@ public class BaconSoupItem extends Item implements IAnimatable {
 	public static ItemTransforms.TransformType transformType;
 
 	public BaconSoupItem() {
-		super(new Item.Properties().tab(CreativeModeTab.TAB_MISC).stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(4).saturationMod(0.3f)
+		super(new Item.Properties().tab(BendymodModTabs.TAB_BENDY_PROPS).stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(4).saturationMod(0.3f).alwaysEat()
 
 				.build()));
 	}

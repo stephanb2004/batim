@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "bendymod:block/studio_brick_slab"
+    },
+    "type=top": {
+      "model": "bendymod:block/studio_brick_slab_top"
+    },
+    "type=double": {
+      "model": "bendymod:block/studio_brick_slab_full"
+    }
+  }
+}

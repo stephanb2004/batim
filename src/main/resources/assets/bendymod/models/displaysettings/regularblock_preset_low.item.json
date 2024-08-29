@@ -1,5 +1,6 @@
 {
   "credit": "Made with Blockbench",
+  "parent": "builtin/entity",
   "texture_size": [
     64,
     64
@@ -64,11 +65,6 @@
       ]
     },
     "ground": {
-      "translation": [
-        0,
-        3,
-        0
-      ],
       "scale": [
         0.25,
         0.25,
@@ -83,7 +79,7 @@
       ],
       "translation": [
         0,
-        -3,
+        -4.75,
         0
       ],
       "scale": [
@@ -92,7 +88,19 @@
         0.625
       ]
     },
+    "head": {
+      "translation": [
+        0,
+        6.25,
+        0
+      ]
+    },
     "fixed": {
+      "translation": [
+        0,
+        -4.5,
+        -2
+      ],
       "scale": [
         0.5,
         0.5,

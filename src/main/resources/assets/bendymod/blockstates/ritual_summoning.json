@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "bendymod:block/ritual_summoning"
+    },
+    "facing=east": {
+      "model": "bendymod:block/ritual_summoning",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "bendymod:block/ritual_summoning",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "bendymod:block/ritual_summoning",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "bendymod:block/ritual_summoning",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "bendymod:block/ritual_summoning",
+      "x": 90
+    }
+  }
+}

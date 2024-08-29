@@ -1,0 +1,9 @@
+{
+  "parent": "bendymod:custom/ink_puddle",
+  "textures": {
+    "all": "bendymod:blocks/ink_puddle",
+    "particle": "bendymod:blocks/ink_puddle",
+    "0": "bendymod:blocks/ink_puddle"
+  },
+  "render_type": "cutout"
+}

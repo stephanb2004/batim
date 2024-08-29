@@ -1,0 +1,9 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "bendymod:blocks/studio_bricks",
+    "top": "bendymod:blocks/studio_bricks",
+    "side": "bendymod:blocks/studio_bricks"
+  },
+  "render_type": "solid"
+}

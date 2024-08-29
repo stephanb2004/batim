@@ -1,0 +1,22 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "poster_littledevildarling"
+      },
+      "name": "default"
+    },
+    "dancingdemon": {
+      "map": {
+        "0": "poster_dancingdemon"
+      },
+      "name": "dancingdemon"
+    },
+    "sheepsongs": {
+      "map": {
+        "0": "poster_sheepsongs"
+      },
+      "name": "sheepsongs"
+    }
+  }
+}

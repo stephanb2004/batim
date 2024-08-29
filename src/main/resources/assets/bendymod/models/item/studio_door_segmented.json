@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "bendymod:blocks/studio_segmenteddoor_bottom"
+    "layer0": "bendymod:items/studio_segmenteddoor_item"
   },
-  "render_type": "solid"
+  "render_type": "translucent"
 }

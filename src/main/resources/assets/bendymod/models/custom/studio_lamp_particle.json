@@ -1,7 +1,0 @@
-
-{
-  "parent": "bendymod:displaysettings/small_block.item",
-  "textures": {
-    "particle": "bendymod:blocks/studio_lamp"
-  }
-}

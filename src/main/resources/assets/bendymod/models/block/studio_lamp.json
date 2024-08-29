@@ -1,0 +1,9 @@
+{
+  "parent": "bendymod:custom/studio_lamp",
+  "textures": {
+    "all": "bendymod:blocks/studio_lamp",
+    "particle": "bendymod:blocks/studio_lamp",
+    "1": "bendymod:blocks/studio_lamp"
+  },
+  "render_type": "cutout"
+}

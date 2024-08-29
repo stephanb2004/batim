@@ -12,7 +12,7 @@
     "rightArm": "",
     "perspective": "All Perspectives",
     "creativeTab": {
-      "value": "MISC"
+      "value": "CUSTOM:BendyProps"
     },
     "firstPersonArms": false,
     "stackSize": 64,
@@ -41,7 +41,7 @@
       "value": ""
     },
     "isMeat": false,
-    "isAlwaysEdible": false,
+    "isAlwaysEdible": true,
     "animation": "eat",
     "normal": "baconsoup.geo.json"
   }

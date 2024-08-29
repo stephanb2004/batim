@@ -1,26 +1,26 @@
 {
   "variants": {
     "facing=north": {
-      "model": "bendymod:custom/studio_lamp_particle"
+      "model": "bendymod:block/studio_lamp"
     },
     "facing=east": {
-      "model": "bendymod:custom/studio_lamp_particle",
+      "model": "bendymod:block/studio_lamp",
       "y": 90
     },
     "facing=south": {
-      "model": "bendymod:custom/studio_lamp_particle",
+      "model": "bendymod:block/studio_lamp",
       "y": 180
     },
     "facing=west": {
-      "model": "bendymod:custom/studio_lamp_particle",
+      "model": "bendymod:block/studio_lamp",
       "y": 270
     },
     "facing=up": {
-      "model": "bendymod:custom/studio_lamp_particle",
+      "model": "bendymod:block/studio_lamp",
       "x": 270
     },
     "facing=down": {
-      "model": "bendymod:custom/studio_lamp_particle",
+      "model": "bendymod:block/studio_lamp",
       "x": 90
     }
   }

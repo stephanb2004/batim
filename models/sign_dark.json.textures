@@ -1,0 +1,16 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "sign_dark"
+      },
+      "name": "default"
+    },
+    "light": {
+      "map": {
+        "1": "sign_light"
+      },
+      "name": "light"
+    }
+  }
+}

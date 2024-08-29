@@ -4,54 +4,35 @@ package net.mcreator.bendymod.block;
 import org.checkerframework.checker.units.qual.s;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Rotation;
-import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.Mirror;
-import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.DirectionalBlock;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.bendymod.init.BendymodModBlockEntities;
-
-import javax.annotation.Nullable;
-
 import java.util.List;
 import java.util.Collections;
 
-public class StudioLampBlock extends BaseEntityBlock implements EntityBlock {
-	public static final IntegerProperty ANIMATION = IntegerProperty.create("animation", 0, (int) 1);
+public class StudioLampBlock extends Block {
 	public static final DirectionProperty FACING = DirectionalBlock.FACING;
 
 	public StudioLampBlock() {
-		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1f, 10f).lightLevel(s -> 5).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(1f, 10f).lightLevel(s -> 5).noOcclusion().hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true)
+				.isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
-	}
-
-	@Override
-	public RenderShape getRenderShape(BlockState state) {
-		return RenderShape.ENTITYBLOCK_ANIMATED;
-	}
-
-	@Nullable
-	@Override
-	public BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState) {
-		return BendymodModBlockEntities.STUDIO_LAMP.get().create(blockPos, blockState);
 	}
 
 	@Override
@@ -65,21 +46,25 @@ public class StudioLampBlock extends BaseEntityBlock implements EntityBlock {
 	}
 
 	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+	public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		return Shapes.empty();
+	}
 
+	@Override
+	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 		return switch (state.getValue(FACING)) {
-			default -> box(2, 5, 4, 14, 15, 10);
-			case NORTH -> box(2, 5, 6, 14, 15, 12);
-			case EAST -> box(4, 5, 2, 10, 15, 14);
-			case WEST -> box(6, 5, 2, 12, 15, 14);
-			case UP -> box(2, 4, 5, 14, 10, 15);
-			case DOWN -> box(2, 6, 1, 14, 12, 11);
+			default -> box(2, 5, 0, 14, 11, 10);
+			case NORTH -> box(2, 5, 6, 14, 11, 16);
+			case EAST -> box(0, 5, 2, 10, 11, 14);
+			case WEST -> box(6, 5, 2, 16, 11, 14);
+			case UP -> box(2, 0, 5, 14, 10, 11);
+			case DOWN -> box(2, 6, 5, 14, 16, 11);
 		};
 	}
 
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-		builder.add(ANIMATION, FACING);
+		builder.add(FACING);
 	}
 
 	@Override

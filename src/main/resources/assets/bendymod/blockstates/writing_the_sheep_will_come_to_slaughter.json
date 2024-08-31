@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "bendymod:custom/writing_the_sheep_will_come_to_slaughter_particle"
+    },
+    "facing=east": {
+      "model": "bendymod:custom/writing_the_sheep_will_come_to_slaughter_particle",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "bendymod:custom/writing_the_sheep_will_come_to_slaughter_particle",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "bendymod:custom/writing_the_sheep_will_come_to_slaughter_particle",
+      "y": 270
+    }
+  }
+}

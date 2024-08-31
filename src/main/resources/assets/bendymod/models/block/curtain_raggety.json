@@ -1,0 +1,9 @@
+{
+  "parent": "bendymod:custom/raggety_curtain",
+  "textures": {
+    "all": "bendymod:blocks/raggety_curtain",
+    "particle": "bendymod:blocks/raggety_curtain",
+    "0": "bendymod:blocks/raggety_curtain"
+  },
+  "render_type": "solid"
+}

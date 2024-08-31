@@ -1,0 +1,8 @@
+{
+  "parent": "block/template_orientable_trapdoor_top",
+  "textures": {
+    "texture": "bendymod:blocks/studio_trapdoor",
+    "particle": "bendymod:blocks/studio_trapdoor"
+  },
+  "render_type": "solid"
+}

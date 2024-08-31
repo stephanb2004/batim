@@ -1,0 +1,7 @@
+
+{
+  "parent": "bendymod:displaysettings/ink_machine.item",
+  "textures": {
+    "particle": "bendymod:blocks/wallwriting_downherewereallsinners"
+  }
+}

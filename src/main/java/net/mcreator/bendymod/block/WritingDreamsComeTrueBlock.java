@@ -66,10 +66,10 @@ public class WritingDreamsComeTrueBlock extends BaseEntityBlock implements Entit
 	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 
 		return switch (state.getValue(FACING)) {
-			default -> box(-41, 0, 0, 55, 48, 1);
-			case NORTH -> box(-39, 0, 15, 57, 48, 16);
-			case EAST -> box(0, 0, -39, 1, 48, 57);
-			case WEST -> box(15, 0, -41, 16, 48, 55);
+			default -> box(-41, 0, 0, 55, 18, 1);
+			case NORTH -> box(-39, 0, 15, 57, 18, 16);
+			case EAST -> box(0, 0, -39, 1, 18, 57);
+			case WEST -> box(15, 0, -41, 16, 18, 55);
 		};
 	}
 

@@ -3,7 +3,7 @@
   "textures": {
     "all": "bendymod:blocks/ink_puddle",
     "particle": "bendymod:blocks/ink_puddle",
-    "0": "bendymod:blocks/ink_puddle"
+    "1": "bendymod:blocks/ink_puddle"
   },
   "render_type": "cutout"
 }

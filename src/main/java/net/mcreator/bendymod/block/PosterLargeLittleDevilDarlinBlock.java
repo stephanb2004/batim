@@ -50,10 +50,10 @@ public class PosterLargeLittleDevilDarlinBlock extends Block {
 	@Override
 	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 		return switch (state.getValue(FACING)) {
-			default -> box(1, -1, 0, 15, 16, 1);
-			case NORTH -> box(1, -1, 15, 15, 16, 16);
-			case EAST -> box(0, -1, 1, 1, 16, 15);
-			case WEST -> box(15, -1, 1, 16, 16, 15);
+			default -> box(4, 0, 0, 28, 32, 1);
+			case NORTH -> box(-12, 0, 15, 12, 32, 16);
+			case EAST -> box(0, 0, -12, 1, 32, 12);
+			case WEST -> box(15, 0, 4, 16, 32, 28);
 		};
 	}
 

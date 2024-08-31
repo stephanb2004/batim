@@ -50,10 +50,10 @@ public class PosterSheepSongsBlock extends Block {
 	@Override
 	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 		return switch (state.getValue(FACING)) {
-			default -> box(1, -1, 0, 15, 16, 1);
-			case NORTH -> box(1, -1, 15, 15, 16, 16);
-			case EAST -> box(0, -1, 1, 1, 16, 15);
-			case WEST -> box(15, -1, 1, 16, 16, 15);
+			default -> box(1, -2, 0, 15, 16, 1);
+			case NORTH -> box(1, -2, 15, 15, 16, 16);
+			case EAST -> box(0, -2, 1, 1, 16, 15);
+			case WEST -> box(15, -2, 1, 16, 16, 15);
 		};
 	}
 

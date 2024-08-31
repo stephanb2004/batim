@@ -66,10 +66,10 @@ public class WritingTheCreatorLiedToUsBlock extends BaseEntityBlock implements E
 	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 
 		return switch (state.getValue(FACING)) {
-			default -> box(-41, 0, 0, 55, 48, 1);
-			case NORTH -> box(-39, 0, 15, 57, 48, 16);
-			case EAST -> box(0, 0, -39, 1, 48, 57);
-			case WEST -> box(15, 0, -41, 16, 48, 55);
+			default -> box(-24, 0, 0, 37, 48, 1);
+			case NORTH -> box(-21, 0, 15, 40, 48, 16);
+			case EAST -> box(0, 0, -21, 1, 48, 40);
+			case WEST -> box(15, 0, -24, 16, 48, 37);
 		};
 	}
 

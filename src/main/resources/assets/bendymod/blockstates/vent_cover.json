@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "bendymod:block/vent_cover"
+    },
+    "facing=east": {
+      "model": "bendymod:block/vent_cover",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "bendymod:block/vent_cover",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "bendymod:block/vent_cover",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "bendymod:block/vent_cover",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "bendymod:block/vent_cover",
+      "x": 90
+    }
+  }
+}

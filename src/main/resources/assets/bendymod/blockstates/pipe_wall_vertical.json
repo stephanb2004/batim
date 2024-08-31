@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "bendymod:block/pipe_wall_vertical"
+    },
+    "facing=east": {
+      "model": "bendymod:block/pipe_wall_vertical",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "bendymod:block/pipe_wall_vertical",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "bendymod:block/pipe_wall_vertical",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "bendymod:block/pipe_wall_vertical",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "bendymod:block/pipe_wall_vertical",
+      "x": 90
+    }
+  }
+}

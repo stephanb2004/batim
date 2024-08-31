@@ -1,0 +1,6 @@
+{
+  "parent": "bendymod:displaysettings/regularblock_preset.item",
+  "textures": {
+    "particle": "bendymod:blocks/studio_floor1"
+  }
+}

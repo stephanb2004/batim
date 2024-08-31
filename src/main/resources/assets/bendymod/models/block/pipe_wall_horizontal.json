@@ -1,0 +1,9 @@
+{
+  "parent": "bendymod:custom/pipe_horizontal",
+  "textures": {
+    "all": "bendymod:blocks/pipe_wall",
+    "particle": "bendymod:blocks/pipe_wall",
+    "0": "bendymod:blocks/pipe_wall"
+  },
+  "render_type": "solid"
+}

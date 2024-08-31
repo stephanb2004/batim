@@ -1,0 +1,9 @@
+{
+  "parent": "bendymod:custom/vent_cover",
+  "textures": {
+    "all": "bendymod:blocks/vent_cover",
+    "particle": "bendymod:blocks/vent_cover",
+    "1": "bendymod:blocks/vent_cover"
+  },
+  "render_type": "cutout"
+}

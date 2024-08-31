@@ -1,9 +1,9 @@
 {
-  "parent": "bendymod:custom/poster",
+  "parent": "bendymod:custom/poster_large",
   "textures": {
     "all": "bendymod:blocks/poster_sheepsongs_large",
     "particle": "bendymod:blocks/poster_sheepsongs_large",
-    "0": "bendymod:blocks/poster_sheepsongs"
+    "1": "bendymod:blocks/poster_sheepsongs_large"
   },
   "render_type": "solid"
 }

@@ -8,10 +8,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.Direction;
-import net.minecraft.core.BlockPos;
 
 import java.util.List;
 import java.util.Collections;
@@ -19,11 +16,6 @@ import java.util.Collections;
 public class StudioBlankWallSlabBlock extends SlabBlock {
 	public StudioBlankWallSlabBlock() {
 		super(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2f, 3f).dynamicShape());
-	}
-
-	@Override
-	public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-		return 5;
 	}
 
 	@Override

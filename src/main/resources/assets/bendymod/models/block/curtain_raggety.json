@@ -3,7 +3,7 @@
   "textures": {
     "all": "bendymod:blocks/raggety_curtain",
     "particle": "bendymod:blocks/raggety_curtain",
-    "0": "bendymod:blocks/raggety_curtain"
+    "1": "bendymod:blocks/raggety_curtain"
   },
-  "render_type": "solid"
+  "render_type": "cutout"
 }

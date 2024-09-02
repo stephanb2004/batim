@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "bendymod:block/poster_large_train_trouble"
+    },
+    "facing=east": {
+      "model": "bendymod:block/poster_large_train_trouble",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "bendymod:block/poster_large_train_trouble",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "bendymod:block/poster_large_train_trouble",
+      "y": 270
+    }
+  }
+}

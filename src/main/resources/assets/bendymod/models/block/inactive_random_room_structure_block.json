@@ -1,0 +1,11 @@
+{
+  "parent": "block/grass_block",
+  "textures": {
+    "bottom": "bendymod:blocks/structureblock_top",
+    "top": "bendymod:blocks/structureblock_top",
+    "side": "bendymod:blocks/structureblock_side",
+    "overlay": "bendymod:blocks/structureblock_side_inactive",
+    "particle": "bendymod:blocks/structureblock_top"
+  },
+  "render_type": "cutout_mipped"
+}

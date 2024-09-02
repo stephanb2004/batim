@@ -8,10 +8,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.Direction;
-import net.minecraft.core.BlockPos;
 
 import java.util.List;
 import java.util.Collections;
@@ -29,11 +26,6 @@ public class StudioBlankWallStairsBlock extends StairBlock {
 	@Override
 	public boolean isRandomlyTicking(BlockState state) {
 		return false;
-	}
-
-	@Override
-	public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-		return 5;
 	}
 
 	@Override

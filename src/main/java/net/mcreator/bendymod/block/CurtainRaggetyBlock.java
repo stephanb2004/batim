@@ -50,10 +50,10 @@ public class CurtainRaggetyBlock extends Block {
 	@Override
 	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 		return switch (state.getValue(FACING)) {
-			default -> box(0, 0, 0, 16, 32, 1);
-			case NORTH -> box(0, 0, 15, 16, 32, 16);
-			case EAST -> box(0, 0, 0, 1, 32, 16);
-			case WEST -> box(15, 0, 0, 16, 32, 16);
+			default -> box(0, 0, 0, 16, 16, 1);
+			case NORTH -> box(0, 0, 15, 16, 16, 16);
+			case EAST -> box(0, 0, 0, 1, 16, 16);
+			case WEST -> box(15, 0, 0, 16, 16, 16);
 		};
 	}
 

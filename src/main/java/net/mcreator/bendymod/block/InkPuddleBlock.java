@@ -29,7 +29,7 @@ public class InkPuddleBlock extends Block {
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
 	public InkPuddleBlock() {
-		super(BlockBehaviour.Properties.of(Material.WATER, MaterialColor.COLOR_BLACK).sound(SoundType.SCULK).strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of(Material.WATER, MaterialColor.COLOR_BLACK).sound(SoundType.SCULK).strength(1f, 10f).noCollission().noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 

@@ -28,7 +28,7 @@ public class PosterLargeLittleDevilDarlinBlock extends Block {
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
 	public PosterLargeLittleDevilDarlinBlock() {
-		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.AZALEA_LEAVES).strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.AZALEA_LEAVES).strength(0.5f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 

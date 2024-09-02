@@ -12,7 +12,6 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 import java.util.List;
@@ -36,11 +35,6 @@ public class StudioPlankedWallBrokenBlock extends Block {
 	@Override
 	public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 		return Shapes.empty();
-	}
-
-	@Override
-	public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-		return 6;
 	}
 
 	@Override

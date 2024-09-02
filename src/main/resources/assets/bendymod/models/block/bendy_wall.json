@@ -1,0 +1,9 @@
+{
+  "parent": "bendymod:custom/bendy_wall",
+  "textures": {
+    "all": "bendymod:blocks/bendy_wall",
+    "particle": "bendymod:blocks/bendy_wall",
+    "0": "bendymod:blocks/bendy_wall"
+  },
+  "render_type": "cutout_mipped"
+}

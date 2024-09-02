@@ -9,6 +9,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.mcreator.bendymod.client.renderer.SitEntityRenderer;
 import net.mcreator.bendymod.client.renderer.SearcherRenderer;
 import net.mcreator.bendymod.client.renderer.SammyLawrenceRenderer;
 import net.mcreator.bendymod.client.renderer.InkBendyRenderer;
@@ -24,5 +25,6 @@ public class BendymodModEntityRenderers {
 		event.registerEntityRenderer(BendymodModEntities.SEARCHER.get(), SearcherRenderer::new);
 		event.registerEntityRenderer(BendymodModEntities.INK_BENDY.get(), InkBendyRenderer::new);
 		event.registerEntityRenderer(BendymodModEntities.SAMMY_LAWRENCE.get(), SammyLawrenceRenderer::new);
+		event.registerEntityRenderer(BendymodModEntities.SIT_ENTITY.get(), SitEntityRenderer::new);
 	}
 }

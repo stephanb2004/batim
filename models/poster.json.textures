@@ -17,6 +17,30 @@
         "0": "poster_sheepsongs"
       },
       "name": "sheepsongs"
+    },
+    "dontforgettopunchin": {
+      "map": {
+        "0": "poster_dontforgettopunchin"
+      },
+      "name": "dontforgettopunchin"
+    },
+    "delicious": {
+      "map": {
+        "0": "poster_delicious"
+      },
+      "name": "delicious"
+    },
+    "traintrouble": {
+      "map": {
+        "0": "poster_traintrouble"
+      },
+      "name": "traintrouble"
+    },
+    "sentfromabove": {
+      "map": {
+        "0": "poster_sentfromabove"
+      },
+      "name": "sentfromabove"
     }
   }
 }

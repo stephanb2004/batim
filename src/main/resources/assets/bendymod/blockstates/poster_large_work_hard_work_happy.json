@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "bendymod:block/poster_large_work_hard_work_happy"
+    },
+    "facing=east": {
+      "model": "bendymod:block/poster_large_work_hard_work_happy",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "bendymod:block/poster_large_work_hard_work_happy",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "bendymod:block/poster_large_work_hard_work_happy",
+      "y": 270
+    }
+  }
+}

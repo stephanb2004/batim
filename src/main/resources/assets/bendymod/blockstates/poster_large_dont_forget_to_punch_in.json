@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "bendymod:block/poster_large_dont_forget_to_punch_in"
+    },
+    "facing=east": {
+      "model": "bendymod:block/poster_large_dont_forget_to_punch_in",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "bendymod:block/poster_large_dont_forget_to_punch_in",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "bendymod:block/poster_large_dont_forget_to_punch_in",
+      "y": 270
+    }
+  }
+}

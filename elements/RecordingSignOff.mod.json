@@ -39,7 +39,7 @@
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "CUSTOM:BendyBlocks"
+      "value": "CUSTOM:BendyProps"
     },
     "destroyTool": "Not specified",
     "customDrop": {

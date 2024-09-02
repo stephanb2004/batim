@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "bendymod:block/inactive_hallways_structure_block"
+    },
+    "facing=east": {
+      "model": "bendymod:block/inactive_hallways_structure_block",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "bendymod:block/inactive_hallways_structure_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "bendymod:block/inactive_hallways_structure_block",
+      "y": 270
+    }
+  }
+}

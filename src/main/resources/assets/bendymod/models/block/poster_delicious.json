@@ -1,0 +1,9 @@
+{
+  "parent": "bendymod:custom/poster",
+  "textures": {
+    "all": "bendymod:blocks/poster_delicious",
+    "particle": "bendymod:blocks/poster_delicious",
+    "0": "bendymod:blocks/poster_delicious"
+  },
+  "render_type": "solid"
+}

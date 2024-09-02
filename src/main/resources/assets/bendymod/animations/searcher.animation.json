@@ -1090,7 +1090,7 @@
 				"puddle": {
 					"rotation": {
 						"0.0": {
-							"vector": [0, 0, 0]
+							"vector": [0, -45, 0]
 						},
 						"0.5": {
 							"vector": [0, 0, 0],
@@ -1098,6 +1098,19 @@
 						},
 						"1.0": {
 							"vector": [0, 22.5, 0],
+							"easing": "easeInOutSine"
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, -1, 0]
+						},
+						"0.5": {
+							"vector": [0, 1, 0],
+							"easing": "easeInOutSine"
+						},
+						"1.0": {
+							"vector": [0, 0, 0],
 							"easing": "easeInOutSine"
 						}
 					}

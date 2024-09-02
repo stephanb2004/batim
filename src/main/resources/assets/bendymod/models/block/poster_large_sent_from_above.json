@@ -1,0 +1,9 @@
+{
+  "parent": "bendymod:custom/poster_large",
+  "textures": {
+    "all": "bendymod:blocks/poster_sentfromabove_large",
+    "particle": "bendymod:blocks/poster_sentfromabove_large",
+    "1": "bendymod:blocks/poster_sentfromabove_large"
+  },
+  "render_type": "cutout"
+}

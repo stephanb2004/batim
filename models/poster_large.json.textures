@@ -17,6 +17,36 @@
         "1": "poster_sheepsongs_large"
       },
       "name": "sheepsongs"
+    },
+    "dontforgettopunchin": {
+      "map": {
+        "1": "poster_dontforgettopunchin_large"
+      },
+      "name": "dontforgettopunchin"
+    },
+    "delicious": {
+      "map": {
+        "1": "poster_delicious_large"
+      },
+      "name": "delicious"
+    },
+    "workhardworkhappy": {
+      "map": {
+        "1": "poster_workhardworkhappy_large"
+      },
+      "name": "workhardworkhappy"
+    },
+    "traintrouble": {
+      "map": {
+        "1": "poster_traintrouble_large"
+      },
+      "name": "traintrouble"
+    },
+    "sentfromabove": {
+      "map": {
+        "1": "poster_sentfromabove_large"
+      },
+      "name": "sentfromabove"
     }
   }
 }

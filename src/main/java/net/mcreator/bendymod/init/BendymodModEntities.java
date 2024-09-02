@@ -16,6 +16,7 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
+import net.mcreator.bendymod.entity.SitEntityEntity;
 import net.mcreator.bendymod.entity.SearcherEntity;
 import net.mcreator.bendymod.entity.SammyLawrenceEntity;
 import net.mcreator.bendymod.entity.InkBendyEntity;
@@ -44,6 +45,8 @@ public class BendymodModEntities {
 			EntityType.Builder.<SammyLawrenceEntity>of(SammyLawrenceEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SammyLawrenceEntity::new)
 
 					.sized(0.3125f, 1.8125f));
+	public static final RegistryObject<EntityType<SitEntityEntity>> SIT_ENTITY = register("sit_entity", EntityType.Builder.<SitEntityEntity>of(SitEntityEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+			.setUpdateInterval(3).setCustomClientFactory(SitEntityEntity::new).fireImmune().sized(0.5f, 0.35f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -57,6 +60,7 @@ public class BendymodModEntities {
 			SearcherEntity.init();
 			InkBendyEntity.init();
 			SammyLawrenceEntity.init();
+			SitEntityEntity.init();
 		});
 	}
 
@@ -67,5 +71,6 @@ public class BendymodModEntities {
 		event.put(SEARCHER.get(), SearcherEntity.createAttributes().build());
 		event.put(INK_BENDY.get(), InkBendyEntity.createAttributes().build());
 		event.put(SAMMY_LAWRENCE.get(), SammyLawrenceEntity.createAttributes().build());
+		event.put(SIT_ENTITY.get(), SitEntityEntity.createAttributes().build());
 	}
 }

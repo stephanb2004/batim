@@ -19,6 +19,6 @@ public class RecordingSignOnDisplayModel extends AnimatedGeoModel<RecordingSignO
 
 	@Override
 	public ResourceLocation getTextureResource(RecordingSignOnDisplayItem entity) {
-		return new ResourceLocation("bendymod", "textures/blocks/recording_sign_a.png");
+		return new ResourceLocation("bendymod", "textures/blocks/recording_sign_on.png");
 	}
 }

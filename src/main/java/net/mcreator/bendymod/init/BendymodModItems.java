@@ -48,8 +48,10 @@ import net.mcreator.bendymod.block.display.ProjectorDisplayItem;
 import net.mcreator.bendymod.block.display.PianoDisplayItem;
 import net.mcreator.bendymod.block.display.PedestalDisplayItem;
 import net.mcreator.bendymod.block.display.MusicDepartmentSignDisplayItem;
-import net.mcreator.bendymod.block.display.LeverStudioDisplayItem;
-import net.mcreator.bendymod.block.display.LeverPowerDisplayItem;
+import net.mcreator.bendymod.block.display.LeverStudioOnDisplayItem;
+import net.mcreator.bendymod.block.display.LeverStudioOffDisplayItem;
+import net.mcreator.bendymod.block.display.LeverPowerOnDisplayItem;
+import net.mcreator.bendymod.block.display.LeverPowerOffDisplayItem;
 import net.mcreator.bendymod.block.display.LargeBoxDisplayItem;
 import net.mcreator.bendymod.block.display.JumbledPaperDisplayItem;
 import net.mcreator.bendymod.block.display.JDSSignDisplayItem;
@@ -141,10 +143,6 @@ public class BendymodModItems {
 	public static final RegistryObject<Item> SPEAKER = REGISTRY.register(BendymodModBlocks.SPEAKER.getId().getPath(), () -> new SpeakerDisplayItem(BendymodModBlocks.SPEAKER.get(), new Item.Properties().tab(BendymodModTabs.TAB_BENDY_PROPS)));
 	public static final RegistryObject<Item> CASSETTE_PLAYER = REGISTRY.register(BendymodModBlocks.CASSETTE_PLAYER.getId().getPath(),
 			() -> new CassettePlayerDisplayItem(BendymodModBlocks.CASSETTE_PLAYER.get(), new Item.Properties().tab(BendymodModTabs.TAB_BENDY_PROPS)));
-	public static final RegistryObject<Item> LEVER_POWER = REGISTRY.register(BendymodModBlocks.LEVER_POWER.getId().getPath(),
-			() -> new LeverPowerDisplayItem(BendymodModBlocks.LEVER_POWER.get(), new Item.Properties().tab(BendymodModTabs.TAB_BENDY_PROPS)));
-	public static final RegistryObject<Item> LEVER_STUDIO = REGISTRY.register(BendymodModBlocks.LEVER_STUDIO.getId().getPath(),
-			() -> new LeverStudioDisplayItem(BendymodModBlocks.LEVER_STUDIO.get(), new Item.Properties().tab(BendymodModTabs.TAB_BENDY_PROPS)));
 	public static final RegistryObject<Item> VALVE = REGISTRY.register(BendymodModBlocks.VALVE.getId().getPath(), () -> new ValveDisplayItem(BendymodModBlocks.VALVE.get(), new Item.Properties().tab(BendymodModTabs.TAB_BENDY_PROPS)));
 	public static final RegistryObject<Item> LARGE_BOX = REGISTRY.register(BendymodModBlocks.LARGE_BOX.getId().getPath(), () -> new LargeBoxDisplayItem(BendymodModBlocks.LARGE_BOX.get(), new Item.Properties().tab(BendymodModTabs.TAB_BENDY_PROPS)));
 	public static final RegistryObject<Item> INK_PUDDLE = block(BendymodModBlocks.INK_PUDDLE, BendymodModTabs.TAB_BENDY_PROPS);
@@ -249,6 +247,12 @@ public class BendymodModItems {
 	public static final RegistryObject<Item> SOLID_INK_PRESSURE_PLATE = block(BendymodModBlocks.SOLID_INK_PRESSURE_PLATE, null);
 	public static final RegistryObject<Item> HEAVY_GATE_CLOSED = REGISTRY.register(BendymodModBlocks.HEAVY_GATE_CLOSED.getId().getPath(),
 			() -> new HeavyGateClosedDisplayItem(BendymodModBlocks.HEAVY_GATE_CLOSED.get(), new Item.Properties().tab(null)));
+	public static final RegistryObject<Item> LEVER_STUDIO_OFF = REGISTRY.register(BendymodModBlocks.LEVER_STUDIO_OFF.getId().getPath(),
+			() -> new LeverStudioOffDisplayItem(BendymodModBlocks.LEVER_STUDIO_OFF.get(), new Item.Properties().tab(BendymodModTabs.TAB_BENDY_PROPS)));
+	public static final RegistryObject<Item> LEVER_STUDIO_ON = REGISTRY.register(BendymodModBlocks.LEVER_STUDIO_ON.getId().getPath(), () -> new LeverStudioOnDisplayItem(BendymodModBlocks.LEVER_STUDIO_ON.get(), new Item.Properties().tab(null)));
+	public static final RegistryObject<Item> LEVER_POWER_OFF = REGISTRY.register(BendymodModBlocks.LEVER_POWER_OFF.getId().getPath(),
+			() -> new LeverPowerOffDisplayItem(BendymodModBlocks.LEVER_POWER_OFF.get(), new Item.Properties().tab(BendymodModTabs.TAB_BENDY_PROPS)));
+	public static final RegistryObject<Item> LEVER_POWER_ON = REGISTRY.register(BendymodModBlocks.LEVER_POWER_ON.getId().getPath(), () -> new LeverPowerOnDisplayItem(BendymodModBlocks.LEVER_POWER_ON.get(), new Item.Properties().tab(null)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

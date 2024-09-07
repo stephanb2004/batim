@@ -88,8 +88,10 @@ import net.mcreator.bendymod.block.PianoBlock;
 import net.mcreator.bendymod.block.PedestalBlock;
 import net.mcreator.bendymod.block.PaintingBendyUmbrellaBlock;
 import net.mcreator.bendymod.block.MusicDepartmentSignBlock;
-import net.mcreator.bendymod.block.LeverStudioBlock;
-import net.mcreator.bendymod.block.LeverPowerBlock;
+import net.mcreator.bendymod.block.LeverStudioOnBlock;
+import net.mcreator.bendymod.block.LeverStudioOffBlock;
+import net.mcreator.bendymod.block.LeverPowerOnBlock;
+import net.mcreator.bendymod.block.LeverPowerOffBlock;
 import net.mcreator.bendymod.block.LargeBoxBlock;
 import net.mcreator.bendymod.block.JumbledPaperBlock;
 import net.mcreator.bendymod.block.JDSSignBlock;
@@ -184,8 +186,6 @@ public class BendymodModBlocks {
 	public static final RegistryObject<Block> RADIO = REGISTRY.register("radio", () -> new RadioBlock());
 	public static final RegistryObject<Block> SPEAKER = REGISTRY.register("speaker", () -> new SpeakerBlock());
 	public static final RegistryObject<Block> CASSETTE_PLAYER = REGISTRY.register("cassette_player", () -> new CassettePlayerBlock());
-	public static final RegistryObject<Block> LEVER_POWER = REGISTRY.register("lever_power", () -> new LeverPowerBlock());
-	public static final RegistryObject<Block> LEVER_STUDIO = REGISTRY.register("lever_studio", () -> new LeverStudioBlock());
 	public static final RegistryObject<Block> VALVE = REGISTRY.register("valve", () -> new ValveBlock());
 	public static final RegistryObject<Block> LARGE_BOX = REGISTRY.register("large_box", () -> new LargeBoxBlock());
 	public static final RegistryObject<Block> INK_PUDDLE = REGISTRY.register("ink_puddle", () -> new InkPuddleBlock());
@@ -262,4 +262,8 @@ public class BendymodModBlocks {
 	public static final RegistryObject<Block> INACTIVE_STAIRWAY_STRUCTURE_BLOCK = REGISTRY.register("inactive_stairway_structure_block", () -> new InactiveStairwayStructureBlockBlock());
 	public static final RegistryObject<Block> SOLID_INK_PRESSURE_PLATE = REGISTRY.register("solid_ink_pressure_plate", () -> new SolidInkPressurePlateBlock());
 	public static final RegistryObject<Block> HEAVY_GATE_CLOSED = REGISTRY.register("heavy_gate_closed", () -> new HeavyGateClosedBlock());
+	public static final RegistryObject<Block> LEVER_STUDIO_OFF = REGISTRY.register("lever_studio_off", () -> new LeverStudioOffBlock());
+	public static final RegistryObject<Block> LEVER_STUDIO_ON = REGISTRY.register("lever_studio_on", () -> new LeverStudioOnBlock());
+	public static final RegistryObject<Block> LEVER_POWER_OFF = REGISTRY.register("lever_power_off", () -> new LeverPowerOffBlock());
+	public static final RegistryObject<Block> LEVER_POWER_ON = REGISTRY.register("lever_power_on", () -> new LeverPowerOnBlock());
 }

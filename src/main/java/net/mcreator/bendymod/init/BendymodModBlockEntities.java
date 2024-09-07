@@ -41,8 +41,10 @@ import net.mcreator.bendymod.block.entity.ProjectorTileEntity;
 import net.mcreator.bendymod.block.entity.PianoTileEntity;
 import net.mcreator.bendymod.block.entity.PedestalTileEntity;
 import net.mcreator.bendymod.block.entity.MusicDepartmentSignTileEntity;
-import net.mcreator.bendymod.block.entity.LeverStudioTileEntity;
-import net.mcreator.bendymod.block.entity.LeverPowerTileEntity;
+import net.mcreator.bendymod.block.entity.LeverStudioOnTileEntity;
+import net.mcreator.bendymod.block.entity.LeverStudioOffTileEntity;
+import net.mcreator.bendymod.block.entity.LeverPowerOnTileEntity;
+import net.mcreator.bendymod.block.entity.LeverPowerOffTileEntity;
 import net.mcreator.bendymod.block.entity.LargeBoxTileEntity;
 import net.mcreator.bendymod.block.entity.JumbledPaperTileEntity;
 import net.mcreator.bendymod.block.entity.JDSSignTileEntity;
@@ -101,8 +103,6 @@ public class BendymodModBlockEntities {
 	public static final RegistryObject<BlockEntityType<SpeakerTileEntity>> SPEAKER = REGISTRY.register("speaker", () -> BlockEntityType.Builder.of(SpeakerTileEntity::new, BendymodModBlocks.SPEAKER.get()).build(null));
 	public static final RegistryObject<BlockEntityType<CassettePlayerTileEntity>> CASSETTE_PLAYER = REGISTRY.register("cassette_player",
 			() -> BlockEntityType.Builder.of(CassettePlayerTileEntity::new, BendymodModBlocks.CASSETTE_PLAYER.get()).build(null));
-	public static final RegistryObject<BlockEntityType<LeverPowerTileEntity>> LEVER_POWER = REGISTRY.register("lever_power", () -> BlockEntityType.Builder.of(LeverPowerTileEntity::new, BendymodModBlocks.LEVER_POWER.get()).build(null));
-	public static final RegistryObject<BlockEntityType<LeverStudioTileEntity>> LEVER_STUDIO = REGISTRY.register("lever_studio", () -> BlockEntityType.Builder.of(LeverStudioTileEntity::new, BendymodModBlocks.LEVER_STUDIO.get()).build(null));
 	public static final RegistryObject<BlockEntityType<ValveTileEntity>> VALVE = REGISTRY.register("valve", () -> BlockEntityType.Builder.of(ValveTileEntity::new, BendymodModBlocks.VALVE.get()).build(null));
 	public static final RegistryObject<BlockEntityType<LargeBoxTileEntity>> LARGE_BOX = REGISTRY.register("large_box", () -> BlockEntityType.Builder.of(LargeBoxTileEntity::new, BendymodModBlocks.LARGE_BOX.get()).build(null));
 	public static final RegistryObject<BlockEntityType<InkMachineTileEntity>> INK_MACHINE = REGISTRY.register("ink_machine", () -> BlockEntityType.Builder.of(InkMachineTileEntity::new, BendymodModBlocks.INK_MACHINE.get()).build(null));
@@ -164,6 +164,13 @@ public class BendymodModBlockEntities {
 	public static final RegistryObject<BlockEntityType<?>> INACTIVE_STAIRWAY_STRUCTURE_BLOCK = register("inactive_stairway_structure_block", BendymodModBlocks.INACTIVE_STAIRWAY_STRUCTURE_BLOCK, InactiveStairwayStructureBlockBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<HeavyGateClosedTileEntity>> HEAVY_GATE_CLOSED = REGISTRY.register("heavy_gate_closed",
 			() -> BlockEntityType.Builder.of(HeavyGateClosedTileEntity::new, BendymodModBlocks.HEAVY_GATE_CLOSED.get()).build(null));
+	public static final RegistryObject<BlockEntityType<LeverStudioOffTileEntity>> LEVER_STUDIO_OFF = REGISTRY.register("lever_studio_off",
+			() -> BlockEntityType.Builder.of(LeverStudioOffTileEntity::new, BendymodModBlocks.LEVER_STUDIO_OFF.get()).build(null));
+	public static final RegistryObject<BlockEntityType<LeverStudioOnTileEntity>> LEVER_STUDIO_ON = REGISTRY.register("lever_studio_on",
+			() -> BlockEntityType.Builder.of(LeverStudioOnTileEntity::new, BendymodModBlocks.LEVER_STUDIO_ON.get()).build(null));
+	public static final RegistryObject<BlockEntityType<LeverPowerOffTileEntity>> LEVER_POWER_OFF = REGISTRY.register("lever_power_off",
+			() -> BlockEntityType.Builder.of(LeverPowerOffTileEntity::new, BendymodModBlocks.LEVER_POWER_OFF.get()).build(null));
+	public static final RegistryObject<BlockEntityType<LeverPowerOnTileEntity>> LEVER_POWER_ON = REGISTRY.register("lever_power_on", () -> BlockEntityType.Builder.of(LeverPowerOnTileEntity::new, BendymodModBlocks.LEVER_POWER_ON.get()).build(null));
 
 	private static RegistryObject<BlockEntityType<?>> register(String registryname, RegistryObject<Block> block, BlockEntityType.BlockEntitySupplier<?> supplier) {
 		return REGISTRY.register(registryname, () -> BlockEntityType.Builder.of(supplier, block.get()).build(null));

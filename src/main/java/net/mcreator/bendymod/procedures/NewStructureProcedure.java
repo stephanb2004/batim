@@ -89,12 +89,20 @@ public class NewStructureProcedure {
 			SetStructureBlocksProcedure.execute(world, x, y, z);
 			SetStructureBlocksProcedure.execute(world, x, y, (z + 17));
 			SetStructureBlocksProcedure.execute(world, x, y, (z - 17));
+			SetStructureBlocksProcedure.execute(world, x, y, (z + 16));
+			SetStructureBlocksProcedure.execute(world, x, y, (z - 16));
 			SetStructureBlocksProcedure.execute(world, (x - 17), y, z);
 			SetStructureBlocksProcedure.execute(world, (x + 17), y, z);
+			SetStructureBlocksProcedure.execute(world, (x - 16), y, z);
+			SetStructureBlocksProcedure.execute(world, (x + 16), y, z);
 			SetStructureBlocksProcedure.execute(world, (x - 17), y, (z - 17));
 			SetStructureBlocksProcedure.execute(world, (x - 17), y, (z + 17));
+			SetStructureBlocksProcedure.execute(world, (x - 16), y, (z - 16));
+			SetStructureBlocksProcedure.execute(world, (x - 16), y, (z + 16));
 			SetStructureBlocksProcedure.execute(world, (x + 17), y, (z + 17));
 			SetStructureBlocksProcedure.execute(world, (x + 17), y, (z - 17));
+			SetStructureBlocksProcedure.execute(world, (x + 16), y, (z + 16));
+			SetStructureBlocksProcedure.execute(world, (x + 16), y, (z - 16));
 		}
 	}
 }

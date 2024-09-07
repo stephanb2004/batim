@@ -35,8 +35,10 @@ import net.mcreator.bendymod.block.renderer.ProjectorTileRenderer;
 import net.mcreator.bendymod.block.renderer.PianoTileRenderer;
 import net.mcreator.bendymod.block.renderer.PedestalTileRenderer;
 import net.mcreator.bendymod.block.renderer.MusicDepartmentSignTileRenderer;
-import net.mcreator.bendymod.block.renderer.LeverStudioTileRenderer;
-import net.mcreator.bendymod.block.renderer.LeverPowerTileRenderer;
+import net.mcreator.bendymod.block.renderer.LeverStudioOnTileRenderer;
+import net.mcreator.bendymod.block.renderer.LeverStudioOffTileRenderer;
+import net.mcreator.bendymod.block.renderer.LeverPowerOnTileRenderer;
+import net.mcreator.bendymod.block.renderer.LeverPowerOffTileRenderer;
 import net.mcreator.bendymod.block.renderer.LargeBoxTileRenderer;
 import net.mcreator.bendymod.block.renderer.JumbledPaperTileRenderer;
 import net.mcreator.bendymod.block.renderer.JDSSignTileRenderer;
@@ -89,8 +91,6 @@ public class ClientListener {
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.RADIO.get(), RadioTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.SPEAKER.get(), SpeakerTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.CASSETTE_PLAYER.get(), CassettePlayerTileRenderer::new);
-		event.registerBlockEntityRenderer(BendymodModBlockEntities.LEVER_POWER.get(), LeverPowerTileRenderer::new);
-		event.registerBlockEntityRenderer(BendymodModBlockEntities.LEVER_STUDIO.get(), LeverStudioTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.VALVE.get(), ValveTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.LARGE_BOX.get(), LargeBoxTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.INK_MACHINE.get(), InkMachineTileRenderer::new);
@@ -132,5 +132,9 @@ public class ClientListener {
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.CELLBOX_1.get(), Cellbox1TileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.CELLBOX_2.get(), Cellbox2TileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.HEAVY_GATE_CLOSED.get(), HeavyGateClosedTileRenderer::new);
+		event.registerBlockEntityRenderer(BendymodModBlockEntities.LEVER_STUDIO_OFF.get(), LeverStudioOffTileRenderer::new);
+		event.registerBlockEntityRenderer(BendymodModBlockEntities.LEVER_STUDIO_ON.get(), LeverStudioOnTileRenderer::new);
+		event.registerBlockEntityRenderer(BendymodModBlockEntities.LEVER_POWER_OFF.get(), LeverPowerOffTileRenderer::new);
+		event.registerBlockEntityRenderer(BendymodModBlockEntities.LEVER_POWER_ON.get(), LeverPowerOnTileRenderer::new);
 	}
 }

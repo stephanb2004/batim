@@ -533,52 +533,6 @@
       "path": "~/Mod Stuff/Blocks/Props/Furniture"
     },
     {
-      "name": "LeverPower",
-      "type": "animatedblock",
-      "sortid": 50,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "lever_power",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/bendymod/block/entity/LeverPowerTileEntity.java",
-          "src/main/java/net/mcreator/bendymod/block/model/LeverPowerBlockModel.java",
-          "src/main/resources/assets/bendymod/models/item/lever_power.json",
-          "src/main/java/net/mcreator/bendymod/block/renderer/LeverPowerTileRenderer.java",
-          "src/main/java/net/mcreator/bendymod/block/model/LeverPowerDisplayModel.java",
-          "src/main/java/net/mcreator/bendymod/block/LeverPowerBlock.java",
-          "src/main/resources/assets/bendymod/blockstates/lever_power.json",
-          "src/main/resources/assets/bendymod/models/custom/lever_power_particle.json",
-          "src/main/java/net/mcreator/bendymod/block/renderer/LeverPowerDisplayItemRenderer.java",
-          "src/main/java/net/mcreator/bendymod/block/display/LeverPowerDisplayItem.java"
-        ]
-      },
-      "path": "~/Mod Stuff/Blocks/Props/Switches"
-    },
-    {
-      "name": "LeverStudio",
-      "type": "animatedblock",
-      "sortid": 51,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "lever_studio",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/bendymod/block/renderer/LeverStudioTileRenderer.java",
-          "src/main/java/net/mcreator/bendymod/block/renderer/LeverStudioDisplayItemRenderer.java",
-          "src/main/java/net/mcreator/bendymod/block/display/LeverStudioDisplayItem.java",
-          "src/main/java/net/mcreator/bendymod/block/entity/LeverStudioTileEntity.java",
-          "src/main/java/net/mcreator/bendymod/block/model/LeverStudioBlockModel.java",
-          "src/main/resources/assets/bendymod/models/item/lever_studio.json",
-          "src/main/java/net/mcreator/bendymod/block/LeverStudioBlock.java",
-          "src/main/resources/assets/bendymod/models/custom/lever_studio_particle.json",
-          "src/main/java/net/mcreator/bendymod/block/model/LeverStudioDisplayModel.java",
-          "src/main/resources/assets/bendymod/blockstates/lever_studio.json"
-        ]
-      },
-      "path": "~/Mod Stuff/Blocks/Props/Switches"
-    },
-    {
       "name": "Valve",
       "type": "animatedblock",
       "sortid": 52,
@@ -3738,6 +3692,162 @@
         ]
       },
       "path": "~/Mod Stuff/Blocks/Props/Gates"
+    },
+    {
+      "name": "LeverStudioOff",
+      "type": "animatedblock",
+      "sortid": 177,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lever_studio_off",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/block/LeverStudioOffBlock.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/LeverStudioOffDisplayItemRenderer.java",
+          "src/main/resources/assets/bendymod/models/custom/lever_studio_off_particle.json",
+          "src/main/resources/assets/bendymod/models/item/lever_studio_off.json",
+          "src/main/java/net/mcreator/bendymod/block/entity/LeverStudioOffTileEntity.java",
+          "src/main/java/net/mcreator/bendymod/block/model/LeverStudioOffDisplayModel.java",
+          "src/main/resources/assets/bendymod/blockstates/lever_studio_off.json",
+          "src/main/java/net/mcreator/bendymod/block/renderer/LeverStudioOffTileRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/model/LeverStudioOffBlockModel.java",
+          "src/main/java/net/mcreator/bendymod/block/display/LeverStudioOffDisplayItem.java"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props/Switches"
+    },
+    {
+      "name": "LeverStudioOn",
+      "type": "animatedblock",
+      "sortid": 178,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lever_studio_on",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/blockstates/lever_studio_on.json",
+          "src/main/java/net/mcreator/bendymod/block/model/LeverStudioOnDisplayModel.java",
+          "src/main/java/net/mcreator/bendymod/block/LeverStudioOnBlock.java",
+          "src/main/resources/assets/bendymod/models/custom/lever_studio_on_particle.json",
+          "src/main/java/net/mcreator/bendymod/block/entity/LeverStudioOnTileEntity.java",
+          "src/main/java/net/mcreator/bendymod/block/display/LeverStudioOnDisplayItem.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/LeverStudioOnTileRenderer.java",
+          "src/main/resources/assets/bendymod/models/item/lever_studio_on.json",
+          "src/main/java/net/mcreator/bendymod/block/renderer/LeverStudioOnDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/model/LeverStudioOnBlockModel.java"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props/Switches"
+    },
+    {
+      "name": "LeverOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 179,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lever_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/LeverOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props/Switches"
+    },
+    {
+      "name": "LeverPowerOff",
+      "type": "animatedblock",
+      "sortid": 180,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lever_power_off",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/block/renderer/LeverPowerOffTileRenderer.java",
+          "src/main/resources/assets/bendymod/blockstates/lever_power_off.json",
+          "src/main/resources/assets/bendymod/models/custom/lever_power_off_particle.json",
+          "src/main/java/net/mcreator/bendymod/block/LeverPowerOffBlock.java",
+          "src/main/java/net/mcreator/bendymod/block/entity/LeverPowerOffTileEntity.java",
+          "src/main/java/net/mcreator/bendymod/block/model/LeverPowerOffBlockModel.java",
+          "src/main/resources/assets/bendymod/models/item/lever_power_off.json",
+          "src/main/java/net/mcreator/bendymod/block/renderer/LeverPowerOffDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/model/LeverPowerOffDisplayModel.java",
+          "src/main/java/net/mcreator/bendymod/block/display/LeverPowerOffDisplayItem.java"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props/Switches"
+    },
+    {
+      "name": "LeverPowerOn",
+      "type": "animatedblock",
+      "sortid": 181,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lever_power_on",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/models/item/lever_power_on.json",
+          "src/main/java/net/mcreator/bendymod/block/model/LeverPowerOnBlockModel.java",
+          "src/main/java/net/mcreator/bendymod/block/model/LeverPowerOnDisplayModel.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/LeverPowerOnTileRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/entity/LeverPowerOnTileEntity.java",
+          "src/main/resources/assets/bendymod/models/custom/lever_power_on_particle.json",
+          "src/main/java/net/mcreator/bendymod/block/renderer/LeverPowerOnDisplayItemRenderer.java",
+          "src/main/resources/assets/bendymod/blockstates/lever_power_on.json",
+          "src/main/java/net/mcreator/bendymod/block/display/LeverPowerOnDisplayItem.java",
+          "src/main/java/net/mcreator/bendymod/block/LeverPowerOnBlock.java"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props/Switches"
+    },
+    {
+      "name": "ValveOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 182,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "valve_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/ValveOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props/Switches"
     }
   ],
   "variable_elements": [
@@ -3763,6 +3873,12 @@
       "name": "EnteredStudio",
       "type": "logic",
       "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "inkbendy_summoned",
+      "type": "logic",
+      "scope": "map",
       "value": "false"
     }
   ],
@@ -3869,12 +3985,11 @@
   ],
   "language_map": {
     "en_us": {
-      "block.bendymod.recording_sign_off": "Recording Sign",
       "block.bendymod.studio_door_basic": "Studio Basic Door",
+      "block.bendymod.recording_sign_off": "Recording Sign",
       "gamerule.inkDemonTeleportMode.description": "If this is on, then the Ink Demon can only teleport to players in Survival.",
-      "block.bendymod.lever_power": "Power Lever",
-      "item.bendymod.studio_axe": "Studio Axe",
       "block.bendymod.desk_fancy": "Fancy Desk",
+      "item.bendymod.studio_axe": "Studio Axe",
       "block.bendymod.ritual_summoning": "Ritual Summoning",
       "block.bendymod.hallways_structure_block": "Hallways Structure Block",
       "block.bendymod.bendy_head": "Bendy Head",
@@ -3896,6 +4011,7 @@
       "itemGroup.tabbendy_props": "Bendy Props",
       "block.bendymod.poster_delicious": "Poster (Delicious!)",
       "block.bendymod.cog": "Cog",
+      "block.bendymod.lever_power_off": "Power Lever",
       "block.bendymod.poster_sent_from_above": "Poster (Sent From Above)",
       "block.bendymod.infermary_bed": "Infermary Bed",
       "block.bendymod.poster_large_work_hard_work_happy": "Large Poster (Work Hard Work Happy)",
@@ -3964,11 +4080,13 @@
       "block.bendymod.studio_tiled_wall": "Studio Tiled Wall",
       "block.bendymod.studio_planked_wall_broken": "Studio Planked Wall (Broken)",
       "block.bendymod.poster_large_train_trouble": "Large Poster (Train Trouble)",
+      "block.bendymod.lever_power_on": "Power Lever",
       "block.bendymod.coffin": "Coffin",
       "fluid.bendymod.ink": "Ink",
       "block.bendymod.stiff_studio_door_segmented": "Stiff Studio Segmented Door",
       "block.bendymod.studio_floor": "Studio Floor",
       "block.bendymod.jds_sign": "Joey Drew Studios Sign",
+      "block.bendymod.lever_studio_on": "Studio Lever",
       "block.bendymod.stiff_studio_door_basic": "Stiff Studio Basic Door",
       "block.bendymod.chain_fence": "Chain Fence",
       "subtitles.searcher_hit": "Searcher is hit",
@@ -3984,7 +4102,6 @@
       "block.bendymod.heavy_gate_open": "Heavy Gate",
       "block.bendymod.studio_blank_wall": "Studio Blank Wall",
       "block.bendymod.studio_blank_wall_fence": "Studio Blank Wall Fence",
-      "block.bendymod.lever_studio": "Studio Lever",
       "subtitles.searcher_die": "Searcher dies.",
       "block.bendymod.poster_large_dancing_demon": "Large Poster (Dancing Demon)",
       "block.bendymod.toolbox": "Toolbox",
@@ -4015,6 +4132,7 @@
       "item.bendymod.ink_bucket": "Ink Bucket",
       "block.bendymod.writing_sing_with_me": "Ink Writing (Sing With Me)",
       "block.bendymod.cellbox_0": "Cellbox",
+      "block.bendymod.lever_studio_off": "Studio Lever",
       "block.bendymod.studio_dirt": "Studio Dirt",
       "block.bendymod.inactive_hallways_structure_block": "Hallways Structure Block (Inactive)",
       "block.bendymod.large_box": "Large Box",

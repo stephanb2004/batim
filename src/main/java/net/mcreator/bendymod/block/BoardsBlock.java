@@ -66,10 +66,10 @@ public class BoardsBlock extends BaseEntityBlock implements EntityBlock {
 	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 
 		return switch (state.getValue(FACING)) {
-			default -> box(-8, -8, 0, 24, 20, 2);
-			case NORTH -> box(-8, -8, 14, 24, 20, 16);
-			case EAST -> box(0, -8, -8, 2, 20, 24);
-			case WEST -> box(14, -8, -8, 16, 20, 24);
+			default -> box(-8, -2, 0, 24, 20, 2);
+			case NORTH -> box(-8, -2, 14, 24, 20, 16);
+			case EAST -> box(0, -2, -8, 2, 20, 24);
+			case WEST -> box(14, -2, -8, 16, 20, 24);
 		};
 	}
 

@@ -105,6 +105,7 @@ public class HeavyGateOpenBlock extends BaseEntityBlock implements EntityBlock {
 	public void neighborChanged(BlockState blockstate, Level world, BlockPos pos, Block neighborBlock, BlockPos fromPos, boolean moving) {
 		super.neighborChanged(blockstate, world, pos, neighborBlock, fromPos, moving);
 		if (world.getBestNeighborSignal(pos) > 0) {
+		} else {
 			HeavyGateOpenRedstoneOnProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 		}
 	}

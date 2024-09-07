@@ -18,7 +18,7 @@ import java.util.Map;
 
 public class HeavyGateClosedRedstoneOffProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		if (!(world instanceof Level _lvl_isPow ? _lvl_isPow.hasNeighborSignal(new BlockPos(x, y, z)) : false)) {
+		if (world instanceof Level _lvl_isPow ? _lvl_isPow.hasNeighborSignal(new BlockPos(x, y, z)) : false) {
 			{
 				int _value = 1;
 				BlockPos _pos = new BlockPos(x, y, z);

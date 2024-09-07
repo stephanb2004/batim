@@ -5,6 +5,12 @@
         "0": "ritual_1"
       },
       "name": "default"
+    },
+    "bendyumbrella": {
+      "map": {
+        "0": "painting_bendyumbrella"
+      },
+      "name": "bendyumbrella"
     }
   }
 }

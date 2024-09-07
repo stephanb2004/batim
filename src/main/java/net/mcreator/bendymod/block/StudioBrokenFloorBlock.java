@@ -16,7 +16,7 @@ import java.util.Collections;
 
 public class StudioBrokenFloorBlock extends Block {
 	public StudioBrokenFloorBlock() {
-		super(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2f, 3f));
+		super(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(-1, 3600000));
 	}
 
 	@Override

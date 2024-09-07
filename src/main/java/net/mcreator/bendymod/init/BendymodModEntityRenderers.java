@@ -9,6 +9,8 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
+
 import net.mcreator.bendymod.client.renderer.SitEntityRenderer;
 import net.mcreator.bendymod.client.renderer.SearcherRenderer;
 import net.mcreator.bendymod.client.renderer.SammyLawrenceRenderer;
@@ -20,6 +22,7 @@ import net.mcreator.bendymod.client.renderer.BendyRenderer;
 public class BendymodModEntityRenderers {
 	@SubscribeEvent
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
+		event.registerEntityRenderer(BendymodModEntities.BACON_SOUP_EMPTY.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(BendymodModEntities.BENDY.get(), BendyRenderer::new);
 		event.registerEntityRenderer(BendymodModEntities.BORIS_BUDDY.get(), BorisBuddyRenderer::new);
 		event.registerEntityRenderer(BendymodModEntities.SEARCHER.get(), SearcherRenderer::new);

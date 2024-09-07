@@ -15,7 +15,7 @@ import java.util.Collections;
 
 public class StudioBlankWallSlabBlock extends SlabBlock {
 	public StudioBlankWallSlabBlock() {
-		super(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2f, 3f).dynamicShape());
+		super(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(-1, 3600000).dynamicShape());
 	}
 
 	@Override

@@ -32,6 +32,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.bendymod.init.BendymodModTabs;
+import net.mcreator.bendymod.init.BendymodModSounds;
 import net.mcreator.bendymod.init.BendymodModMenus;
 import net.mcreator.bendymod.init.BendymodModItems;
 import net.mcreator.bendymod.init.BendymodModFluids;
@@ -39,6 +40,7 @@ import net.mcreator.bendymod.init.BendymodModFluidTypes;
 import net.mcreator.bendymod.init.BendymodModEntities;
 import net.mcreator.bendymod.init.BendymodModBlocks;
 import net.mcreator.bendymod.init.BendymodModBlockEntities;
+import net.mcreator.bendymod.init.BendymodModBiomes;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -58,7 +60,7 @@ public class BendymodMod {
 		MinecraftForge.EVENT_BUS.register(this);
 		BendymodModTabs.load();
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-
+		BendymodModSounds.REGISTRY.register(bus);
 		BendymodModBlocks.REGISTRY.register(bus);
 		BendymodModItems.REGISTRY.register(bus);
 		BendymodModEntities.REGISTRY.register(bus);
@@ -68,6 +70,7 @@ public class BendymodMod {
 		BendymodModFluidTypes.REGISTRY.register(bus);
 
 		BendymodModMenus.REGISTRY.register(bus);
+		BendymodModBiomes.REGISTRY.register(bus);
 
 		GeckoLib.initialize();
 	}

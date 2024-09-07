@@ -25,6 +25,7 @@ import net.mcreator.bendymod.block.entity.ValveTileEntity;
 import net.mcreator.bendymod.block.entity.TrashBinTileEntity;
 import net.mcreator.bendymod.block.entity.ToolboxTileEntity;
 import net.mcreator.bendymod.block.entity.StudioChairTileEntity;
+import net.mcreator.bendymod.block.entity.StairwayStructureBlockBlockEntity;
 import net.mcreator.bendymod.block.entity.SpeakerTileEntity;
 import net.mcreator.bendymod.block.entity.SoupCandleTileEntity;
 import net.mcreator.bendymod.block.entity.ShelfTileEntity;
@@ -33,6 +34,7 @@ import net.mcreator.bendymod.block.entity.ReelTileEntity;
 import net.mcreator.bendymod.block.entity.RecordingSignOnTileEntity;
 import net.mcreator.bendymod.block.entity.RecordingSignOffTileEntity;
 import net.mcreator.bendymod.block.entity.RecordTileEntity;
+import net.mcreator.bendymod.block.entity.RandomRoomStructureBlockBlockEntity;
 import net.mcreator.bendymod.block.entity.RadioTileEntity;
 import net.mcreator.bendymod.block.entity.PunchInCardTileEntity;
 import net.mcreator.bendymod.block.entity.ProjectorTileEntity;
@@ -48,9 +50,15 @@ import net.mcreator.bendymod.block.entity.InkPuddleSpawnerBlockEntity;
 import net.mcreator.bendymod.block.entity.InkMachineTileEntity;
 import net.mcreator.bendymod.block.entity.InkBarrelTileEntity;
 import net.mcreator.bendymod.block.entity.InfermaryBedTileEntity;
+import net.mcreator.bendymod.block.entity.InactiveStairwayStructureBlockBlockEntity;
+import net.mcreator.bendymod.block.entity.InactiveRandomRoomStructureBlockBlockEntity;
+import net.mcreator.bendymod.block.entity.InactiveHallwaysStructureBlockBlockEntity;
 import net.mcreator.bendymod.block.entity.IllusionOfLivingTileEntity;
+import net.mcreator.bendymod.block.entity.HeavyGateOpenTileEntity;
+import net.mcreator.bendymod.block.entity.HeavyGateClosedTileEntity;
 import net.mcreator.bendymod.block.entity.HatRackTileEntity;
 import net.mcreator.bendymod.block.entity.HangingMicTileEntity;
+import net.mcreator.bendymod.block.entity.HallwaysStructureBlockBlockEntity;
 import net.mcreator.bendymod.block.entity.GearboxTileEntity;
 import net.mcreator.bendymod.block.entity.DrumTileEntity;
 import net.mcreator.bendymod.block.entity.DresserTileEntity;
@@ -74,6 +82,8 @@ import net.mcreator.bendymod.BendymodMod;
 
 public class BendymodModBlockEntities {
 	public static final DeferredRegister<BlockEntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, BendymodMod.MODID);
+	public static final RegistryObject<BlockEntityType<HeavyGateOpenTileEntity>> HEAVY_GATE_OPEN = REGISTRY.register("heavy_gate_open",
+			() -> BlockEntityType.Builder.of(HeavyGateOpenTileEntity::new, BendymodModBlocks.HEAVY_GATE_OPEN.get()).build(null));
 	public static final RegistryObject<BlockEntityType<HangingMicTileEntity>> HANGING_MIC = REGISTRY.register("hanging_mic", () -> BlockEntityType.Builder.of(HangingMicTileEntity::new, BendymodModBlocks.HANGING_MIC.get()).build(null));
 	public static final RegistryObject<BlockEntityType<?>> CRATE = register("crate", BendymodModBlocks.CRATE, CrateBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<SoupCandleTileEntity>> SOUP_CANDLE = REGISTRY.register("soup_candle", () -> BlockEntityType.Builder.of(SoupCandleTileEntity::new, BendymodModBlocks.SOUP_CANDLE.get()).build(null));
@@ -139,12 +149,21 @@ public class BendymodModBlockEntities {
 			() -> BlockEntityType.Builder.of(WritingSingWithMeTileEntity::new, BendymodModBlocks.WRITING_SING_WITH_ME.get()).build(null));
 	public static final RegistryObject<BlockEntityType<WritingDownHereWereAllSinnersTileEntity>> WRITING_DOWN_HERE_WERE_ALL_SINNERS = REGISTRY.register("writing_down_here_were_all_sinners",
 			() -> BlockEntityType.Builder.of(WritingDownHereWereAllSinnersTileEntity::new, BendymodModBlocks.WRITING_DOWN_HERE_WERE_ALL_SINNERS.get()).build(null));
+	public static final RegistryObject<BlockEntityType<?>> INK_PUDDLE_SPAWNER = register("ink_puddle_spawner", BendymodModBlocks.INK_PUDDLE_SPAWNER, InkPuddleSpawnerBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<CutoutSinnyTileEntity>> CUTOUT_SINNY = REGISTRY.register("cutout_sinny", () -> BlockEntityType.Builder.of(CutoutSinnyTileEntity::new, BendymodModBlocks.CUTOUT_SINNY.get()).build(null));
 	public static final RegistryObject<BlockEntityType<RecordingSignOnTileEntity>> RECORDING_SIGN_ON = REGISTRY.register("recording_sign_on",
 			() -> BlockEntityType.Builder.of(RecordingSignOnTileEntity::new, BendymodModBlocks.RECORDING_SIGN_ON.get()).build(null));
 	public static final RegistryObject<BlockEntityType<Cellbox1TileEntity>> CELLBOX_1 = REGISTRY.register("cellbox_1", () -> BlockEntityType.Builder.of(Cellbox1TileEntity::new, BendymodModBlocks.CELLBOX_1.get()).build(null));
 	public static final RegistryObject<BlockEntityType<Cellbox2TileEntity>> CELLBOX_2 = REGISTRY.register("cellbox_2", () -> BlockEntityType.Builder.of(Cellbox2TileEntity::new, BendymodModBlocks.CELLBOX_2.get()).build(null));
-	public static final RegistryObject<BlockEntityType<?>> INK_PUDDLE_SPAWNER = register("ink_puddle_spawner", BendymodModBlocks.INK_PUDDLE_SPAWNER, InkPuddleSpawnerBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> HALLWAYS_STRUCTURE_BLOCK = register("hallways_structure_block", BendymodModBlocks.HALLWAYS_STRUCTURE_BLOCK, HallwaysStructureBlockBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> INACTIVE_HALLWAYS_STRUCTURE_BLOCK = register("inactive_hallways_structure_block", BendymodModBlocks.INACTIVE_HALLWAYS_STRUCTURE_BLOCK, InactiveHallwaysStructureBlockBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> RANDOM_ROOM_STRUCTURE_BLOCK = register("random_room_structure_block", BendymodModBlocks.RANDOM_ROOM_STRUCTURE_BLOCK, RandomRoomStructureBlockBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> INACTIVE_RANDOM_ROOM_STRUCTURE_BLOCK = register("inactive_random_room_structure_block", BendymodModBlocks.INACTIVE_RANDOM_ROOM_STRUCTURE_BLOCK,
+			InactiveRandomRoomStructureBlockBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> STAIRWAY_STRUCTURE_BLOCK = register("stairway_structure_block", BendymodModBlocks.STAIRWAY_STRUCTURE_BLOCK, StairwayStructureBlockBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> INACTIVE_STAIRWAY_STRUCTURE_BLOCK = register("inactive_stairway_structure_block", BendymodModBlocks.INACTIVE_STAIRWAY_STRUCTURE_BLOCK, InactiveStairwayStructureBlockBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<HeavyGateClosedTileEntity>> HEAVY_GATE_CLOSED = REGISTRY.register("heavy_gate_closed",
+			() -> BlockEntityType.Builder.of(HeavyGateClosedTileEntity::new, BendymodModBlocks.HEAVY_GATE_CLOSED.get()).build(null));
 
 	private static RegistryObject<BlockEntityType<?>> register(String registryname, RegistryObject<Block> block, BlockEntityType.BlockEntitySupplier<?> supplier) {
 		return REGISTRY.register(registryname, () -> BlockEntityType.Builder.of(supplier, block.get()).build(null));

@@ -1,0 +1,16 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "baconsoup"
+      },
+      "name": "default"
+    },
+    "empty": {
+      "map": {
+        "0": "baconsoup_empty"
+      },
+      "name": "empty"
+    }
+  }
+}

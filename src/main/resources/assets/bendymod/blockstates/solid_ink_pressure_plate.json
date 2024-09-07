@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "bendymod:block/solid_ink_pressure_plate"
+    },
+    "powered=true": {
+      "model": "bendymod:block/solid_ink_pressure_plate_down"
+    }
+  }
+}

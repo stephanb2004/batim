@@ -58,7 +58,7 @@
     {
       "name": "BendyBlocks",
       "type": "tab",
-      "sortid": 115,
+      "sortid": 122,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bendy_blocks",
@@ -176,7 +176,7 @@
     {
       "name": "Bendy",
       "type": "animatedentity",
-      "sortid": 110,
+      "sortid": 117,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bendy",
@@ -193,7 +193,7 @@
     {
       "name": "BendyEntities",
       "type": "tab",
-      "sortid": 116,
+      "sortid": 123,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bendy_entities",
@@ -205,7 +205,7 @@
     {
       "name": "StudioAxe",
       "type": "tool",
-      "sortid": 23,
+      "sortid": 27,
       "compiles": true,
       "locked_code": false,
       "registry_name": "studio_axe",
@@ -220,7 +220,7 @@
     {
       "name": "BendyProps",
       "type": "tab",
-      "sortid": 117,
+      "sortid": 124,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bendy_props",
@@ -232,7 +232,7 @@
     {
       "name": "SammyLawrence",
       "type": "animatedentity",
-      "sortid": 114,
+      "sortid": 121,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sammy_lawrence",
@@ -249,7 +249,7 @@
     {
       "name": "CutoutBendy",
       "type": "animatedblock",
-      "sortid": 31,
+      "sortid": 36,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cutout_bendy",
@@ -267,12 +267,12 @@
           "src/main/java/net/mcreator/bendymod/block/renderer/CutoutBendyDisplayItemRenderer.java"
         ]
       },
-      "path": "~/Mod Stuff/Blocks/Props"
+      "path": "~/Mod Stuff/Blocks/Props/Cutouts"
     },
     {
       "name": "CutoutSinny",
       "type": "animatedblock",
-      "sortid": 118,
+      "sortid": 125,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cutout_sinny",
@@ -290,12 +290,12 @@
           "src/main/resources/assets/bendymod/models/custom/cutout_sinny_particle.json"
         ]
       },
-      "path": "~/Mod Stuff/Blocks/Props"
+      "path": "~/Mod Stuff/Blocks/Props/Cutouts"
     },
     {
       "name": "InkBendy",
       "type": "animatedentity",
-      "sortid": 113,
+      "sortid": 120,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ink_bendy",
@@ -307,12 +307,12 @@
           "src/main/java/net/mcreator/bendymod/entity/model/InkBendyModel.java"
         ]
       },
-      "path": "~/Mod Stuff/Entities"
+      "path": "~/Mod Stuff/Entities/InkBendy"
     },
     {
       "name": "InkBendyOnEntityTickUpdate",
       "type": "procedure",
-      "sortid": 119,
+      "sortid": 126,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ink_bendy_on_entity_tick_update",
@@ -324,15 +324,31 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
-      "path": "~/Mod Stuff/Entities"
+      "path": "~/Mod Stuff/Entities/InkBendy"
     },
     {
       "name": "Searcher",
       "type": "animatedentity",
-      "sortid": 112,
+      "sortid": 119,
       "compiles": true,
       "locked_code": false,
       "registry_name": "searcher",
@@ -349,7 +365,7 @@
     {
       "name": "BorisBuddy",
       "type": "animatedentity",
-      "sortid": 111,
+      "sortid": 118,
       "compiles": true,
       "locked_code": false,
       "registry_name": "boris_buddy",
@@ -366,7 +382,7 @@
     {
       "name": "BorisBuddyOnEntityTickUpdate",
       "type": "procedure",
-      "sortid": 120,
+      "sortid": 127,
       "compiles": true,
       "locked_code": false,
       "registry_name": "boris_buddy_on_entity_tick_update",
@@ -426,7 +442,7 @@
     {
       "name": "StudioDoorSegmented",
       "type": "block",
-      "sortid": 19,
+      "sortid": 20,
       "compiles": true,
       "locked_code": false,
       "registry_name": "studio_door_segmented",
@@ -450,7 +466,7 @@
     {
       "name": "InkMachine",
       "type": "animatedblock",
-      "sortid": 51,
+      "sortid": 56,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ink_machine",
@@ -473,7 +489,7 @@
     {
       "name": "Speaker",
       "type": "animatedblock",
-      "sortid": 43,
+      "sortid": 48,
       "compiles": true,
       "locked_code": false,
       "registry_name": "speaker",
@@ -496,7 +512,7 @@
     {
       "name": "Dresser",
       "type": "animatedblock",
-      "sortid": 38,
+      "sortid": 43,
       "compiles": true,
       "locked_code": false,
       "registry_name": "dresser",
@@ -519,7 +535,7 @@
     {
       "name": "LeverPower",
       "type": "animatedblock",
-      "sortid": 45,
+      "sortid": 50,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lever_power",
@@ -542,7 +558,7 @@
     {
       "name": "LeverStudio",
       "type": "animatedblock",
-      "sortid": 46,
+      "sortid": 51,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lever_studio",
@@ -565,7 +581,7 @@
     {
       "name": "Valve",
       "type": "animatedblock",
-      "sortid": 47,
+      "sortid": 52,
       "compiles": true,
       "locked_code": false,
       "registry_name": "valve",
@@ -588,7 +604,7 @@
     {
       "name": "Record",
       "type": "animatedblock",
-      "sortid": 72,
+      "sortid": 77,
       "compiles": true,
       "locked_code": false,
       "registry_name": "record",
@@ -611,7 +627,7 @@
     {
       "name": "TrashBin",
       "type": "animatedblock",
-      "sortid": 41,
+      "sortid": 46,
       "compiles": true,
       "locked_code": false,
       "registry_name": "trash_bin",
@@ -634,7 +650,7 @@
     {
       "name": "JumbledPaper",
       "type": "animatedblock",
-      "sortid": 52,
+      "sortid": 57,
       "compiles": true,
       "locked_code": false,
       "registry_name": "jumbled_paper",
@@ -657,7 +673,7 @@
     {
       "name": "Boards",
       "type": "animatedblock",
-      "sortid": 53,
+      "sortid": 58,
       "compiles": true,
       "locked_code": false,
       "registry_name": "boards",
@@ -678,26 +694,9 @@
       "path": "~/Mod Stuff/Blocks/Props"
     },
     {
-      "name": "BaconSoup",
-      "type": "animateditem",
-      "sortid": 24,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "bacon_soup",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/bendymod/item/BaconSoupItem.java",
-          "src/main/java/net/mcreator/bendymod/item/model/BaconSoupItemModel.java",
-          "src/main/resources/assets/bendymod/models/item/bacon_soup.json",
-          "src/main/java/net/mcreator/bendymod/item/renderer/BaconSoupItemRenderer.java"
-        ]
-      },
-      "path": "~/Mod Stuff"
-    },
-    {
       "name": "Radio",
       "type": "animatedblock",
-      "sortid": 42,
+      "sortid": 47,
       "compiles": true,
       "locked_code": false,
       "registry_name": "radio",
@@ -720,7 +719,7 @@
     {
       "name": "CassettePlayer",
       "type": "animatedblock",
-      "sortid": 44,
+      "sortid": 49,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cassette_player",
@@ -743,7 +742,7 @@
     {
       "name": "Desk",
       "type": "animatedblock",
-      "sortid": 33,
+      "sortid": 38,
       "compiles": true,
       "locked_code": false,
       "registry_name": "desk",
@@ -766,7 +765,7 @@
     {
       "name": "StudioChair",
       "type": "animatedblock",
-      "sortid": 37,
+      "sortid": 42,
       "compiles": true,
       "locked_code": false,
       "registry_name": "studio_chair",
@@ -789,7 +788,7 @@
     {
       "name": "Projector",
       "type": "animatedblock",
-      "sortid": 32,
+      "sortid": 37,
       "compiles": true,
       "locked_code": false,
       "registry_name": "projector",
@@ -812,7 +811,7 @@
     {
       "name": "BorisClone",
       "type": "animatedblock",
-      "sortid": 54,
+      "sortid": 59,
       "compiles": true,
       "locked_code": false,
       "registry_name": "boris_clone",
@@ -869,7 +868,7 @@
     {
       "name": "InkPuddle",
       "type": "block",
-      "sortid": 49,
+      "sortid": 54,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ink_puddle",
@@ -886,7 +885,7 @@
     {
       "name": "StudioLamp",
       "type": "block",
-      "sortid": 40,
+      "sortid": 45,
       "compiles": true,
       "locked_code": false,
       "registry_name": "studio_lamp",
@@ -903,7 +902,7 @@
     {
       "name": "BendyStatue",
       "type": "animatedblock",
-      "sortid": 55,
+      "sortid": 60,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bendy_statue",
@@ -926,7 +925,7 @@
     {
       "name": "InkBarrel",
       "type": "animatedblock",
-      "sortid": 39,
+      "sortid": 44,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ink_barrel",
@@ -949,7 +948,7 @@
     {
       "name": "PosterLittleDevilDarlin",
       "type": "block",
-      "sortid": 87,
+      "sortid": 93,
       "compiles": true,
       "locked_code": false,
       "registry_name": "poster_little_devil_darlin",
@@ -966,7 +965,7 @@
     {
       "name": "PosterDancingDemon",
       "type": "block",
-      "sortid": 88,
+      "sortid": 94,
       "compiles": true,
       "locked_code": false,
       "registry_name": "poster_dancing_demon",
@@ -983,7 +982,7 @@
     {
       "name": "PosterSheepSongs",
       "type": "block",
-      "sortid": 89,
+      "sortid": 95,
       "compiles": true,
       "locked_code": false,
       "registry_name": "poster_sheep_songs",
@@ -1000,7 +999,7 @@
     {
       "name": "Coffin",
       "type": "animatedblock",
-      "sortid": 56,
+      "sortid": 61,
       "compiles": true,
       "locked_code": false,
       "registry_name": "coffin",
@@ -1023,7 +1022,7 @@
     {
       "name": "Ink",
       "type": "fluid",
-      "sortid": 25,
+      "sortid": 30,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ink",
@@ -1060,7 +1059,7 @@
     {
       "name": "WritingDreamsComeTrue",
       "type": "animatedblock",
-      "sortid": 102,
+      "sortid": 108,
       "compiles": true,
       "locked_code": false,
       "registry_name": "writing_dreams_come_true",
@@ -1083,7 +1082,7 @@
     {
       "name": "WritingWhosLaughingNow",
       "type": "animatedblock",
-      "sortid": 103,
+      "sortid": 109,
       "compiles": true,
       "locked_code": false,
       "registry_name": "writing_whos_laughing_now",
@@ -1106,7 +1105,7 @@
     {
       "name": "WritingTheCreatorLiedToUs",
       "type": "animatedblock",
-      "sortid": 104,
+      "sortid": 110,
       "compiles": true,
       "locked_code": false,
       "registry_name": "writing_the_creator_lied_to_us",
@@ -1129,7 +1128,7 @@
     {
       "name": "ChainFence",
       "type": "block",
-      "sortid": 21,
+      "sortid": 24,
       "compiles": true,
       "locked_code": false,
       "registry_name": "chain_fence",
@@ -1150,7 +1149,7 @@
     {
       "name": "Reel",
       "type": "animatedblock",
-      "sortid": 57,
+      "sortid": 62,
       "compiles": true,
       "locked_code": false,
       "registry_name": "reel",
@@ -1173,7 +1172,7 @@
     {
       "name": "SoupCandle",
       "type": "animatedblock",
-      "sortid": 27,
+      "sortid": 32,
       "compiles": true,
       "locked_code": false,
       "registry_name": "soup_candle",
@@ -1196,7 +1195,7 @@
     {
       "name": "Crate",
       "type": "block",
-      "sortid": 26,
+      "sortid": 31,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crate",
@@ -1214,7 +1213,7 @@
     {
       "name": "CrateInventory",
       "type": "gui",
-      "sortid": 121,
+      "sortid": 128,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crate_inventory",
@@ -1229,7 +1228,7 @@
     {
       "name": "InkPuddleWall",
       "type": "block",
-      "sortid": 50,
+      "sortid": 55,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ink_puddle_wall",
@@ -1246,7 +1245,7 @@
     {
       "name": "RitualSummoning",
       "type": "block",
-      "sortid": 109,
+      "sortid": 115,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ritual_summoning",
@@ -1301,7 +1300,7 @@
     {
       "name": "FenceBlocks",
       "type": "tag",
-      "sortid": 122,
+      "sortid": 129,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fence_blocks",
@@ -1315,7 +1314,7 @@
     {
       "name": "WoodenFenceBlocks",
       "type": "tag",
-      "sortid": 123,
+      "sortid": 130,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wooden_fence_blocks",
@@ -1329,7 +1328,7 @@
     {
       "name": "PosterLargeLittleDevilDarlin",
       "type": "block",
-      "sortid": 94,
+      "sortid": 100,
       "compiles": true,
       "locked_code": false,
       "registry_name": "poster_large_little_devil_darlin",
@@ -1346,7 +1345,7 @@
     {
       "name": "PosterLargeDancingDemon",
       "type": "block",
-      "sortid": 95,
+      "sortid": 101,
       "compiles": true,
       "locked_code": false,
       "registry_name": "poster_large_dancing_demon",
@@ -1363,7 +1362,7 @@
     {
       "name": "PosterLargeSheepSongs",
       "type": "block",
-      "sortid": 96,
+      "sortid": 102,
       "compiles": true,
       "locked_code": false,
       "registry_name": "poster_large_sheep_songs",
@@ -1380,7 +1379,7 @@
     {
       "name": "SignLight",
       "type": "block",
-      "sortid": 29,
+      "sortid": 34,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sign_light",
@@ -1397,7 +1396,7 @@
     {
       "name": "SignDark",
       "type": "block",
-      "sortid": 30,
+      "sortid": 35,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sign_dark",
@@ -1469,7 +1468,7 @@
     {
       "name": "DeskFancy",
       "type": "animatedblock",
-      "sortid": 34,
+      "sortid": 39,
       "compiles": true,
       "locked_code": false,
       "registry_name": "desk_fancy",
@@ -1492,7 +1491,7 @@
     {
       "name": "Shelf",
       "type": "animatedblock",
-      "sortid": 36,
+      "sortid": 41,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shelf",
@@ -1515,7 +1514,7 @@
     {
       "name": "JDSSign",
       "type": "animatedblock",
-      "sortid": 58,
+      "sortid": 63,
       "compiles": true,
       "locked_code": false,
       "registry_name": "jds_sign",
@@ -1538,7 +1537,7 @@
     {
       "name": "PlankedTrapdoor",
       "type": "block",
-      "sortid": 20,
+      "sortid": 22,
       "compiles": true,
       "locked_code": false,
       "registry_name": "planked_trapdoor",
@@ -1557,7 +1556,7 @@
     {
       "name": "WorkTable",
       "type": "animatedblock",
-      "sortid": 35,
+      "sortid": 40,
       "compiles": true,
       "locked_code": false,
       "registry_name": "work_table",
@@ -1580,7 +1579,7 @@
     {
       "name": "MusicDepartmentSign",
       "type": "animatedblock",
-      "sortid": 59,
+      "sortid": 64,
       "compiles": true,
       "locked_code": false,
       "registry_name": "music_department_sign",
@@ -1603,7 +1602,7 @@
     {
       "name": "PipeStraight",
       "type": "block",
-      "sortid": 61,
+      "sortid": 66,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pipe_straight",
@@ -1620,7 +1619,7 @@
     {
       "name": "PipeWallVertical",
       "type": "block",
-      "sortid": 62,
+      "sortid": 67,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pipe_wall_vertical",
@@ -1637,7 +1636,7 @@
     {
       "name": "PipeWallHorizontal",
       "type": "block",
-      "sortid": 63,
+      "sortid": 68,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pipe_wall_horizontal",
@@ -1654,7 +1653,7 @@
     {
       "name": "Gearbox",
       "type": "animatedblock",
-      "sortid": 64,
+      "sortid": 69,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gearbox",
@@ -1677,7 +1676,7 @@
     {
       "name": "Toolbox",
       "type": "animatedblock",
-      "sortid": 65,
+      "sortid": 70,
       "compiles": true,
       "locked_code": false,
       "registry_name": "toolbox",
@@ -1700,7 +1699,7 @@
     {
       "name": "VentCover",
       "type": "block",
-      "sortid": 28,
+      "sortid": 33,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vent_cover",
@@ -1717,7 +1716,7 @@
     {
       "name": "WritingItsTimeToBelieve",
       "type": "animatedblock",
-      "sortid": 105,
+      "sortid": 111,
       "compiles": true,
       "locked_code": false,
       "registry_name": "writing_its_time_to_believe",
@@ -1740,7 +1739,7 @@
     {
       "name": "WritingTheSheepWillComeToSlaughter",
       "type": "animatedblock",
-      "sortid": 106,
+      "sortid": 112,
       "compiles": true,
       "locked_code": false,
       "registry_name": "writing_the_sheep_will_come_to_slaughter",
@@ -1763,7 +1762,7 @@
     {
       "name": "WritingSingWithMe",
       "type": "animatedblock",
-      "sortid": 107,
+      "sortid": 113,
       "compiles": true,
       "locked_code": false,
       "registry_name": "writing_sing_with_me",
@@ -1786,7 +1785,7 @@
     {
       "name": "WritingDownHereWereAllSinners",
       "type": "animatedblock",
-      "sortid": 108,
+      "sortid": 114,
       "compiles": true,
       "locked_code": false,
       "registry_name": "writing_down_here_were_all_sinners",
@@ -1809,7 +1808,7 @@
     {
       "name": "HatRack",
       "type": "animatedblock",
-      "sortid": 66,
+      "sortid": 71,
       "compiles": true,
       "locked_code": false,
       "registry_name": "hat_rack",
@@ -1832,7 +1831,7 @@
     {
       "name": "CurtainRaggety",
       "type": "block",
-      "sortid": 84,
+      "sortid": 89,
       "compiles": true,
       "locked_code": false,
       "registry_name": "curtain_raggety",
@@ -1849,7 +1848,7 @@
     {
       "name": "RecordingSignOff",
       "type": "animatedblock",
-      "sortid": 60,
+      "sortid": 65,
       "compiles": true,
       "locked_code": false,
       "registry_name": "recording_sign_off",
@@ -1872,7 +1871,7 @@
     {
       "name": "RecordingSignOn",
       "type": "animatedblock",
-      "sortid": 124,
+      "sortid": 131,
       "compiles": true,
       "locked_code": false,
       "registry_name": "recording_sign_on",
@@ -1895,7 +1894,7 @@
     {
       "name": "RecordingSignOnRedstoneOff",
       "type": "procedure",
-      "sortid": 125,
+      "sortid": 132,
       "compiles": true,
       "locked_code": false,
       "registry_name": "recording_sign_on_redstone_off",
@@ -1927,7 +1926,7 @@
     {
       "name": "RecordingSignOffRedstoneOn",
       "type": "procedure",
-      "sortid": 126,
+      "sortid": 133,
       "compiles": true,
       "locked_code": false,
       "registry_name": "recording_sign_off_redstone_on",
@@ -1959,7 +1958,7 @@
     {
       "name": "PunchInCard",
       "type": "animatedblock",
-      "sortid": 67,
+      "sortid": 72,
       "compiles": true,
       "locked_code": false,
       "registry_name": "punch_in_card",
@@ -1982,7 +1981,7 @@
     {
       "name": "PunchInCardOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 127,
+      "sortid": 134,
       "compiles": true,
       "locked_code": false,
       "registry_name": "punch_in_card_on_block_right_clicked",
@@ -2018,7 +2017,7 @@
     {
       "name": "SitEntityOnEntityTickUpdate",
       "type": "procedure",
-      "sortid": 128,
+      "sortid": 135,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sit_entity_on_entity_tick_update",
@@ -2038,7 +2037,7 @@
     {
       "name": "SitEntity",
       "type": "livingentity",
-      "sortid": 129,
+      "sortid": 136,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sit_entity",
@@ -2054,7 +2053,7 @@
     {
       "name": "SittingRightClicked",
       "type": "procedure",
-      "sortid": 130,
+      "sortid": 137,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sitting_right_clicked",
@@ -2090,7 +2089,7 @@
     {
       "name": "Pedestal",
       "type": "animatedblock",
-      "sortid": 71,
+      "sortid": 76,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pedestal",
@@ -2113,7 +2112,7 @@
     {
       "name": "PosterDontForgetToPunchIn",
       "type": "block",
-      "sortid": 90,
+      "sortid": 96,
       "compiles": true,
       "locked_code": false,
       "registry_name": "poster_dont_forget_to_punch_in",
@@ -2130,7 +2129,7 @@
     {
       "name": "PosterLargeDontForgetToPunchIn",
       "type": "block",
-      "sortid": 97,
+      "sortid": 103,
       "compiles": true,
       "locked_code": false,
       "registry_name": "poster_large_dont_forget_to_punch_in",
@@ -2147,7 +2146,7 @@
     {
       "name": "PosterDelicious",
       "type": "block",
-      "sortid": 91,
+      "sortid": 97,
       "compiles": true,
       "locked_code": false,
       "registry_name": "poster_delicious",
@@ -2164,7 +2163,7 @@
     {
       "name": "PosterLargeDelicious",
       "type": "block",
-      "sortid": 98,
+      "sortid": 104,
       "compiles": true,
       "locked_code": false,
       "registry_name": "poster_large_delicious",
@@ -2181,7 +2180,7 @@
     {
       "name": "Cellbox0",
       "type": "animatedblock",
-      "sortid": 68,
+      "sortid": 73,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cellbox_0",
@@ -2204,7 +2203,7 @@
     {
       "name": "Cellbox1",
       "type": "animatedblock",
-      "sortid": 131,
+      "sortid": 138,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cellbox_1",
@@ -2227,7 +2226,7 @@
     {
       "name": "Cellbox2",
       "type": "animatedblock",
-      "sortid": 132,
+      "sortid": 139,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cellbox_2",
@@ -2250,7 +2249,7 @@
     {
       "name": "DryCell",
       "type": "item",
-      "sortid": 69,
+      "sortid": 74,
       "compiles": true,
       "locked_code": false,
       "registry_name": "dry_cell",
@@ -2265,7 +2264,7 @@
     {
       "name": "CellboxOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 133,
+      "sortid": 140,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cellbox_on_block_right_clicked",
@@ -2301,7 +2300,7 @@
     {
       "name": "InfermaryBed",
       "type": "animatedblock",
-      "sortid": 70,
+      "sortid": 75,
       "compiles": true,
       "locked_code": false,
       "registry_name": "infermary_bed",
@@ -2324,7 +2323,7 @@
     {
       "name": "InkWell",
       "type": "block",
-      "sortid": 73,
+      "sortid": 78,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ink_well",
@@ -2341,7 +2340,7 @@
     {
       "name": "Cog",
       "type": "block",
-      "sortid": 74,
+      "sortid": 79,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cog",
@@ -2358,7 +2357,7 @@
     {
       "name": "HallwaysStructureBlock",
       "type": "block",
-      "sortid": 134,
+      "sortid": 141,
       "compiles": true,
       "locked_code": false,
       "registry_name": "hallways_structure_block",
@@ -2366,6 +2365,7 @@
         "files": [
           "src/main/resources/assets/bendymod/blockstates/hallways_structure_block.json",
           "src/main/java/net/mcreator/bendymod/block/HallwaysStructureBlockBlock.java",
+          "src/main/java/net/mcreator/bendymod/block/entity/HallwaysStructureBlockBlockEntity.java",
           "src/main/resources/assets/bendymod/models/item/hallways_structure_block.json",
           "src/main/resources/assets/bendymod/models/block/hallways_structure_block.json"
         ]
@@ -2375,12 +2375,13 @@
     {
       "name": "InactiveHallwaysStructureBlock",
       "type": "block",
-      "sortid": 135,
+      "sortid": 142,
       "compiles": true,
       "locked_code": false,
       "registry_name": "inactive_hallways_structure_block",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/bendymod/block/entity/InactiveHallwaysStructureBlockBlockEntity.java",
           "src/main/resources/assets/bendymod/models/block/inactive_hallways_structure_block.json",
           "src/main/resources/assets/bendymod/models/item/inactive_hallways_structure_block.json",
           "src/main/java/net/mcreator/bendymod/block/InactiveHallwaysStructureBlockBlock.java",
@@ -2392,7 +2393,7 @@
     {
       "name": "RandomRoomStructureBlock",
       "type": "block",
-      "sortid": 136,
+      "sortid": 143,
       "compiles": true,
       "locked_code": false,
       "registry_name": "random_room_structure_block",
@@ -2400,6 +2401,7 @@
         "files": [
           "src/main/resources/assets/bendymod/models/item/random_room_structure_block.json",
           "src/main/java/net/mcreator/bendymod/block/RandomRoomStructureBlockBlock.java",
+          "src/main/java/net/mcreator/bendymod/block/entity/RandomRoomStructureBlockBlockEntity.java",
           "src/main/resources/assets/bendymod/models/block/random_room_structure_block.json",
           "src/main/resources/assets/bendymod/blockstates/random_room_structure_block.json"
         ]
@@ -2409,13 +2411,14 @@
     {
       "name": "InactiveRandomRoomStructureBlock",
       "type": "block",
-      "sortid": 137,
+      "sortid": 144,
       "compiles": true,
       "locked_code": false,
       "registry_name": "inactive_random_room_structure_block",
       "metadata": {
         "files": [
           "src/main/resources/assets/bendymod/models/item/inactive_random_room_structure_block.json",
+          "src/main/java/net/mcreator/bendymod/block/entity/InactiveRandomRoomStructureBlockBlockEntity.java",
           "src/main/java/net/mcreator/bendymod/block/InactiveRandomRoomStructureBlockBlock.java",
           "src/main/resources/assets/bendymod/models/block/inactive_random_room_structure_block.json",
           "src/main/resources/assets/bendymod/blockstates/inactive_random_room_structure_block.json"
@@ -2424,45 +2427,9 @@
       "path": "~/Mod Stuff/StructureBlocks"
     },
     {
-      "name": "GetRandomRoom",
-      "type": "procedure",
-      "sortid": 138,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "get_random_room",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/bendymod/procedures/GetRandomRoomProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "blockstate",
-            "type": "blockstate"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Mod Stuff/StructureBlocks"
-    },
-    {
       "name": "BendyDoll",
       "type": "animatedblock",
-      "sortid": 75,
+      "sortid": 80,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bendy_doll",
@@ -2485,7 +2452,7 @@
     {
       "name": "Wrench",
       "type": "animatedblock",
-      "sortid": 76,
+      "sortid": 81,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wrench",
@@ -2508,7 +2475,7 @@
     {
       "name": "IllusionOfLiving",
       "type": "animatedblock",
-      "sortid": 77,
+      "sortid": 82,
       "compiles": true,
       "locked_code": false,
       "registry_name": "illusion_of_living",
@@ -2531,7 +2498,7 @@
     {
       "name": "HangingMic",
       "type": "animatedblock",
-      "sortid": 22,
+      "sortid": 26,
       "compiles": true,
       "locked_code": false,
       "registry_name": "hanging_mic",
@@ -2554,7 +2521,7 @@
     {
       "name": "SheetHolder",
       "type": "animatedblock",
-      "sortid": 78,
+      "sortid": 83,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sheet_holder",
@@ -2577,7 +2544,7 @@
     {
       "name": "BendyHead",
       "type": "block",
-      "sortid": 86,
+      "sortid": 91,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bendy_head",
@@ -2594,7 +2561,7 @@
     {
       "name": "BendyWall",
       "type": "block",
-      "sortid": 85,
+      "sortid": 90,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bendy_wall",
@@ -2611,7 +2578,7 @@
     {
       "name": "NewStructure",
       "type": "procedure",
-      "sortid": 139,
+      "sortid": 145,
       "compiles": true,
       "locked_code": false,
       "registry_name": "new_structure",
@@ -2647,7 +2614,7 @@
     {
       "name": "StructureBlockUpdateTick",
       "type": "procedure",
-      "sortid": 140,
+      "sortid": 146,
       "compiles": true,
       "locked_code": false,
       "registry_name": "structure_block_update_tick",
@@ -2683,7 +2650,7 @@
     {
       "name": "Banjo",
       "type": "animatedblock",
-      "sortid": 79,
+      "sortid": 84,
       "compiles": true,
       "locked_code": false,
       "registry_name": "banjo",
@@ -2706,7 +2673,7 @@
     {
       "name": "Drum",
       "type": "animatedblock",
-      "sortid": 80,
+      "sortid": 85,
       "compiles": true,
       "locked_code": false,
       "registry_name": "drum",
@@ -2729,7 +2696,7 @@
     {
       "name": "Piano",
       "type": "animatedblock",
-      "sortid": 81,
+      "sortid": 86,
       "compiles": true,
       "locked_code": false,
       "registry_name": "piano",
@@ -2752,7 +2719,7 @@
     {
       "name": "Bass",
       "type": "animatedblock",
-      "sortid": 82,
+      "sortid": 87,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bass",
@@ -2775,7 +2742,7 @@
     {
       "name": "Violin",
       "type": "animatedblock",
-      "sortid": 83,
+      "sortid": 88,
       "compiles": true,
       "locked_code": false,
       "registry_name": "violin",
@@ -2798,7 +2765,7 @@
     {
       "name": "LargeBox",
       "type": "animatedblock",
-      "sortid": 48,
+      "sortid": 53,
       "compiles": true,
       "locked_code": false,
       "registry_name": "large_box",
@@ -2821,7 +2788,7 @@
     {
       "name": "PosterLargeWorkHardWorkHappy",
       "type": "block",
-      "sortid": 99,
+      "sortid": 105,
       "compiles": true,
       "locked_code": false,
       "registry_name": "poster_large_work_hard_work_happy",
@@ -2838,7 +2805,7 @@
     {
       "name": "PosterTrainTrouble",
       "type": "block",
-      "sortid": 92,
+      "sortid": 98,
       "compiles": true,
       "locked_code": false,
       "registry_name": "poster_train_trouble",
@@ -2855,7 +2822,7 @@
     {
       "name": "PosterLargeTrainTrouble",
       "type": "block",
-      "sortid": 100,
+      "sortid": 106,
       "compiles": true,
       "locked_code": false,
       "registry_name": "poster_large_train_trouble",
@@ -2872,7 +2839,7 @@
     {
       "name": "PosterSentFromAbove",
       "type": "block",
-      "sortid": 93,
+      "sortid": 99,
       "compiles": true,
       "locked_code": false,
       "registry_name": "poster_sent_from_above",
@@ -2889,7 +2856,7 @@
     {
       "name": "PosterLargeSentFromAbove",
       "type": "block",
-      "sortid": 101,
+      "sortid": 107,
       "compiles": true,
       "locked_code": false,
       "registry_name": "poster_large_sent_from_above",
@@ -2906,7 +2873,7 @@
     {
       "name": "InkPuddleSpawner",
       "type": "block",
-      "sortid": 141,
+      "sortid": 116,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ink_puddle_spawner",
@@ -2924,7 +2891,7 @@
     {
       "name": "InkPuddleSpawnerBlockAdded",
       "type": "procedure",
-      "sortid": 142,
+      "sortid": 147,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ink_puddle_spawner_block_added",
@@ -2956,7 +2923,7 @@
     {
       "name": "InkPuddleSpawnerUpdateTick",
       "type": "procedure",
-      "sortid": 143,
+      "sortid": 148,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ink_puddle_spawner_update_tick",
@@ -2988,7 +2955,7 @@
     {
       "name": "SearcherOnInitialEntitySpawn",
       "type": "procedure",
-      "sortid": 144,
+      "sortid": 149,
       "compiles": true,
       "locked_code": false,
       "registry_name": "searcher_on_initial_entity_spawn",
@@ -3000,54 +2967,955 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
       "path": "~/Mod Stuff/Entities/Searcher"
+    },
+    {
+      "name": "StairwayStructureBlock",
+      "type": "block",
+      "sortid": 150,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stairway_structure_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/block/entity/StairwayStructureBlockBlockEntity.java",
+          "src/main/resources/assets/bendymod/models/block/stairway_structure_block.json",
+          "src/main/resources/assets/bendymod/models/item/stairway_structure_block.json",
+          "src/main/java/net/mcreator/bendymod/block/StairwayStructureBlockBlock.java",
+          "src/main/resources/assets/bendymod/blockstates/stairway_structure_block.json"
+        ]
+      },
+      "path": "~/Mod Stuff/StructureBlocks"
+    },
+    {
+      "name": "InactiveStairwayStructureBlock",
+      "type": "block",
+      "sortid": 151,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "inactive_stairway_structure_block",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/models/block/inactive_stairway_structure_block.json",
+          "src/main/java/net/mcreator/bendymod/block/InactiveStairwayStructureBlockBlock.java",
+          "src/main/java/net/mcreator/bendymod/block/entity/InactiveStairwayStructureBlockBlockEntity.java",
+          "src/main/resources/assets/bendymod/blockstates/inactive_stairway_structure_block.json",
+          "src/main/resources/assets/bendymod/models/item/inactive_stairway_structure_block.json"
+        ]
+      },
+      "path": "~/Mod Stuff/StructureBlocks"
+    },
+    {
+      "name": "StructureBlockBlockAdded",
+      "type": "procedure",
+      "sortid": 152,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "structure_block_block_added",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/StructureBlockBlockAddedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/StructureBlocks"
+    },
+    {
+      "name": "GetRandomStructure",
+      "type": "procedure",
+      "sortid": 153,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_random_structure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/GetRandomStructureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/StructureBlocks/StructureSpawningTypes"
+    },
+    {
+      "name": "InkBendyOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 154,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ink_bendy_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/InkBendyOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/Entities/InkBendy"
+    },
+    {
+      "name": "TheStudio",
+      "type": "biome",
+      "sortid": 155,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_studio",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/world/biome/TheStudioBiome.java"
+        ]
+      },
+      "path": "~/Mod Stuff/Dimension"
+    },
+    {
+      "name": "Studio",
+      "type": "dimension",
+      "sortid": 156,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "studio",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/bendymod/dimension/studio.json",
+          "src/main/resources/data/bendymod/dimension_type/studio.json",
+          "src/main/java/net/mcreator/bendymod/world/dimension/StudioDimension.java"
+        ]
+      },
+      "path": "~/Mod Stuff/Dimension"
+    },
+    {
+      "name": "ChooseRandomPlayer",
+      "type": "procedure",
+      "sortid": 157,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "choose_random_player",
+      "metadata": {
+        "return_type": "entity",
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/ChooseRandomPlayerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/Entities/InkBendy"
+    },
+    {
+      "name": "StudioPlayerEntersDimensionFirstTime",
+      "type": "procedure",
+      "sortid": 158,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "studio_player_enters_dimension_first_time",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/StudioPlayerEntersDimensionFirstTimeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/Dimension"
+    },
+    {
+      "name": "BaconSoup",
+      "type": "item",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bacon_soup",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/item/BaconSoupItem.java",
+          "src/main/resources/assets/bendymod/models/item/bacon_soup.json"
+        ]
+      },
+      "path": "~/Mod Stuff/Weapons"
+    },
+    {
+      "name": "BaconSoupEmpty",
+      "type": "rangeditem",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bacon_soup_empty",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/item/BaconSoupEmptyItem.java",
+          "src/main/java/net/mcreator/bendymod/entity/BaconSoupEmptyEntity.java",
+          "src/main/resources/assets/bendymod/models/item/bacon_soup_empty.json"
+        ]
+      },
+      "path": "~/Mod Stuff/Weapons"
+    },
+    {
+      "name": "StudioCrateLootTable1",
+      "type": "loottable",
+      "sortid": 159,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "studio_crate_loot_table_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/bendymod/loot_tables/chests/studio_crate_loot_table_1.json"
+        ]
+      },
+      "path": "~/Mod Stuff/LootTables"
+    },
+    {
+      "name": "InkDemonTeleportMode",
+      "type": "gamerule",
+      "sortid": 160,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ink_demon_teleport_mode",
+      "metadata": {
+        "files": [],
+        "type": "logic"
+      },
+      "path": "~/Mod Stuff/Entities/InkBendy"
+    },
+    {
+      "name": "InkBendyEntityIsHurt",
+      "type": "procedure",
+      "sortid": 161,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ink_bendy_entity_is_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/InkBendyEntityIsHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/Entities/InkBendy"
+    },
+    {
+      "name": "TheDarkPuddlesAwaken",
+      "type": "achievement",
+      "sortid": 162,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_dark_puddles_awaken",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/bendymod/advancements/the_dark_puddles_awaken.json"
+        ]
+      },
+      "path": "~/Mod Stuff/Achievement"
+    },
+    {
+      "name": "TheOldSong",
+      "type": "achievement",
+      "sortid": 163,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_old_song",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/bendymod/advancements/the_old_song.json"
+        ]
+      },
+      "path": "~/Mod Stuff/Achievement"
+    },
+    {
+      "name": "AchievementTitleShow",
+      "type": "procedure",
+      "sortid": 164,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "achievement_title_show",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/AchievementTitleShowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "advancement",
+            "type": "advancement"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/Achievement"
+    },
+    {
+      "name": "MovingPictures",
+      "type": "achievement",
+      "sortid": 165,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moving_pictures",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/bendymod/advancements/moving_pictures.json"
+        ]
+      },
+      "path": "~/Mod Stuff/Achievement"
+    },
+    {
+      "name": "AchievementGet",
+      "type": "procedure",
+      "sortid": 166,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "achievement_get",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/AchievementGetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/Achievement"
+    },
+    {
+      "name": "EnterStudio",
+      "type": "command",
+      "sortid": 167,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_studio",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/command/EnterStudioCommand.java"
+        ]
+      },
+      "path": "~/Mod Stuff"
+    },
+    {
+      "name": "EnterStudioProcedure",
+      "type": "procedure",
+      "sortid": 168,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_studio_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/EnterStudioProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff"
+    },
+    {
+      "name": "SolidInk",
+      "type": "block",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solid_ink",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/blockstates/solid_ink.json",
+          "src/main/resources/assets/bendymod/models/item/solid_ink.json",
+          "src/main/resources/assets/bendymod/models/block/solid_ink.json",
+          "src/main/java/net/mcreator/bendymod/block/SolidInkBlock.java"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks"
+    },
+    {
+      "name": "SolidInkPressurePlate",
+      "type": "block",
+      "sortid": 169,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solid_ink_pressure_plate",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/models/block/solid_ink_pressure_plate_down.json",
+          "src/main/java/net/mcreator/bendymod/block/SolidInkPressurePlateBlock.java",
+          "src/main/resources/assets/bendymod/models/block/solid_ink_pressure_plate.json",
+          "src/main/resources/assets/bendymod/blockstates/solid_ink_pressure_plate.json",
+          "src/main/resources/assets/bendymod/models/item/solid_ink_pressure_plate.json"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks"
+    },
+    {
+      "name": "StiffStudioDoorBasic",
+      "type": "block",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stiff_studio_door_basic",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/models/block/stiff_studio_door_basic_bottom_right_open.json",
+          "src/main/resources/assets/bendymod/models/block/stiff_studio_door_basic_top_left_open.json",
+          "src/main/java/net/mcreator/bendymod/block/StiffStudioDoorBasicBlock.java",
+          "src/main/resources/assets/bendymod/models/item/stiff_studio_door_basic.json",
+          "src/main/resources/assets/bendymod/blockstates/stiff_studio_door_basic.json",
+          "src/main/resources/assets/bendymod/models/block/stiff_studio_door_basic_bottom_left.json",
+          "src/main/resources/assets/bendymod/models/block/stiff_studio_door_basic_top_right_open.json",
+          "src/main/resources/assets/bendymod/models/block/stiff_studio_door_basic_top_left.json",
+          "src/main/resources/assets/bendymod/models/block/stiff_studio_door_basic_bottom_right.json",
+          "src/main/resources/assets/bendymod/models/block/stiff_studio_door_basic_bottom_left_open.json",
+          "src/main/resources/assets/bendymod/models/block/stiff_studio_door_basic_top_right.json"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks"
+    },
+    {
+      "name": "StiffStudioDoorSegmented",
+      "type": "block",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stiff_studio_door_segmented",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/block/StiffStudioDoorSegmentedBlock.java",
+          "src/main/resources/assets/bendymod/models/block/stiff_studio_door_segmented_top_left.json",
+          "src/main/resources/assets/bendymod/blockstates/stiff_studio_door_segmented.json",
+          "src/main/resources/assets/bendymod/models/block/stiff_studio_door_segmented_top_right.json",
+          "src/main/resources/assets/bendymod/models/block/stiff_studio_door_segmented_bottom_left_open.json",
+          "src/main/resources/assets/bendymod/models/block/stiff_studio_door_segmented_bottom_right_open.json",
+          "src/main/resources/assets/bendymod/models/item/stiff_studio_door_segmented.json",
+          "src/main/resources/assets/bendymod/models/block/stiff_studio_door_segmented_top_left_open.json",
+          "src/main/resources/assets/bendymod/models/block/stiff_studio_door_segmented_bottom_right.json",
+          "src/main/resources/assets/bendymod/models/block/stiff_studio_door_segmented_bottom_left.json",
+          "src/main/resources/assets/bendymod/models/block/stiff_studio_door_segmented_top_right_open.json"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks"
+    },
+    {
+      "name": "GetRandomHallway",
+      "type": "procedure",
+      "sortid": 170,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_random_hallway",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/GetRandomHallwayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/StructureBlocks/StructureSpawningTypes"
+    },
+    {
+      "name": "GetRandomRoom",
+      "type": "procedure",
+      "sortid": 171,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_random_room",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/GetRandomRoomProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/StructureBlocks/StructureSpawningTypes"
+    },
+    {
+      "name": "SetStructureBlocks",
+      "type": "procedure",
+      "sortid": 172,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_structure_blocks",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/SetStructureBlocksProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/StructureBlocks"
+    },
+    {
+      "name": "PaintingBendyUmbrella",
+      "type": "block",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "painting_bendy_umbrella",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/models/block/painting_bendy_umbrella.json",
+          "src/main/resources/assets/bendymod/models/item/painting_bendy_umbrella.json",
+          "src/main/resources/assets/bendymod/blockstates/painting_bendy_umbrella.json",
+          "src/main/java/net/mcreator/bendymod/block/PaintingBendyUmbrellaBlock.java"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props"
+    },
+    {
+      "name": "InstrumentOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 173,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "instrument_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/InstrumentOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props/Instruments"
+    },
+    {
+      "name": "HeavyGateClosed",
+      "type": "animatedblock",
+      "sortid": 174,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heavy_gate_closed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/block/display/HeavyGateClosedDisplayItem.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/HeavyGateClosedDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/HeavyGateClosedTileRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/HeavyGateClosedBlock.java",
+          "src/main/java/net/mcreator/bendymod/block/model/HeavyGateClosedDisplayModel.java",
+          "src/main/resources/assets/bendymod/blockstates/heavy_gate_closed.json",
+          "src/main/resources/assets/bendymod/models/item/heavy_gate_closed.json",
+          "src/main/resources/assets/bendymod/models/custom/heavy_gate_closed_particle.json",
+          "src/main/java/net/mcreator/bendymod/block/model/HeavyGateClosedBlockModel.java",
+          "src/main/java/net/mcreator/bendymod/block/entity/HeavyGateClosedTileEntity.java"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props/Gates"
+    },
+    {
+      "name": "HeavyGateOpen",
+      "type": "animatedblock",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heavy_gate_open",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/block/renderer/HeavyGateOpenTileRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/HeavyGateOpenDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/model/HeavyGateOpenDisplayModel.java",
+          "src/main/resources/assets/bendymod/models/custom/heavy_gate_open_particle.json",
+          "src/main/java/net/mcreator/bendymod/block/model/HeavyGateOpenBlockModel.java",
+          "src/main/java/net/mcreator/bendymod/block/entity/HeavyGateOpenTileEntity.java",
+          "src/main/java/net/mcreator/bendymod/block/display/HeavyGateOpenDisplayItem.java",
+          "src/main/java/net/mcreator/bendymod/block/HeavyGateOpenBlock.java",
+          "src/main/resources/assets/bendymod/blockstates/heavy_gate_open.json",
+          "src/main/resources/assets/bendymod/models/item/heavy_gate_open.json"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props/Gates"
+    },
+    {
+      "name": "HeavyGateOpenRedstoneOn",
+      "type": "procedure",
+      "sortid": 175,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heavy_gate_open_redstone_on",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/HeavyGateOpenRedstoneOnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props/Gates"
+    },
+    {
+      "name": "HeavyGateClosedRedstoneOff",
+      "type": "procedure",
+      "sortid": 176,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heavy_gate_closed_redstone_off",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/HeavyGateClosedRedstoneOffProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props/Gates"
     }
   ],
-  "variable_elements": [],
-  "sound_elements": [],
+  "variable_elements": [
+    {
+      "name": "ink_bendy_timer",
+      "type": "number",
+      "scope": "map",
+      "value": "0.0"
+    },
+    {
+      "name": "ink_bendy_time_remaining",
+      "type": "number",
+      "scope": "map",
+      "value": "0.0"
+    },
+    {
+      "name": "is_random_cutout_selected",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "EnteredStudio",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    }
+  ],
+  "sound_elements": [
+    {
+      "name": "inkdemon_footstep",
+      "files": [
+        "inkdemon_footstep1",
+        "inkdemon_footstep2",
+        "inkdemon_footstep3",
+        "inkdemon_footstep4"
+      ],
+      "category": "hostile",
+      "subtitle": "Ink Demon Steps"
+    },
+    {
+      "name": "inkdemon_near",
+      "files": [
+        "inkdemon_near"
+      ],
+      "category": "hostile",
+      "subtitle": "The Ink Demon is near."
+    },
+    {
+      "name": "sammy_footstep",
+      "files": [
+        "sammy_footstep"
+      ],
+      "category": "hostile",
+      "subtitle": "Sammy Steps"
+    },
+    {
+      "name": "sammy_ambience",
+      "files": [
+        "sammy_living"
+      ],
+      "category": "hostile",
+      "subtitle": "Sammy is near."
+    },
+    {
+      "name": "searcher_appear",
+      "files": [
+        "searcher_appear"
+      ],
+      "category": "hostile",
+      "subtitle": "Searcher appears"
+    },
+    {
+      "name": "searcher_ambient",
+      "files": [
+        "searcher_ambient"
+      ],
+      "category": "neutral",
+      "subtitle": "Searcher groans"
+    },
+    {
+      "name": "searcher_attack",
+      "files": [
+        "searcher_attack"
+      ],
+      "category": "hostile",
+      "subtitle": "Searcher attacks"
+    },
+    {
+      "name": "searcher_die",
+      "files": [
+        "searcher_dead"
+      ],
+      "category": "hostile",
+      "subtitle": "Searcher dies."
+    },
+    {
+      "name": "searcher_hit",
+      "files": [
+        "searcher_hit"
+      ],
+      "category": "hostile",
+      "subtitle": "Searcher is hit"
+    },
+    {
+      "name": "sammy_hit",
+      "files": [
+        "sammy_hit"
+      ],
+      "category": "hostile",
+      "subtitle": "Sammy is hit"
+    },
+    {
+      "name": "inkdemon_chase",
+      "files": [
+        "inkdemon_chase"
+      ],
+      "category": "music",
+      "subtitle": "Ink Demon chases"
+    },
+    {
+      "name": "violin_note",
+      "files": [
+        "violin_sound"
+      ],
+      "category": "record",
+      "subtitle": "Violin plays"
+    }
+  ],
   "language_map": {
     "en_us": {
       "block.bendymod.studio_door_basic": "Studio Basic Door",
       "block.bendymod.recording_sign_off": "Recording Sign",
+      "gamerule.inkDemonTeleportMode.description": "If this is on, then the Ink Demon can only teleport to players in Survival.",
       "block.bendymod.desk_fancy": "Fancy Desk",
       "item.bendymod.studio_axe": "Studio Axe",
       "block.bendymod.lever_power": "Power Lever",
       "block.bendymod.ritual_summoning": "Ritual Summoning",
       "block.bendymod.hallways_structure_block": "Hallways Structure Block",
       "block.bendymod.bendy_head": "Bendy Head",
+      "subtitles.inkdemon_footstep": "Ink Demon Steps",
       "block.bendymod.studio_planked_wall": "Studio Planked Wall",
       "block.bendymod.studio_blank_wall_slab": "Studio Blank Wall Slab",
       "block.bendymod.writing_dreams_come_true": "Ink Writing (Dreams Come True)",
+      "subtitles.inkdemon_near": "The Ink Demon is near.",
       "item.bendymod.bacon_soup": "Bacon Soup",
       "block.bendymod.jumbled_paper": "Jumbled Paper",
       "entity.bendymod.sammy_lawrence": "Sammy Lawrence",
       "block.bendymod.poster_large_little_devil_darlin": "Large Poster (Little Devil Darlin)",
       "block.bendymod.speaker": "Speaker",
       "block.bendymod.pipe_wall_vertical": "Wall Pipe (Vertical)",
+      "advancements.the_dark_puddles_awaken.title": "The Dark Puddles Awaken",
       "block.bendymod.studio_brick_stairs": "Studio Brick Stairs",
       "block.bendymod.writing_its_time_to_believe": "Ink Writing (Its Time To Believe)",
-      "itemGroup.tabbendy_props": "Bendy Props",
       "block.bendymod.banjo": "Banjo",
+      "itemGroup.tabbendy_props": "Bendy Props",
       "block.bendymod.poster_delicious": "Poster (Delicious!)",
       "block.bendymod.cog": "Cog",
       "block.bendymod.poster_sent_from_above": "Poster (Sent From Above)",
       "block.bendymod.infermary_bed": "Infermary Bed",
       "block.bendymod.poster_large_work_hard_work_happy": "Large Poster (Work Hard Work Happy)",
+      "subtitles.searcher_attack": "Searcher attacks",
       "block.bendymod.pipe_straight": "Pipe Straight",
       "block.bendymod.cutout_bendy": "Cutout Bendy",
       "block.bendymod.soup_candle": "Soup Candle",
       "block.bendymod.studio_lamp": "Studio Lamp",
       "block.bendymod.studio_floor_slab": "Studio Floor Slab",
       "block.bendymod.ink_machine": "Ink Machine",
+      "advancements.the_old_song.descr": "Reach the second floor of the Studio, The Music Department.",
+      "subtitles.sammy_hit": "Sammy is hit",
       "block.bendymod.poster_large_sent_from_above": "Large Poster (Sent From Above)",
       "block.bendymod.reel": "Reel",
       "block.bendymod.writing_whos_laughing_now": "Ink Writing (Who\u0027s Laughing Now)",
       "itemGroup.tabbendy_entities": "Bendy Entities",
       "block.bendymod.bendy_statue": "Bendy Statue",
       "block.bendymod.poster_large_sheep_songs": "Large Poster (Sheep Songs)",
+      "subtitles.sammy_ambience": "Sammy is near.",
+      "advancements.moving_pictures.descr": "Reach the first floor of the studio, The Animator\u0027s Department.",
       "block.bendymod.hanging_mic": "Hanging Mic",
       "gui.bendymod.crate_inventory.label_crate": "Crate",
       "entity.bendymod.boris_buddy": "Buddy Boris",
@@ -3066,8 +3934,10 @@
       "item.bendymod.bendy_spawn_egg": "Bendy Spawn Egg",
       "block.bendymod.random_room_structure_block": "Random Room Structure Block",
       "block.bendymod.projector": "Projector",
+      "block.bendymod.heavy_gate_closed": "Heavy Gate",
       "block.bendymod.ink_well": "Ink Well",
       "block.bendymod.inactive_random_room_structure_block": "Inactive Random Room Structure Block",
+      "block.bendymod.stairway_structure_block": "Stairway Structure Block",
       "entity.bendymod.bendy": "Bendy",
       "block.bendymod.bendy_wall": "Wall Bendy",
       "item.bendymod.ink_bendy_spawn_egg": "Ink Bendy Spawn Egg",
@@ -3077,12 +3947,16 @@
       "entity.bendymod.sit_entity": "Sit Entity",
       "block.bendymod.illusion_of_living": "The Illusion Of Living",
       "block.bendymod.shelf": "Shelf",
+      "biome.bendymod.the_studio": "The Studio",
       "block.bendymod.work_table": "Work Table",
+      "subtitles.searcher_ambient": "Searcher groans",
       "block.bendymod.ink_puddle": "Ink Puddle",
       "block.bendymod.cassette_player": "Cassette Player",
       "block.bendymod.punch_in_card": "Punch In Card",
+      "subtitles.violin_note": "Violin plays",
       "block.bendymod.ink": "Ink",
       "block.bendymod.poster_dont_forget_to_punch_in": "Poster (Dont Forget To Punch In)",
+      "subtitles.searcher_appear": "Searcher appears",
       "block.bendymod.record": "Record",
       "block.bendymod.poster_large_delicious": "Large Poster (Delicious!)",
       "block.bendymod.sign_light": "Sign (Light)",
@@ -3092,19 +3966,29 @@
       "block.bendymod.poster_large_train_trouble": "Large Poster (Train Trouble)",
       "block.bendymod.coffin": "Coffin",
       "fluid.bendymod.ink": "Ink",
+      "block.bendymod.stiff_studio_door_segmented": "Stiff Studio Segmented Door",
       "block.bendymod.studio_floor": "Studio Floor",
       "block.bendymod.jds_sign": "Joey Drew Studios Sign",
+      "block.bendymod.stiff_studio_door_basic": "Stiff Studio Basic Door",
       "block.bendymod.chain_fence": "Chain Fence",
+      "subtitles.searcher_hit": "Searcher is hit",
       "block.bendymod.hat_rack": "Hat Rack",
       "block.bendymod.studio_ceiling": "Studio Ceiling",
       "block.bendymod.poster_little_devil_darlin": "Poster (Little Devil Darlin)",
+      "item.bendymod.bacon_soup_empty": "Empty Bacon Soup Can",
       "block.bendymod.pipe_wall_horizontal": "Wall Pipe (Horizontal)",
+      "block.bendymod.solid_ink": "Solid Ink",
+      "gamerule.inkDemonTeleportMode": "Ink Demon Teleport Mode",
+      "block.bendymod.solid_ink_pressure_plate": "Solid Ink Pressure Plate",
       "block.bendymod.studio_chair": "Studio Chair",
+      "block.bendymod.heavy_gate_open": "Heavy Gate",
       "block.bendymod.studio_blank_wall": "Studio Blank Wall",
       "block.bendymod.studio_blank_wall_fence": "Studio Blank Wall Fence",
       "block.bendymod.lever_studio": "Studio Lever",
+      "subtitles.searcher_die": "Searcher dies.",
       "block.bendymod.poster_large_dancing_demon": "Large Poster (Dancing Demon)",
       "block.bendymod.toolbox": "Toolbox",
+      "advancements.moving_pictures.title": "Moving Pictures",
       "block.bendymod.studio_bricks": "Studio Bricks",
       "block.bendymod.writing_the_creator_lied_to_us": "Ink Writing (The Creator Lied To Us)",
       "block.bendymod.gearbox": "Gearbox",
@@ -3116,13 +4000,17 @@
       "block.bendymod.trash_bin": "Trash Bin",
       "block.bendymod.piano": "Piano",
       "block.bendymod.ink_puddle_spawner": "Ink Puddle (Spawner)",
+      "subtitles.sammy_footstep": "Sammy Steps",
       "block.bendymod.boards": "Boards",
       "block.bendymod.dresser": "Dresser",
       "block.bendymod.drum": "Drum",
+      "block.bendymod.inactive_stairway_structure_block": "Inactive Stairway Structure Block",
       "block.bendymod.writing_down_here_were_all_sinners": "Ink Writing (Down Here We\u0027re All Sinners)",
+      "subtitles.inkdemon_chase": "Ink Demon chases",
       "block.bendymod.studio_blank_wall_stairs": "Studio Blank Wall Stairs",
       "block.bendymod.recording_sign_on": "Recording Sign",
       "block.bendymod.vent_cover": "Vent Cover",
+      "advancements.the_dark_puddles_awaken.descr": "Enter the studio for the very first time.",
       "block.bendymod.studio_brick_slab": "Studio Brick Slab",
       "item.bendymod.ink_bucket": "Ink Bucket",
       "block.bendymod.writing_sing_with_me": "Ink Writing (Sing With Me)",
@@ -3135,8 +4023,10 @@
       "block.bendymod.studio_floor_fence": "Studio Floor Fence",
       "block.bendymod.studio_broken_floor": "Studio Floor (Broken)",
       "block.bendymod.bass": "Bass",
+      "block.bendymod.painting_bendy_umbrella": "Painting (Umbrella Bendy)",
       "block.bendymod.bendy_doll": "Bendy Doll",
       "block.bendymod.writing_the_sheep_will_come_to_slaughter": "Ink Writing (The Sheep WIll Come To Slaughter)",
+      "advancements.the_old_song.title": "The Old Song",
       "block.bendymod.poster_large_dont_forget_to_punch_in": "Large Poster (Don\u0027t Forget To Punch In)",
       "block.bendymod.crate": "Crate",
       "block.bendymod.cellbox_1": "Cellbox",
@@ -3166,6 +4056,10 @@
             "children": [
               {
                 "name": "Searcher",
+                "children": []
+              },
+              {
+                "name": "InkBendy",
                 "children": []
               }
             ]
@@ -3220,6 +4114,14 @@
                   {
                     "name": "Instruments",
                     "children": []
+                  },
+                  {
+                    "name": "Cutouts",
+                    "children": []
+                  },
+                  {
+                    "name": "Gates",
+                    "children": []
                   }
                 ]
               }
@@ -3236,6 +4138,23 @@
           },
           {
             "name": "StructureBlocks",
+            "children": [
+              {
+                "name": "StructureSpawningTypes",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Dimension",
+            "children": []
+          },
+          {
+            "name": "LootTables",
+            "children": []
+          },
+          {
+            "name": "Achievement",
             "children": []
           }
         ]

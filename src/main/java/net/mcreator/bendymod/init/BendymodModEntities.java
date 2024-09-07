@@ -22,11 +22,14 @@ import net.mcreator.bendymod.entity.SammyLawrenceEntity;
 import net.mcreator.bendymod.entity.InkBendyEntity;
 import net.mcreator.bendymod.entity.BorisBuddyEntity;
 import net.mcreator.bendymod.entity.BendyEntity;
+import net.mcreator.bendymod.entity.BaconSoupEmptyEntity;
 import net.mcreator.bendymod.BendymodMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class BendymodModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, BendymodMod.MODID);
+	public static final RegistryObject<EntityType<BaconSoupEmptyEntity>> BACON_SOUP_EMPTY = register("projectile_bacon_soup_empty",
+			EntityType.Builder.<BaconSoupEmptyEntity>of(BaconSoupEmptyEntity::new, MobCategory.MISC).setCustomClientFactory(BaconSoupEmptyEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<BendyEntity>> BENDY = register("bendy",
 			EntityType.Builder.<BendyEntity>of(BendyEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BendyEntity::new)
 
@@ -39,8 +42,8 @@ public class BendymodModEntities {
 			EntityType.Builder.<SearcherEntity>of(SearcherEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SearcherEntity::new)
 
 					.sized(0.5f, 0.875f));
-	public static final RegistryObject<EntityType<InkBendyEntity>> INK_BENDY = register("ink_bendy", EntityType.Builder.<InkBendyEntity>of(InkBendyEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
-			.setUpdateInterval(3).setCustomClientFactory(InkBendyEntity::new).fireImmune().sized(0.3125f, 2.625f));
+	public static final RegistryObject<EntityType<InkBendyEntity>> INK_BENDY = register("ink_bendy",
+			EntityType.Builder.<InkBendyEntity>of(InkBendyEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(InkBendyEntity::new).fireImmune().sized(0.5f, 1.75f));
 	public static final RegistryObject<EntityType<SammyLawrenceEntity>> SAMMY_LAWRENCE = register("sammy_lawrence",
 			EntityType.Builder.<SammyLawrenceEntity>of(SammyLawrenceEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SammyLawrenceEntity::new)
 

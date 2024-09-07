@@ -44,6 +44,8 @@ import net.mcreator.bendymod.block.renderer.InkMachineTileRenderer;
 import net.mcreator.bendymod.block.renderer.InkBarrelTileRenderer;
 import net.mcreator.bendymod.block.renderer.InfermaryBedTileRenderer;
 import net.mcreator.bendymod.block.renderer.IllusionOfLivingTileRenderer;
+import net.mcreator.bendymod.block.renderer.HeavyGateOpenTileRenderer;
+import net.mcreator.bendymod.block.renderer.HeavyGateClosedTileRenderer;
 import net.mcreator.bendymod.block.renderer.HatRackTileRenderer;
 import net.mcreator.bendymod.block.renderer.HangingMicTileRenderer;
 import net.mcreator.bendymod.block.renderer.GearboxTileRenderer;
@@ -71,6 +73,7 @@ public class ClientListener {
 	@OnlyIn(Dist.CLIENT)
 	@SubscribeEvent
 	public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
+		event.registerBlockEntityRenderer(BendymodModBlockEntities.HEAVY_GATE_OPEN.get(), HeavyGateOpenTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.HANGING_MIC.get(), HangingMicTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.SOUP_CANDLE.get(), SoupCandleTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.CUTOUT_BENDY.get(), CutoutBendyTileRenderer::new);
@@ -128,5 +131,6 @@ public class ClientListener {
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.RECORDING_SIGN_ON.get(), RecordingSignOnTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.CELLBOX_1.get(), Cellbox1TileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.CELLBOX_2.get(), Cellbox2TileRenderer::new);
+		event.registerBlockEntityRenderer(BendymodModBlockEntities.HEAVY_GATE_CLOSED.get(), HeavyGateClosedTileRenderer::new);
 	}
 }

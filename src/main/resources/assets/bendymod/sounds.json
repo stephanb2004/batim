@@ -1,0 +1,122 @@
+{
+  "inkdemon_footstep": {
+    "subtitle": "subtitles.inkdemon_footstep",
+    "sounds": [
+      {
+        "name": "bendymod:inkdemon_footstep1",
+        "stream": false
+      },
+      {
+        "name": "bendymod:inkdemon_footstep2",
+        "stream": false
+      },
+      {
+        "name": "bendymod:inkdemon_footstep3",
+        "stream": false
+      },
+      {
+        "name": "bendymod:inkdemon_footstep4",
+        "stream": false
+      }
+    ]
+  },
+  "inkdemon_near": {
+    "subtitle": "subtitles.inkdemon_near",
+    "sounds": [
+      {
+        "name": "bendymod:inkdemon_near",
+        "stream": false
+      }
+    ]
+  },
+  "sammy_footstep": {
+    "subtitle": "subtitles.sammy_footstep",
+    "sounds": [
+      {
+        "name": "bendymod:sammy_footstep",
+        "stream": false
+      }
+    ]
+  },
+  "sammy_ambience": {
+    "subtitle": "subtitles.sammy_ambience",
+    "sounds": [
+      {
+        "name": "bendymod:sammy_living",
+        "stream": false
+      }
+    ]
+  },
+  "searcher_appear": {
+    "subtitle": "subtitles.searcher_appear",
+    "sounds": [
+      {
+        "name": "bendymod:searcher_appear",
+        "stream": false
+      }
+    ]
+  },
+  "searcher_ambient": {
+    "subtitle": "subtitles.searcher_ambient",
+    "sounds": [
+      {
+        "name": "bendymod:searcher_ambient",
+        "stream": false
+      }
+    ]
+  },
+  "searcher_attack": {
+    "subtitle": "subtitles.searcher_attack",
+    "sounds": [
+      {
+        "name": "bendymod:searcher_attack",
+        "stream": false
+      }
+    ]
+  },
+  "searcher_die": {
+    "subtitle": "subtitles.searcher_die",
+    "sounds": [
+      {
+        "name": "bendymod:searcher_dead",
+        "stream": false
+      }
+    ]
+  },
+  "searcher_hit": {
+    "subtitle": "subtitles.searcher_hit",
+    "sounds": [
+      {
+        "name": "bendymod:searcher_hit",
+        "stream": false
+      }
+    ]
+  },
+  "sammy_hit": {
+    "subtitle": "subtitles.sammy_hit",
+    "sounds": [
+      {
+        "name": "bendymod:sammy_hit",
+        "stream": false
+      }
+    ]
+  },
+  "inkdemon_chase": {
+    "subtitle": "subtitles.inkdemon_chase",
+    "sounds": [
+      {
+        "name": "bendymod:inkdemon_chase",
+        "stream": true
+      }
+    ]
+  },
+  "violin_note": {
+    "subtitle": "subtitles.violin_note",
+    "sounds": [
+      {
+        "name": "bendymod:violin_sound",
+        "stream": true
+      }
+    ]
+  }
+}

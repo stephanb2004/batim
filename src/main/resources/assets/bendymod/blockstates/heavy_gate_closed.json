@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "bendymod:custom/heavy_gate_closed_particle"
+    },
+    "facing=east": {
+      "model": "bendymod:custom/heavy_gate_closed_particle",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "bendymod:custom/heavy_gate_closed_particle",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "bendymod:custom/heavy_gate_closed_particle",
+      "y": 270
+    }
+  }
+}

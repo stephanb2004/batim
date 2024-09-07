@@ -1,0 +1,26 @@
+{
+  "display": {
+    "background": "minecraft:textures/block/stone.png",
+    "icon": {
+      "item": "bendymod:ink_bucket"
+    },
+    "title": {
+      "translate": "advancements.the_dark_puddles_awaken.title"
+    },
+    "description": {
+      "translate": "advancements.the_dark_puddles_awaken.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "the_dark_puddles_awaken": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "bendymod:studio"
+      }
+    }
+  }
+}

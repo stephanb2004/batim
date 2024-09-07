@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "bendymod:studio_axe"
+    },
+    "title": {
+      "translate": "advancements.the_old_song.title"
+    },
+    "description": {
+      "translate": "advancements.the_old_song.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "the_old_song": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "bendymod:moving_pictures"
+}

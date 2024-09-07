@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "bendymod:block/painting_bendy_umbrella"
+    },
+    "facing=east": {
+      "model": "bendymod:block/painting_bendy_umbrella",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "bendymod:block/painting_bendy_umbrella",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "bendymod:block/painting_bendy_umbrella",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "bendymod:block/painting_bendy_umbrella",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "bendymod:block/painting_bendy_umbrella",
+      "x": 90
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "_fv": 43,
+  "_type": "rangeditem",
+  "definition": {
+    "renderType": 1,
+    "texture": "baconsoup_empty",
+    "customModelName": "baconsoup:empty",
+    "name": "Empty Bacon Soup Can",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:BendyProps"
+    },
+    "stackSize": 64,
+    "ammoItem": {
+      "value": "CUSTOM:BaconSoupEmpty"
+    },
+    "shootConstantly": false,
+    "usageCount": 0,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "hasGlow": false,
+    "animation": "crossbow",
+    "enableMeleeDamage": true,
+    "damageVsEntity": 2.0,
+    "bulletPower": 1.0,
+    "bulletDamage": 2.0,
+    "bulletKnockback": 1,
+    "bulletParticles": false,
+    "bulletIgnitesFire": false,
+    "bulletItemTexture": {
+      "value": "CUSTOM:BaconSoupEmpty"
+    },
+    "bulletModel": "Default",
+    "customBulletModelTexture": ""
+  }
+}

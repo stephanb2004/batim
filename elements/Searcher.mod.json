@@ -88,13 +88,13 @@
       "value": ""
     },
     "livingSound": {
-      "value": ""
+      "value": "CUSTOM:searcher_ambient"
     },
     "hurtSound": {
-      "value": "entity.generic.hurt"
+      "value": "CUSTOM:searcher_hit"
     },
     "deathSound": {
-      "value": "entity.generic.death"
+      "value": "CUSTOM:searcher_die"
     },
     "stepSound": {
       "value": ""

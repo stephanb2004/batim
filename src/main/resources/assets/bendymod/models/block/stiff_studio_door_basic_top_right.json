@@ -1,0 +1,8 @@
+{
+  "parent": "block/door_top_right",
+  "textures": {
+    "bottom": "bendymod:blocks/studio_basicdoor_bottom",
+    "top": "bendymod:blocks/studio_basicdoor_top"
+  },
+  "render_type": "solid"
+}

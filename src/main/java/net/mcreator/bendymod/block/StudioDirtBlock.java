@@ -19,7 +19,7 @@ import java.util.Collections;
 
 public class StudioDirtBlock extends Block {
 	public StudioDirtBlock() {
-		super(BlockBehaviour.Properties.of(Material.DIRT).sound(SoundType.GRAVEL).strength(1f, 10f));
+		super(BlockBehaviour.Properties.of(Material.DIRT).sound(SoundType.GRAVEL).strength(-1, 3600000));
 	}
 
 	@Override

@@ -18,7 +18,7 @@ import java.util.Collections;
 
 public class StudioBrickSlabBlock extends SlabBlock {
 	public StudioBrickSlabBlock() {
-		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(2f, 3f).dynamicShape());
+		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(-1, 3600000).dynamicShape());
 	}
 
 	@Override

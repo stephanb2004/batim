@@ -1,20 +1,15 @@
 {
   "_fv": 43,
-  "_type": "animateditem",
+  "_type": "item",
   "definition": {
-    "renderType": 0,
+    "renderType": 1,
     "texture": "baconsoup",
+    "customModelName": "baconsoup:default",
     "name": "Bacon Soup",
-    "idle": "animation.model.new",
     "rarity": "COMMON",
-    "displaySettings": "baconsoup.item.json",
-    "leftArm": "",
-    "rightArm": "",
-    "perspective": "All Perspectives",
     "creativeTab": {
       "value": "CUSTOM:BendyProps"
     },
-    "firstPersonArms": false,
     "stackSize": 64,
     "enchantability": 0,
     "useDuration": 32,
@@ -38,11 +33,10 @@
     "nutritionalValue": 4,
     "saturation": 0.3,
     "eatResultItem": {
-      "value": ""
+      "value": "CUSTOM:BaconSoupEmpty"
     },
-    "isMeat": false,
+    "isMeat": true,
     "isAlwaysEdible": true,
-    "animation": "eat",
-    "normal": "baconsoup.geo.json"
+    "animation": "eat"
   }
 }

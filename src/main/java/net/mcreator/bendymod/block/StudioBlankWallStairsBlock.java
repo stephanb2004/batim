@@ -15,7 +15,7 @@ import java.util.Collections;
 
 public class StudioBlankWallStairsBlock extends StairBlock {
 	public StudioBlankWallStairsBlock() {
-		super(() -> Blocks.AIR.defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2f, 3f).dynamicShape());
+		super(() -> Blocks.AIR.defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(-1, 3600000).dynamicShape());
 	}
 
 	@Override

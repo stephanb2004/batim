@@ -1,0 +1,9 @@
+{
+  "parent": "bendymod:custom/ritual",
+  "textures": {
+    "all": "bendymod:blocks/painting_bendyumbrella",
+    "particle": "bendymod:blocks/painting_bendyumbrella",
+    "0": "bendymod:blocks/painting_bendyumbrella"
+  },
+  "render_type": "cutout"
+}

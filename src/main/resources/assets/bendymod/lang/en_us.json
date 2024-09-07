@@ -1,10 +1,10 @@
 {
-  "block.bendymod.studio_door_basic": "Studio Basic Door",
   "block.bendymod.recording_sign_off": "Recording Sign",
+  "block.bendymod.studio_door_basic": "Studio Basic Door",
   "gamerule.inkDemonTeleportMode.description": "If this is on, then the Ink Demon can only teleport to players in Survival.",
-  "block.bendymod.desk_fancy": "Fancy Desk",
-  "item.bendymod.studio_axe": "Studio Axe",
   "block.bendymod.lever_power": "Power Lever",
+  "item.bendymod.studio_axe": "Studio Axe",
+  "block.bendymod.desk_fancy": "Fancy Desk",
   "block.bendymod.ritual_summoning": "Ritual Summoning",
   "block.bendymod.hallways_structure_block": "Hallways Structure Block",
   "block.bendymod.bendy_head": "Bendy Head",

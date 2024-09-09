@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "bendymod:block/painting_music"
+    },
+    "facing=east": {
+      "model": "bendymod:block/painting_music",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "bendymod:block/painting_music",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "bendymod:block/painting_music",
+      "y": 270
+    }
+  }
+}

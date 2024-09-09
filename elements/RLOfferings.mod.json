@@ -1,0 +1,33 @@
+{
+  "_fv": 43,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:RecordRL"
+      },
+      {
+        "value": "CUSTOM:InkWellRL"
+      },
+      {
+        "value": "CUSTOM:GearRL"
+      },
+      {
+        "value": "CUSTOM:BendyDollRL"
+      },
+      {
+        "value": "CUSTOM:WrenchRL"
+      },
+      {
+        "value": "CUSTOM:IllusionOfLivingRL"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "rl_offerings",
+    "namespace": "mod"
+  }
+}

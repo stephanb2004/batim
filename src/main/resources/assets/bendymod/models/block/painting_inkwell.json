@@ -1,0 +1,9 @@
+{
+  "parent": "bendymod:custom/painting",
+  "textures": {
+    "all": "bendymod:blocks/painting_blank",
+    "particle": "bendymod:blocks/painting_blank",
+    "0": "bendymod:blocks/painting_inkwell"
+  },
+  "render_type": "cutout"
+}

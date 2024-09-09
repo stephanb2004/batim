@@ -5,6 +5,12 @@
         "0": "ink_well"
       },
       "name": "default"
+    },
+    "irl": {
+      "map": {
+        "0": "ink_well_batdr"
+      },
+      "name": "irl"
     }
   }
 }

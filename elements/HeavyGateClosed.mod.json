@@ -39,11 +39,11 @@
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "No creative tab entry"
+      "value": "CUSTOM:BendyBlocks"
     },
     "destroyTool": "Not specified",
     "customDrop": {
-      "value": "CUSTOM:HeavyGateOpen"
+      "value": ""
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,
@@ -64,7 +64,7 @@
     },
     "colorOnMap": "DEFAULT",
     "creativePickItem": {
-      "value": "CUSTOM:HeavyGateOpen"
+      "value": ""
     },
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",

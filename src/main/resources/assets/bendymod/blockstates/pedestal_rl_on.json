@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "bendymod:custom/pedestal_rl_on_particle"
+    }
+  }
+}

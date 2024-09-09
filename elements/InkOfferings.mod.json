@@ -1,0 +1,33 @@
+{
+  "_fv": 43,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:Record"
+      },
+      {
+        "value": "CUSTOM:InkWell"
+      },
+      {
+        "value": "CUSTOM:BendyDoll"
+      },
+      {
+        "value": "CUSTOM:Wrench"
+      },
+      {
+        "value": "CUSTOM:IllusionOfLiving"
+      },
+      {
+        "value": "CUSTOM:Gear"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "ink_offerings",
+    "namespace": "mod"
+  }
+}

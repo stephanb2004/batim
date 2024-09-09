@@ -1,0 +1,46 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "painting_blank"
+      },
+      "name": "default"
+    },
+    "music": {
+      "map": {
+        "0": "painting_music"
+      },
+      "name": "music"
+    },
+    "plush": {
+      "map": {
+        "0": "painting_plush"
+      },
+      "name": "plush"
+    },
+    "book": {
+      "map": {
+        "0": "painting_book"
+      },
+      "name": "book"
+    },
+    "cog": {
+      "map": {
+        "0": "painting_cog"
+      },
+      "name": "cog"
+    },
+    "inkwell": {
+      "map": {
+        "0": "painting_inkwell"
+      },
+      "name": "inkwell"
+    },
+    "wrench": {
+      "map": {
+        "0": "painting_wrench"
+      },
+      "name": "wrench"
+    }
+  }
+}

@@ -80,7 +80,7 @@ public class GetRandomRoomProcedure {
 				room_variation1 = Mth.nextInt(RandomSource.create(), 1, 3);
 				if (room_variation1 == 1) {
 					chance = Mth.nextInt(RandomSource.create(), 1, 5);
-					if (chance == 1) {
+					if (chance == 0) {
 						done_choosing = true;
 						if ((new Object() {
 							public Direction getDirection(BlockState _bs) {

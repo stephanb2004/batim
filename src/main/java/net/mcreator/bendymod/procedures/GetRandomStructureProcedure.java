@@ -8,6 +8,7 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.Mirror;
+import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.util.RandomSource;
@@ -72,7 +73,7 @@ public class GetRandomStructureProcedure {
 			result_x = x;
 			result_z = z + 1;
 		}
-		if ((world.getBlockState(new BlockPos(result_x, y, result_z))).getBlock() == Blocks.AIR) {
+		if ((world.getBlockState(new BlockPos(result_x, y, result_z))).getBlock() == Blocks.AIR || (world.getBlockState(new BlockPos(result_x, y, result_z))).getBlock() instanceof LiquidBlock) {
 			if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == BendymodModBlocks.HALLWAYS_STRUCTURE_BLOCK.get()) {
 				GetRandomHallwayProcedure.execute(world, x, y, z, blockstate);
 			}

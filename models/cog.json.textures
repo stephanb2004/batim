@@ -5,6 +5,12 @@
         "1": "cog"
       },
       "name": "default"
+    },
+    "irl": {
+      "map": {
+        "1": "cog_batdr"
+      },
+      "name": "irl"
     }
   }
 }

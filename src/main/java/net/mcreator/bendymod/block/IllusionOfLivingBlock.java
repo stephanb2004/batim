@@ -66,10 +66,10 @@ public class IllusionOfLivingBlock extends BaseEntityBlock implements EntityBloc
 	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 
 		return switch (state.getValue(FACING)) {
-			default -> box(0, 0, 2, 16, 2, 14);
-			case NORTH -> box(0, 0, 2, 16, 2, 14);
-			case EAST -> box(2, 0, 0, 14, 2, 16);
-			case WEST -> box(2, 0, 0, 14, 2, 16);
+			default -> box(4, 0, 2, 12, 2, 14);
+			case NORTH -> box(4, 0, 2, 12, 2, 14);
+			case EAST -> box(2, 0, 4, 14, 2, 12);
+			case WEST -> box(2, 0, 4, 14, 2, 12);
 		};
 	}
 

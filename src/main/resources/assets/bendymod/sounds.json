@@ -118,5 +118,14 @@
         "stream": true
       }
     ]
+  },
+  "bendydoll_squeak": {
+    "subtitle": "subtitles.bendydoll_squeak",
+    "sounds": [
+      {
+        "name": "bendymod:bendydoll_squeak",
+        "stream": false
+      }
+    ]
   }
 }

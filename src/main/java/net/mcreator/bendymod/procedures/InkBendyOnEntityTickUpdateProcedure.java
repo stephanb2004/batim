@@ -123,7 +123,7 @@ public class InkBendyOnEntityTickUpdateProcedure {
 		}
 		if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() instanceof LiquidBlock && (world.getFluidState(new BlockPos(x, y, z)).createLegacyBlock()).getBlock() == BendymodModBlocks.INK.get()) {
 			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 20, 1, false, false));
+				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 20, 3, false, false));
 			if (entity.getPersistentData().getBoolean("hidden") == false && !(!world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 16, 16, 16), e -> true).isEmpty())
 					&& !world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 64, 64, 64), e -> true).isEmpty()) {
 				entity.setDeltaMovement(new Vec3(0, 0, 0));
@@ -157,6 +157,8 @@ public class InkBendyOnEntityTickUpdateProcedure {
 				});
 			}
 		} else {
+			if (entity instanceof LivingEntity _entity)
+				_entity.removeEffect(MobEffects.MOVEMENT_SPEED);
 			entity.getPersistentData().putBoolean("hidden", false);
 		}
 		if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null) && did_chase_animation == false) {

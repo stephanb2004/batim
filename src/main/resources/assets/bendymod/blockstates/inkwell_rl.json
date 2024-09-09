@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "bendymod:block/inkwell_rl"
+    },
+    "facing=east": {
+      "model": "bendymod:block/inkwell_rl",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "bendymod:block/inkwell_rl",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "bendymod:block/inkwell_rl",
+      "y": 270
+    }
+  }
+}

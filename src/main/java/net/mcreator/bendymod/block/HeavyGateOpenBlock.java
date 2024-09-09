@@ -3,6 +3,7 @@ package net.mcreator.bendymod.block;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
@@ -23,10 +24,12 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.bendymod.procedures.HeavyGateOpenRedstoneOnProcedure;
+import net.mcreator.bendymod.init.BendymodModBlocks;
 import net.mcreator.bendymod.init.BendymodModBlockEntities;
 
 import javax.annotation.Nullable;
@@ -94,11 +97,16 @@ public class HeavyGateOpenBlock extends BaseEntityBlock implements EntityBlock {
 	}
 
 	@Override
+	public ItemStack getCloneItemStack(BlockState state, HitResult target, BlockGetter world, BlockPos pos, Player player) {
+		return new ItemStack(BendymodModBlocks.HEAVY_GATE_CLOSED.get());
+	}
+
+	@Override
 	public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
 		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(this, 1));
+		return Collections.singletonList(new ItemStack(BendymodModBlocks.HEAVY_GATE_CLOSED.get()));
 	}
 
 	@Override

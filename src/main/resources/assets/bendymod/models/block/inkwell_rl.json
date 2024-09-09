@@ -1,0 +1,9 @@
+{
+  "parent": "bendymod:custom/ink_well",
+  "textures": {
+    "all": "bendymod:blocks/ink_well_batdr",
+    "particle": "bendymod:blocks/ink_well_batdr",
+    "0": "bendymod:blocks/ink_well_batdr"
+  },
+  "render_type": "cutout"
+}

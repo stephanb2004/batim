@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "bendymod:block/painting_wrench"
+    },
+    "facing=east": {
+      "model": "bendymod:block/painting_wrench",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "bendymod:block/painting_wrench",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "bendymod:block/painting_wrench",
+      "y": 270
+    }
+  }
+}

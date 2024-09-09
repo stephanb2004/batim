@@ -15,6 +15,7 @@ import net.mcreator.bendymod.block.renderer.WritingItsTimeToBelieveTileRenderer;
 import net.mcreator.bendymod.block.renderer.WritingDreamsComeTrueTileRenderer;
 import net.mcreator.bendymod.block.renderer.WritingDownHereWereAllSinnersTileRenderer;
 import net.mcreator.bendymod.block.renderer.WrenchTileRenderer;
+import net.mcreator.bendymod.block.renderer.WrenchRLTileRenderer;
 import net.mcreator.bendymod.block.renderer.WorkTableTileRenderer;
 import net.mcreator.bendymod.block.renderer.ViolinTileRenderer;
 import net.mcreator.bendymod.block.renderer.ValveTileRenderer;
@@ -29,11 +30,15 @@ import net.mcreator.bendymod.block.renderer.ReelTileRenderer;
 import net.mcreator.bendymod.block.renderer.RecordingSignOnTileRenderer;
 import net.mcreator.bendymod.block.renderer.RecordingSignOffTileRenderer;
 import net.mcreator.bendymod.block.renderer.RecordTileRenderer;
+import net.mcreator.bendymod.block.renderer.RecordRLTileRenderer;
 import net.mcreator.bendymod.block.renderer.RadioTileRenderer;
 import net.mcreator.bendymod.block.renderer.PunchInCardTileRenderer;
 import net.mcreator.bendymod.block.renderer.ProjectorTileRenderer;
 import net.mcreator.bendymod.block.renderer.PianoTileRenderer;
 import net.mcreator.bendymod.block.renderer.PedestalTileRenderer;
+import net.mcreator.bendymod.block.renderer.PedestalRLTileRenderer;
+import net.mcreator.bendymod.block.renderer.PedestalRLOnTileRenderer;
+import net.mcreator.bendymod.block.renderer.PedestalOnTileRenderer;
 import net.mcreator.bendymod.block.renderer.MusicDepartmentSignTileRenderer;
 import net.mcreator.bendymod.block.renderer.LeverStudioOnTileRenderer;
 import net.mcreator.bendymod.block.renderer.LeverStudioOffTileRenderer;
@@ -43,9 +48,11 @@ import net.mcreator.bendymod.block.renderer.LargeBoxTileRenderer;
 import net.mcreator.bendymod.block.renderer.JumbledPaperTileRenderer;
 import net.mcreator.bendymod.block.renderer.JDSSignTileRenderer;
 import net.mcreator.bendymod.block.renderer.InkMachineTileRenderer;
+import net.mcreator.bendymod.block.renderer.InkMachineRLTileRenderer;
 import net.mcreator.bendymod.block.renderer.InkBarrelTileRenderer;
 import net.mcreator.bendymod.block.renderer.InfermaryBedTileRenderer;
 import net.mcreator.bendymod.block.renderer.IllusionOfLivingTileRenderer;
+import net.mcreator.bendymod.block.renderer.IllusionOfLivingRLTileRenderer;
 import net.mcreator.bendymod.block.renderer.HeavyGateOpenTileRenderer;
 import net.mcreator.bendymod.block.renderer.HeavyGateClosedTileRenderer;
 import net.mcreator.bendymod.block.renderer.HatRackTileRenderer;
@@ -66,6 +73,7 @@ import net.mcreator.bendymod.block.renderer.BorisCloneTileRenderer;
 import net.mcreator.bendymod.block.renderer.BoardsTileRenderer;
 import net.mcreator.bendymod.block.renderer.BendyStatueTileRenderer;
 import net.mcreator.bendymod.block.renderer.BendyDollTileRenderer;
+import net.mcreator.bendymod.block.renderer.BendyDollRLTileRenderer;
 import net.mcreator.bendymod.block.renderer.BassTileRenderer;
 import net.mcreator.bendymod.block.renderer.BanjoTileRenderer;
 import net.mcreator.bendymod.BendymodMod;
@@ -75,7 +83,7 @@ public class ClientListener {
 	@OnlyIn(Dist.CLIENT)
 	@SubscribeEvent
 	public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
-		event.registerBlockEntityRenderer(BendymodModBlockEntities.HEAVY_GATE_OPEN.get(), HeavyGateOpenTileRenderer::new);
+		event.registerBlockEntityRenderer(BendymodModBlockEntities.HEAVY_GATE_CLOSED.get(), HeavyGateClosedTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.HANGING_MIC.get(), HangingMicTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.SOUP_CANDLE.get(), SoupCandleTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.CUTOUT_BENDY.get(), CutoutBendyTileRenderer::new);
@@ -94,6 +102,7 @@ public class ClientListener {
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.VALVE.get(), ValveTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.LARGE_BOX.get(), LargeBoxTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.INK_MACHINE.get(), InkMachineTileRenderer::new);
+		event.registerBlockEntityRenderer(BendymodModBlockEntities.INK_MACHINE_RL.get(), InkMachineRLTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.JUMBLED_PAPER.get(), JumbledPaperTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.BOARDS.get(), BoardsTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.BORIS_CLONE.get(), BorisCloneTileRenderer::new);
@@ -114,6 +123,10 @@ public class ClientListener {
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.BENDY_DOLL.get(), BendyDollTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.WRENCH.get(), WrenchTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.ILLUSION_OF_LIVING.get(), IllusionOfLivingTileRenderer::new);
+		event.registerBlockEntityRenderer(BendymodModBlockEntities.RECORD_RL.get(), RecordRLTileRenderer::new);
+		event.registerBlockEntityRenderer(BendymodModBlockEntities.BENDY_DOLL_RL.get(), BendyDollRLTileRenderer::new);
+		event.registerBlockEntityRenderer(BendymodModBlockEntities.WRENCH_RL.get(), WrenchRLTileRenderer::new);
+		event.registerBlockEntityRenderer(BendymodModBlockEntities.ILLUSION_OF_LIVING_RL.get(), IllusionOfLivingRLTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.SHEET_HOLDER.get(), SheetHolderTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.BANJO.get(), BanjoTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.DRUM.get(), DrumTileRenderer::new);
@@ -127,14 +140,17 @@ public class ClientListener {
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.WRITING_THE_SHEEP_WILL_COME_TO_SLAUGHTER.get(), WritingTheSheepWillComeToSlaughterTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.WRITING_SING_WITH_ME.get(), WritingSingWithMeTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.WRITING_DOWN_HERE_WERE_ALL_SINNERS.get(), WritingDownHereWereAllSinnersTileRenderer::new);
+		event.registerBlockEntityRenderer(BendymodModBlockEntities.LEVER_STUDIO_OFF.get(), LeverStudioOffTileRenderer::new);
+		event.registerBlockEntityRenderer(BendymodModBlockEntities.LEVER_POWER_OFF.get(), LeverPowerOffTileRenderer::new);
+		event.registerBlockEntityRenderer(BendymodModBlockEntities.PEDESTAL_RL.get(), PedestalRLTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.CUTOUT_SINNY.get(), CutoutSinnyTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.RECORDING_SIGN_ON.get(), RecordingSignOnTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.CELLBOX_1.get(), Cellbox1TileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.CELLBOX_2.get(), Cellbox2TileRenderer::new);
-		event.registerBlockEntityRenderer(BendymodModBlockEntities.HEAVY_GATE_CLOSED.get(), HeavyGateClosedTileRenderer::new);
-		event.registerBlockEntityRenderer(BendymodModBlockEntities.LEVER_STUDIO_OFF.get(), LeverStudioOffTileRenderer::new);
+		event.registerBlockEntityRenderer(BendymodModBlockEntities.HEAVY_GATE_OPEN.get(), HeavyGateOpenTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.LEVER_STUDIO_ON.get(), LeverStudioOnTileRenderer::new);
-		event.registerBlockEntityRenderer(BendymodModBlockEntities.LEVER_POWER_OFF.get(), LeverPowerOffTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.LEVER_POWER_ON.get(), LeverPowerOnTileRenderer::new);
+		event.registerBlockEntityRenderer(BendymodModBlockEntities.PEDESTAL_ON.get(), PedestalOnTileRenderer::new);
+		event.registerBlockEntityRenderer(BendymodModBlockEntities.PEDESTAL_RL_ON.get(), PedestalRLOnTileRenderer::new);
 	}
 }

@@ -66,10 +66,10 @@ public class DeskBlock extends BaseEntityBlock implements EntityBlock {
 	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 
 		return switch (state.getValue(FACING)) {
-			default -> box(0, 0, 0, 16, 16, 10);
-			case NORTH -> box(0, 0, 6, 16, 16, 16);
-			case EAST -> box(0, 0, 0, 10, 16, 16);
-			case WEST -> box(6, 0, 0, 16, 16, 16);
+			default -> box(3, 0, 0, 29, 16, 12);
+			case NORTH -> box(-13, 0, 4, 13, 16, 16);
+			case EAST -> box(0, 0, -13, 12, 16, 13);
+			case WEST -> box(4, 0, 3, 16, 16, 29);
 		};
 	}
 

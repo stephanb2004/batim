@@ -1,56 +1,94 @@
 package net.mcreator.bendymod.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
-
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.block.LiquidBlock;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.util.RandomSource;
-import net.minecraft.util.Mth;
-import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
 import net.mcreator.bendymod.network.BendymodModVariables;
+import net.mcreator.bendymod.init.BendymodModGameRules;
 import net.mcreator.bendymod.init.BendymodModBlocks;
 import net.mcreator.bendymod.entity.InkBendyEntity;
 import net.mcreator.bendymod.BendymodMod;
+
+import java.util.Comparator;
 
 public class InkBendyOnEntityTickUpdateProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
 		Entity selected_player = null;
+		boolean hiding = false;
+		boolean did_chase_animation = false;
+		boolean overrid = false;
+		boolean selected_loc = false;
+		boolean played_song = false;
 		double random_x = 0;
 		double random_z = 0;
 		double random_letter = 0;
 		double random2 = 0;
 		double target_x = 0;
 		double target_z = 0;
-		boolean hiding = false;
-		boolean did_chase_animation = false;
-		boolean overrid = false;
-		boolean selected_loc = false;
+		double range_distance = 0;
+		range_distance = 101;
+		if (entity.getPersistentData().getBoolean("cur_inkbendy") == true) {
+			BendymodModVariables.MapVariables.get(world).cur_inkdemon_x = x;
+			BendymodModVariables.MapVariables.get(world).syncData(world);
+			BendymodModVariables.MapVariables.get(world).cur_inkdemon_y = y;
+			BendymodModVariables.MapVariables.get(world).syncData(world);
+			BendymodModVariables.MapVariables.get(world).cur_inkdemon_z = z;
+			BendymodModVariables.MapVariables.get(world).syncData(world);
+		}
 		if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 			_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 60, 9999, false, false));
 		if (!(null == (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null))) {
 			if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof LivingEntity _entity && !_entity.level.isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.DARKNESS, 20, 1, false, false));
+		} else {
+			if (!world.getEntitiesOfClass(InkBendyEntity.class, AABB.ofSize(new Vec3((x + range_distance), y, (z + range_distance)), 200, 200, 200), e -> true).isEmpty()
+					|| !world.getEntitiesOfClass(InkBendyEntity.class, AABB.ofSize(new Vec3((x - range_distance), y, (z - range_distance)), 200, 200, 200), e -> true).isEmpty()
+					|| !world.getEntitiesOfClass(InkBendyEntity.class, AABB.ofSize(new Vec3((x - range_distance), y, (z + range_distance)), 200, 200, 200), e -> true).isEmpty()
+					|| !world.getEntitiesOfClass(InkBendyEntity.class, AABB.ofSize(new Vec3((x + range_distance), y, (z - range_distance)), 200, 200, 200), e -> true).isEmpty()) {
+				if (entity.getPersistentData().getBoolean("cur_inkbendy") == false && !world.getLevelData().getGameRules().getBoolean(BendymodModGameRules.ALLOW_MULTIPLE_INK_BENDYS)) {
+					if (((Entity) world.getEntitiesOfClass(InkBendyEntity.class,
+							AABB.ofSize(new Vec3(BendymodModVariables.MapVariables.get(world).cur_inkdemon_x, BendymodModVariables.MapVariables.get(world).cur_inkdemon_y, BendymodModVariables.MapVariables.get(world).cur_inkdemon_z), 4, 4, 4),
+							e -> true).stream().sorted(new Object() {
+								Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+									return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
+								}
+							}.compareDistOf(BendymodModVariables.MapVariables.get(world).cur_inkdemon_x, BendymodModVariables.MapVariables.get(world).cur_inkdemon_y, BendymodModVariables.MapVariables.get(world).cur_inkdemon_z)).findFirst()
+							.orElse(null)).getPersistentData().getBoolean("can_be_teleported") == true) {
+						{
+							Entity _ent = ((Entity) world.getEntitiesOfClass(InkBendyEntity.class,
+									AABB.ofSize(new Vec3(BendymodModVariables.MapVariables.get(world).cur_inkdemon_x, BendymodModVariables.MapVariables.get(world).cur_inkdemon_y, BendymodModVariables.MapVariables.get(world).cur_inkdemon_z), 4, 4, 4),
+									e -> true).stream().sorted(new Object() {
+										Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+											return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
+										}
+									}.compareDistOf(BendymodModVariables.MapVariables.get(world).cur_inkdemon_x, BendymodModVariables.MapVariables.get(world).cur_inkdemon_y, BendymodModVariables.MapVariables.get(world).cur_inkdemon_z)).findFirst()
+									.orElse(null));
+							_ent.teleportTo(x, y, z);
+							if (_ent instanceof ServerPlayer _serverPlayer)
+								_serverPlayer.connection.teleport(x, y, z, _ent.getYRot(), _ent.getXRot());
+						}
+					}
+					if (!entity.level.isClientSide())
+						entity.discard();
+				}
+			}
 		}
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
@@ -67,59 +105,14 @@ public class InkBendyOnEntityTickUpdateProcedure {
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3((x - 16), y, (z - 16)), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 					"forceload remove ~ ~ ~ ~");
-		BendymodModVariables.MapVariables.get(world).ink_bendy_time_remaining = BendymodModVariables.MapVariables.get(world).ink_bendy_time_remaining + 5;
+		BendymodModVariables.MapVariables.get(world).ink_bendy_time_remaining = BendymodModVariables.MapVariables.get(world).ink_bendy_time_remaining + 1;
 		BendymodModVariables.MapVariables.get(world).syncData(world);
-		if (BendymodModVariables.MapVariables.get(world).ink_bendy_time_remaining == BendymodModVariables.MapVariables.get(world).ink_bendy_timer) {
-			if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null) {
-				selected_player = ChooseRandomPlayerProcedure.execute(world);
-				if (!(selected_player == null)) {
-					while (selected_loc == false) {
-						random2 = Mth.nextInt(RandomSource.create(), 1, 4);
-						if (random2 == 1) {
-							random_x = selected_player.getX() + Mth.nextInt(RandomSource.create(), 8, 13);
-						} else if (random2 == 2) {
-							random_x = selected_player.getX() - Mth.nextInt(RandomSource.create(), 8, 13);
-						} else if (random2 == 3) {
-							random_x = selected_player.getX() + Mth.nextInt(RandomSource.create(), 0, 2);
-						} else if (random2 == 4) {
-							random_x = selected_player.getX() - Mth.nextInt(RandomSource.create(), 0, 2);
-						}
-						random2 = Mth.nextInt(RandomSource.create(), 1, 4);
-						if (random2 == 1) {
-							random_z = selected_player.getX() + Mth.nextInt(RandomSource.create(), 8, 13);
-						} else if (random2 == 2) {
-							random_z = selected_player.getX() - Mth.nextInt(RandomSource.create(), 8, 13);
-						} else if (random2 == 3) {
-							random_z = selected_player.getZ() + Mth.nextInt(RandomSource.create(), 0, 2);
-						} else if (random2 == 4) {
-							random_z = selected_player.getZ() - Mth.nextInt(RandomSource.create(), 0, 2);
-						}
-						target_x = selected_player.getX();
-						target_z = selected_player.getZ();
-						if ((world.getBlockState(new BlockPos(random_x, selected_player.getY(), random_z))).getBlock() == Blocks.AIR && world.getBlockState(new BlockPos(random_x, selected_player.getY() - 1, random_z)).canOcclude()) {
-							selected_loc = true;
-						}
-					}
-					{
-						Entity _ent = entity;
-						_ent.teleportTo(random_x, (selected_player.getY()), random_z);
-						if (_ent instanceof ServerPlayer _serverPlayer)
-							_serverPlayer.connection.teleport(random_x, (selected_player.getY()), random_z, _ent.getYRot(), _ent.getXRot());
-					}
-					if (entity instanceof Mob _entity)
-						_entity.getNavigation().moveTo(target_x, y, target_z, 1);
-					BendymodModVariables.MapVariables.get(world).ink_bendy_time_remaining = 0;
-					BendymodModVariables.MapVariables.get(world).syncData(world);
-				} else {
-					BendymodModVariables.MapVariables.get(world).ink_bendy_time_remaining = 0;
-					BendymodModVariables.MapVariables.get(world).syncData(world);
-				}
-			} else {
-				BendymodModVariables.MapVariables.get(world).ink_bendy_time_remaining = 0;
-				BendymodModVariables.MapVariables.get(world).syncData(world);
-				BendymodModVariables.MapVariables.get(world).ink_bendy_timer = Mth.nextInt(RandomSource.create(), 30000, 78000);
-				BendymodModVariables.MapVariables.get(world).syncData(world);
-			}
+		if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
+			entity.getPersistentData().putBoolean("can_be_teleported", false);
+		} else if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null && BendymodModVariables.MapVariables.get(world).ink_bendy_time_remaining == BendymodModVariables.MapVariables.get(world).ink_bendy_timer) {
+			entity.getPersistentData().putBoolean("can_be_teleported", true);
+		} else if (BendymodModVariables.MapVariables.get(world).ink_bendy_time_remaining < BendymodModVariables.MapVariables.get(world).ink_bendy_timer) {
+			entity.getPersistentData().putBoolean("can_be_teleported", false);
 		}
 		if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() instanceof LiquidBlock && (world.getFluidState(new BlockPos(x, y, z)).createLegacyBlock()).getBlock() == BendymodModBlocks.INK.get()) {
 			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
@@ -165,25 +158,25 @@ public class InkBendyOnEntityTickUpdateProcedure {
 			if (entity instanceof InkBendyEntity) {
 				((InkBendyEntity) entity).setAnimation("animation.inkbendy.see");
 			}
-			entity.setTicksFrozen(28);
-			if (world.isClientSide()) {
-				if (world instanceof Level _level) {
-					if (!_level.isClientSide()) {
-						_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("bendymod:inkdemon_chase")), SoundSource.MUSIC, 1, 1);
-					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("bendymod:inkdemon_chase")), SoundSource.MUSIC, 1, 1, false);
-					}
-				}
+			if (played_song == false) {
+				if (world instanceof ServerLevel _level)
+					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+							"playsound bendymod:inkdemon_chase ambient @a[distance=..35] ~ ~ ~");
+				played_song = true;
 			}
+			entity.setTicksFrozen(28);
 			BendymodMod.queueServerWork(28, () -> {
 				if (entity instanceof InkBendyEntity) {
 					((InkBendyEntity) entity).setAnimation("empty");
 				}
 			});
 		} else if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null) {
-			if (world instanceof ServerLevel _level)
-				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-						"stopsound @a * bendymod:inkdemon_chase");
+			if (entity.getPersistentData().getBoolean("cur_inkbendy") == false) {
+				if (world instanceof ServerLevel _level)
+					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+							"stopsound @a * bendymod:inkdemon_chase");
+			}
+			played_song = false;
 			overrid = false;
 			did_chase_animation = false;
 			hiding = false;

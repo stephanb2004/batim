@@ -49,6 +49,8 @@ public class StudioPlayerEntersDimensionFirstTimeProcedure {
 						_serverPlayer.connection.teleport(0, 307, 0, _ent.getYRot(), _ent.getXRot());
 				}
 			});
+			if (entity instanceof ServerPlayer _serverPlayer)
+				_serverPlayer.setRespawnPosition(_serverPlayer.level.dimension(), new BlockPos(0, 307, 0), _serverPlayer.getYRot(), true, false);
 			{
 				boolean _setval = true;
 				entity.getCapability(BendymodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

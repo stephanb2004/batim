@@ -16,7 +16,7 @@ import java.util.Collections;
 
 public class SolidInkBlock extends Block {
 	public SolidInkBlock() {
-		super(BlockBehaviour.Properties.of(Material.WATER).sound(SoundType.HONEY_BLOCK).strength(-1, 3600000));
+		super(BlockBehaviour.Properties.of(Material.DIRT).sound(SoundType.HONEY_BLOCK).strength(-1, 3600000));
 	}
 
 	@Override

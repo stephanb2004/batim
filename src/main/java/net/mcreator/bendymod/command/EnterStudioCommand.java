@@ -20,7 +20,7 @@ import net.mcreator.bendymod.procedures.EnterStudioProcedureProcedure;
 public class EnterStudioCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(Commands.literal("enterstudio").requires(s -> s.hasPermission(2)).then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
+		event.getDispatcher().register(Commands.literal("enterstudio").requires(s -> s.hasPermission(2)).then(Commands.argument("name", EntityArgument.entities()).executes(arguments -> {
 			ServerLevel world = arguments.getSource().getLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();

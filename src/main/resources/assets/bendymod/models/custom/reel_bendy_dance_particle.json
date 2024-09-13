@@ -1,0 +1,6 @@
+{
+  "parent": "bendymod:displaysettings/tinyblock.item",
+  "textures": {
+    "particle": "bendymod:blocks/reel"
+  }
+}

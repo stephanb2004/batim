@@ -1,0 +1,21 @@
+{
+  "_fv": 43,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:ProjectionBlank"
+      },
+      {
+        "value": "CUSTOM:ProjectionBendyDance"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "projections",
+    "namespace": "mod"
+  }
+}

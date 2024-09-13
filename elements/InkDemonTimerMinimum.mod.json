@@ -1,0 +1,12 @@
+{
+  "_fv": 43,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Number",
+    "displayName": "Ink Demon Timer Minimum",
+    "description": "This, will be the minimum time (in ticks) of how often the Ink Demon spawns.",
+    "category": "PLAYER",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 6000
+  }
+}

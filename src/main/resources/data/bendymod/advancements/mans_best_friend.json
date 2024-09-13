@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "bendymod:bacon_soup"
+    },
+    "title": {
+      "translate": "advancements.mans_best_friend.title"
+    },
+    "description": {
+      "translate": "advancements.mans_best_friend.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "mans_best_friend": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "bendymod:the_dark_puddles_awaken"
+}

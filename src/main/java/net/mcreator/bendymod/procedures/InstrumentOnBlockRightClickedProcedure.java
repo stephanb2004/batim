@@ -18,41 +18,41 @@ public class InstrumentOnBlockRightClickedProcedure {
 			if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == BendymodModBlocks.PIANO.get()) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.harp")), SoundSource.RECORDS, 1, (float) Mth.nextDouble(RandomSource.create(), 1, 2));
+						_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.harp")), SoundSource.NEUTRAL, 1, (float) Mth.nextDouble(RandomSource.create(), 1, 2));
 					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.harp")), SoundSource.RECORDS, 1, (float) Mth.nextDouble(RandomSource.create(), 1, 2), false);
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.harp")), SoundSource.NEUTRAL, 1, (float) Mth.nextDouble(RandomSource.create(), 1, 2), false);
 					}
 				}
 			} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == BendymodModBlocks.BASS.get()) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.bass")), SoundSource.RECORDS, 1, (float) Mth.nextDouble(RandomSource.create(), 1, 2));
+						_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.bass")), SoundSource.NEUTRAL, 1, (float) Mth.nextDouble(RandomSource.create(), 1, 2));
 					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.bass")), SoundSource.RECORDS, 1, (float) Mth.nextDouble(RandomSource.create(), 1, 2), false);
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.bass")), SoundSource.NEUTRAL, 1, (float) Mth.nextDouble(RandomSource.create(), 1, 2), false);
 					}
 				}
 			} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == BendymodModBlocks.DRUM.get()) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.basedrum")), SoundSource.RECORDS, 1, (float) Mth.nextDouble(RandomSource.create(), 1, 2));
+						_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.basedrum")), SoundSource.NEUTRAL, 1, (float) Mth.nextDouble(RandomSource.create(), 1, 2));
 					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.basedrum")), SoundSource.RECORDS, 1, (float) Mth.nextDouble(RandomSource.create(), 1, 2), false);
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.basedrum")), SoundSource.NEUTRAL, 1, (float) Mth.nextDouble(RandomSource.create(), 1, 2), false);
 					}
 				}
 			} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == BendymodModBlocks.BANJO.get()) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.banjo")), SoundSource.RECORDS, 1, (float) Mth.nextDouble(RandomSource.create(), 1, 2));
+						_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.banjo")), SoundSource.NEUTRAL, 1, (float) Mth.nextDouble(RandomSource.create(), 1, 2));
 					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.banjo")), SoundSource.RECORDS, 1, (float) Mth.nextDouble(RandomSource.create(), 1, 2), false);
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.banjo")), SoundSource.NEUTRAL, 1, (float) Mth.nextDouble(RandomSource.create(), 1, 2), false);
 					}
 				}
 			} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == BendymodModBlocks.VIOLIN.get()) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("bendymod:violin_note")), SoundSource.RECORDS, 1, (float) Mth.nextDouble(RandomSource.create(), 1, 2));
+						_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("bendymod:violin_note")), SoundSource.NEUTRAL, 1, (float) Mth.nextDouble(RandomSource.create(), 1, 2));
 					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("bendymod:violin_note")), SoundSource.RECORDS, 1, (float) Mth.nextDouble(RandomSource.create(), 1, 2), false);
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("bendymod:violin_note")), SoundSource.NEUTRAL, 1, (float) Mth.nextDouble(RandomSource.create(), 1, 2), false);
 					}
 				}
 			} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == BendymodModBlocks.BENDY_DOLL.get() || (world.getBlockState(new BlockPos(x, y, z))).getBlock() == BendymodModBlocks.BENDY_DOLL_RL.get()) {

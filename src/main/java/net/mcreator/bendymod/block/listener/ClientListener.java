@@ -17,6 +17,7 @@ import net.mcreator.bendymod.block.renderer.WritingDownHereWereAllSinnersTileRen
 import net.mcreator.bendymod.block.renderer.WrenchTileRenderer;
 import net.mcreator.bendymod.block.renderer.WrenchRLTileRenderer;
 import net.mcreator.bendymod.block.renderer.WorkTableTileRenderer;
+import net.mcreator.bendymod.block.renderer.WallGash1TileRenderer;
 import net.mcreator.bendymod.block.renderer.ViolinTileRenderer;
 import net.mcreator.bendymod.block.renderer.ValveTileRenderer;
 import net.mcreator.bendymod.block.renderer.TrashBinTileRenderer;
@@ -27,6 +28,7 @@ import net.mcreator.bendymod.block.renderer.SoupCandleTileRenderer;
 import net.mcreator.bendymod.block.renderer.ShelfTileRenderer;
 import net.mcreator.bendymod.block.renderer.SheetHolderTileRenderer;
 import net.mcreator.bendymod.block.renderer.ReelTileRenderer;
+import net.mcreator.bendymod.block.renderer.ReelBendyDanceTileRenderer;
 import net.mcreator.bendymod.block.renderer.RecordingSignOnTileRenderer;
 import net.mcreator.bendymod.block.renderer.RecordingSignOffTileRenderer;
 import net.mcreator.bendymod.block.renderer.RecordTileRenderer;
@@ -34,6 +36,8 @@ import net.mcreator.bendymod.block.renderer.RecordRLTileRenderer;
 import net.mcreator.bendymod.block.renderer.RadioTileRenderer;
 import net.mcreator.bendymod.block.renderer.PunchInCardTileRenderer;
 import net.mcreator.bendymod.block.renderer.ProjectorTileRenderer;
+import net.mcreator.bendymod.block.renderer.ProjectionBlankTileRenderer;
+import net.mcreator.bendymod.block.renderer.ProjectionBendyDanceTileRenderer;
 import net.mcreator.bendymod.block.renderer.PianoTileRenderer;
 import net.mcreator.bendymod.block.renderer.PedestalTileRenderer;
 import net.mcreator.bendymod.block.renderer.PedestalRLTileRenderer;
@@ -70,10 +74,12 @@ import net.mcreator.bendymod.block.renderer.Cellbox1TileRenderer;
 import net.mcreator.bendymod.block.renderer.Cellbox0TileRenderer;
 import net.mcreator.bendymod.block.renderer.CassettePlayerTileRenderer;
 import net.mcreator.bendymod.block.renderer.BorisCloneTileRenderer;
+import net.mcreator.bendymod.block.renderer.BookBendyTileRenderer;
 import net.mcreator.bendymod.block.renderer.BoardsTileRenderer;
 import net.mcreator.bendymod.block.renderer.BendyStatueTileRenderer;
 import net.mcreator.bendymod.block.renderer.BendyDollTileRenderer;
 import net.mcreator.bendymod.block.renderer.BendyDollRLTileRenderer;
+import net.mcreator.bendymod.block.renderer.BendyBookStackTileRenderer;
 import net.mcreator.bendymod.block.renderer.BassTileRenderer;
 import net.mcreator.bendymod.block.renderer.BanjoTileRenderer;
 import net.mcreator.bendymod.BendymodMod;
@@ -119,6 +125,7 @@ public class ClientListener {
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.CELLBOX_0.get(), Cellbox0TileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.INFERMARY_BED.get(), InfermaryBedTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.PEDESTAL.get(), PedestalTileRenderer::new);
+		event.registerBlockEntityRenderer(BendymodModBlockEntities.PEDESTAL_RL.get(), PedestalRLTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.RECORD.get(), RecordTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.BENDY_DOLL.get(), BendyDollTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.WRENCH.get(), WrenchTileRenderer::new);
@@ -127,6 +134,8 @@ public class ClientListener {
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.BENDY_DOLL_RL.get(), BendyDollRLTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.WRENCH_RL.get(), WrenchRLTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.ILLUSION_OF_LIVING_RL.get(), IllusionOfLivingRLTileRenderer::new);
+		event.registerBlockEntityRenderer(BendymodModBlockEntities.BOOK_BENDY.get(), BookBendyTileRenderer::new);
+		event.registerBlockEntityRenderer(BendymodModBlockEntities.BENDY_BOOK_STACK.get(), BendyBookStackTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.SHEET_HOLDER.get(), SheetHolderTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.BANJO.get(), BanjoTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.DRUM.get(), DrumTileRenderer::new);
@@ -142,7 +151,8 @@ public class ClientListener {
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.WRITING_DOWN_HERE_WERE_ALL_SINNERS.get(), WritingDownHereWereAllSinnersTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.LEVER_STUDIO_OFF.get(), LeverStudioOffTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.LEVER_POWER_OFF.get(), LeverPowerOffTileRenderer::new);
-		event.registerBlockEntityRenderer(BendymodModBlockEntities.PEDESTAL_RL.get(), PedestalRLTileRenderer::new);
+		event.registerBlockEntityRenderer(BendymodModBlockEntities.REEL_BENDY_DANCE.get(), ReelBendyDanceTileRenderer::new);
+		event.registerBlockEntityRenderer(BendymodModBlockEntities.WALL_GASH_1.get(), WallGash1TileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.CUTOUT_SINNY.get(), CutoutSinnyTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.RECORDING_SIGN_ON.get(), RecordingSignOnTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.CELLBOX_1.get(), Cellbox1TileRenderer::new);
@@ -152,5 +162,7 @@ public class ClientListener {
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.LEVER_POWER_ON.get(), LeverPowerOnTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.PEDESTAL_ON.get(), PedestalOnTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.PEDESTAL_RL_ON.get(), PedestalRLOnTileRenderer::new);
+		event.registerBlockEntityRenderer(BendymodModBlockEntities.PROJECTION_BLANK.get(), ProjectionBlankTileRenderer::new);
+		event.registerBlockEntityRenderer(BendymodModBlockEntities.PROJECTION_BENDY_DANCE.get(), ProjectionBendyDanceTileRenderer::new);
 	}
 }

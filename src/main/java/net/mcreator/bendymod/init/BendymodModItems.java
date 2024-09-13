@@ -31,6 +31,7 @@ import net.mcreator.bendymod.block.display.WritingDownHereWereAllSinnersDisplayI
 import net.mcreator.bendymod.block.display.WrenchRLDisplayItem;
 import net.mcreator.bendymod.block.display.WrenchDisplayItem;
 import net.mcreator.bendymod.block.display.WorkTableDisplayItem;
+import net.mcreator.bendymod.block.display.WallGash1DisplayItem;
 import net.mcreator.bendymod.block.display.ViolinDisplayItem;
 import net.mcreator.bendymod.block.display.ValveDisplayItem;
 import net.mcreator.bendymod.block.display.TrashBinDisplayItem;
@@ -41,6 +42,7 @@ import net.mcreator.bendymod.block.display.SoupCandleDisplayItem;
 import net.mcreator.bendymod.block.display.ShelfDisplayItem;
 import net.mcreator.bendymod.block.display.SheetHolderDisplayItem;
 import net.mcreator.bendymod.block.display.ReelDisplayItem;
+import net.mcreator.bendymod.block.display.ReelBendyDanceDisplayItem;
 import net.mcreator.bendymod.block.display.RecordingSignOnDisplayItem;
 import net.mcreator.bendymod.block.display.RecordingSignOffDisplayItem;
 import net.mcreator.bendymod.block.display.RecordRLDisplayItem;
@@ -48,6 +50,8 @@ import net.mcreator.bendymod.block.display.RecordDisplayItem;
 import net.mcreator.bendymod.block.display.RadioDisplayItem;
 import net.mcreator.bendymod.block.display.PunchInCardDisplayItem;
 import net.mcreator.bendymod.block.display.ProjectorDisplayItem;
+import net.mcreator.bendymod.block.display.ProjectionBlankDisplayItem;
+import net.mcreator.bendymod.block.display.ProjectionBendyDanceDisplayItem;
 import net.mcreator.bendymod.block.display.PianoDisplayItem;
 import net.mcreator.bendymod.block.display.PedestalRLOnDisplayItem;
 import net.mcreator.bendymod.block.display.PedestalRLDisplayItem;
@@ -84,10 +88,12 @@ import net.mcreator.bendymod.block.display.Cellbox1DisplayItem;
 import net.mcreator.bendymod.block.display.Cellbox0DisplayItem;
 import net.mcreator.bendymod.block.display.CassettePlayerDisplayItem;
 import net.mcreator.bendymod.block.display.BorisCloneDisplayItem;
+import net.mcreator.bendymod.block.display.BookBendyDisplayItem;
 import net.mcreator.bendymod.block.display.BoardsDisplayItem;
 import net.mcreator.bendymod.block.display.BendyStatueDisplayItem;
 import net.mcreator.bendymod.block.display.BendyDollRLDisplayItem;
 import net.mcreator.bendymod.block.display.BendyDollDisplayItem;
+import net.mcreator.bendymod.block.display.BendyBookStackDisplayItem;
 import net.mcreator.bendymod.block.display.BassDisplayItem;
 import net.mcreator.bendymod.block.display.BanjoDisplayItem;
 import net.mcreator.bendymod.BendymodMod;
@@ -189,6 +195,8 @@ public class BendymodModItems {
 	public static final RegistryObject<Item> INFERMARY_BED = REGISTRY.register(BendymodModBlocks.INFERMARY_BED.getId().getPath(),
 			() -> new InfermaryBedDisplayItem(BendymodModBlocks.INFERMARY_BED.get(), new Item.Properties().tab(BendymodModTabs.TAB_BENDY_PROPS)));
 	public static final RegistryObject<Item> PEDESTAL = REGISTRY.register(BendymodModBlocks.PEDESTAL.getId().getPath(), () -> new PedestalDisplayItem(BendymodModBlocks.PEDESTAL.get(), new Item.Properties().tab(BendymodModTabs.TAB_BENDY_PROPS)));
+	public static final RegistryObject<Item> PEDESTAL_RL = REGISTRY.register(BendymodModBlocks.PEDESTAL_RL.getId().getPath(),
+			() -> new PedestalRLDisplayItem(BendymodModBlocks.PEDESTAL_RL.get(), new Item.Properties().tab(BendymodModTabs.TAB_BENDY_PROPS)));
 	public static final RegistryObject<Item> RECORD = REGISTRY.register(BendymodModBlocks.RECORD.getId().getPath(), () -> new RecordDisplayItem(BendymodModBlocks.RECORD.get(), new Item.Properties().tab(BendymodModTabs.TAB_BENDY_PROPS)));
 	public static final RegistryObject<Item> INKWELL = block(BendymodModBlocks.INKWELL, BendymodModTabs.TAB_BENDY_PROPS);
 	public static final RegistryObject<Item> GEAR = block(BendymodModBlocks.GEAR, BendymodModTabs.TAB_BENDY_PROPS);
@@ -205,6 +213,10 @@ public class BendymodModItems {
 	public static final RegistryObject<Item> WRENCH_RL = REGISTRY.register(BendymodModBlocks.WRENCH_RL.getId().getPath(), () -> new WrenchRLDisplayItem(BendymodModBlocks.WRENCH_RL.get(), new Item.Properties().tab(BendymodModTabs.TAB_BENDY_PROPS)));
 	public static final RegistryObject<Item> ILLUSION_OF_LIVING_RL = REGISTRY.register(BendymodModBlocks.ILLUSION_OF_LIVING_RL.getId().getPath(),
 			() -> new IllusionOfLivingRLDisplayItem(BendymodModBlocks.ILLUSION_OF_LIVING_RL.get(), new Item.Properties().tab(BendymodModTabs.TAB_BENDY_PROPS)));
+	public static final RegistryObject<Item> BOOK_BENDY = REGISTRY.register(BendymodModBlocks.BOOK_BENDY.getId().getPath(),
+			() -> new BookBendyDisplayItem(BendymodModBlocks.BOOK_BENDY.get(), new Item.Properties().tab(BendymodModTabs.TAB_BENDY_PROPS)));
+	public static final RegistryObject<Item> BENDY_BOOK_STACK = REGISTRY.register(BendymodModBlocks.BENDY_BOOK_STACK.getId().getPath(),
+			() -> new BendyBookStackDisplayItem(BendymodModBlocks.BENDY_BOOK_STACK.get(), new Item.Properties().tab(BendymodModTabs.TAB_BENDY_PROPS)));
 	public static final RegistryObject<Item> SHEET_HOLDER = REGISTRY.register(BendymodModBlocks.SHEET_HOLDER.getId().getPath(),
 			() -> new SheetHolderDisplayItem(BendymodModBlocks.SHEET_HOLDER.get(), new Item.Properties().tab(BendymodModTabs.TAB_BENDY_PROPS)));
 	public static final RegistryObject<Item> BANJO = REGISTRY.register(BendymodModBlocks.BANJO.getId().getPath(), () -> new BanjoDisplayItem(BendymodModBlocks.BANJO.get(), new Item.Properties().tab(BendymodModTabs.TAB_BENDY_PROPS)));
@@ -216,6 +228,8 @@ public class BendymodModItems {
 	public static final RegistryObject<Item> BENDY_WALL = block(BendymodModBlocks.BENDY_WALL, BendymodModTabs.TAB_BENDY_PROPS);
 	public static final RegistryObject<Item> BENDY_HEAD = block(BendymodModBlocks.BENDY_HEAD, BendymodModTabs.TAB_BENDY_PROPS);
 	public static final RegistryObject<Item> PAINTING_BENDY_UMBRELLA = block(BendymodModBlocks.PAINTING_BENDY_UMBRELLA, BendymodModTabs.TAB_BENDY_PROPS);
+	public static final RegistryObject<Item> TABLE = block(BendymodModBlocks.TABLE, BendymodModTabs.TAB_BENDY_PROPS);
+	public static final RegistryObject<Item> TABLE_BIG = block(BendymodModBlocks.TABLE_BIG, BendymodModTabs.TAB_BENDY_PROPS);
 	public static final RegistryObject<Item> POSTER_LITTLE_DEVIL_DARLIN = block(BendymodModBlocks.POSTER_LITTLE_DEVIL_DARLIN, BendymodModTabs.TAB_BENDY_PROPS);
 	public static final RegistryObject<Item> POSTER_DANCING_DEMON = block(BendymodModBlocks.POSTER_DANCING_DEMON, BendymodModTabs.TAB_BENDY_PROPS);
 	public static final RegistryObject<Item> POSTER_SHEEP_SONGS = block(BendymodModBlocks.POSTER_SHEEP_SONGS, BendymodModTabs.TAB_BENDY_PROPS);
@@ -258,8 +272,10 @@ public class BendymodModItems {
 			() -> new LeverStudioOffDisplayItem(BendymodModBlocks.LEVER_STUDIO_OFF.get(), new Item.Properties().tab(BendymodModTabs.TAB_BENDY_PROPS)));
 	public static final RegistryObject<Item> LEVER_POWER_OFF = REGISTRY.register(BendymodModBlocks.LEVER_POWER_OFF.getId().getPath(),
 			() -> new LeverPowerOffDisplayItem(BendymodModBlocks.LEVER_POWER_OFF.get(), new Item.Properties().tab(BendymodModTabs.TAB_BENDY_PROPS)));
-	public static final RegistryObject<Item> PEDESTAL_RL = REGISTRY.register(BendymodModBlocks.PEDESTAL_RL.getId().getPath(),
-			() -> new PedestalRLDisplayItem(BendymodModBlocks.PEDESTAL_RL.get(), new Item.Properties().tab(BendymodModTabs.TAB_BENDY_PROPS)));
+	public static final RegistryObject<Item> REEL_BENDY_DANCE = REGISTRY.register(BendymodModBlocks.REEL_BENDY_DANCE.getId().getPath(),
+			() -> new ReelBendyDanceDisplayItem(BendymodModBlocks.REEL_BENDY_DANCE.get(), new Item.Properties().tab(BendymodModTabs.TAB_BENDY_PROPS)));
+	public static final RegistryObject<Item> WALL_GASH_1 = REGISTRY.register(BendymodModBlocks.WALL_GASH_1.getId().getPath(),
+			() -> new WallGash1DisplayItem(BendymodModBlocks.WALL_GASH_1.get(), new Item.Properties().tab(BendymodModTabs.TAB_BENDY_PROPS)));
 	public static final RegistryObject<Item> BENDY_SPAWN_EGG = REGISTRY.register("bendy_spawn_egg", () -> new ForgeSpawnEggItem(BendymodModEntities.BENDY, -15724785, -12955, new Item.Properties().tab(BendymodModTabs.TAB_BENDY_ENTITIES)));
 	public static final RegistryObject<Item> BORIS_BUDDY_SPAWN_EGG = REGISTRY.register("boris_buddy_spawn_egg",
 			() -> new ForgeSpawnEggItem(BendymodModEntities.BORIS_BUDDY, -15724785, -1587590, new Item.Properties().tab(BendymodModTabs.TAB_BENDY_ENTITIES)));
@@ -284,6 +300,9 @@ public class BendymodModItems {
 	public static final RegistryObject<Item> LEVER_POWER_ON = REGISTRY.register(BendymodModBlocks.LEVER_POWER_ON.getId().getPath(), () -> new LeverPowerOnDisplayItem(BendymodModBlocks.LEVER_POWER_ON.get(), new Item.Properties().tab(null)));
 	public static final RegistryObject<Item> PEDESTAL_ON = REGISTRY.register(BendymodModBlocks.PEDESTAL_ON.getId().getPath(), () -> new PedestalOnDisplayItem(BendymodModBlocks.PEDESTAL_ON.get(), new Item.Properties().tab(null)));
 	public static final RegistryObject<Item> PEDESTAL_RL_ON = REGISTRY.register(BendymodModBlocks.PEDESTAL_RL_ON.getId().getPath(), () -> new PedestalRLOnDisplayItem(BendymodModBlocks.PEDESTAL_RL_ON.get(), new Item.Properties().tab(null)));
+	public static final RegistryObject<Item> PROJECTION_BLANK = REGISTRY.register(BendymodModBlocks.PROJECTION_BLANK.getId().getPath(), () -> new ProjectionBlankDisplayItem(BendymodModBlocks.PROJECTION_BLANK.get(), new Item.Properties().tab(null)));
+	public static final RegistryObject<Item> PROJECTION_BENDY_DANCE = REGISTRY.register(BendymodModBlocks.PROJECTION_BENDY_DANCE.getId().getPath(),
+			() -> new ProjectionBendyDanceDisplayItem(BendymodModBlocks.PROJECTION_BENDY_DANCE.get(), new Item.Properties().tab(null)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

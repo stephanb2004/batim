@@ -28,4 +28,6 @@ public class BendymodModSounds {
 	public static final RegistryObject<SoundEvent> INKDEMON_CHASE = REGISTRY.register("inkdemon_chase", () -> new SoundEvent(new ResourceLocation("bendymod", "inkdemon_chase")));
 	public static final RegistryObject<SoundEvent> VIOLIN_NOTE = REGISTRY.register("violin_note", () -> new SoundEvent(new ResourceLocation("bendymod", "violin_note")));
 	public static final RegistryObject<SoundEvent> BENDYDOLL_SQUEAK = REGISTRY.register("bendydoll_squeak", () -> new SoundEvent(new ResourceLocation("bendymod", "bendydoll_squeak")));
+	public static final RegistryObject<SoundEvent> RADIO_1 = REGISTRY.register("radio_1", () -> new SoundEvent(new ResourceLocation("bendymod", "radio_1")));
+	public static final RegistryObject<SoundEvent> RADIO_2 = REGISTRY.register("radio_2", () -> new SoundEvent(new ResourceLocation("bendymod", "radio_2")));
 }

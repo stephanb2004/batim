@@ -139,6 +139,10 @@ public class BendymodModVariables {
 		public double ink_bendy_time_remaining = 0.0;
 		public boolean is_random_cutout_selected = false;
 		public boolean inkbendy_summoned = false;
+		public double cur_inkdemon_x = 0;
+		public double cur_inkdemon_y = 0;
+		public double cur_inkdemon_z = 0;
+		public boolean cur_inkdemon_selected = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -151,6 +155,10 @@ public class BendymodModVariables {
 			ink_bendy_time_remaining = nbt.getDouble("ink_bendy_time_remaining");
 			is_random_cutout_selected = nbt.getBoolean("is_random_cutout_selected");
 			inkbendy_summoned = nbt.getBoolean("inkbendy_summoned");
+			cur_inkdemon_x = nbt.getDouble("cur_inkdemon_x");
+			cur_inkdemon_y = nbt.getDouble("cur_inkdemon_y");
+			cur_inkdemon_z = nbt.getDouble("cur_inkdemon_z");
+			cur_inkdemon_selected = nbt.getBoolean("cur_inkdemon_selected");
 		}
 
 		@Override
@@ -159,6 +167,10 @@ public class BendymodModVariables {
 			nbt.putDouble("ink_bendy_time_remaining", ink_bendy_time_remaining);
 			nbt.putBoolean("is_random_cutout_selected", is_random_cutout_selected);
 			nbt.putBoolean("inkbendy_summoned", inkbendy_summoned);
+			nbt.putDouble("cur_inkdemon_x", cur_inkdemon_x);
+			nbt.putDouble("cur_inkdemon_y", cur_inkdemon_y);
+			nbt.putDouble("cur_inkdemon_z", cur_inkdemon_z);
+			nbt.putBoolean("cur_inkdemon_selected", cur_inkdemon_selected);
 			return nbt;
 		}
 

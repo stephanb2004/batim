@@ -127,5 +127,23 @@
         "stream": false
       }
     ]
+  },
+  "radio_1": {
+    "subtitle": "subtitles.radio_1",
+    "sounds": [
+      {
+        "name": "bendymod:radio_1",
+        "stream": false
+      }
+    ]
+  },
+  "radio_2": {
+    "subtitle": "subtitles.radio_2",
+    "sounds": [
+      {
+        "name": "bendymod:radio_2",
+        "stream": false
+      }
+    ]
   }
 }

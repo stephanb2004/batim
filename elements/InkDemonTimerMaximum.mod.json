@@ -1,0 +1,12 @@
+{
+  "_fv": 43,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Number",
+    "displayName": "Ink Demon Timer Maximum",
+    "description": "This, will be the maximum time (in ticks) of how often the Ink Demon spawns.",
+    "category": "PLAYER",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 15600
+  }
+}

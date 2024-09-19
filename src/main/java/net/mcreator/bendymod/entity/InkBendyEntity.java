@@ -56,6 +56,7 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.bendymod.procedures.InkBendyOnInitialEntitySpawnProcedure;
 import net.mcreator.bendymod.procedures.InkBendyOnEntityTickUpdateProcedure;
 import net.mcreator.bendymod.procedures.InkBendyEntityIsHurtProcedure;
+import net.mcreator.bendymod.procedures.InkBendyEntityDiesProcedure;
 import net.mcreator.bendymod.init.BendymodModEntities;
 import net.mcreator.bendymod.init.BendymodModBlocks;
 
@@ -189,6 +190,12 @@ public class InkBendyEntity extends Monster implements IAnimatable {
 		if (source.getMsgId().equals("witherSkull"))
 			return false;
 		return super.hurt(source, amount);
+	}
+
+	@Override
+	public void die(DamageSource source) {
+		super.die(source);
+		InkBendyEntityDiesProcedure.execute(this.level, this);
 	}
 
 	@Override

@@ -31,12 +31,6 @@ public class StudioPlayerEntersDimensionFirstTimeProcedure {
 					template.placeInWorld(_serverworld, new BlockPos(-8, 304, -8), new BlockPos(-8, 304, -8), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 				}
 			}
-			{
-				Entity _ent = entity;
-				_ent.teleportTo(0, 318, 0);
-				if (_ent instanceof ServerPlayer _serverPlayer)
-					_serverPlayer.connection.teleport(0, 318, 0, _ent.getYRot(), _ent.getXRot());
-			}
 			entity.setDeltaMovement(new Vec3(0, 0, 0));
 			BendymodMod.queueServerWork(15, () -> {
 				{
@@ -46,8 +40,6 @@ public class StudioPlayerEntersDimensionFirstTimeProcedure {
 						_serverPlayer.connection.teleport(0, 318, 0, _ent.getYRot(), _ent.getXRot());
 				}
 			});
-			if (entity instanceof ServerPlayer _serverPlayer)
-				_serverPlayer.setRespawnPosition(_serverPlayer.level.dimension(), new BlockPos(0, 318, 0), _serverPlayer.getYRot(), true, false);
 			SetStructureBlocksProcedure.execute(world, (-8), 304, (-9));
 			{
 				boolean _setval = true;

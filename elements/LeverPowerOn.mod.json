@@ -126,6 +126,9 @@
     "onRightClicked": {
       "name": "LeverOnBlockRightClicked"
     },
+    "onBlockAdded": {
+      "name": "LeverStudioOnBlockAdded"
+    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [

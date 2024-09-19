@@ -31,6 +31,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.bendymod.procedures.LeverStudioOnBlockAddedProcedure;
 import net.mcreator.bendymod.procedures.LeverOnBlockRightClickedProcedure;
 import net.mcreator.bendymod.init.BendymodModBlocks;
 import net.mcreator.bendymod.init.BendymodModBlockEntities;
@@ -125,6 +126,12 @@ public class LeverPowerOnBlock extends BaseEntityBlock implements EntityBlock {
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
 		return Collections.singletonList(new ItemStack(BendymodModBlocks.LEVER_POWER_OFF.get()));
+	}
+
+	@Override
+	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
+		super.onPlace(blockstate, world, pos, oldState, moving);
+		LeverStudioOnBlockAddedProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 
 	@Override

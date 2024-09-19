@@ -99,6 +99,9 @@
     "stepSound": {
       "value": "CUSTOM:inkdemon_footstep"
     },
+    "whenMobDies": {
+      "name": "InkBendyEntityDies"
+    },
     "whenMobIsHurt": {
       "name": "InkBendyEntityIsHurt"
     },

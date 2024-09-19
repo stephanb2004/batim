@@ -4626,21 +4626,6 @@
       "path": "~/Mod Stuff/Blocks/Props/Functional Props/Radio"
     },
     {
-      "name": "JoeysApartment",
-      "type": "structure",
-      "sortid": 221,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "joeys_apartment",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/bendymod/forge/biome_modifier/joeys_apartment_biome_modifier.json",
-          "src/main/java/net/mcreator/bendymod/world/features/JoeysApartmentFeature.java"
-        ]
-      },
-      "path": "~/Mod Stuff"
-    },
-    {
       "name": "InkRL",
       "type": "fluid",
       "sortid": 141,
@@ -4695,6 +4680,62 @@
         ]
       },
       "path": "~/Mod Stuff/Blocks"
+    },
+    {
+      "name": "InkBendyEntityDies",
+      "type": "procedure",
+      "sortid": 223,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ink_bendy_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/InkBendyEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/Entities/InkBendy"
+    },
+    {
+      "name": "LeverStudioOnBlockAdded",
+      "type": "procedure",
+      "sortid": 224,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lever_studio_on_block_added",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/LeverStudioOnBlockAddedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props/Switches"
     }
   ],
   "variable_elements": [

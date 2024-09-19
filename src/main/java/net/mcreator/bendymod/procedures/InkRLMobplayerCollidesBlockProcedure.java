@@ -14,16 +14,10 @@ import net.minecraft.network.protocol.game.ClientboundGameEventPacket;
 import net.minecraft.core.Registry;
 import net.minecraft.core.BlockPos;
 
-public class EnterStudioProcedureProcedure {
+public class InkRLMobplayerCollidesBlockProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		{
-			Entity _ent = entity;
-			_ent.teleportTo(0, 318, 0);
-			if (_ent instanceof ServerPlayer _serverPlayer)
-				_serverPlayer.connection.teleport(0, 318, 0, _ent.getYRot(), _ent.getXRot());
-		}
 		if (entity instanceof ServerPlayer _player && !_player.level.isClientSide()) {
 			ResourceKey<Level> destinationType = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("bendymod:studio"));
 			if (_player.level.dimension() == destinationType)
@@ -37,12 +31,6 @@ public class EnterStudioProcedureProcedure {
 					_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance));
 				_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 			}
-		}
-		{
-			Entity _ent = entity;
-			_ent.teleportTo(0, 318, 0);
-			if (_ent instanceof ServerPlayer _serverPlayer)
-				_serverPlayer.connection.teleport(0, 318, 0, _ent.getYRot(), _ent.getXRot());
 		}
 	}
 }

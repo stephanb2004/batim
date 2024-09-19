@@ -124,6 +124,7 @@ public class BendymodModItems {
 	public static final RegistryObject<Item> PLANKED_TRAPDOOR = block(BendymodModBlocks.PLANKED_TRAPDOOR, BendymodModTabs.TAB_BENDY_BLOCKS);
 	public static final RegistryObject<Item> CHAIN_FENCE = block(BendymodModBlocks.CHAIN_FENCE, BendymodModTabs.TAB_BENDY_BLOCKS);
 	public static final RegistryObject<Item> SOLID_INK = block(BendymodModBlocks.SOLID_INK, BendymodModTabs.TAB_BENDY_BLOCKS);
+	public static final RegistryObject<Item> SOLID_INK_RL = block(BendymodModBlocks.SOLID_INK_RL, BendymodModTabs.TAB_BENDY_BLOCKS);
 	public static final RegistryObject<Item> HEAVY_GATE_CLOSED = REGISTRY.register(BendymodModBlocks.HEAVY_GATE_CLOSED.getId().getPath(),
 			() -> new HeavyGateClosedDisplayItem(BendymodModBlocks.HEAVY_GATE_CLOSED.get(), new Item.Properties().tab(BendymodModTabs.TAB_BENDY_BLOCKS)));
 	public static final RegistryObject<Item> HANGING_MIC = REGISTRY.register(BendymodModBlocks.HANGING_MIC.getId().getPath(),

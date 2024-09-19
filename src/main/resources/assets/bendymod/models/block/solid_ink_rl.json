@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "bendymod:blocks/ink_fluid_rl",
+    "particle": "bendymod:blocks/ink_fluid_rl"
+  },
+  "render_type": "solid"
+}

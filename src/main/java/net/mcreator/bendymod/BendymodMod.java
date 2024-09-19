@@ -37,6 +37,7 @@ import net.mcreator.bendymod.init.BendymodModMenus;
 import net.mcreator.bendymod.init.BendymodModItems;
 import net.mcreator.bendymod.init.BendymodModFluids;
 import net.mcreator.bendymod.init.BendymodModFluidTypes;
+import net.mcreator.bendymod.init.BendymodModFeatures;
 import net.mcreator.bendymod.init.BendymodModEntities;
 import net.mcreator.bendymod.init.BendymodModBlocks;
 import net.mcreator.bendymod.init.BendymodModBlockEntities;
@@ -65,7 +66,7 @@ public class BendymodMod {
 		BendymodModItems.REGISTRY.register(bus);
 		BendymodModEntities.REGISTRY.register(bus);
 		BendymodModBlockEntities.REGISTRY.register(bus);
-
+		BendymodModFeatures.REGISTRY.register(bus);
 		BendymodModFluids.REGISTRY.register(bus);
 		BendymodModFluidTypes.REGISTRY.register(bus);
 

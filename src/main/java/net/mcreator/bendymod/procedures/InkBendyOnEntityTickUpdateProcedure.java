@@ -19,7 +19,6 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
 import net.mcreator.bendymod.network.BendymodModVariables;
-import net.mcreator.bendymod.init.BendymodModGameRules;
 import net.mcreator.bendymod.init.BendymodModBlocks;
 import net.mcreator.bendymod.entity.InkBendyEntity;
 import net.mcreator.bendymod.BendymodMod;
@@ -44,16 +43,6 @@ public class InkBendyOnEntityTickUpdateProcedure {
 		double target_z = 0;
 		double range_distance = 0;
 		range_distance = 101;
-		if (entity.getPersistentData().getBoolean("cur_inkbendy") == true) {
-			BendymodModVariables.MapVariables.get(world).cur_inkdemon_x = x;
-			BendymodModVariables.MapVariables.get(world).syncData(world);
-			BendymodModVariables.MapVariables.get(world).cur_inkdemon_y = y;
-			BendymodModVariables.MapVariables.get(world).syncData(world);
-			BendymodModVariables.MapVariables.get(world).cur_inkdemon_z = z;
-			BendymodModVariables.MapVariables.get(world).syncData(world);
-		}
-		if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-			_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 60, 9999, false, false));
 		if (!(null == (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null))) {
 			if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof LivingEntity _entity && !_entity.level.isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.DARKNESS, 20, 1, false, false));
@@ -61,50 +50,62 @@ public class InkBendyOnEntityTickUpdateProcedure {
 			if (!world.getEntitiesOfClass(InkBendyEntity.class, AABB.ofSize(new Vec3((x + range_distance), y, (z + range_distance)), 200, 200, 200), e -> true).isEmpty()
 					|| !world.getEntitiesOfClass(InkBendyEntity.class, AABB.ofSize(new Vec3((x - range_distance), y, (z - range_distance)), 200, 200, 200), e -> true).isEmpty()
 					|| !world.getEntitiesOfClass(InkBendyEntity.class, AABB.ofSize(new Vec3((x - range_distance), y, (z + range_distance)), 200, 200, 200), e -> true).isEmpty()
-					|| !world.getEntitiesOfClass(InkBendyEntity.class, AABB.ofSize(new Vec3((x + range_distance), y, (z - range_distance)), 200, 200, 200), e -> true).isEmpty()) {
-				if (entity.getPersistentData().getBoolean("cur_inkbendy") == false && !world.getLevelData().getGameRules().getBoolean(BendymodModGameRules.ALLOW_MULTIPLE_INK_BENDYS)) {
-					if (((Entity) world.getEntitiesOfClass(InkBendyEntity.class,
-							AABB.ofSize(new Vec3(BendymodModVariables.MapVariables.get(world).cur_inkdemon_x, BendymodModVariables.MapVariables.get(world).cur_inkdemon_y, BendymodModVariables.MapVariables.get(world).cur_inkdemon_z), 4, 4, 4),
-							e -> true).stream().sorted(new Object() {
-								Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-									return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-								}
-							}.compareDistOf(BendymodModVariables.MapVariables.get(world).cur_inkdemon_x, BendymodModVariables.MapVariables.get(world).cur_inkdemon_y, BendymodModVariables.MapVariables.get(world).cur_inkdemon_z)).findFirst()
-							.orElse(null)).getPersistentData().getBoolean("can_be_teleported") == true) {
-						{
-							Entity _ent = ((Entity) world.getEntitiesOfClass(InkBendyEntity.class,
-									AABB.ofSize(new Vec3(BendymodModVariables.MapVariables.get(world).cur_inkdemon_x, BendymodModVariables.MapVariables.get(world).cur_inkdemon_y, BendymodModVariables.MapVariables.get(world).cur_inkdemon_z), 4, 4, 4),
-									e -> true).stream().sorted(new Object() {
-										Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-											return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-										}
-									}.compareDistOf(BendymodModVariables.MapVariables.get(world).cur_inkdemon_x, BendymodModVariables.MapVariables.get(world).cur_inkdemon_y, BendymodModVariables.MapVariables.get(world).cur_inkdemon_z)).findFirst()
-									.orElse(null));
-							_ent.teleportTo(x, y, z);
-							if (_ent instanceof ServerPlayer _serverPlayer)
-								_serverPlayer.connection.teleport(x, y, z, _ent.getYRot(), _ent.getXRot());
-						}
+					|| !world.getEntitiesOfClass(InkBendyEntity.class, AABB.ofSize(new Vec3((x + range_distance), y, (z - range_distance)), 200, 200, 200), e -> true).isEmpty()
+					|| !world.getEntitiesOfClass(InkBendyEntity.class, AABB.ofSize(new Vec3(x, y, (z + range_distance)), 200, 200, 200), e -> true).isEmpty()
+					|| !world.getEntitiesOfClass(InkBendyEntity.class, AABB.ofSize(new Vec3(x, y, (z - range_distance)), 200, 200, 200), e -> true).isEmpty()
+					|| !world.getEntitiesOfClass(InkBendyEntity.class, AABB.ofSize(new Vec3((x + range_distance), y, z), 200, 200, 200), e -> true).isEmpty()
+					|| !world.getEntitiesOfClass(InkBendyEntity.class, AABB.ofSize(new Vec3((x - range_distance), y, z), 200, 200, 200), e -> true).isEmpty()) {
+				if (((Entity) world.getEntitiesOfClass(InkBendyEntity.class,
+						AABB.ofSize(new Vec3(BendymodModVariables.MapVariables.get(world).cur_inkdemon_x, BendymodModVariables.MapVariables.get(world).cur_inkdemon_y, BendymodModVariables.MapVariables.get(world).cur_inkdemon_z), 16, 16, 16),
+						e -> true).stream().sorted(new Object() {
+							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+								return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
+							}
+						}.compareDistOf(BendymodModVariables.MapVariables.get(world).cur_inkdemon_x, BendymodModVariables.MapVariables.get(world).cur_inkdemon_y, BendymodModVariables.MapVariables.get(world).cur_inkdemon_z)).findFirst().orElse(null))
+						.getPersistentData().getBoolean("can_be_teleported") == true) {
+					{
+						Entity _ent = ((Entity) world.getEntitiesOfClass(InkBendyEntity.class,
+								AABB.ofSize(new Vec3(BendymodModVariables.MapVariables.get(world).cur_inkdemon_x, BendymodModVariables.MapVariables.get(world).cur_inkdemon_y, BendymodModVariables.MapVariables.get(world).cur_inkdemon_z), 16, 16, 16),
+								e -> true).stream().sorted(new Object() {
+									Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+										return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
+									}
+								}.compareDistOf(BendymodModVariables.MapVariables.get(world).cur_inkdemon_x, BendymodModVariables.MapVariables.get(world).cur_inkdemon_y, BendymodModVariables.MapVariables.get(world).cur_inkdemon_z)).findFirst()
+								.orElse(null));
+						_ent.teleportTo(x, y, z);
+						if (_ent instanceof ServerPlayer _serverPlayer)
+							_serverPlayer.connection.teleport(x, y, z, _ent.getYRot(), _ent.getXRot());
 					}
-					if (!entity.level.isClientSide())
-						entity.discard();
 				}
+				if (!entity.level.isClientSide())
+					entity.discard();
 			}
 		}
-		if (world instanceof ServerLevel _level)
-			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					"forceload add ~ ~ ~ ~");
-		if (world instanceof ServerLevel _level)
-			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3((x + 16), y, (z + 16)), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					"forceload remove ~ ~ ~ ~");
-		if (world instanceof ServerLevel _level)
-			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3((x + 16), y, (z - 16)), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					"forceload remove ~ ~ ~ ~");
-		if (world instanceof ServerLevel _level)
-			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3((x - 16), y, (z + 16)), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					"forceload remove ~ ~ ~ ~");
-		if (world instanceof ServerLevel _level)
-			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3((x - 16), y, (z - 16)), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					"forceload remove ~ ~ ~ ~");
+		if (entity.getPersistentData().getBoolean("cur_inkbendy") == true) {
+			BendymodModVariables.MapVariables.get(world).cur_inkdemon_x = x;
+			BendymodModVariables.MapVariables.get(world).syncData(world);
+			BendymodModVariables.MapVariables.get(world).cur_inkdemon_y = y;
+			BendymodModVariables.MapVariables.get(world).syncData(world);
+			BendymodModVariables.MapVariables.get(world).cur_inkdemon_z = z;
+			BendymodModVariables.MapVariables.get(world).syncData(world);
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"forceload add ~ ~ ~ ~");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3((x + 16), y, (z + 16)), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"forceload remove ~ ~ ~ ~");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3((x + 16), y, (z - 16)), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"forceload remove ~ ~ ~ ~");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3((x - 16), y, (z + 16)), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"forceload remove ~ ~ ~ ~");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3((x - 16), y, (z - 16)), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"forceload remove ~ ~ ~ ~");
+		}
+		if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+			_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 60, 9999, false, false));
 		BendymodModVariables.MapVariables.get(world).ink_bendy_time_remaining = BendymodModVariables.MapVariables.get(world).ink_bendy_time_remaining + 1;
 		BendymodModVariables.MapVariables.get(world).syncData(world);
 		if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {

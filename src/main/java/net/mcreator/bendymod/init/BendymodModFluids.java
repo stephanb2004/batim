@@ -17,6 +17,7 @@ import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 
+import net.mcreator.bendymod.fluid.InkRLFluid;
 import net.mcreator.bendymod.fluid.InkFluid;
 import net.mcreator.bendymod.BendymodMod;
 
@@ -24,6 +25,8 @@ public class BendymodModFluids {
 	public static final DeferredRegister<Fluid> REGISTRY = DeferredRegister.create(ForgeRegistries.FLUIDS, BendymodMod.MODID);
 	public static final RegistryObject<FlowingFluid> INK = REGISTRY.register("ink", () -> new InkFluid.Source());
 	public static final RegistryObject<FlowingFluid> FLOWING_INK = REGISTRY.register("flowing_ink", () -> new InkFluid.Flowing());
+	public static final RegistryObject<FlowingFluid> INK_RL = REGISTRY.register("ink_rl", () -> new InkRLFluid.Source());
+	public static final RegistryObject<FlowingFluid> FLOWING_INK_RL = REGISTRY.register("flowing_ink_rl", () -> new InkRLFluid.Flowing());
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ClientSideHandler {
@@ -31,6 +34,8 @@ public class BendymodModFluids {
 		public static void clientSetup(FMLClientSetupEvent event) {
 			ItemBlockRenderTypes.setRenderLayer(INK.get(), RenderType.translucent());
 			ItemBlockRenderTypes.setRenderLayer(FLOWING_INK.get(), RenderType.translucent());
+			ItemBlockRenderTypes.setRenderLayer(INK_RL.get(), RenderType.translucent());
+			ItemBlockRenderTypes.setRenderLayer(FLOWING_INK_RL.get(), RenderType.translucent());
 		}
 	}
 }

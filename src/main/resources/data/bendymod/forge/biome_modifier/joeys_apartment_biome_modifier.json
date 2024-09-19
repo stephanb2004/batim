@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "plains",
+  "features": "bendymod:joeys_apartment",
+  "step": "surface_structures"
+}

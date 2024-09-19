@@ -143,6 +143,7 @@ public class BendymodModVariables {
 		public double cur_inkdemon_y = 0;
 		public double cur_inkdemon_z = 0;
 		public boolean cur_inkdemon_selected = false;
+		public boolean inkmachine_spawned = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -159,6 +160,7 @@ public class BendymodModVariables {
 			cur_inkdemon_y = nbt.getDouble("cur_inkdemon_y");
 			cur_inkdemon_z = nbt.getDouble("cur_inkdemon_z");
 			cur_inkdemon_selected = nbt.getBoolean("cur_inkdemon_selected");
+			inkmachine_spawned = nbt.getBoolean("inkmachine_spawned");
 		}
 
 		@Override
@@ -171,6 +173,7 @@ public class BendymodModVariables {
 			nbt.putDouble("cur_inkdemon_y", cur_inkdemon_y);
 			nbt.putDouble("cur_inkdemon_z", cur_inkdemon_z);
 			nbt.putBoolean("cur_inkdemon_selected", cur_inkdemon_selected);
+			nbt.putBoolean("inkmachine_spawned", inkmachine_spawned);
 			return nbt;
 		}
 

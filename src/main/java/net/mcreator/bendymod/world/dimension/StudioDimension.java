@@ -49,7 +49,7 @@ public class StudioDimension {
 		double z = entity.getZ();
 		if (event.getTo() == ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("bendymod:studio"))) {
 
-			StudioPlayerEntersDimensionFirstTimeProcedure.execute(world, entity);
+			StudioPlayerEntersDimensionFirstTimeProcedure.execute(world, x, y, z, entity);
 		}
 	}
 }

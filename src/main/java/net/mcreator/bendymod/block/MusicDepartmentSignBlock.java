@@ -37,7 +37,7 @@ public class MusicDepartmentSignBlock extends BaseEntityBlock implements EntityB
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
 	public MusicDepartmentSignBlock() {
-		super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(1f, 10f).noCollission().noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(-1, 3600000).noCollission().noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 

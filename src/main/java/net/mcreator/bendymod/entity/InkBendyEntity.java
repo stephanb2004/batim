@@ -112,22 +112,23 @@ public class InkBendyEntity extends Monster implements IAnimatable {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.7, false) {
+		this.goalSelector.addGoal(1, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1));
+		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.7, false) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
 			}
 		});
-		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1));
-		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, Player.class, true, false));
-		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, SammyLawrenceEntity.class, true, false));
-		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, SearcherEntity.class, true, false));
-		this.goalSelector.addGoal(6, new OpenDoorGoal(this, true));
-		this.goalSelector.addGoal(7, new OpenDoorGoal(this, false));
-		this.goalSelector.addGoal(8, new BreakDoorGoal(this, e -> true));
-		this.goalSelector.addGoal(9, new RemoveBlockGoal(BendymodModBlocks.BOARDS.get(), this, 1, (int) 4));
-		this.goalSelector.addGoal(10, new RemoveBlockGoal(Blocks.GLASS, this, 1, (int) 4));
-		this.goalSelector.addGoal(11, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(4, new RemoveBlockGoal(BendymodModBlocks.BOARDS.get(), this, 1, (int) 4));
+		this.goalSelector.addGoal(5, new RemoveBlockGoal(Blocks.BLACK_STAINED_GLASS, this, 1, (int) 4));
+		this.goalSelector.addGoal(6, new RemoveBlockGoal(Blocks.BLACK_STAINED_GLASS_PANE, this, 1, (int) 4));
+		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, Player.class, true, true));
+		this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, SammyLawrenceEntity.class, true, true));
+		this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, SearcherEntity.class, true, true));
+		this.goalSelector.addGoal(10, new OpenDoorGoal(this, true));
+		this.goalSelector.addGoal(11, new OpenDoorGoal(this, false));
+		this.goalSelector.addGoal(12, new BreakDoorGoal(this, e -> true));
 	}
 
 	@Override
@@ -225,7 +226,7 @@ public class InkBendyEntity extends Monster implements IAnimatable {
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.2);
 		builder = builder.add(Attributes.MAX_HEALTH, 15);
 		builder = builder.add(Attributes.ARMOR, 0);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 10);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 20);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		return builder;
 	}

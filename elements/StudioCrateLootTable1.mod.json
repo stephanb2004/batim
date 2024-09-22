@@ -16,23 +16,9 @@
             "item": {
               "value": "CUSTOM:BaconSoup"
             },
-            "weight": 3,
+            "weight": 25,
             "minCount": 0,
             "maxCount": 5,
-            "minEnchantmentLevel": 0,
-            "maxEnchantmentLevel": 0,
-            "affectedByFortune": false,
-            "explosionDecay": false,
-            "silkTouchMode": 0
-          },
-          {
-            "type": "item",
-            "item": {
-              "value": "CUSTOM:BaconSoupEmpty"
-            },
-            "weight": 1,
-            "minCount": 0,
-            "maxCount": 2,
             "minEnchantmentLevel": 0,
             "maxEnchantmentLevel": 0,
             "affectedByFortune": false,
@@ -53,7 +39,7 @@
             "item": {
               "value": "CUSTOM:DryCell"
             },
-            "weight": 3,
+            "weight": 10,
             "minCount": 0,
             "maxCount": 2,
             "minEnchantmentLevel": 0,
@@ -67,7 +53,7 @@
             "item": {
               "value": "CUSTOM:Cellbox0"
             },
-            "weight": 1,
+            "weight": 5,
             "minCount": 0,
             "maxCount": 1,
             "minEnchantmentLevel": 0,
@@ -83,14 +69,14 @@
         "maxrolls": 1,
         "minbonusrolls": 0,
         "maxbonusrolls": 1,
-        "hasbonusrolls": true,
+        "hasbonusrolls": false,
         "entries": [
           {
             "type": "item",
             "item": {
               "value": "CUSTOM:StudioAxe"
             },
-            "weight": 1,
+            "weight": 5,
             "minCount": 0,
             "maxCount": 1,
             "minEnchantmentLevel": 0,
@@ -114,20 +100,6 @@
               "value": "CUSTOM:Reel"
             },
             "weight": 3,
-            "minCount": 0,
-            "maxCount": 1,
-            "minEnchantmentLevel": 0,
-            "maxEnchantmentLevel": 0,
-            "affectedByFortune": false,
-            "explosionDecay": false,
-            "silkTouchMode": 0
-          },
-          {
-            "type": "item",
-            "item": {
-              "value": "CUSTOM:ReelBendyDance"
-            },
-            "weight": 1,
             "minCount": 0,
             "maxCount": 1,
             "minEnchantmentLevel": 0,
@@ -191,34 +163,6 @@
             "type": "item",
             "item": {
               "value": "CUSTOM:InkWell"
-            },
-            "weight": 1,
-            "minCount": 0,
-            "maxCount": 1,
-            "minEnchantmentLevel": 0,
-            "maxEnchantmentLevel": 0,
-            "affectedByFortune": false,
-            "explosionDecay": false,
-            "silkTouchMode": 0
-          },
-          {
-            "type": "item",
-            "item": {
-              "value": "CUSTOM:Gear"
-            },
-            "weight": 2,
-            "minCount": 0,
-            "maxCount": 1,
-            "minEnchantmentLevel": 0,
-            "maxEnchantmentLevel": 0,
-            "affectedByFortune": false,
-            "explosionDecay": false,
-            "silkTouchMode": 0
-          },
-          {
-            "type": "item",
-            "item": {
-              "value": "CUSTOM:Record"
             },
             "weight": 1,
             "minCount": 0,

@@ -28,7 +28,7 @@ public class RitualSummoningBlock extends Block {
 	public static final DirectionProperty FACING = DirectionalBlock.FACING;
 
 	public RitualSummoningBlock() {
-		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.BASALT).strength(1f, 10f).noOcclusion().hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true).isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.BASALT).strength(-1, 3600000).noOcclusion().hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true).isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 

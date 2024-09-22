@@ -3,6 +3,8 @@ package net.mcreator.bendymod.procedures;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
@@ -17,6 +19,7 @@ import net.minecraft.network.protocol.game.ClientboundUpdateMobEffectPacket;
 import net.minecraft.network.protocol.game.ClientboundPlayerAbilitiesPacket;
 import net.minecraft.network.protocol.game.ClientboundLevelEventPacket;
 import net.minecraft.network.protocol.game.ClientboundGameEventPacket;
+import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.bendymod.init.BendymodModBlocks;
@@ -26,11 +29,63 @@ import java.util.Map;
 import java.util.Comparator;
 
 public class LeverStudioOnBlockAddedProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z) {
+	public static void execute(LevelAccessor world, double x, double y, double z, BlockState blockstate) {
 		Entity cur_entity = null;
-		if ((world.getBlockState(new BlockPos(x + 4, y, z - 1))).getBlock() == BendymodModBlocks.INKWELL.get() && (world.getBlockState(new BlockPos(x + 4, y, z - 3))).getBlock() == BendymodModBlocks.RECORD.get()
-				&& (world.getBlockState(new BlockPos(x + 4, y, z - 5))).getBlock() == BendymodModBlocks.BENDY_DOLL.get() && (world.getBlockState(new BlockPos(x - 4, y, z - 1))).getBlock() == BendymodModBlocks.GEAR.get()
-				&& (world.getBlockState(new BlockPos(x - 4, y, z - 3))).getBlock() == BendymodModBlocks.WRENCH.get() && (world.getBlockState(new BlockPos(x - 4, y, z - 5))).getBlock() == BendymodModBlocks.ILLUSION_OF_LIVING.get()) {
+		boolean can_tp = false;
+		if ((new Object() {
+			public Direction getDirection(BlockState _bs) {
+				Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+				if (_prop instanceof DirectionProperty _dp)
+					return _bs.getValue(_dp);
+				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
+			}
+		}.getDirection(blockstate)) == Direction.NORTH && (world.getBlockState(new BlockPos(x + 4, y, z - 1))).getBlock() == BendymodModBlocks.INKWELL.get()
+				&& (world.getBlockState(new BlockPos(x + 4, y, z - 3))).getBlock() == BendymodModBlocks.RECORD.get() && (world.getBlockState(new BlockPos(x + 4, y, z - 5))).getBlock() == BendymodModBlocks.BENDY_DOLL.get()
+				&& (world.getBlockState(new BlockPos(x - 4, y, z - 1))).getBlock() == BendymodModBlocks.GEAR.get() && (world.getBlockState(new BlockPos(x - 4, y, z - 3))).getBlock() == BendymodModBlocks.WRENCH.get()
+				&& (world.getBlockState(new BlockPos(x - 4, y, z - 5))).getBlock() == BendymodModBlocks.ILLUSION_OF_LIVING.get()) {
+			can_tp = true;
+		} else if ((new Object() {
+			public Direction getDirection(BlockState _bs) {
+				Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+				if (_prop instanceof DirectionProperty _dp)
+					return _bs.getValue(_dp);
+				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
+			}
+		}.getDirection(blockstate)) == Direction.SOUTH && (world.getBlockState(new BlockPos(x - 4, y, z + 1))).getBlock() == BendymodModBlocks.INKWELL.get()
+				&& (world.getBlockState(new BlockPos(x - 4, y, z + 3))).getBlock() == BendymodModBlocks.RECORD.get() && (world.getBlockState(new BlockPos(x - 4, y, z + 5))).getBlock() == BendymodModBlocks.BENDY_DOLL.get()
+				&& (world.getBlockState(new BlockPos(x + 4, y, z + 1))).getBlock() == BendymodModBlocks.GEAR.get() && (world.getBlockState(new BlockPos(x + 4, y, z + 3))).getBlock() == BendymodModBlocks.WRENCH.get()
+				&& (world.getBlockState(new BlockPos(x + 4, y, z + 5))).getBlock() == BendymodModBlocks.ILLUSION_OF_LIVING.get()) {
+			can_tp = true;
+		} else if ((new Object() {
+			public Direction getDirection(BlockState _bs) {
+				Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+				if (_prop instanceof DirectionProperty _dp)
+					return _bs.getValue(_dp);
+				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
+			}
+		}.getDirection(blockstate)) == Direction.EAST && (world.getBlockState(new BlockPos(x + 1, y, z + 4))).getBlock() == BendymodModBlocks.INKWELL.get()
+				&& (world.getBlockState(new BlockPos(x + 3, y, z + 4))).getBlock() == BendymodModBlocks.RECORD.get() && (world.getBlockState(new BlockPos(x + 5, y, z + 4))).getBlock() == BendymodModBlocks.BENDY_DOLL.get()
+				&& (world.getBlockState(new BlockPos(x + 1, y, z - 4))).getBlock() == BendymodModBlocks.GEAR.get() && (world.getBlockState(new BlockPos(x + 3, y, z - 4))).getBlock() == BendymodModBlocks.WRENCH.get()
+				&& (world.getBlockState(new BlockPos(x + 5, y, z - 4))).getBlock() == BendymodModBlocks.ILLUSION_OF_LIVING.get()) {
+			can_tp = true;
+		} else if ((new Object() {
+			public Direction getDirection(BlockState _bs) {
+				Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+				if (_prop instanceof DirectionProperty _dp)
+					return _bs.getValue(_dp);
+				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
+			}
+		}.getDirection(blockstate)) == Direction.WEST && (world.getBlockState(new BlockPos(x - 1, y, z - 4))).getBlock() == BendymodModBlocks.INKWELL.get()
+				&& (world.getBlockState(new BlockPos(x - 3, y, z - 4))).getBlock() == BendymodModBlocks.RECORD.get() && (world.getBlockState(new BlockPos(x - 5, y, z - 4))).getBlock() == BendymodModBlocks.BENDY_DOLL.get()
+				&& (world.getBlockState(new BlockPos(x - 1, y, z + 4))).getBlock() == BendymodModBlocks.GEAR.get() && (world.getBlockState(new BlockPos(x - 3, y, z + 4))).getBlock() == BendymodModBlocks.WRENCH.get()
+				&& (world.getBlockState(new BlockPos(x - 5, y, z + 4))).getBlock() == BendymodModBlocks.ILLUSION_OF_LIVING.get()) {
+			can_tp = true;
+		}
+		if (can_tp == true) {
 			if (((Entity) world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 16, 16, 16), e -> true).stream().sorted(new Object() {
 				Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 					return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));

@@ -26,7 +26,7 @@
       {
         "mx": 2.0,
         "my": 5.0,
-        "mz": 6.0,
+        "mz": 14.0,
         "Mx": 14.0,
         "My": 11.0,
         "Mz": 16.0,
@@ -76,7 +76,7 @@
     "speedFactor": 1.0,
     "jumpFactor": 1.0,
     "reactionToPushing": "NORMAL",
-    "isNotColidable": false,
+    "isNotColidable": true,
     "isCustomSoundType": false,
     "soundOnStep": {
       "value": "METAL"
@@ -97,7 +97,7 @@
       "value": ""
     },
     "luminance": 5,
-    "unbreakable": false,
+    "unbreakable": true,
     "breakHarvestLevel": 1,
     "isBonemealable": false,
     "hasInventory": false,

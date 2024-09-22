@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "bendymod:block/walkable_studio_blank_wall_slab"
+    },
+    "type=top": {
+      "model": "bendymod:block/walkable_studio_blank_wall_slab_top"
+    },
+    "type=double": {
+      "model": "bendymod:block/walkable_studio_blank_wall_slab_full"
+    }
+  }
+}

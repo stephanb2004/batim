@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "bendymod:walkable_studio_floor",
+    "bendymod:walkable_studio_tiled_wall",
+    "bendymod:walkable_studio_blank_wall_stairs",
+    "bendymod:walkable_studio_ceiling",
+    "bendymod:walkable_studio_blank_wall",
+    "bendymod:walkable_studio_blank_wall_slab",
+    "bendymod:walkable_studio_floor_stairs",
+    "bendymod:walkable_studio_planked_wall",
+    "bendymod:walkable_studio_floor_slab",
+    "bendymod:cutout_bendy"
+  ]
+}

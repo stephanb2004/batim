@@ -83,14 +83,14 @@ public class InkBendyOnEntityTickUpdateProcedure {
 				BendymodModVariables.MapVariables.get(world).ink_bendy_time_remaining = BendymodModVariables.MapVariables.get(world).ink_bendy_time_remaining + 1;
 				BendymodModVariables.MapVariables.get(world).syncData(world);
 			} else {
-				if (!world.getEntitiesOfClass(InkBendyEntity.class, AABB.ofSize(new Vec3((x + range_distance), y, (z + range_distance)), 200, 200, 200), e -> true).isEmpty()
-						|| !world.getEntitiesOfClass(InkBendyEntity.class, AABB.ofSize(new Vec3((x - range_distance), y, (z - range_distance)), 200, 200, 200), e -> true).isEmpty()
-						|| !world.getEntitiesOfClass(InkBendyEntity.class, AABB.ofSize(new Vec3((x - range_distance), y, (z + range_distance)), 200, 200, 200), e -> true).isEmpty()
-						|| !world.getEntitiesOfClass(InkBendyEntity.class, AABB.ofSize(new Vec3((x + range_distance), y, (z - range_distance)), 200, 200, 200), e -> true).isEmpty()
-						|| !world.getEntitiesOfClass(InkBendyEntity.class, AABB.ofSize(new Vec3(x, y, (z + range_distance)), 200, 200, 200), e -> true).isEmpty()
-						|| !world.getEntitiesOfClass(InkBendyEntity.class, AABB.ofSize(new Vec3(x, y, (z - range_distance)), 200, 200, 200), e -> true).isEmpty()
-						|| !world.getEntitiesOfClass(InkBendyEntity.class, AABB.ofSize(new Vec3((x + range_distance), y, z), 200, 200, 200), e -> true).isEmpty()
-						|| !world.getEntitiesOfClass(InkBendyEntity.class, AABB.ofSize(new Vec3((x - range_distance), y, z), 200, 200, 200), e -> true).isEmpty()) {
+				if (!world.getEntitiesOfClass(InkBendyEntity.class, AABB.ofSize(new Vec3((x + range_distance), y, (z + range_distance)), (range_distance * 2), (range_distance * 2), (range_distance * 2)), e -> true).isEmpty()
+						|| !world.getEntitiesOfClass(InkBendyEntity.class, AABB.ofSize(new Vec3((x - range_distance), y, (z - range_distance)), (range_distance * 2), (range_distance * 2), (range_distance * 2)), e -> true).isEmpty()
+						|| !world.getEntitiesOfClass(InkBendyEntity.class, AABB.ofSize(new Vec3((x - range_distance), y, (z + range_distance)), (range_distance * 2), (range_distance * 2), (range_distance * 2)), e -> true).isEmpty()
+						|| !world.getEntitiesOfClass(InkBendyEntity.class, AABB.ofSize(new Vec3((x + range_distance), y, (z - range_distance)), (range_distance * 2), (range_distance * 2), (range_distance * 2)), e -> true).isEmpty()
+						|| !world.getEntitiesOfClass(InkBendyEntity.class, AABB.ofSize(new Vec3(x, y, (z + range_distance)), (range_distance * 2), (range_distance * 2), (range_distance * 2)), e -> true).isEmpty()
+						|| !world.getEntitiesOfClass(InkBendyEntity.class, AABB.ofSize(new Vec3(x, y, (z - range_distance)), (range_distance * 2), (range_distance * 2), (range_distance * 2)), e -> true).isEmpty()
+						|| !world.getEntitiesOfClass(InkBendyEntity.class, AABB.ofSize(new Vec3((x + range_distance), y, z), (range_distance * 2), (range_distance * 2), (range_distance * 2)), e -> true).isEmpty()
+						|| !world.getEntitiesOfClass(InkBendyEntity.class, AABB.ofSize(new Vec3((x - range_distance), y, z), (range_distance * 2), (range_distance * 2), (range_distance * 2)), e -> true).isEmpty()) {
 					if (((Entity) world.getEntitiesOfClass(InkBendyEntity.class,
 							AABB.ofSize(new Vec3(BendymodModVariables.MapVariables.get(world).cur_inkdemon_x, BendymodModVariables.MapVariables.get(world).cur_inkdemon_y, BendymodModVariables.MapVariables.get(world).cur_inkdemon_z), 16, 16, 16),
 							e -> true).stream().sorted(new Object() {
@@ -128,8 +128,6 @@ public class InkBendyOnEntityTickUpdateProcedure {
 				}
 			}
 			if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() instanceof LiquidBlock && (world.getFluidState(new BlockPos(x, y, z)).createLegacyBlock()).getBlock() == BendymodModBlocks.INK.get()) {
-				if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 20, 3, false, false));
 				if (entity.getPersistentData().getBoolean("hidden") == false && !(!world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 16, 16, 16), e -> true).isEmpty())
 						&& !world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 64, 64, 64), e -> true).isEmpty()) {
 					entity.setDeltaMovement(new Vec3(0, 0, 0));
@@ -163,15 +161,13 @@ public class InkBendyOnEntityTickUpdateProcedure {
 					});
 				}
 			} else {
-				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(MobEffects.MOVEMENT_SPEED);
 				entity.getPersistentData().putBoolean("hidden", false);
 			}
 			if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof LivingEntity && did_chase_animation == false) {
 				if (entity instanceof InkBendyEntity) {
 					((InkBendyEntity) entity).setAnimation("animation.inkbendy.see");
 				}
-				if (played_song == false) {
+				if (played_song == false && (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof Player) {
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 								"playsound bendymod:inkdemon_chase ambient @a[distance=..35] ~ ~ ~");
@@ -184,7 +180,7 @@ public class InkBendyOnEntityTickUpdateProcedure {
 					}
 				});
 			} else if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof LivingEntity)) {
-				if (entity.getPersistentData().getBoolean("cur_inkbendy") == false) {
+				if (entity.getPersistentData().getBoolean("cur_inkbendy") == true) {
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 								"stopsound @a * bendymod:inkdemon_chase");

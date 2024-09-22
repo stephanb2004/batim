@@ -30,7 +30,7 @@ public class StudioLampBlock extends Block {
 	public static final DirectionProperty FACING = DirectionalBlock.FACING;
 
 	public StudioLampBlock() {
-		super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(1f, 10f).lightLevel(s -> 5).noOcclusion().hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true)
+		super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(-1, 3600000).lightLevel(s -> 5).noCollission().noOcclusion().hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true)
 				.isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
@@ -53,12 +53,12 @@ public class StudioLampBlock extends Block {
 	@Override
 	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 		return switch (state.getValue(FACING)) {
-			default -> box(2, 5, 0, 14, 11, 10);
-			case NORTH -> box(2, 5, 6, 14, 11, 16);
-			case EAST -> box(0, 5, 2, 10, 11, 14);
-			case WEST -> box(6, 5, 2, 16, 11, 14);
-			case UP -> box(2, 0, 5, 14, 10, 11);
-			case DOWN -> box(2, 6, 5, 14, 16, 11);
+			default -> box(2, 5, 0, 14, 11, 2);
+			case NORTH -> box(2, 5, 14, 14, 11, 16);
+			case EAST -> box(0, 5, 2, 2, 11, 14);
+			case WEST -> box(14, 5, 2, 16, 11, 14);
+			case UP -> box(2, 0, 5, 14, 2, 11);
+			case DOWN -> box(2, 14, 5, 14, 16, 11);
 		};
 	}
 

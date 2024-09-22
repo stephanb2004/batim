@@ -74,9 +74,9 @@ public class GetRandomHallwayProcedure {
 		}
 		if ((world.getBlockState(new BlockPos(result_x, y, result_z))).getBlock() == Blocks.AIR) {
 			while (done_choosing == false) {
-				room_variation1 = Mth.nextInt(RandomSource.create(), 1, 4);
-				rarity = Mth.nextInt(RandomSource.create(), 1, 10);
-				if (rarity > 0 && rarity < 5) {
+				room_variation1 = Mth.nextInt(RandomSource.create(), 1, 5);
+				rarity = GetRoomRarityProcedure.execute();
+				if (rarity == 1) {
 					if (room_variation1 == 1) {
 						chance = Mth.nextInt(RandomSource.create(), 1, 8);
 						if (chance == 1) {
@@ -688,81 +688,6 @@ public class GetRandomHallwayProcedure {
 									}
 								}
 							}
-						} else if (chance == 2 && y == top_y_level - 16) {
-							done_choosing = true;
-							if ((new Object() {
-								public Direction getDirection(BlockState _bs) {
-									Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-									if (_prop instanceof DirectionProperty _dp)
-										return _bs.getValue(_dp);
-									_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-									return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
-											? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
-											: Direction.NORTH;
-								}
-							}.getDirection(blockstate)) == Direction.NORTH) {
-								if (world instanceof ServerLevel _serverworld) {
-									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "xhall_flood"));
-									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
-												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
-									}
-								}
-							} else if ((new Object() {
-								public Direction getDirection(BlockState _bs) {
-									Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-									if (_prop instanceof DirectionProperty _dp)
-										return _bs.getValue(_dp);
-									_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-									return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
-											? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
-											: Direction.NORTH;
-								}
-							}.getDirection(blockstate)) == Direction.EAST) {
-								if (world instanceof ServerLevel _serverworld) {
-									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "xhall_flood"));
-									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
-												new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
-									}
-								}
-							} else if ((new Object() {
-								public Direction getDirection(BlockState _bs) {
-									Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-									if (_prop instanceof DirectionProperty _dp)
-										return _bs.getValue(_dp);
-									_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-									return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
-											? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
-											: Direction.NORTH;
-								}
-							}.getDirection(blockstate)) == Direction.WEST) {
-								if (world instanceof ServerLevel _serverworld) {
-									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "xhall_flood"));
-									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
-												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
-									}
-								}
-							} else if ((new Object() {
-								public Direction getDirection(BlockState _bs) {
-									Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-									if (_prop instanceof DirectionProperty _dp)
-										return _bs.getValue(_dp);
-									_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-									return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
-											? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
-											: Direction.NORTH;
-								}
-							}.getDirection(blockstate)) == Direction.SOUTH) {
-								if (world instanceof ServerLevel _serverworld) {
-									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "xhall_flood"));
-									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
-												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
-									}
-								}
-							}
 						} else if (chance == 4 && y == top_y_level) {
 							done_choosing = true;
 							if ((new Object() {
@@ -813,7 +738,7 @@ public class GetRandomHallwayProcedure {
 								}
 							}.getDirection(blockstate)) == Direction.WEST) {
 								if (world instanceof ServerLevel _serverworld) {
-									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "xhall_storage"));
+									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "animatorsdepartment_lobby"));
 									if (template != null) {
 										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
@@ -840,7 +765,7 @@ public class GetRandomHallwayProcedure {
 							}
 						}
 					}
-				} else if (rarity > 4 && rarity < 8) {
+				} else if (rarity == 2) {
 					if (room_variation1 == 1) {
 						chance = Mth.nextInt(RandomSource.create(), 1, 8);
 						if (chance == 4 && y == top_y_level - 16) {
@@ -1362,7 +1287,7 @@ public class GetRandomHallwayProcedure {
 								}
 							}.getDirection(blockstate)) == Direction.SOUTH) {
 								if (world instanceof ServerLevel _serverworld) {
-									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "lhalll_cutout"));
+									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "animatorsdepartment_lobby"));
 									if (template != null) {
 										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
@@ -1893,6 +1818,463 @@ public class GetRandomHallwayProcedure {
 							}.getDirection(blockstate)) == Direction.SOUTH) {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "xhall_sacrifice"));
+									if (template != null) {
+										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+									}
+								}
+							}
+						} else if (chance == 2 && y == top_y_level - 16) {
+							done_choosing = true;
+							if ((new Object() {
+								public Direction getDirection(BlockState _bs) {
+									Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+									if (_prop instanceof DirectionProperty _dp)
+										return _bs.getValue(_dp);
+									_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+									return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+											? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+											: Direction.NORTH;
+								}
+							}.getDirection(blockstate)) == Direction.NORTH) {
+								if (world instanceof ServerLevel _serverworld) {
+									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "xhall_flood"));
+									if (template != null) {
+										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+									}
+								}
+							} else if ((new Object() {
+								public Direction getDirection(BlockState _bs) {
+									Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+									if (_prop instanceof DirectionProperty _dp)
+										return _bs.getValue(_dp);
+									_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+									return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+											? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+											: Direction.NORTH;
+								}
+							}.getDirection(blockstate)) == Direction.EAST) {
+								if (world instanceof ServerLevel _serverworld) {
+									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "xhall_flood"));
+									if (template != null) {
+										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+												new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+									}
+								}
+							} else if ((new Object() {
+								public Direction getDirection(BlockState _bs) {
+									Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+									if (_prop instanceof DirectionProperty _dp)
+										return _bs.getValue(_dp);
+									_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+									return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+											? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+											: Direction.NORTH;
+								}
+							}.getDirection(blockstate)) == Direction.WEST) {
+								if (world instanceof ServerLevel _serverworld) {
+									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "xhall_flood"));
+									if (template != null) {
+										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+									}
+								}
+							} else if ((new Object() {
+								public Direction getDirection(BlockState _bs) {
+									Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+									if (_prop instanceof DirectionProperty _dp)
+										return _bs.getValue(_dp);
+									_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+									return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+											? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+											: Direction.NORTH;
+								}
+							}.getDirection(blockstate)) == Direction.SOUTH) {
+								if (world instanceof ServerLevel _serverworld) {
+									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "xhall_flood"));
+									if (template != null) {
+										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+									}
+								}
+							}
+						}
+					}
+				} else if (rarity == 4) {
+					if (room_variation1 == 5) {
+						chance = Mth.nextInt(RandomSource.create(), 1, 5);
+						if (chance == 1) {
+							if (y == top_y_level) {
+								done_choosing = true;
+								if ((new Object() {
+									public Direction getDirection(BlockState _bs) {
+										Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+										if (_prop instanceof DirectionProperty _dp)
+											return _bs.getValue(_dp);
+										_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+										return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+												? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+												: Direction.NORTH;
+									}
+								}.getDirection(blockstate)) == Direction.NORTH) {
+									if (world instanceof ServerLevel _serverworld) {
+										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "animatorsdepartment_lobby"));
+										if (template != null) {
+											template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+													new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+										}
+									}
+								} else if ((new Object() {
+									public Direction getDirection(BlockState _bs) {
+										Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+										if (_prop instanceof DirectionProperty _dp)
+											return _bs.getValue(_dp);
+										_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+										return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+												? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+												: Direction.NORTH;
+									}
+								}.getDirection(blockstate)) == Direction.EAST) {
+									if (world instanceof ServerLevel _serverworld) {
+										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "animatorsdepartment_lobby"));
+										if (template != null) {
+											template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+													new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+										}
+									}
+								} else if ((new Object() {
+									public Direction getDirection(BlockState _bs) {
+										Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+										if (_prop instanceof DirectionProperty _dp)
+											return _bs.getValue(_dp);
+										_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+										return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+												? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+												: Direction.NORTH;
+									}
+								}.getDirection(blockstate)) == Direction.WEST) {
+									if (world instanceof ServerLevel _serverworld) {
+										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "animatorsdepartment_lobby"));
+										if (template != null) {
+											template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+													new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+										}
+									}
+								} else if ((new Object() {
+									public Direction getDirection(BlockState _bs) {
+										Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+										if (_prop instanceof DirectionProperty _dp)
+											return _bs.getValue(_dp);
+										_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+										return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+												? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+												: Direction.NORTH;
+									}
+								}.getDirection(blockstate)) == Direction.SOUTH) {
+									if (world instanceof ServerLevel _serverworld) {
+										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "animatorsdepartment_lobby"));
+										if (template != null) {
+											template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+													new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+										}
+									}
+								}
+							}
+						} else if (chance == 2 && y == top_y_level) {
+							done_choosing = true;
+							if ((new Object() {
+								public Direction getDirection(BlockState _bs) {
+									Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+									if (_prop instanceof DirectionProperty _dp)
+										return _bs.getValue(_dp);
+									_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+									return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+											? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+											: Direction.NORTH;
+								}
+							}.getDirection(blockstate)) == Direction.NORTH) {
+								if (world instanceof ServerLevel _serverworld) {
+									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "preritualroom_maze"));
+									if (template != null) {
+										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+									}
+								}
+							} else if ((new Object() {
+								public Direction getDirection(BlockState _bs) {
+									Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+									if (_prop instanceof DirectionProperty _dp)
+										return _bs.getValue(_dp);
+									_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+									return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+											? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+											: Direction.NORTH;
+								}
+							}.getDirection(blockstate)) == Direction.EAST) {
+								if (world instanceof ServerLevel _serverworld) {
+									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "preritualroom_maze"));
+									if (template != null) {
+										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+												new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+									}
+								}
+							} else if ((new Object() {
+								public Direction getDirection(BlockState _bs) {
+									Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+									if (_prop instanceof DirectionProperty _dp)
+										return _bs.getValue(_dp);
+									_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+									return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+											? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+											: Direction.NORTH;
+								}
+							}.getDirection(blockstate)) == Direction.WEST) {
+								if (world instanceof ServerLevel _serverworld) {
+									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "animatorsdepartment_lobby"));
+									if (template != null) {
+										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+									}
+								}
+							} else if ((new Object() {
+								public Direction getDirection(BlockState _bs) {
+									Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+									if (_prop instanceof DirectionProperty _dp)
+										return _bs.getValue(_dp);
+									_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+									return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+											? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+											: Direction.NORTH;
+								}
+							}.getDirection(blockstate)) == Direction.SOUTH) {
+								if (world instanceof ServerLevel _serverworld) {
+									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "preritualroom_maze"));
+									if (template != null) {
+										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+									}
+								}
+							}
+						} else if (chance == 3 && y == top_y_level - 16) {
+							done_choosing = true;
+							if ((new Object() {
+								public Direction getDirection(BlockState _bs) {
+									Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+									if (_prop instanceof DirectionProperty _dp)
+										return _bs.getValue(_dp);
+									_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+									return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+											? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+											: Direction.NORTH;
+								}
+							}.getDirection(blockstate)) == Direction.NORTH) {
+								if (world instanceof ServerLevel _serverworld) {
+									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "ritualroom_maze"));
+									if (template != null) {
+										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+									}
+								}
+							} else if ((new Object() {
+								public Direction getDirection(BlockState _bs) {
+									Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+									if (_prop instanceof DirectionProperty _dp)
+										return _bs.getValue(_dp);
+									_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+									return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+											? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+											: Direction.NORTH;
+								}
+							}.getDirection(blockstate)) == Direction.EAST) {
+								if (world instanceof ServerLevel _serverworld) {
+									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "ritualroom_maze"));
+									if (template != null) {
+										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+												new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+									}
+								}
+							} else if ((new Object() {
+								public Direction getDirection(BlockState _bs) {
+									Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+									if (_prop instanceof DirectionProperty _dp)
+										return _bs.getValue(_dp);
+									_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+									return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+											? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+											: Direction.NORTH;
+								}
+							}.getDirection(blockstate)) == Direction.WEST) {
+								if (world instanceof ServerLevel _serverworld) {
+									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "ritualroom_maze"));
+									if (template != null) {
+										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+									}
+								}
+							} else if ((new Object() {
+								public Direction getDirection(BlockState _bs) {
+									Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+									if (_prop instanceof DirectionProperty _dp)
+										return _bs.getValue(_dp);
+									_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+									return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+											? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+											: Direction.NORTH;
+								}
+							}.getDirection(blockstate)) == Direction.SOUTH) {
+								if (world instanceof ServerLevel _serverworld) {
+									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "ritualroom_maze"));
+									if (template != null) {
+										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+									}
+								}
+							}
+						} else if (chance == 4 && y == top_y_level) {
+							done_choosing = true;
+							if ((new Object() {
+								public Direction getDirection(BlockState _bs) {
+									Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+									if (_prop instanceof DirectionProperty _dp)
+										return _bs.getValue(_dp);
+									_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+									return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+											? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+											: Direction.NORTH;
+								}
+							}.getDirection(blockstate)) == Direction.NORTH) {
+								if (world instanceof ServerLevel _serverworld) {
+									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "borisroom_1"));
+									if (template != null) {
+										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+									}
+								}
+							} else if ((new Object() {
+								public Direction getDirection(BlockState _bs) {
+									Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+									if (_prop instanceof DirectionProperty _dp)
+										return _bs.getValue(_dp);
+									_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+									return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+											? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+											: Direction.NORTH;
+								}
+							}.getDirection(blockstate)) == Direction.EAST) {
+								if (world instanceof ServerLevel _serverworld) {
+									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "borisroom_1"));
+									if (template != null) {
+										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+												new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+									}
+								}
+							} else if ((new Object() {
+								public Direction getDirection(BlockState _bs) {
+									Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+									if (_prop instanceof DirectionProperty _dp)
+										return _bs.getValue(_dp);
+									_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+									return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+											? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+											: Direction.NORTH;
+								}
+							}.getDirection(blockstate)) == Direction.WEST) {
+								if (world instanceof ServerLevel _serverworld) {
+									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "borisroom_1"));
+									if (template != null) {
+										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+									}
+								}
+							} else if ((new Object() {
+								public Direction getDirection(BlockState _bs) {
+									Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+									if (_prop instanceof DirectionProperty _dp)
+										return _bs.getValue(_dp);
+									_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+									return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+											? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+											: Direction.NORTH;
+								}
+							}.getDirection(blockstate)) == Direction.SOUTH) {
+								if (world instanceof ServerLevel _serverworld) {
+									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "borisroom_1"));
+									if (template != null) {
+										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+									}
+								}
+							}
+						} else if (chance == 5 && y == top_y_level - 16) {
+							done_choosing = true;
+							if ((new Object() {
+								public Direction getDirection(BlockState _bs) {
+									Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+									if (_prop instanceof DirectionProperty _dp)
+										return _bs.getValue(_dp);
+									_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+									return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+											? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+											: Direction.NORTH;
+								}
+							}.getDirection(blockstate)) == Direction.NORTH) {
+								if (world instanceof ServerLevel _serverworld) {
+									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "musicdepartment_lobby"));
+									if (template != null) {
+										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+									}
+								}
+							} else if ((new Object() {
+								public Direction getDirection(BlockState _bs) {
+									Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+									if (_prop instanceof DirectionProperty _dp)
+										return _bs.getValue(_dp);
+									_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+									return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+											? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+											: Direction.NORTH;
+								}
+							}.getDirection(blockstate)) == Direction.EAST) {
+								if (world instanceof ServerLevel _serverworld) {
+									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "musicdepartment_lobby"));
+									if (template != null) {
+										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+												new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+									}
+								}
+							} else if ((new Object() {
+								public Direction getDirection(BlockState _bs) {
+									Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+									if (_prop instanceof DirectionProperty _dp)
+										return _bs.getValue(_dp);
+									_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+									return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+											? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+											: Direction.NORTH;
+								}
+							}.getDirection(blockstate)) == Direction.WEST) {
+								if (world instanceof ServerLevel _serverworld) {
+									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "musicdepartment_lobby"));
+									if (template != null) {
+										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+									}
+								}
+							} else if ((new Object() {
+								public Direction getDirection(BlockState _bs) {
+									Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+									if (_prop instanceof DirectionProperty _dp)
+										return _bs.getValue(_dp);
+									_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+									return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+											? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+											: Direction.NORTH;
+								}
+							}.getDirection(blockstate)) == Direction.SOUTH) {
+								if (world instanceof ServerLevel _serverworld) {
+									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "musicdepartment_lobby"));
 									if (template != null) {
 										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);

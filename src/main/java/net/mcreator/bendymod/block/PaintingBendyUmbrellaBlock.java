@@ -28,7 +28,7 @@ public class PaintingBendyUmbrellaBlock extends Block {
 	public static final DirectionProperty FACING = DirectionalBlock.FACING;
 
 	public PaintingBendyUmbrellaBlock() {
-		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.BASALT).strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.BASALT).strength(-1, 3600000).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 

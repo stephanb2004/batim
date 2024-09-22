@@ -126,6 +126,9 @@
     "onRightClicked": {
       "name": "CellboxOnBlockRightClicked"
     },
+    "onDestroyedByPlayer": {
+      "name": "CellboxBlockDestroyedByPlayer"
+    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [

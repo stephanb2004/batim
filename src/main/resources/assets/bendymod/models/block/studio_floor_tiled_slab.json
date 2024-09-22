@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "bendymod:blocks/studio_floor2",
+    "top": "bendymod:blocks/studio_floor2",
+    "side": "bendymod:blocks/studio_floor2"
+  },
+  "render_type": "solid"
+}

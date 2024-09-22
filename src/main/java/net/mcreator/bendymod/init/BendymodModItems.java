@@ -112,6 +112,9 @@ public class BendymodModItems {
 	public static final RegistryObject<Item> STUDIO_BROKEN_FLOOR = block(BendymodModBlocks.STUDIO_BROKEN_FLOOR, BendymodModTabs.TAB_BENDY_BLOCKS);
 	public static final RegistryObject<Item> STUDIO_FLOOR_STAIRS = block(BendymodModBlocks.STUDIO_FLOOR_STAIRS, BendymodModTabs.TAB_BENDY_BLOCKS);
 	public static final RegistryObject<Item> STUDIO_FLOOR_SLAB = block(BendymodModBlocks.STUDIO_FLOOR_SLAB, BendymodModTabs.TAB_BENDY_BLOCKS);
+	public static final RegistryObject<Item> STUDIO_FLOOR_TILED = block(BendymodModBlocks.STUDIO_FLOOR_TILED, BendymodModTabs.TAB_BENDY_BLOCKS);
+	public static final RegistryObject<Item> STUDIO_FLOOR_TILED_STAIRS = block(BendymodModBlocks.STUDIO_FLOOR_TILED_STAIRS, BendymodModTabs.TAB_BENDY_BLOCKS);
+	public static final RegistryObject<Item> STUDIO_FLOOR_TILED_SLAB = block(BendymodModBlocks.STUDIO_FLOOR_TILED_SLAB, BendymodModTabs.TAB_BENDY_BLOCKS);
 	public static final RegistryObject<Item> STUDIO_FLOOR_FENCE = block(BendymodModBlocks.STUDIO_FLOOR_FENCE, BendymodModTabs.TAB_BENDY_BLOCKS);
 	public static final RegistryObject<Item> STUDIO_BRICKS = block(BendymodModBlocks.STUDIO_BRICKS, BendymodModTabs.TAB_BENDY_BLOCKS);
 	public static final RegistryObject<Item> STUDIO_BRICK_STAIRS = block(BendymodModBlocks.STUDIO_BRICK_STAIRS, BendymodModTabs.TAB_BENDY_BLOCKS);
@@ -273,8 +276,6 @@ public class BendymodModItems {
 			() -> new LeverStudioOffDisplayItem(BendymodModBlocks.LEVER_STUDIO_OFF.get(), new Item.Properties().tab(BendymodModTabs.TAB_BENDY_PROPS)));
 	public static final RegistryObject<Item> LEVER_POWER_OFF = REGISTRY.register(BendymodModBlocks.LEVER_POWER_OFF.getId().getPath(),
 			() -> new LeverPowerOffDisplayItem(BendymodModBlocks.LEVER_POWER_OFF.get(), new Item.Properties().tab(BendymodModTabs.TAB_BENDY_PROPS)));
-	public static final RegistryObject<Item> REEL_BENDY_DANCE = REGISTRY.register(BendymodModBlocks.REEL_BENDY_DANCE.getId().getPath(),
-			() -> new ReelBendyDanceDisplayItem(BendymodModBlocks.REEL_BENDY_DANCE.get(), new Item.Properties().tab(BendymodModTabs.TAB_BENDY_PROPS)));
 	public static final RegistryObject<Item> WALL_GASH_1 = REGISTRY.register(BendymodModBlocks.WALL_GASH_1.getId().getPath(),
 			() -> new WallGash1DisplayItem(BendymodModBlocks.WALL_GASH_1.get(), new Item.Properties().tab(BendymodModTabs.TAB_BENDY_PROPS)));
 	public static final RegistryObject<Item> BENDY_SPAWN_EGG = REGISTRY.register("bendy_spawn_egg", () -> new ForgeSpawnEggItem(BendymodModEntities.BENDY, -15724785, -12955, new Item.Properties().tab(BendymodModTabs.TAB_BENDY_ENTITIES)));
@@ -304,6 +305,19 @@ public class BendymodModItems {
 	public static final RegistryObject<Item> PROJECTION_BLANK = REGISTRY.register(BendymodModBlocks.PROJECTION_BLANK.getId().getPath(), () -> new ProjectionBlankDisplayItem(BendymodModBlocks.PROJECTION_BLANK.get(), new Item.Properties().tab(null)));
 	public static final RegistryObject<Item> PROJECTION_BENDY_DANCE = REGISTRY.register(BendymodModBlocks.PROJECTION_BENDY_DANCE.getId().getPath(),
 			() -> new ProjectionBendyDanceDisplayItem(BendymodModBlocks.PROJECTION_BENDY_DANCE.get(), new Item.Properties().tab(null)));
+	public static final RegistryObject<Item> REEL_BENDY_DANCE = REGISTRY.register(BendymodModBlocks.REEL_BENDY_DANCE.getId().getPath(),
+			() -> new ReelBendyDanceDisplayItem(BendymodModBlocks.REEL_BENDY_DANCE.get(), new Item.Properties().tab(BendymodModTabs.TAB_BENDY_PROPS)));
+	public static final RegistryObject<Item> GENT_STRUCTURE_BLOCK = block(BendymodModBlocks.GENT_STRUCTURE_BLOCK, null);
+	public static final RegistryObject<Item> INACTIVE_GENT_STRUCTURE_BLOCK = block(BendymodModBlocks.INACTIVE_GENT_STRUCTURE_BLOCK, null);
+	public static final RegistryObject<Item> WALKABLE_STUDIO_FLOOR = block(BendymodModBlocks.WALKABLE_STUDIO_FLOOR, BendymodModTabs.TAB_BENDY_BLOCKS);
+	public static final RegistryObject<Item> WALKABLE_STUDIO_FLOOR_STAIRS = block(BendymodModBlocks.WALKABLE_STUDIO_FLOOR_STAIRS, BendymodModTabs.TAB_BENDY_BLOCKS);
+	public static final RegistryObject<Item> WALKABLE_STUDIO_FLOOR_SLAB = block(BendymodModBlocks.WALKABLE_STUDIO_FLOOR_SLAB, BendymodModTabs.TAB_BENDY_BLOCKS);
+	public static final RegistryObject<Item> WALKABLE_STUDIO_BLANK_WALL = block(BendymodModBlocks.WALKABLE_STUDIO_BLANK_WALL, BendymodModTabs.TAB_BENDY_BLOCKS);
+	public static final RegistryObject<Item> WALKABLE_STUDIO_BLANK_WALL_STAIRS = block(BendymodModBlocks.WALKABLE_STUDIO_BLANK_WALL_STAIRS, BendymodModTabs.TAB_BENDY_BLOCKS);
+	public static final RegistryObject<Item> WALKABLE_STUDIO_BLANK_WALL_SLAB = block(BendymodModBlocks.WALKABLE_STUDIO_BLANK_WALL_SLAB, BendymodModTabs.TAB_BENDY_BLOCKS);
+	public static final RegistryObject<Item> WALKABLE_STUDIO_PLANKED_WALL = block(BendymodModBlocks.WALKABLE_STUDIO_PLANKED_WALL, BendymodModTabs.TAB_BENDY_BLOCKS);
+	public static final RegistryObject<Item> WALKABLE_STUDIO_CEILING = block(BendymodModBlocks.WALKABLE_STUDIO_CEILING, BendymodModTabs.TAB_BENDY_BLOCKS);
+	public static final RegistryObject<Item> WALKABLE_STUDIO_TILED_WALL = block(BendymodModBlocks.WALKABLE_STUDIO_TILED_WALL, BendymodModTabs.TAB_BENDY_BLOCKS);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

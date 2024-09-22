@@ -30,7 +30,7 @@ public class StudioAxeItem extends AxeItem {
 			}
 
 			public int getEnchantmentValue() {
-				return 2;
+				return 0;
 			}
 
 			public Ingredient getRepairIngredient() {

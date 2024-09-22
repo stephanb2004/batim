@@ -4,11 +4,15 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.bendymod.init.BendymodModBlocks;
@@ -26,14 +30,132 @@ public class HeavyGateOpenRedstoneOnProcedure {
 				if (_bs.getBlock().getStateDefinition().getProperty("animation") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
 					world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
 			}
-			BendymodMod.queueServerWork(40, () -> {
+			BendymodMod.queueServerWork(20, () -> {
 				if (!world.isClientSide()) {
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.iron_door.close")), SoundSource.NEUTRAL, 1, 1);
+							_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.iron_door.open")), SoundSource.NEUTRAL, 1, 1);
 						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.iron_door.close")), SoundSource.NEUTRAL, 1, 1, false);
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.iron_door.open")), SoundSource.NEUTRAL, 1, 1, false);
 						}
+					}
+				}
+				if ((new Object() {
+					public Direction getDirection(BlockState _bs) {
+						Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+						if (_prop instanceof DirectionProperty _dp)
+							return _bs.getValue(_dp);
+						_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+						return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+								? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+								: Direction.NORTH;
+					}
+				}.getDirection((world.getBlockState(new BlockPos(x, y, z))))) == Direction.EAST || (new Object() {
+					public Direction getDirection(BlockState _bs) {
+						Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+						if (_prop instanceof DirectionProperty _dp)
+							return _bs.getValue(_dp);
+						_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+						return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+								? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+								: Direction.NORTH;
+					}
+				}.getDirection((world.getBlockState(new BlockPos(x, y, z))))) == Direction.WEST) {
+					world.setBlock(new BlockPos(x, y + 1, z), Blocks.BARRIER.defaultBlockState(), 3);
+					world.setBlock(new BlockPos(x, y + 2, z), Blocks.BARRIER.defaultBlockState(), 3);
+					world.setBlock(new BlockPos(x, y, z + 1), Blocks.BARRIER.defaultBlockState(), 3);
+					world.setBlock(new BlockPos(x, y + 1, z + 1), Blocks.BARRIER.defaultBlockState(), 3);
+					world.setBlock(new BlockPos(x, y + 2, z + 1), Blocks.BARRIER.defaultBlockState(), 3);
+					world.setBlock(new BlockPos(x, y, z - 1), Blocks.BARRIER.defaultBlockState(), 3);
+					world.setBlock(new BlockPos(x, y + 1, z - 1), Blocks.BARRIER.defaultBlockState(), 3);
+					world.setBlock(new BlockPos(x, y + 2, z - 1), Blocks.BARRIER.defaultBlockState(), 3);
+					if ((new Object() {
+						public Direction getDirection(BlockState _bs) {
+							Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+							if (_prop instanceof DirectionProperty _dp)
+								return _bs.getValue(_dp);
+							_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+							return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+									? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+									: Direction.NORTH;
+						}
+					}.getDirection((world.getBlockState(new BlockPos(x, y, z))))) == Direction.WEST) {
+						world.setBlock(new BlockPos(x, y, z - 2), Blocks.BARRIER.defaultBlockState(), 3);
+						world.setBlock(new BlockPos(x, y + 1, z - 2), Blocks.BARRIER.defaultBlockState(), 3);
+						world.setBlock(new BlockPos(x, y + 2, z - 2), Blocks.BARRIER.defaultBlockState(), 3);
+					} else if ((new Object() {
+						public Direction getDirection(BlockState _bs) {
+							Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+							if (_prop instanceof DirectionProperty _dp)
+								return _bs.getValue(_dp);
+							_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+							return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+									? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+									: Direction.NORTH;
+						}
+					}.getDirection((world.getBlockState(new BlockPos(x, y, z))))) == Direction.WEST) {
+						world.setBlock(new BlockPos(x, y, z + 2), Blocks.BARRIER.defaultBlockState(), 3);
+						world.setBlock(new BlockPos(x, y + 1, z + 2), Blocks.BARRIER.defaultBlockState(), 3);
+						world.setBlock(new BlockPos(x, y + 2, z + 2), Blocks.BARRIER.defaultBlockState(), 3);
+					}
+				}
+				if ((new Object() {
+					public Direction getDirection(BlockState _bs) {
+						Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+						if (_prop instanceof DirectionProperty _dp)
+							return _bs.getValue(_dp);
+						_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+						return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+								? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+								: Direction.NORTH;
+					}
+				}.getDirection((world.getBlockState(new BlockPos(x, y, z))))) == Direction.SOUTH || (new Object() {
+					public Direction getDirection(BlockState _bs) {
+						Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+						if (_prop instanceof DirectionProperty _dp)
+							return _bs.getValue(_dp);
+						_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+						return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+								? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+								: Direction.NORTH;
+					}
+				}.getDirection((world.getBlockState(new BlockPos(x, y, z))))) == Direction.NORTH) {
+					world.setBlock(new BlockPos(x, y + 1, z), Blocks.BARRIER.defaultBlockState(), 3);
+					world.setBlock(new BlockPos(x, y + 2, z), Blocks.BARRIER.defaultBlockState(), 3);
+					world.setBlock(new BlockPos(x + 1, y, z), Blocks.BARRIER.defaultBlockState(), 3);
+					world.setBlock(new BlockPos(x + 1, y + 1, z), Blocks.BARRIER.defaultBlockState(), 3);
+					world.setBlock(new BlockPos(x + 1, y + 2, z), Blocks.BARRIER.defaultBlockState(), 3);
+					world.setBlock(new BlockPos(x - 1, y, z), Blocks.BARRIER.defaultBlockState(), 3);
+					world.setBlock(new BlockPos(x - 1, y + 1, z), Blocks.BARRIER.defaultBlockState(), 3);
+					world.setBlock(new BlockPos(x - 1, y + 2, z), Blocks.BARRIER.defaultBlockState(), 3);
+					if ((new Object() {
+						public Direction getDirection(BlockState _bs) {
+							Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+							if (_prop instanceof DirectionProperty _dp)
+								return _bs.getValue(_dp);
+							_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+							return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+									? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+									: Direction.NORTH;
+						}
+					}.getDirection((world.getBlockState(new BlockPos(x, y, z))))) == Direction.SOUTH) {
+						world.setBlock(new BlockPos(x - 2, y, z), Blocks.BARRIER.defaultBlockState(), 3);
+						world.setBlock(new BlockPos(x - 2, y + 1, z), Blocks.BARRIER.defaultBlockState(), 3);
+						world.setBlock(new BlockPos(x - 2, y + 2, z), Blocks.BARRIER.defaultBlockState(), 3);
+					} else if ((new Object() {
+						public Direction getDirection(BlockState _bs) {
+							Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+							if (_prop instanceof DirectionProperty _dp)
+								return _bs.getValue(_dp);
+							_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+							return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+									? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+									: Direction.NORTH;
+						}
+					}.getDirection((world.getBlockState(new BlockPos(x, y, z))))) == Direction.NORTH) {
+						world.setBlock(new BlockPos(x + 2, y, z), Blocks.BARRIER.defaultBlockState(), 3);
+						world.setBlock(new BlockPos(x + 2, y + 1, z), Blocks.BARRIER.defaultBlockState(), 3);
+						world.setBlock(new BlockPos(x + 2, y + 2, z), Blocks.BARRIER.defaultBlockState(), 3);
 					}
 				}
 				{

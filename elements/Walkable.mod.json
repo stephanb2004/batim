@@ -1,0 +1,45 @@
+{
+  "_fv": 43,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:WalkableStudioFloor"
+      },
+      {
+        "value": "CUSTOM:WalkableStudioFloorStairs"
+      },
+      {
+        "value": "CUSTOM:WalkableStudioFloorSlab"
+      },
+      {
+        "value": "CUSTOM:WalkableStudioBlankWall"
+      },
+      {
+        "value": "CUSTOM:WalkableStudioBlankWallStairs"
+      },
+      {
+        "value": "CUSTOM:WalkableStudioBlankWallSlab"
+      },
+      {
+        "value": "CUSTOM:WalkableStudioPlankedWall"
+      },
+      {
+        "value": "CUSTOM:WalkableStudioCeiling"
+      },
+      {
+        "value": "CUSTOM:WalkableStudioTiledWall"
+      },
+      {
+        "value": "CUSTOM:CutoutBendy"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "walkable_blocks",
+    "namespace": "mod"
+  }
+}

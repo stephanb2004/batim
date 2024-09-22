@@ -38,15 +38,6 @@
       }
     ]
   },
-  "sammy_ambience": {
-    "subtitle": "subtitles.sammy_ambience",
-    "sounds": [
-      {
-        "name": "bendymod:sammy_living",
-        "stream": false
-      }
-    ]
-  },
   "searcher_appear": {
     "subtitle": "subtitles.searcher_appear",
     "sounds": [
@@ -142,6 +133,77 @@
     "sounds": [
       {
         "name": "bendymod:radio_2",
+        "stream": false
+      }
+    ]
+  },
+  "sammy_ambience": {
+    "subtitle": "subtitles.sammy_ambience",
+    "sounds": [
+      {
+        "name": "bendymod:sammy_living",
+        "stream": false
+      }
+    ]
+  },
+  "studioambience_loop": {
+    "sounds": [
+      {
+        "name": "bendymod:original_horror_loop",
+        "stream": false
+      }
+    ]
+  },
+  "studioambience_additionalsounds": {
+    "sounds": [
+      {
+        "name": "bendymod:industrial_echoes_loop",
+        "stream": false
+      },
+      {
+        "name": "bendymod:ink_pipe_loop",
+        "stream": false
+      },
+      {
+        "name": "bendymod:studioambience_ductcrawling",
+        "stream": false
+      },
+      {
+        "name": "bendymod:creepy_sounds_01",
+        "stream": false
+      },
+      {
+        "name": "bendymod:creepy_sounds_02",
+        "stream": false
+      },
+      {
+        "name": "bendymod:creepy_sounds_03",
+        "stream": false
+      },
+      {
+        "name": "bendymod:creepy_sounds_04",
+        "stream": false
+      },
+      {
+        "name": "bendymod:creepy_sounds_05",
+        "stream": false
+      }
+    ]
+  },
+  "radio_3": {
+    "subtitle": "subtitles.radio_3",
+    "sounds": [
+      {
+        "name": "bendymod:radio_3",
+        "stream": false
+      }
+    ]
+  },
+  "radio_4": {
+    "subtitle": "subtitles.radio_4",
+    "sounds": [
+      {
+        "name": "bendymod:radio_4",
         "stream": false
       }
     ]

@@ -151,7 +151,6 @@ public class ClientListener {
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.WRITING_DOWN_HERE_WERE_ALL_SINNERS.get(), WritingDownHereWereAllSinnersTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.LEVER_STUDIO_OFF.get(), LeverStudioOffTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.LEVER_POWER_OFF.get(), LeverPowerOffTileRenderer::new);
-		event.registerBlockEntityRenderer(BendymodModBlockEntities.REEL_BENDY_DANCE.get(), ReelBendyDanceTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.WALL_GASH_1.get(), WallGash1TileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.CUTOUT_SINNY.get(), CutoutSinnyTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.RECORDING_SIGN_ON.get(), RecordingSignOnTileRenderer::new);
@@ -164,5 +163,6 @@ public class ClientListener {
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.PEDESTAL_RL_ON.get(), PedestalRLOnTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.PROJECTION_BLANK.get(), ProjectionBlankTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.PROJECTION_BENDY_DANCE.get(), ProjectionBendyDanceTileRenderer::new);
+		event.registerBlockEntityRenderer(BendymodModBlockEntities.REEL_BENDY_DANCE.get(), ReelBendyDanceTileRenderer::new);
 	}
 }

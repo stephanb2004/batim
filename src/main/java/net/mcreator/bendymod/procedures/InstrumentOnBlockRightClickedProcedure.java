@@ -14,7 +14,7 @@ import net.mcreator.bendymod.init.BendymodModBlocks;
 
 public class InstrumentOnBlockRightClickedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		if (world.isClientSide()) {
+		if (!world.isClientSide()) {
 			if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == BendymodModBlocks.PIANO.get()) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {

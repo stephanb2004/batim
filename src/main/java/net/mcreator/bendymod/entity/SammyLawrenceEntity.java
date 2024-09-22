@@ -45,6 +45,7 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.bendymod.procedures.AchievementEntityDiesProcedure;
 import net.mcreator.bendymod.init.BendymodModItems;
 import net.mcreator.bendymod.init.BendymodModEntities;
 
@@ -136,6 +137,12 @@ public class SammyLawrenceEntity extends Monster implements IAnimatable {
 	@Override
 	public SoundEvent getDeathSound() {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
+	}
+
+	@Override
+	public void die(DamageSource source) {
+		super.die(source);
+		AchievementEntityDiesProcedure.execute(this, source.getEntity());
 	}
 
 	@Override

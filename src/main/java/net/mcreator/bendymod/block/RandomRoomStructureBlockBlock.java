@@ -73,7 +73,7 @@ public class RandomRoomStructureBlockBlock extends Block implements EntityBlock 
 	@Override
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
 		super.onPlace(blockstate, world, pos, oldState, moving);
-		world.scheduleTick(pos, this, 1);
+		world.scheduleTick(pos, this, 3);
 		StructureBlockBlockAddedProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 
@@ -84,7 +84,7 @@ public class RandomRoomStructureBlockBlock extends Block implements EntityBlock 
 		int y = pos.getY();
 		int z = pos.getZ();
 		StructureBlockUpdateTickProcedure.execute(world, x, y, z, blockstate);
-		world.scheduleTick(pos, this, 1);
+		world.scheduleTick(pos, this, 3);
 	}
 
 	@Override

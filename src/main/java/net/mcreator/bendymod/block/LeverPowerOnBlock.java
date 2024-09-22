@@ -131,7 +131,7 @@ public class LeverPowerOnBlock extends BaseEntityBlock implements EntityBlock {
 	@Override
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
 		super.onPlace(blockstate, world, pos, oldState, moving);
-		LeverStudioOnBlockAddedProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		LeverStudioOnBlockAddedProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), blockstate);
 	}
 
 	@Override

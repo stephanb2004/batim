@@ -37,7 +37,7 @@ public class WritingItsTimeToBelieveBlock extends BaseEntityBlock implements Ent
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
 	public WritingItsTimeToBelieveBlock() {
-		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.SCULK).strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.SCULK).strength(-1, 3600000).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 

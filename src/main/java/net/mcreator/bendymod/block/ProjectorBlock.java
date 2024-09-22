@@ -6,6 +6,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -34,6 +35,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.bendymod.procedures.ProjectorOnBlockRightClickedProcedure;
+import net.mcreator.bendymod.procedures.ProjectorBlockDestroyedByPlayerProcedure;
 import net.mcreator.bendymod.init.BendymodModBlockEntities;
 import net.mcreator.bendymod.block.entity.ProjectorTileEntity;
 
@@ -43,7 +45,7 @@ import java.util.List;
 import java.util.Collections;
 
 public class ProjectorBlock extends BaseEntityBlock implements EntityBlock {
-	public static final IntegerProperty ANIMATION = IntegerProperty.create("animation", 0, (int) 1);
+	public static final IntegerProperty ANIMATION = IntegerProperty.create("animation", 0, (int) 2);
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
 	public ProjectorBlock() {
@@ -107,6 +109,13 @@ public class ProjectorBlock extends BaseEntityBlock implements EntityBlock {
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
 		return Collections.singletonList(new ItemStack(this, 1));
+	}
+
+	@Override
+	public boolean onDestroyedByPlayer(BlockState blockstate, Level world, BlockPos pos, Player entity, boolean willHarvest, FluidState fluid) {
+		boolean retval = super.onDestroyedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
+		ProjectorBlockDestroyedByPlayerProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		return retval;
 	}
 
 	@Override

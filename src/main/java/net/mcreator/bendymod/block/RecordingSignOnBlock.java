@@ -42,7 +42,7 @@ public class RecordingSignOnBlock extends BaseEntityBlock implements EntityBlock
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
 	public RecordingSignOnBlock() {
-		super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(-1, 3600000).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 

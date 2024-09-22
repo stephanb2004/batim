@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "bendymod:bendy_mask_helmet"
+    },
+    "title": {
+      "translate": "advancements.sheep_sheep_sheep.title"
+    },
+    "description": {
+      "translate": "advancements.sheep_sheep_sheep.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "sheep_sheep_sheep": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "bendymod:the_old_song"
+}

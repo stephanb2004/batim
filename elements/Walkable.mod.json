@@ -37,6 +37,12 @@
       },
       {
         "value": "CUSTOM:WalkableSolidInk"
+      },
+      {
+        "value": "CUSTOM:WalkableStudioTiles"
+      },
+      {
+        "value": "CUSTOM:Boards"
       }
     ],
     "functions": [],

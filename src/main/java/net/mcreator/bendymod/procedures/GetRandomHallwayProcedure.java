@@ -1905,7 +1905,7 @@ public class GetRandomHallwayProcedure {
 				} else if (rarity == 3) {
 					if (room_variation1 == 6) {
 						chance = Mth.nextInt(RandomSource.create(), 1, 6);
-						chance2 = Mth.nextInt(RandomSource.create(), 1, 3);
+						chance2 = Mth.nextInt(RandomSource.create(), 1, 8);
 						if (chance2 == 1 || !(y == top_y_level)) {
 							if (chance == 1) {
 								done_choosing = true;

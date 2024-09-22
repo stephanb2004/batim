@@ -25,6 +25,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.RemoveBlockGoal;
+import net.minecraft.world.entity.ai.goal.RandomSwimmingGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.OpenDoorGoal;
@@ -58,7 +59,6 @@ import net.mcreator.bendymod.procedures.InkBendyOnEntityTickUpdateProcedure;
 import net.mcreator.bendymod.procedures.InkBendyEntityIsHurtProcedure;
 import net.mcreator.bendymod.procedures.InkBendyEntityDiesProcedure;
 import net.mcreator.bendymod.init.BendymodModEntities;
-import net.mcreator.bendymod.init.BendymodModBlocks;
 
 import javax.annotation.Nullable;
 
@@ -114,13 +114,13 @@ public class InkBendyEntity extends Monster implements IAnimatable {
 		super.registerGoals();
 		this.goalSelector.addGoal(1, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1));
-		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.7, false) {
+		this.goalSelector.addGoal(3, new RandomSwimmingGoal(this, 2, 40));
+		this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 1.7, true) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
 			}
 		});
-		this.goalSelector.addGoal(4, new RemoveBlockGoal(BendymodModBlocks.BOARDS.get(), this, 1, (int) 4));
 		this.goalSelector.addGoal(5, new RemoveBlockGoal(Blocks.BLACK_STAINED_GLASS, this, 1, (int) 4));
 		this.goalSelector.addGoal(6, new RemoveBlockGoal(Blocks.BLACK_STAINED_GLASS_PANE, this, 1, (int) 4));
 		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, Player.class, true, true));

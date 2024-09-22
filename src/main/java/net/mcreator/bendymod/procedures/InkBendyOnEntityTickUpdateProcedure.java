@@ -33,12 +33,6 @@ public class InkBendyOnEntityTickUpdateProcedure {
 		if (entity == null)
 			return;
 		Entity selected_player = null;
-		boolean hiding = false;
-		boolean did_chase_animation = false;
-		boolean overrid = false;
-		boolean selected_loc = false;
-		boolean played_song = false;
-		boolean selected_inkdemon = false;
 		double random_x = 0;
 		double random_z = 0;
 		double random_letter = 0;
@@ -48,6 +42,13 @@ public class InkBendyOnEntityTickUpdateProcedure {
 		double range_distance = 0;
 		double chance = 0;
 		double aaaaaaaa = 0;
+		boolean hiding = false;
+		boolean did_chase_animation = false;
+		boolean overrid = false;
+		boolean selected_loc = false;
+		boolean played_song = false;
+		boolean selected_inkdemon = false;
+		boolean got_new_entity = false;
 		if (entity instanceof LivingEntity) {
 			if (selected_inkdemon == false) {
 				if (world.getLevelData().getGameRules().getBoolean(BendymodModGameRules.ALLOW_MULTIPLE_INK_BENDYS) == false) {
@@ -94,12 +95,11 @@ public class InkBendyOnEntityTickUpdateProcedure {
 				if (world instanceof ServerLevel _level)
 					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3((x - 16), y, (z - 16)), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							"forceload remove ~ ~ ~ ~");
-				if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof LivingEntity) {
+				if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
 					entity.getPersistentData().putBoolean("can_be_teleported", false);
-				} else if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof LivingEntity)
-						&& BendymodModVariables.MapVariables.get(world).ink_bendy_time_remaining >= BendymodModVariables.MapVariables.get(world).ink_bendy_timer) {
+				} else if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null && BendymodModVariables.MapVariables.get(world).ink_bendy_time_remaining > BendymodModVariables.MapVariables.get(world).ink_bendy_timer) {
 					entity.getPersistentData().putBoolean("can_be_teleported", true);
-				} else if (BendymodModVariables.MapVariables.get(world).ink_bendy_time_remaining < BendymodModVariables.MapVariables.get(world).ink_bendy_timer || (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null) {
+				} else if (BendymodModVariables.MapVariables.get(world).ink_bendy_time_remaining <= BendymodModVariables.MapVariables.get(world).ink_bendy_timer || !((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
 					entity.getPersistentData().putBoolean("can_be_teleported", false);
 				}
 				BendymodModVariables.MapVariables.get(world).ink_bendy_time_remaining = BendymodModVariables.MapVariables.get(world).ink_bendy_time_remaining + 1;

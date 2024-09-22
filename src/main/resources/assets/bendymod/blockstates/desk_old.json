@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "bendymod:custom/desk_old_particle"
+    },
+    "facing=east": {
+      "model": "bendymod:custom/desk_old_particle",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "bendymod:custom/desk_old_particle",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "bendymod:custom/desk_old_particle",
+      "y": 270
+    }
+  }
+}

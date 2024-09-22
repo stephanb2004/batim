@@ -1,0 +1,9 @@
+{
+  "parent": "bendymod:custom/plank",
+  "textures": {
+    "all": "bendymod:blocks/plank_floor",
+    "particle": "bendymod:blocks/plank_floor",
+    "1": "bendymod:blocks/plank_floor"
+  },
+  "render_type": "cutout"
+}

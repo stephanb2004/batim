@@ -12,7 +12,7 @@
     "boundingBoxScale": {
       "fixedValue": 0.875
     },
-    "modelWidth": 0.3125,
+    "modelWidth": 0.75,
     "modelHeight": 2.1875,
     "modelShadowSize": 0.312,
     "mountedYOffset": 0.0,

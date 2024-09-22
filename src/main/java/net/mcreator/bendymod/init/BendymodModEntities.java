@@ -37,11 +37,11 @@ public class BendymodModEntities {
 	public static final RegistryObject<EntityType<BorisBuddyEntity>> BORIS_BUDDY = register("boris_buddy",
 			EntityType.Builder.<BorisBuddyEntity>of(BorisBuddyEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BorisBuddyEntity::new)
 
-					.sized(0.3125f, 2.1875f));
+					.sized(0.75f, 2.1875f));
 	public static final RegistryObject<EntityType<SearcherEntity>> SEARCHER = register("searcher",
 			EntityType.Builder.<SearcherEntity>of(SearcherEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SearcherEntity::new)
 
-					.sized(0.5f, 0.875f));
+					.sized(0.95f, 0.875f));
 	public static final RegistryObject<EntityType<InkBendyEntity>> INK_BENDY = register("ink_bendy",
 			EntityType.Builder.<InkBendyEntity>of(InkBendyEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(InkBendyEntity::new).fireImmune().sized(0.5f, 1.75f));
 	public static final RegistryObject<EntityType<SammyLawrenceEntity>> SAMMY_LAWRENCE = register("sammy_lawrence",

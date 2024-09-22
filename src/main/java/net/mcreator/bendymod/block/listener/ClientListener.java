@@ -65,9 +65,12 @@ import net.mcreator.bendymod.block.renderer.GearboxTileRenderer;
 import net.mcreator.bendymod.block.renderer.DrumTileRenderer;
 import net.mcreator.bendymod.block.renderer.DresserTileRenderer;
 import net.mcreator.bendymod.block.renderer.DeskTileRenderer;
+import net.mcreator.bendymod.block.renderer.DeskOldTileRenderer;
 import net.mcreator.bendymod.block.renderer.DeskFancyTileRenderer;
 import net.mcreator.bendymod.block.renderer.CutoutSinnyTileRenderer;
+import net.mcreator.bendymod.block.renderer.CutoutSinnyDiagTileRenderer;
 import net.mcreator.bendymod.block.renderer.CutoutBendyTileRenderer;
+import net.mcreator.bendymod.block.renderer.CutoutBendyDiagTileRenderer;
 import net.mcreator.bendymod.block.renderer.CoffinTileRenderer;
 import net.mcreator.bendymod.block.renderer.Cellbox2TileRenderer;
 import net.mcreator.bendymod.block.renderer.Cellbox1TileRenderer;
@@ -90,11 +93,12 @@ public class ClientListener {
 	@SubscribeEvent
 	public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.HEAVY_GATE_CLOSED.get(), HeavyGateClosedTileRenderer::new);
-		event.registerBlockEntityRenderer(BendymodModBlockEntities.HANGING_MIC.get(), HangingMicTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.SOUP_CANDLE.get(), SoupCandleTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.CUTOUT_BENDY.get(), CutoutBendyTileRenderer::new);
+		event.registerBlockEntityRenderer(BendymodModBlockEntities.CUTOUT_BENDY_DIAG.get(), CutoutBendyDiagTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.PROJECTOR.get(), ProjectorTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.DESK.get(), DeskTileRenderer::new);
+		event.registerBlockEntityRenderer(BendymodModBlockEntities.DESK_OLD.get(), DeskOldTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.DESK_FANCY.get(), DeskFancyTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.WORK_TABLE.get(), WorkTableTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.SHELF.get(), ShelfTileRenderer::new);
@@ -115,6 +119,7 @@ public class ClientListener {
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.BENDY_STATUE.get(), BendyStatueTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.COFFIN.get(), CoffinTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.REEL.get(), ReelTileRenderer::new);
+		event.registerBlockEntityRenderer(BendymodModBlockEntities.REEL_BENDY_DANCE.get(), ReelBendyDanceTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.JDS_SIGN.get(), JDSSignTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.MUSIC_DEPARTMENT_SIGN.get(), MusicDepartmentSignTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.RECORDING_SIGN_OFF.get(), RecordingSignOffTileRenderer::new);
@@ -137,6 +142,7 @@ public class ClientListener {
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.BOOK_BENDY.get(), BookBendyTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.BENDY_BOOK_STACK.get(), BendyBookStackTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.SHEET_HOLDER.get(), SheetHolderTileRenderer::new);
+		event.registerBlockEntityRenderer(BendymodModBlockEntities.HANGING_MIC.get(), HangingMicTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.BANJO.get(), BanjoTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.DRUM.get(), DrumTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.PIANO.get(), PianoTileRenderer::new);
@@ -163,6 +169,6 @@ public class ClientListener {
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.PEDESTAL_RL_ON.get(), PedestalRLOnTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.PROJECTION_BLANK.get(), ProjectionBlankTileRenderer::new);
 		event.registerBlockEntityRenderer(BendymodModBlockEntities.PROJECTION_BENDY_DANCE.get(), ProjectionBendyDanceTileRenderer::new);
-		event.registerBlockEntityRenderer(BendymodModBlockEntities.REEL_BENDY_DANCE.get(), ReelBendyDanceTileRenderer::new);
+		event.registerBlockEntityRenderer(BendymodModBlockEntities.CUTOUT_SINNY_DIAG.get(), CutoutSinnyDiagTileRenderer::new);
 	}
 }

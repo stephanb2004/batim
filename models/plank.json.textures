@@ -1,0 +1,16 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "plank_shelf"
+      },
+      "name": "default"
+    },
+    "floor": {
+      "map": {
+        "1": "plank_floor"
+      },
+      "name": "floor"
+    }
+  }
+}

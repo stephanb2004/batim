@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "bendymod:block/plank"
+    },
+    "facing=east": {
+      "model": "bendymod:block/plank",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "bendymod:block/plank",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "bendymod:block/plank",
+      "y": 270
+    }
+  }
+}

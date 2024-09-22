@@ -318,6 +318,7 @@ public class BendymodModItems {
 	public static final RegistryObject<Item> WALKABLE_STUDIO_PLANKED_WALL = block(BendymodModBlocks.WALKABLE_STUDIO_PLANKED_WALL, BendymodModTabs.TAB_BENDY_BLOCKS);
 	public static final RegistryObject<Item> WALKABLE_STUDIO_CEILING = block(BendymodModBlocks.WALKABLE_STUDIO_CEILING, BendymodModTabs.TAB_BENDY_BLOCKS);
 	public static final RegistryObject<Item> WALKABLE_STUDIO_TILED_WALL = block(BendymodModBlocks.WALKABLE_STUDIO_TILED_WALL, BendymodModTabs.TAB_BENDY_BLOCKS);
+	public static final RegistryObject<Item> WALKABLE_SOLID_INK = block(BendymodModBlocks.WALKABLE_SOLID_INK, BendymodModTabs.TAB_BENDY_BLOCKS);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

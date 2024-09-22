@@ -30,6 +30,7 @@ import net.mcreator.bendymod.block.WalkableStudioCeilingBlock;
 import net.mcreator.bendymod.block.WalkableStudioBlankWallStairsBlock;
 import net.mcreator.bendymod.block.WalkableStudioBlankWallSlabBlock;
 import net.mcreator.bendymod.block.WalkableStudioBlankWallBlock;
+import net.mcreator.bendymod.block.WalkableSolidInkBlock;
 import net.mcreator.bendymod.block.ViolinBlock;
 import net.mcreator.bendymod.block.VentCoverBlock;
 import net.mcreator.bendymod.block.ValveBlock;
@@ -350,4 +351,5 @@ public class BendymodModBlocks {
 	public static final RegistryObject<Block> WALKABLE_STUDIO_PLANKED_WALL = REGISTRY.register("walkable_studio_planked_wall", () -> new WalkableStudioPlankedWallBlock());
 	public static final RegistryObject<Block> WALKABLE_STUDIO_CEILING = REGISTRY.register("walkable_studio_ceiling", () -> new WalkableStudioCeilingBlock());
 	public static final RegistryObject<Block> WALKABLE_STUDIO_TILED_WALL = REGISTRY.register("walkable_studio_tiled_wall", () -> new WalkableStudioTiledWallBlock());
+	public static final RegistryObject<Block> WALKABLE_SOLID_INK = REGISTRY.register("walkable_solid_ink", () -> new WalkableSolidInkBlock());
 }

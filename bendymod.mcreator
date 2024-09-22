@@ -5089,7 +5089,7 @@
           "src/main/resources/assets/bendymod/models/block/walkable_studio_floor.json"
         ]
       },
-      "path": "~/Mod Stuff/Blocks"
+      "path": "~/Mod Stuff/Blocks/WalkableBlocks"
     },
     {
       "name": "WalkableStudioFloorStairs",
@@ -5108,7 +5108,7 @@
           "src/main/resources/assets/bendymod/models/block/walkable_studio_floor_stairs_outer.json"
         ]
       },
-      "path": "~/Mod Stuff/Blocks"
+      "path": "~/Mod Stuff/Blocks/WalkableBlocks"
     },
     {
       "name": "WalkableStudioFloorSlab",
@@ -5127,7 +5127,7 @@
           "src/main/java/net/mcreator/bendymod/block/WalkableStudioFloorSlabBlock.java"
         ]
       },
-      "path": "~/Mod Stuff/Blocks"
+      "path": "~/Mod Stuff/Blocks/WalkableBlocks"
     },
     {
       "name": "WalkableStudioBlankWall",
@@ -5144,7 +5144,7 @@
           "src/main/resources/assets/bendymod/models/item/walkable_studio_blank_wall.json"
         ]
       },
-      "path": "~/Mod Stuff/Blocks"
+      "path": "~/Mod Stuff/Blocks/WalkableBlocks"
     },
     {
       "name": "WalkableStudioBlankWallStairs",
@@ -5163,7 +5163,7 @@
           "src/main/resources/assets/bendymod/models/block/walkable_studio_blank_wall_stairs_outer.json"
         ]
       },
-      "path": "~/Mod Stuff/Blocks"
+      "path": "~/Mod Stuff/Blocks/WalkableBlocks"
     },
     {
       "name": "WalkableStudioBlankWallSlab",
@@ -5182,7 +5182,7 @@
           "src/main/resources/assets/bendymod/models/block/walkable_studio_blank_wall_slab.json"
         ]
       },
-      "path": "~/Mod Stuff/Blocks"
+      "path": "~/Mod Stuff/Blocks/WalkableBlocks"
     },
     {
       "name": "WalkableStudioPlankedWall",
@@ -5199,7 +5199,7 @@
           "src/main/resources/assets/bendymod/blockstates/walkable_studio_planked_wall.json"
         ]
       },
-      "path": "~/Mod Stuff/Blocks"
+      "path": "~/Mod Stuff/Blocks/WalkableBlocks"
     },
     {
       "name": "WalkableStudioCeiling",
@@ -5216,7 +5216,7 @@
           "src/main/java/net/mcreator/bendymod/block/WalkableStudioCeilingBlock.java"
         ]
       },
-      "path": "~/Mod Stuff/Blocks"
+      "path": "~/Mod Stuff/Blocks/WalkableBlocks"
     },
     {
       "name": "WalkableStudioTiledWall",
@@ -5233,7 +5233,7 @@
           "src/main/resources/assets/bendymod/blockstates/walkable_studio_tiled_wall.json"
         ]
       },
-      "path": "~/Mod Stuff/Blocks"
+      "path": "~/Mod Stuff/Blocks/WalkableBlocks"
     },
     {
       "name": "WalkableBlockEntityCollidesInTheBlock",
@@ -5269,7 +5269,7 @@
           }
         ]
       },
-      "path": "~/Mod Stuff/Blocks"
+      "path": "~/Mod Stuff/Blocks/WalkableBlocks"
     },
     {
       "name": "Walkable",
@@ -5283,7 +5283,7 @@
           "src/main/resources/data/bendymod/tags/blocks/walkable_blocks.json"
         ]
       },
-      "path": "~/Mod Stuff/Blocks"
+      "path": "~/Mod Stuff/Blocks/WalkableBlocks"
     },
     {
       "name": "WalkableDestroyRow",
@@ -5315,7 +5315,7 @@
           }
         ]
       },
-      "path": "~/Mod Stuff/Blocks"
+      "path": "~/Mod Stuff/Blocks/WalkableBlocks"
     },
     {
       "name": "SheepSheepSheep",
@@ -5330,6 +5330,23 @@
         ]
       },
       "path": "~/Mod Stuff/Achievement"
+    },
+    {
+      "name": "WalkableSolidInk",
+      "type": "block",
+      "sortid": 259,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "walkable_solid_ink",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/models/item/walkable_solid_ink.json",
+          "src/main/resources/assets/bendymod/blockstates/walkable_solid_ink.json",
+          "src/main/resources/assets/bendymod/models/block/walkable_solid_ink.json",
+          "src/main/java/net/mcreator/bendymod/block/WalkableSolidInkBlock.java"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/WalkableBlocks"
     }
   ],
   "variable_elements": [
@@ -5389,6 +5406,12 @@
     },
     {
       "name": "inkmachine_spawned",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "studio_generated",
       "type": "logic",
       "scope": "map",
       "value": "false"
@@ -5560,8 +5583,8 @@
   ],
   "language_map": {
     "en_us": {
-      "block.bendymod.studio_door_basic": "Studio Basic Door",
       "block.bendymod.recording_sign_off": "Recording Sign",
+      "block.bendymod.studio_door_basic": "Studio Basic Door",
       "gamerule.inkDemonTeleportMode.description": "If this is on, then the Ink Demon can only teleport to players in Survival.",
       "block.bendymod.desk_fancy": "Fancy Desk",
       "block.bendymod.bendy_doll_rl": "Bendy Doll (RL)",
@@ -5571,8 +5594,8 @@
       "block.bendymod.studio_blank_wall_slab": "Studio Blank Wall Slab",
       "item.bendymod.bacon_soup": "Bacon Soup",
       "entity.bendymod.sammy_lawrence": "Sammy Lawrence",
-      "block.bendymod.walkable_studio_blank_wall_slab": "Studio Blank Wall Slab (Walkable)",
       "block.bendymod.pipe_wall_vertical": "Wall Pipe (Vertical)",
+      "block.bendymod.walkable_studio_blank_wall_slab": "Studio Blank Wall Slab (Walkable)",
       "gamerule.inkDemonTimerMinimum": "Ink Demon Timer Minimum",
       "subtitles.studioambience_creepysounds": "The Studio Calls",
       "gamerule.searcherSpawnMax": "Searcher Spawn Maximum",
@@ -5581,8 +5604,8 @@
       "block.bendymod.poster_sent_from_above": "Poster (Sent From Above)",
       "block.bendymod.pipe_straight": "Pipe Straight",
       "block.bendymod.cutout_bendy": "Cutout Bendy",
-      "block.bendymod.walkable_studio_blank_wall": "Studio Blank Wall (Walkable)",
       "block.bendymod.ink_machine": "Ink Machine",
+      "block.bendymod.walkable_studio_blank_wall": "Studio Blank Wall (Walkable)",
       "advancements.the_old_song.descr": "Reach the second floor of the Studio, The Music Department.",
       "block.bendymod.bendy_book_stack": "Bendy Book Stack",
       "subtitles.radio_2": "Radio playing \"Build Our Machine\" by DAGames",
@@ -5601,16 +5624,16 @@
       "block.bendymod.solid_ink_rl": "Solid Ink (RL)",
       "block.bendymod.ink_barrel": "Ink Barrel",
       "block.bendymod.painting_book": "Painting (Book)",
-      "item.bendymod.searcher_spawn_egg": "Searcher Spawn Egg",
       "item.bendymod.bendy_spawn_egg": "Bendy Spawn Egg",
+      "item.bendymod.searcher_spawn_egg": "Searcher Spawn Egg",
       "block.bendymod.random_room_structure_block": "Random Room Structure Block",
       "block.bendymod.heavy_gate_closed": "Heavy Gate",
       "block.bendymod.stairway_structure_block": "Stairway Structure Block",
       "block.bendymod.inactive_random_room_structure_block": "Inactive Random Room Structure Block",
       "gamerule.inkDemonTimerMinimum.description": "This, will be the minimum time (in ticks) of how often the Ink Demon spawns.",
       "block.bendymod.music_department_sign": "Music Department Sign",
-      "block.bendymod.shelf": "Shelf",
       "subtitles.studioambience_loop": "",
+      "block.bendymod.shelf": "Shelf",
       "block.bendymod.ink_puddle": "Ink Puddle",
       "block.bendymod.cassette_player": "Cassette Player",
       "block.bendymod.punch_in_card": "Punch In Card",
@@ -5675,6 +5698,7 @@
       "block.bendymod.illusion_of_living_rl": "The Illusion Of Living (RL)",
       "block.bendymod.hallways_structure_block": "Hallways Structure Block",
       "block.bendymod.bendy_head": "Bendy Head",
+      "block.bendymod.walkable_solid_ink": "Solid Ink",
       "block.bendymod.table_big": "Big Table",
       "block.bendymod.record_rl": "Record (IRL)",
       "block.bendymod.writing_dreams_come_true": "Ink Writing (Dreams Come True)",
@@ -5916,6 +5940,10 @@
                     "children": []
                   }
                 ]
+              },
+              {
+                "name": "WalkableBlocks",
+                "children": []
               }
             ]
           },

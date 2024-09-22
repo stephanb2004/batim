@@ -14,13 +14,15 @@ public class InkBendyOnInitialEntitySpawnProcedure {
 			return;
 		BendymodModVariables.MapVariables.get(world).ink_bendy_time_remaining = 0;
 		BendymodModVariables.MapVariables.get(world).syncData(world);
-		if (BendymodModVariables.MapVariables.get(world).cur_inkdemon_selected == false) {
-			BendymodModVariables.MapVariables.get(world).ink_bendy_timer = Mth.nextInt(RandomSource.create(), (world.getLevelData().getGameRules().getInt(BendymodModGameRules.INK_DEMON_TIMER_MINIMUM)),
-					(world.getLevelData().getGameRules().getInt(BendymodModGameRules.INK_DEMON_TIMER_MAXIMUM)));
-			BendymodModVariables.MapVariables.get(world).syncData(world);
-			BendymodModVariables.MapVariables.get(world).cur_inkdemon_selected = true;
-			BendymodModVariables.MapVariables.get(world).syncData(world);
-			entity.getPersistentData().putBoolean("cur_inkbendy", true);
+		if (world.getLevelData().getGameRules().getBoolean(BendymodModGameRules.ALLOW_MULTIPLE_INK_BENDYS) == false) {
+			if (BendymodModVariables.MapVariables.get(world).cur_inkdemon_selected == false) {
+				BendymodModVariables.MapVariables.get(world).ink_bendy_timer = Mth.nextInt(RandomSource.create(), (world.getLevelData().getGameRules().getInt(BendymodModGameRules.INK_DEMON_TIMER_MINIMUM)),
+						(world.getLevelData().getGameRules().getInt(BendymodModGameRules.INK_DEMON_TIMER_MAXIMUM)));
+				BendymodModVariables.MapVariables.get(world).syncData(world);
+				BendymodModVariables.MapVariables.get(world).cur_inkdemon_selected = true;
+				BendymodModVariables.MapVariables.get(world).syncData(world);
+				entity.getPersistentData().putBoolean("cur_inkbendy", true);
+			}
 		}
 	}
 }

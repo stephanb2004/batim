@@ -2,7 +2,7 @@
   "_fv": 43,
   "_type": "block",
   "definition": {
-    "texture": "studio_ceiling_planks",
+    "texture": "ink_fluid",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -33,10 +33,10 @@
         "subtract": false
       }
     ],
-    "name": "Studio Ceiling (Walkable)",
+    "name": "Solid Ink",
     "specialInfo": [],
-    "hardness": 2.0,
-    "resistance": 3.0,
+    "hardness": 1.0,
+    "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
@@ -54,7 +54,7 @@
     "canRedstoneConnect": false,
     "lightOpacity": 15,
     "material": {
-      "value": "WOOD"
+      "value": "EARTH"
     },
     "tickRate": 0,
     "tickRandomly": false,
@@ -68,7 +68,7 @@
       "value": ""
     },
     "offsetType": "NONE",
-    "aiPathNodeType": "OPEN",
+    "aiPathNodeType": "DEFAULT",
     "flammability": 0,
     "fireSpreadSpeed": 0,
     "isLadder": false,
@@ -79,7 +79,7 @@
     "isNotColidable": true,
     "isCustomSoundType": false,
     "soundOnStep": {
-      "value": "WOOD"
+      "value": "HONEY"
     },
     "breakSound": {
       "value": ""

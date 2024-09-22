@@ -71,7 +71,7 @@ public class StructureBlockUpdateTickProcedure {
 			result_x = x;
 			result_z = z + 1;
 		}
-		if (!world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(result_x, y, result_z), 128, 128, 128), e -> true).isEmpty()) {
+		if (!world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(result_x, y, result_z), 96, 96, 96), e -> true).isEmpty()) {
 			if (!world.isClientSide()) {
 				BlockPos _bp = new BlockPos(x, y, z);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);

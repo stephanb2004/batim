@@ -97,7 +97,7 @@ public class InkBendyOnEntityTickUpdateProcedure {
 					} else if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof LivingEntity)
 							&& BendymodModVariables.MapVariables.get(world).ink_bendy_time_remaining >= BendymodModVariables.MapVariables.get(world).ink_bendy_timer) {
 						entity.getPersistentData().putBoolean("can_be_teleported", true);
-					} else if (BendymodModVariables.MapVariables.get(world).ink_bendy_time_remaining < BendymodModVariables.MapVariables.get(world).ink_bendy_timer) {
+					} else if (BendymodModVariables.MapVariables.get(world).ink_bendy_time_remaining < BendymodModVariables.MapVariables.get(world).ink_bendy_timer || (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null) {
 						entity.getPersistentData().putBoolean("can_be_teleported", false);
 					}
 					BendymodModVariables.MapVariables.get(world).ink_bendy_time_remaining = BendymodModVariables.MapVariables.get(world).ink_bendy_time_remaining + 1;
@@ -128,7 +128,7 @@ public class InkBendyOnEntityTickUpdateProcedure {
 										}
 									}.compareDistOf(BendymodModVariables.MapVariables.get(world).cur_inkdemon_x, BendymodModVariables.MapVariables.get(world).cur_inkdemon_y, BendymodModVariables.MapVariables.get(world).cur_inkdemon_z)).findFirst()
 									.orElse(null)).getPersistentData().getBoolean("can_be_teleported") == true) {
-								chance = Mth.nextInt(RandomSource.create(), 1, 3);
+								chance = Mth.nextInt(RandomSource.create(), 1, 4);
 								if (chance == 2) {
 									{
 										Entity _ent = ((Entity) world.getEntitiesOfClass(InkBendyEntity.class,
@@ -194,7 +194,7 @@ public class InkBendyOnEntityTickUpdateProcedure {
 					if (entity instanceof InkBendyEntity) {
 						((InkBendyEntity) entity).setAnimation("animation.inkbendy.see");
 					}
-					if (played_song == false && (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof Player) {
+					if (world.getLevelData().getGameRules().getBoolean(BendymodModGameRules.ALLOW_MULTIPLE_INK_BENDYS) == true || played_song == false && (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof Player) {
 						if (world instanceof ServerLevel _level)
 							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 									"playsound bendymod:inkdemon_chase ambient @a[distance=..35] ~ ~ ~");
@@ -206,7 +206,7 @@ public class InkBendyOnEntityTickUpdateProcedure {
 							((InkBendyEntity) entity).setAnimation("empty");
 						}
 					});
-				} else if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof LivingEntity)) {
+				} else if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null) {
 					if (entity.getPersistentData().getBoolean("cur_inkbendy") == true) {
 						if (world instanceof ServerLevel _level)
 							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),

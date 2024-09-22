@@ -283,9 +283,9 @@ public class BendymodModItems {
 			() -> new ForgeSpawnEggItem(BendymodModEntities.BORIS_BUDDY, -15724785, -1587590, new Item.Properties().tab(BendymodModTabs.TAB_BENDY_ENTITIES)));
 	public static final RegistryObject<Item> SEARCHER_SPAWN_EGG = REGISTRY.register("searcher_spawn_egg", () -> new ForgeSpawnEggItem(BendymodModEntities.SEARCHER, -16579837, -15790578, new Item.Properties().tab(BendymodModTabs.TAB_BENDY_ENTITIES)));
 	public static final RegistryObject<Item> INK_BENDY_SPAWN_EGG = REGISTRY.register("ink_bendy_spawn_egg", () -> new ForgeSpawnEggItem(BendymodModEntities.INK_BENDY, -15724785, -21220, new Item.Properties().tab(BendymodModTabs.TAB_BENDY_ENTITIES)));
+	public static final RegistryObject<Item> CUTOUT_SINNY = REGISTRY.register(BendymodModBlocks.CUTOUT_SINNY.getId().getPath(), () -> new CutoutSinnyDisplayItem(BendymodModBlocks.CUTOUT_SINNY.get(), new Item.Properties().tab(null)));
 	public static final RegistryObject<Item> SAMMY_LAWRENCE_SPAWN_EGG = REGISTRY.register("sammy_lawrence_spawn_egg",
 			() -> new ForgeSpawnEggItem(BendymodModEntities.SAMMY_LAWRENCE, -16579837, -3365807, new Item.Properties().tab(BendymodModTabs.TAB_BENDY_ENTITIES)));
-	public static final RegistryObject<Item> CUTOUT_SINNY = REGISTRY.register(BendymodModBlocks.CUTOUT_SINNY.getId().getPath(), () -> new CutoutSinnyDisplayItem(BendymodModBlocks.CUTOUT_SINNY.get(), new Item.Properties().tab(null)));
 	public static final RegistryObject<Item> RECORDING_SIGN_ON = REGISTRY.register(BendymodModBlocks.RECORDING_SIGN_ON.getId().getPath(),
 			() -> new RecordingSignOnDisplayItem(BendymodModBlocks.RECORDING_SIGN_ON.get(), new Item.Properties().tab(null)));
 	public static final RegistryObject<Item> CELLBOX_1 = REGISTRY.register(BendymodModBlocks.CELLBOX_1.getId().getPath(), () -> new Cellbox1DisplayItem(BendymodModBlocks.CELLBOX_1.get(), new Item.Properties().tab(null)));

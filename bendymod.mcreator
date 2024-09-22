@@ -232,7 +232,7 @@
     {
       "name": "SammyLawrence",
       "type": "animatedentity",
-      "sortid": 154,
+      "sortid": 159,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sammy_lawrence",
@@ -312,7 +312,7 @@
     {
       "name": "InkBendyOnEntityTickUpdate",
       "type": "procedure",
-      "sortid": 159,
+      "sortid": 164,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ink_bendy_on_entity_tick_update",
@@ -4961,7 +4961,7 @@
           }
         ]
       },
-      "path": "~/Mod Stuff/Entities/InkBendy"
+      "path": "~/Mod Stuff/Entities"
     },
     {
       "name": "GetRoomRarity",
@@ -5583,8 +5583,8 @@
   ],
   "language_map": {
     "en_us": {
-      "block.bendymod.recording_sign_off": "Recording Sign",
       "block.bendymod.studio_door_basic": "Studio Basic Door",
+      "block.bendymod.recording_sign_off": "Recording Sign",
       "gamerule.inkDemonTeleportMode.description": "If this is on, then the Ink Demon can only teleport to players in Survival.",
       "block.bendymod.desk_fancy": "Fancy Desk",
       "block.bendymod.bendy_doll_rl": "Bendy Doll (RL)",
@@ -5594,8 +5594,8 @@
       "block.bendymod.studio_blank_wall_slab": "Studio Blank Wall Slab",
       "item.bendymod.bacon_soup": "Bacon Soup",
       "entity.bendymod.sammy_lawrence": "Sammy Lawrence",
-      "block.bendymod.pipe_wall_vertical": "Wall Pipe (Vertical)",
       "block.bendymod.walkable_studio_blank_wall_slab": "Studio Blank Wall Slab (Walkable)",
+      "block.bendymod.pipe_wall_vertical": "Wall Pipe (Vertical)",
       "gamerule.inkDemonTimerMinimum": "Ink Demon Timer Minimum",
       "subtitles.studioambience_creepysounds": "The Studio Calls",
       "gamerule.searcherSpawnMax": "Searcher Spawn Maximum",
@@ -5604,8 +5604,8 @@
       "block.bendymod.poster_sent_from_above": "Poster (Sent From Above)",
       "block.bendymod.pipe_straight": "Pipe Straight",
       "block.bendymod.cutout_bendy": "Cutout Bendy",
-      "block.bendymod.ink_machine": "Ink Machine",
       "block.bendymod.walkable_studio_blank_wall": "Studio Blank Wall (Walkable)",
+      "block.bendymod.ink_machine": "Ink Machine",
       "advancements.the_old_song.descr": "Reach the second floor of the Studio, The Music Department.",
       "block.bendymod.bendy_book_stack": "Bendy Book Stack",
       "subtitles.radio_2": "Radio playing \"Build Our Machine\" by DAGames",
@@ -5624,16 +5624,16 @@
       "block.bendymod.solid_ink_rl": "Solid Ink (RL)",
       "block.bendymod.ink_barrel": "Ink Barrel",
       "block.bendymod.painting_book": "Painting (Book)",
-      "item.bendymod.bendy_spawn_egg": "Bendy Spawn Egg",
       "item.bendymod.searcher_spawn_egg": "Searcher Spawn Egg",
+      "item.bendymod.bendy_spawn_egg": "Bendy Spawn Egg",
       "block.bendymod.random_room_structure_block": "Random Room Structure Block",
       "block.bendymod.heavy_gate_closed": "Heavy Gate",
       "block.bendymod.stairway_structure_block": "Stairway Structure Block",
       "block.bendymod.inactive_random_room_structure_block": "Inactive Random Room Structure Block",
       "gamerule.inkDemonTimerMinimum.description": "This, will be the minimum time (in ticks) of how often the Ink Demon spawns.",
       "block.bendymod.music_department_sign": "Music Department Sign",
-      "subtitles.studioambience_loop": "",
       "block.bendymod.shelf": "Shelf",
+      "subtitles.studioambience_loop": "",
       "block.bendymod.ink_puddle": "Ink Puddle",
       "block.bendymod.cassette_player": "Cassette Player",
       "block.bendymod.punch_in_card": "Punch In Card",

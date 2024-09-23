@@ -1,15 +1,14 @@
 
 package net.mcreator.bendymod.entity;
 
-import software.bernie.geckolib3.util.GeckoLibUtil;
-import software.bernie.geckolib3.core.manager.AnimationFactory;
-import software.bernie.geckolib3.core.manager.AnimationData;
-import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
-import software.bernie.geckolib3.core.controller.AnimationController;
-import software.bernie.geckolib3.core.builder.ILoopType.EDefaultLoopTypes;
-import software.bernie.geckolib3.core.builder.AnimationBuilder;
-import software.bernie.geckolib3.core.PlayState;
-import software.bernie.geckolib3.core.IAnimatable;
+import software.bernie.geckolib.util.GeckoLibUtil;
+import software.bernie.geckolib.core.object.PlayState;
+import software.bernie.geckolib.core.animation.RawAnimation;
+import software.bernie.geckolib.core.animation.AnimationState;
+import software.bernie.geckolib.core.animation.AnimationController;
+import software.bernie.geckolib.core.animation.AnimatableManager;
+import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.animatable.GeoEntity;
 
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
@@ -35,7 +34,6 @@ import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.sounds.SoundEvent;
@@ -43,6 +41,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 
@@ -51,11 +50,11 @@ import net.mcreator.bendymod.init.BendymodModEntities;
 
 import javax.annotation.Nullable;
 
-public class SearcherEntity extends Monster implements IAnimatable {
+public class SearcherEntity extends Monster implements GeoEntity {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(SearcherEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(SearcherEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(SearcherEntity.class, EntityDataSerializers.STRING);
-	private AnimationFactory factory = GeckoLibUtil.createFactory(this);
+	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	private boolean swinging;
 	private boolean lastloop;
 	private long lastSwing;
@@ -69,6 +68,7 @@ public class SearcherEntity extends Monster implements IAnimatable {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(false);
+		setMaxUpStep(0.6f);
 		setPersistenceRequired();
 	}
 
@@ -89,7 +89,7 @@ public class SearcherEntity extends Monster implements IAnimatable {
 	}
 
 	@Override
-	public Packet<?> getAddEntityPacket() {
+	public Packet<ClientGamePacketListener> getAddEntityPacket() {
 		return NetworkHooks.getEntitySpawningPacket(this);
 	}
 
@@ -142,6 +142,19 @@ public class SearcherEntity extends Monster implements IAnimatable {
 	}
 
 	@Override
+	public void addAdditionalSaveData(CompoundTag compound) {
+		super.addAdditionalSaveData(compound);
+		compound.putString("Texture", this.getTexture());
+	}
+
+	@Override
+	public void readAdditionalSaveData(CompoundTag compound) {
+		super.readAdditionalSaveData(compound);
+		if (compound.contains("Texture"))
+			this.setTexture(compound.getString("Texture"));
+	}
+
+	@Override
 	public void baseTick() {
 		super.baseTick();
 		this.refreshDimensions();
@@ -165,68 +178,55 @@ public class SearcherEntity extends Monster implements IAnimatable {
 		return builder;
 	}
 
-	private <E extends IAnimatable> PlayState movementPredicate(AnimationEvent<E> event) {
+	private PlayState movementPredicate(AnimationState event) {
 		if (this.animationprocedure.equals("empty")) {
 			if ((event.isMoving() || !(event.getLimbSwingAmount() > -0.15F && event.getLimbSwingAmount() < 0.15F))
 
 			) {
-				event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.model.walk", EDefaultLoopTypes.LOOP));
-				return PlayState.CONTINUE;
+				return event.setAndContinue(RawAnimation.begin().thenLoop("animation.model.walk"));
 			}
 			if (this.isDeadOrDying()) {
-				event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.model.die", EDefaultLoopTypes.PLAY_ONCE));
-				return PlayState.CONTINUE;
+				return event.setAndContinue(RawAnimation.begin().thenPlay("animation.model.die"));
 			}
-			event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.model.idle", EDefaultLoopTypes.LOOP));
-			return PlayState.CONTINUE;
+			return event.setAndContinue(RawAnimation.begin().thenLoop("animation.model.idle"));
 		}
 		return PlayState.STOP;
 	}
 
-	private <E extends IAnimatable> PlayState attackingPredicate(AnimationEvent<E> event) {
+	private PlayState attackingPredicate(AnimationState event) {
 		double d1 = this.getX() - this.xOld;
 		double d0 = this.getZ() - this.zOld;
 		float velocity = (float) Math.sqrt(d1 * d1 + d0 * d0);
 		if (getAttackAnim(event.getPartialTick()) > 0f && !this.swinging) {
 			this.swinging = true;
-			this.lastSwing = level.getGameTime();
+			this.lastSwing = level().getGameTime();
 		}
-		if (this.swinging && this.lastSwing + 15L <= level.getGameTime()) {
+		if (this.swinging && this.lastSwing + 7L <= level().getGameTime()) {
 			this.swinging = false;
 		}
-		if (this.swinging && event.getController().getAnimationState().equals(software.bernie.geckolib3.core.AnimationState.Stopped)) {
-			event.getController().markNeedsReload();
-			event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.model.attack", EDefaultLoopTypes.PLAY_ONCE));
-			return PlayState.CONTINUE;
+		if (this.swinging && event.getController().getAnimationState() == AnimationController.State.STOPPED) {
+			event.getController().forceAnimationReset();
+			return event.setAndContinue(RawAnimation.begin().thenPlay("animation.model.attack"));
 		}
 		return PlayState.CONTINUE;
 	}
 
-	private <E extends IAnimatable> PlayState procedurePredicate(AnimationEvent<E> event) {
-		Entity entity = this;
-		Level world = entity.level;
-		boolean loop = false;
-		double x = entity.getX();
-		double y = entity.getY();
-		double z = entity.getZ();
-		if (!loop && this.lastloop) {
-			this.lastloop = false;
-			event.getController().setAnimation(new AnimationBuilder().addAnimation(this.animationprocedure, EDefaultLoopTypes.PLAY_ONCE));
-			event.getController().clearAnimationCache();
+	String prevAnim = "empty";
+
+	private PlayState procedurePredicate(AnimationState event) {
+		if (!animationprocedure.equals("empty") && event.getController().getAnimationState() == AnimationController.State.STOPPED || (!this.animationprocedure.equals(prevAnim) && !this.animationprocedure.equals("empty"))) {
+			if (!this.animationprocedure.equals(prevAnim))
+				event.getController().forceAnimationReset();
+			event.getController().setAnimation(RawAnimation.begin().thenPlay(this.animationprocedure));
+			if (event.getController().getAnimationState() == AnimationController.State.STOPPED) {
+				this.animationprocedure = "empty";
+				event.getController().forceAnimationReset();
+			}
+		} else if (animationprocedure.equals("empty")) {
+			prevAnim = "empty";
 			return PlayState.STOP;
 		}
-		if (!this.animationprocedure.equals("empty") && event.getController().getAnimationState().equals(software.bernie.geckolib3.core.AnimationState.Stopped)) {
-			if (!loop) {
-				event.getController().setAnimation(new AnimationBuilder().addAnimation(this.animationprocedure, EDefaultLoopTypes.PLAY_ONCE));
-				if (event.getController().getAnimationState().equals(software.bernie.geckolib3.core.AnimationState.Stopped)) {
-					this.animationprocedure = "empty";
-					event.getController().markNeedsReload();
-				}
-			} else {
-				event.getController().setAnimation(new AnimationBuilder().addAnimation(this.animationprocedure, EDefaultLoopTypes.LOOP));
-				this.lastloop = true;
-			}
-		}
+		prevAnim = this.animationprocedure;
 		return PlayState.CONTINUE;
 	}
 
@@ -248,14 +248,14 @@ public class SearcherEntity extends Monster implements IAnimatable {
 	}
 
 	@Override
-	public void registerControllers(AnimationData data) {
-		data.addAnimationController(new AnimationController<>(this, "movement", 4, this::movementPredicate));
-		data.addAnimationController(new AnimationController<>(this, "attacking", 4, this::attackingPredicate));
-		data.addAnimationController(new AnimationController<>(this, "procedure", 4, this::procedurePredicate));
+	public void registerControllers(AnimatableManager.ControllerRegistrar data) {
+		data.add(new AnimationController<>(this, "movement", 4, this::movementPredicate));
+		data.add(new AnimationController<>(this, "attacking", 4, this::attackingPredicate));
+		data.add(new AnimationController<>(this, "procedure", 4, this::procedurePredicate));
 	}
 
 	@Override
-	public AnimationFactory getFactory() {
-		return this.factory;
+	public AnimatableInstanceCache getAnimatableInstanceCache() {
+		return this.cache;
 	}
 }

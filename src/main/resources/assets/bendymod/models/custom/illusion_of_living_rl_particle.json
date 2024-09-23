@@ -1,6 +1,6 @@
 {
   "parent": "bendymod:displaysettings/regularblock_preset_low.item",
   "textures": {
-    "particle": "bendymod:blocks/illusionofliving_batdr"
+    "particle": "bendymod:block/illusionofliving_batdr"
   }
 }

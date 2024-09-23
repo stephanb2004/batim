@@ -1,9 +1,9 @@
 {
   "parent": "bendymod:custom/poster_large",
   "textures": {
-    "all": "bendymod:blocks/poster_dancingdemon_large",
-    "particle": "bendymod:blocks/poster_dancingdemon_large",
-    "1": "bendymod:blocks/poster_dancingdemon_large"
+    "all": "bendymod:block/poster_dancingdemon_large",
+    "particle": "bendymod:block/poster_dancingdemon_large",
+    "1": "bendymod:block/poster_dancingdemon_large"
   },
   "render_type": "solid"
 }

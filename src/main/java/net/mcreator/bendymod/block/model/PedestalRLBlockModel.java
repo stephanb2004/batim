@@ -1,12 +1,12 @@
 package net.mcreator.bendymod.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.bendymod.block.entity.PedestalRLTileEntity;
 
-public class PedestalRLBlockModel extends AnimatedGeoModel<PedestalRLTileEntity> {
+public class PedestalRLBlockModel extends GeoModel<PedestalRLTileEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(PedestalRLTileEntity animatable) {
 		return new ResourceLocation("bendymod", "animations/pedestal.animation.json");
@@ -18,7 +18,7 @@ public class PedestalRLBlockModel extends AnimatedGeoModel<PedestalRLTileEntity>
 	}
 
 	@Override
-	public ResourceLocation getTextureResource(PedestalRLTileEntity entity) {
-		return new ResourceLocation("bendymod", "textures/blocks/pedestal0_batdr.png");
+	public ResourceLocation getTextureResource(PedestalRLTileEntity animatable) {
+		return new ResourceLocation("bendymod", "textures/block/pedestal0_batdr.png");
 	}
 }

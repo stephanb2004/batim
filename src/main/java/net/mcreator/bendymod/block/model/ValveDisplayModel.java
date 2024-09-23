@@ -1,12 +1,12 @@
 package net.mcreator.bendymod.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.bendymod.block.display.ValveDisplayItem;
 
-public class ValveDisplayModel extends AnimatedGeoModel<ValveDisplayItem> {
+public class ValveDisplayModel extends GeoModel<ValveDisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(ValveDisplayItem animatable) {
 		return new ResourceLocation("bendymod", "animations/valve.animation.json");
@@ -19,6 +19,6 @@ public class ValveDisplayModel extends AnimatedGeoModel<ValveDisplayItem> {
 
 	@Override
 	public ResourceLocation getTextureResource(ValveDisplayItem entity) {
-		return new ResourceLocation("bendymod", "textures/blocks/valve.png");
+		return new ResourceLocation("bendymod", "textures/block/valve.png");
 	}
 }

@@ -1,12 +1,12 @@
 package net.mcreator.bendymod.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.bendymod.block.display.CutoutBendyDisplayItem;
 
-public class CutoutBendyDisplayModel extends AnimatedGeoModel<CutoutBendyDisplayItem> {
+public class CutoutBendyDisplayModel extends GeoModel<CutoutBendyDisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(CutoutBendyDisplayItem animatable) {
 		return new ResourceLocation("bendymod", "animations/cutout_bendy.animation.json");
@@ -19,6 +19,6 @@ public class CutoutBendyDisplayModel extends AnimatedGeoModel<CutoutBendyDisplay
 
 	@Override
 	public ResourceLocation getTextureResource(CutoutBendyDisplayItem entity) {
-		return new ResourceLocation("bendymod", "textures/blocks/cutout_bendy.png");
+		return new ResourceLocation("bendymod", "textures/block/cutout_bendy.png");
 	}
 }

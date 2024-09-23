@@ -1,12 +1,12 @@
 package net.mcreator.bendymod.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.bendymod.block.display.PunchInCardDisplayItem;
 
-public class PunchInCardDisplayModel extends AnimatedGeoModel<PunchInCardDisplayItem> {
+public class PunchInCardDisplayModel extends GeoModel<PunchInCardDisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(PunchInCardDisplayItem animatable) {
 		return new ResourceLocation("bendymod", "animations/punchin_card.animation.json");
@@ -19,6 +19,6 @@ public class PunchInCardDisplayModel extends AnimatedGeoModel<PunchInCardDisplay
 
 	@Override
 	public ResourceLocation getTextureResource(PunchInCardDisplayItem entity) {
-		return new ResourceLocation("bendymod", "textures/blocks/punchin_card.png");
+		return new ResourceLocation("bendymod", "textures/block/punchin_card.png");
 	}
 }

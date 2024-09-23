@@ -1,6 +1,6 @@
 {
   "parent": "bendymod:displaysettings/big_block.item",
   "textures": {
-    "particle": "bendymod:blocks/studio_wall_blank"
+    "particle": "bendymod:block/studio_wall_blank"
   }
 }

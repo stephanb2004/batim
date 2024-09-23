@@ -1,12 +1,12 @@
 package net.mcreator.bendymod.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.bendymod.block.display.BendyBookStackDisplayItem;
 
-public class BendyBookStackDisplayModel extends AnimatedGeoModel<BendyBookStackDisplayItem> {
+public class BendyBookStackDisplayModel extends GeoModel<BendyBookStackDisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(BendyBookStackDisplayItem animatable) {
 		return new ResourceLocation("bendymod", "animations/book_stack.animation.json");
@@ -19,6 +19,6 @@ public class BendyBookStackDisplayModel extends AnimatedGeoModel<BendyBookStackD
 
 	@Override
 	public ResourceLocation getTextureResource(BendyBookStackDisplayItem entity) {
-		return new ResourceLocation("bendymod", "textures/blocks/book_bendy.png");
+		return new ResourceLocation("bendymod", "textures/block/book_bendy.png");
 	}
 }

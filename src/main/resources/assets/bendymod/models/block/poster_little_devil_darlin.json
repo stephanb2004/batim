@@ -1,9 +1,9 @@
 {
   "parent": "bendymod:custom/poster",
   "textures": {
-    "all": "bendymod:blocks/poster_littledevildarling",
-    "particle": "bendymod:blocks/poster_littledevildarling",
-    "0": "bendymod:blocks/poster_littledevildarling"
+    "all": "bendymod:block/poster_littledevildarling",
+    "particle": "bendymod:block/poster_littledevildarling",
+    "0": "bendymod:block/poster_littledevildarling"
   },
   "render_type": "solid"
 }

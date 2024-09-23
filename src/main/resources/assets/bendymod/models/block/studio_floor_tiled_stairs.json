@@ -1,9 +1,10 @@
 {
   "parent": "block/stairs",
   "textures": {
-    "bottom": "bendymod:blocks/studio_floor2",
-    "top": "bendymod:blocks/studio_floor2",
-    "side": "bendymod:blocks/studio_floor2"
+    "particle": "bendymod:block/studio_floor2",
+    "bottom": "bendymod:block/studio_floor2",
+    "top": "bendymod:block/studio_floor2",
+    "side": "bendymod:block/studio_floor2"
   },
   "render_type": "solid"
 }

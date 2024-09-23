@@ -1,6 +1,6 @@
 {
   "parent": "bendymod:displaysettings/cutouts.item",
   "textures": {
-    "particle": "bendymod:blocks/cutout_sinny"
+    "particle": "bendymod:block/cutout_sinny"
   }
 }

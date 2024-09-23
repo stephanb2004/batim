@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "bendymod:blocks/poster_large_train_trouble",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "bendymod:poster_large_train_trouble"
+        }
+      ]
+    }
+  ]
+}

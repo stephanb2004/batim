@@ -19,37 +19,41 @@ import net.minecraft.world.entity.Entity;
 import net.mcreator.bendymod.entity.SitEntityEntity;
 import net.mcreator.bendymod.entity.SearcherEntity;
 import net.mcreator.bendymod.entity.SammyLawrenceEntity;
+import net.mcreator.bendymod.entity.LMSSitEntityEntity;
 import net.mcreator.bendymod.entity.InkBendyEntity;
 import net.mcreator.bendymod.entity.BorisBuddyEntity;
 import net.mcreator.bendymod.entity.BendyEntity;
-import net.mcreator.bendymod.entity.BaconSoupEmptyEntity;
+import net.mcreator.bendymod.entity.BaconSoupEmptyProjectileEntity;
 import net.mcreator.bendymod.BendymodMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class BendymodModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, BendymodMod.MODID);
-	public static final RegistryObject<EntityType<BaconSoupEmptyEntity>> BACON_SOUP_EMPTY = register("projectile_bacon_soup_empty",
-			EntityType.Builder.<BaconSoupEmptyEntity>of(BaconSoupEmptyEntity::new, MobCategory.MISC).setCustomClientFactory(BaconSoupEmptyEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<BendyEntity>> BENDY = register("bendy",
 			EntityType.Builder.<BendyEntity>of(BendyEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BendyEntity::new)
 
 					.sized(0.3125f, 1.8125f));
-	public static final RegistryObject<EntityType<BorisBuddyEntity>> BORIS_BUDDY = register("boris_buddy",
-			EntityType.Builder.<BorisBuddyEntity>of(BorisBuddyEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BorisBuddyEntity::new)
-
-					.sized(0.75f, 2.1875f));
-	public static final RegistryObject<EntityType<SearcherEntity>> SEARCHER = register("searcher",
-			EntityType.Builder.<SearcherEntity>of(SearcherEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SearcherEntity::new)
-
-					.sized(0.95f, 0.875f));
-	public static final RegistryObject<EntityType<InkBendyEntity>> INK_BENDY = register("ink_bendy",
-			EntityType.Builder.<InkBendyEntity>of(InkBendyEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(InkBendyEntity::new).fireImmune().sized(0.5f, 1.75f));
 	public static final RegistryObject<EntityType<SammyLawrenceEntity>> SAMMY_LAWRENCE = register("sammy_lawrence",
 			EntityType.Builder.<SammyLawrenceEntity>of(SammyLawrenceEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SammyLawrenceEntity::new)
 
 					.sized(0.3125f, 1.8125f));
+	public static final RegistryObject<EntityType<InkBendyEntity>> INK_BENDY = register("ink_bendy",
+			EntityType.Builder.<InkBendyEntity>of(InkBendyEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(InkBendyEntity::new).fireImmune().sized(0.5f, 1.75f));
+	public static final RegistryObject<EntityType<SearcherEntity>> SEARCHER = register("searcher",
+			EntityType.Builder.<SearcherEntity>of(SearcherEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SearcherEntity::new)
+
+					.sized(0.95f, 0.875f));
+	public static final RegistryObject<EntityType<BorisBuddyEntity>> BORIS_BUDDY = register("boris_buddy",
+			EntityType.Builder.<BorisBuddyEntity>of(BorisBuddyEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BorisBuddyEntity::new)
+
+					.sized(0.75f, 2.1875f));
 	public static final RegistryObject<EntityType<SitEntityEntity>> SIT_ENTITY = register("sit_entity", EntityType.Builder.<SitEntityEntity>of(SitEntityEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 			.setUpdateInterval(3).setCustomClientFactory(SitEntityEntity::new).fireImmune().sized(0.5f, 0.35f));
+	public static final RegistryObject<EntityType<BaconSoupEmptyProjectileEntity>> BACON_SOUP_EMPTY_PROJECTILE = register("bacon_soup_empty_projectile",
+			EntityType.Builder.<BaconSoupEmptyProjectileEntity>of(BaconSoupEmptyProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(BaconSoupEmptyProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<LMSSitEntityEntity>> LMS_SIT_ENTITY = register("lms_sit_entity", EntityType.Builder.<LMSSitEntityEntity>of(LMSSitEntityEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LMSSitEntityEntity::new).fireImmune().sized(0.5f, 0.35f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -59,21 +63,23 @@ public class BendymodModEntities {
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
 			BendyEntity.init();
-			BorisBuddyEntity.init();
-			SearcherEntity.init();
-			InkBendyEntity.init();
 			SammyLawrenceEntity.init();
+			InkBendyEntity.init();
+			SearcherEntity.init();
+			BorisBuddyEntity.init();
 			SitEntityEntity.init();
+			LMSSitEntityEntity.init();
 		});
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(BENDY.get(), BendyEntity.createAttributes().build());
-		event.put(BORIS_BUDDY.get(), BorisBuddyEntity.createAttributes().build());
-		event.put(SEARCHER.get(), SearcherEntity.createAttributes().build());
-		event.put(INK_BENDY.get(), InkBendyEntity.createAttributes().build());
 		event.put(SAMMY_LAWRENCE.get(), SammyLawrenceEntity.createAttributes().build());
+		event.put(INK_BENDY.get(), InkBendyEntity.createAttributes().build());
+		event.put(SEARCHER.get(), SearcherEntity.createAttributes().build());
+		event.put(BORIS_BUDDY.get(), BorisBuddyEntity.createAttributes().build());
 		event.put(SIT_ENTITY.get(), SitEntityEntity.createAttributes().build());
+		event.put(LMS_SIT_ENTITY.get(), LMSSitEntityEntity.createAttributes().build());
 	}
 }

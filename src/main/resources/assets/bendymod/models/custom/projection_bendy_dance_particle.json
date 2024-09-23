@@ -1,6 +1,6 @@
 {
   "parent": "bendymod:displaysettings/big_block.item",
   "textures": {
-    "particle": "bendymod:blocks/projection_bendydance"
+    "particle": "bendymod:block/projection_bendydance"
   }
 }

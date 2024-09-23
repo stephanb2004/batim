@@ -1,12 +1,12 @@
 package net.mcreator.bendymod.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.bendymod.block.display.RecordingSignOffDisplayItem;
 
-public class RecordingSignOffDisplayModel extends AnimatedGeoModel<RecordingSignOffDisplayItem> {
+public class RecordingSignOffDisplayModel extends GeoModel<RecordingSignOffDisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(RecordingSignOffDisplayItem animatable) {
 		return new ResourceLocation("bendymod", "animations/recordingsign.animation.json");
@@ -19,6 +19,6 @@ public class RecordingSignOffDisplayModel extends AnimatedGeoModel<RecordingSign
 
 	@Override
 	public ResourceLocation getTextureResource(RecordingSignOffDisplayItem entity) {
-		return new ResourceLocation("bendymod", "textures/blocks/recording_sign.png");
+		return new ResourceLocation("bendymod", "textures/block/recording_sign.png");
 	}
 }

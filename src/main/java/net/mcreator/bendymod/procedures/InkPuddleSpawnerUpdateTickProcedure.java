@@ -8,7 +8,6 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
@@ -25,9 +24,9 @@ public class InkPuddleSpawnerUpdateTickProcedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos(x, y, z), "searchers_remain") > 0) {
+		}.getValue(world, BlockPos.containing(x, y, z), "searchers_remain") > 0) {
 			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_blockEntity != null)
@@ -38,19 +37,15 @@ public class InkPuddleSpawnerUpdateTickProcedure {
 								return blockEntity.getPersistentData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos(x, y, z), "searchers_remain")) - 1));
+					}.getValue(world, BlockPos.containing(x, y, z), "searchers_remain")) - 1));
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 			if (world instanceof ServerLevel _level) {
-				Entity entityToSpawn = new SearcherEntity(BendymodModEntities.SEARCHER.get(), _level);
-				entityToSpawn.moveTo(x, (y + 1), z, 0, 0);
-				entityToSpawn.setYBodyRot(0);
-				entityToSpawn.setYHeadRot(0);
-				entityToSpawn.setDeltaMovement(0, 0, 0);
-				if (entityToSpawn instanceof Mob _mobToSpawn)
-					_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-				world.addFreshEntity(entityToSpawn);
+				Entity entityToSpawn = BendymodModEntities.SEARCHER.get().spawn(_level, BlockPos.containing(x, y + 1, z), MobSpawnType.MOB_SUMMONED);
+				if (entityToSpawn != null) {
+					entityToSpawn.setDeltaMovement(0, 0, 0);
+				}
 			}
 		}
 	}

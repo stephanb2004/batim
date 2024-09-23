@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "bendymod:blocks/painting_bendy_umbrella",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "bendymod:painting_bendy_umbrella"
+        }
+      ]
+    }
+  ]
+}

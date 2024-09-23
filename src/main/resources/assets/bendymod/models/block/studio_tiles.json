@@ -1,8 +1,8 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "bendymod:blocks/studio_tiles",
-    "particle": "bendymod:blocks/studio_tiles"
+    "all": "bendymod:block/studio_tiles",
+    "particle": "bendymod:block/studio_tiles"
   },
   "render_type": "solid"
 }

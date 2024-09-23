@@ -1,7 +1,6 @@
 
 package net.mcreator.bendymod.item;
 
-import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 
 import net.minecraft.world.item.crafting.Ingredient;
@@ -12,13 +11,12 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.bendymod.init.BendymodModTabs;
 import net.mcreator.bendymod.client.model.Modelbendy_mask;
 
 import java.util.function.Consumer;
@@ -26,16 +24,16 @@ import java.util.Map;
 import java.util.Collections;
 
 public abstract class BendyMaskItem extends ArmorItem {
-	public BendyMaskItem(EquipmentSlot slot, Item.Properties properties) {
+	public BendyMaskItem(ArmorItem.Type type, Item.Properties properties) {
 		super(new ArmorMaterial() {
 			@Override
-			public int getDurabilityForSlot(EquipmentSlot slot) {
-				return new int[]{13, 15, 16, 11}[slot.getIndex()] * 25;
+			public int getDurabilityForType(ArmorItem.Type type) {
+				return new int[]{13, 15, 16, 11}[type.getSlot().getIndex()] * 25;
 			}
 
 			@Override
-			public int getDefenseForSlot(EquipmentSlot slot) {
-				return new int[]{2, 5, 6, 2}[slot.getIndex()];
+			public int getDefenseForType(ArmorItem.Type type) {
+				return new int[]{2, 5, 6, 2}[type.getSlot().getIndex()];
 			}
 
 			@Override
@@ -45,7 +43,7 @@ public abstract class BendyMaskItem extends ArmorItem {
 
 			@Override
 			public SoundEvent getEquipSound() {
-				return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(""));
+				return SoundEvents.EMPTY;
 			}
 
 			@Override
@@ -67,12 +65,12 @@ public abstract class BendyMaskItem extends ArmorItem {
 			public float getKnockbackResistance() {
 				return 0f;
 			}
-		}, slot, properties);
+		}, type, properties);
 	}
 
 	public static class Helmet extends BendyMaskItem {
 		public Helmet() {
-			super(EquipmentSlot.HEAD, new Item.Properties().tab(BendymodModTabs.TAB_BENDY_PROPS));
+			super(ArmorItem.Type.HELMET, new Item.Properties());
 		}
 
 		@Override

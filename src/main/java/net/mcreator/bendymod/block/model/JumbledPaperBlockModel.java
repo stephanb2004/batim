@@ -1,12 +1,12 @@
 package net.mcreator.bendymod.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.bendymod.block.entity.JumbledPaperTileEntity;
 
-public class JumbledPaperBlockModel extends AnimatedGeoModel<JumbledPaperTileEntity> {
+public class JumbledPaperBlockModel extends GeoModel<JumbledPaperTileEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(JumbledPaperTileEntity animatable) {
 		return new ResourceLocation("bendymod", "animations/paper_jumbled.animation.json");
@@ -18,7 +18,7 @@ public class JumbledPaperBlockModel extends AnimatedGeoModel<JumbledPaperTileEnt
 	}
 
 	@Override
-	public ResourceLocation getTextureResource(JumbledPaperTileEntity entity) {
-		return new ResourceLocation("bendymod", "textures/blocks/paper.png");
+	public ResourceLocation getTextureResource(JumbledPaperTileEntity animatable) {
+		return new ResourceLocation("bendymod", "textures/block/paper.png");
 	}
 }

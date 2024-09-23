@@ -1,6 +1,6 @@
 {
   "parent": "bendymod:displaysettings/regularblock_preset_low.item",
   "textures": {
-    "particle": "bendymod:blocks/studio_floor1"
+    "particle": "bendymod:block/studio_floor1"
   }
 }

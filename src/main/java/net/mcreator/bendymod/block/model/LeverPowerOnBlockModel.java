@@ -1,12 +1,12 @@
 package net.mcreator.bendymod.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.bendymod.block.entity.LeverPowerOnTileEntity;
 
-public class LeverPowerOnBlockModel extends AnimatedGeoModel<LeverPowerOnTileEntity> {
+public class LeverPowerOnBlockModel extends GeoModel<LeverPowerOnTileEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(LeverPowerOnTileEntity animatable) {
 		return new ResourceLocation("bendymod", "animations/switch_power_on.animation.json");
@@ -18,7 +18,7 @@ public class LeverPowerOnBlockModel extends AnimatedGeoModel<LeverPowerOnTileEnt
 	}
 
 	@Override
-	public ResourceLocation getTextureResource(LeverPowerOnTileEntity entity) {
-		return new ResourceLocation("bendymod", "textures/blocks/switch_power.png");
+	public ResourceLocation getTextureResource(LeverPowerOnTileEntity animatable) {
+		return new ResourceLocation("bendymod", "textures/block/switch_power.png");
 	}
 }

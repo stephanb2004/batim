@@ -1,15 +1,27 @@
 {
-  "_fv": 43,
+  "_fv": 66,
   "_type": "livingentity",
   "definition": {
     "mobName": "Sit Entity",
     "mobLabel": "",
     "mobModelName": "Modela",
     "mobModelTexture": "seat.png",
-    "mobModelGlowTexture": "",
+    "transparentModelCondition": {
+      "fixedValue": false
+    },
+    "isShakingCondition": {
+      "fixedValue": false
+    },
     "solidBoundingBox": {
       "fixedValue": false
     },
+    "visualScale": {
+      "fixedValue": 1.0
+    },
+    "boundingBoxScale": {
+      "fixedValue": 1.0
+    },
+    "modelLayers": [],
     "modelWidth": 0.5,
     "modelHeight": 0.35,
     "modelShadowSize": 0.5,
@@ -23,9 +35,7 @@
       "value": -1,
       "falpha": 0.0
     },
-    "creativeTab": {
-      "value": "No creative tab entry"
-    },
+    "creativeTabs": [],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -60,6 +70,12 @@
     "health": 10,
     "xpAmount": 0,
     "waterMob": false,
+    "breatheUnderwater": {
+      "fixedValue": false
+    },
+    "pushedByFluids": {
+      "fixedValue": true
+    },
     "flyingMob": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
@@ -96,6 +112,10 @@
     "stepSound": {
       "value": ""
     },
+    "raidCelebrationSound": {
+      "value": ""
+    },
+    "entityDataEntries": [],
     "onMobTickUpdate": {
       "name": "SitEntityOnEntityTickUpdate"
     },
@@ -112,13 +132,22 @@
     "rangedItemType": "Default item",
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 10.0,
-    "spawnThisMob": true,
-    "doesDespawnWhenIdle": true,
+    "spawnThisMob": false,
+    "doesDespawnWhenIdle": false,
     "spawningProbability": 20,
     "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 4,
     "maxNumberOfMobsPerGroup": 4,
     "restrictionBiomes": [],
-    "spawnInDungeons": false
+    "spawnInDungeons": false,
+    "raidSpawnsCount": [
+      4,
+      3,
+      3,
+      4,
+      4,
+      4,
+      2
+    ]
   }
 }

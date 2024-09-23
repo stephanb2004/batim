@@ -1,9 +1,9 @@
 {
   "parent": "bendymod:custom/cog",
   "textures": {
-    "all": "bendymod:blocks/cog_batdr",
-    "particle": "bendymod:blocks/cog_batdr",
-    "1": "bendymod:blocks/cog_batdr"
+    "all": "bendymod:block/cog_batdr",
+    "particle": "bendymod:block/cog_batdr",
+    "1": "bendymod:block/cog_batdr"
   },
   "render_type": "cutout"
 }

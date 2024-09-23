@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "bendymod:blocks/chainfence"
+    "layer0": "bendymod:block/chainfence"
   },
   "render_type": "cutout_mipped"
 }

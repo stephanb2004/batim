@@ -1,25 +1,21 @@
 package net.mcreator.bendymod.block.renderer;
 
-import software.bernie.geckolib3.renderers.geo.GeoBlockRenderer;
+import software.bernie.geckolib.renderer.GeoBlockRenderer;
 
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.MultiBufferSource;
 
 import net.mcreator.bendymod.block.model.ProjectionBlankBlockModel;
 import net.mcreator.bendymod.block.entity.ProjectionBlankTileEntity;
 
-import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.blaze3d.vertex.PoseStack;
-
 public class ProjectionBlankTileRenderer extends GeoBlockRenderer<ProjectionBlankTileEntity> {
-	public ProjectionBlankTileRenderer(BlockEntityRendererProvider.Context rendererDispatcherIn) {
-		super(rendererDispatcherIn, new ProjectionBlankBlockModel());
+	public ProjectionBlankTileRenderer() {
+		super(new ProjectionBlankBlockModel());
 	}
 
 	@Override
-	public RenderType getRenderType(ProjectionBlankTileEntity animatable, float partialTick, PoseStack poseStack, MultiBufferSource bufferSource, VertexConsumer buffer, int packedLight, ResourceLocation texture) {
+	public RenderType getRenderType(ProjectionBlankTileEntity animatable, ResourceLocation texture, MultiBufferSource bufferSource, float partialTick) {
 		return RenderType.entityTranslucent(getTextureLocation(animatable));
 	}
 }

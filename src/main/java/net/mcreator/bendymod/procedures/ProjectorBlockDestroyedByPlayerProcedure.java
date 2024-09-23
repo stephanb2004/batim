@@ -14,22 +14,22 @@ public class ProjectorBlockDestroyedByPlayerProcedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos(x, y, z), "cur_reel") == 0)) {
-			world.setBlock(new BlockPos(new Object() {
+		}.getValue(world, BlockPos.containing(x, y, z), "cur_reel") == 0)) {
+			world.setBlock(BlockPos.containing(new Object() {
 				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 					BlockEntity blockEntity = world.getBlockEntity(pos);
 					if (blockEntity != null)
 						return blockEntity.getPersistentData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(world, new BlockPos(x, y, z), "result_x"), y, new Object() {
+			}.getValue(world, BlockPos.containing(x, y, z), "result_x"), y, new Object() {
 				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 					BlockEntity blockEntity = world.getBlockEntity(pos);
 					if (blockEntity != null)
 						return blockEntity.getPersistentData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(world, new BlockPos(x, y, z), "result_z")), Blocks.AIR.defaultBlockState(), 3);
+			}.getValue(world, BlockPos.containing(x, y, z), "result_z")), Blocks.AIR.defaultBlockState(), 3);
 		}
 	}
 }

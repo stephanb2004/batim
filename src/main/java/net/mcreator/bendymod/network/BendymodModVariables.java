@@ -51,19 +51,19 @@ public class BendymodModVariables {
 	public static class EventBusVariableHandlers {
 		@SubscribeEvent
 		public static void onPlayerLoggedInSyncPlayerVariables(PlayerEvent.PlayerLoggedInEvent event) {
-			if (!event.getEntity().level.isClientSide())
+			if (!event.getEntity().level().isClientSide())
 				((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(event.getEntity());
 		}
 
 		@SubscribeEvent
 		public static void onPlayerRespawnedSyncPlayerVariables(PlayerEvent.PlayerRespawnEvent event) {
-			if (!event.getEntity().level.isClientSide())
+			if (!event.getEntity().level().isClientSide())
 				((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(event.getEntity());
 		}
 
 		@SubscribeEvent
 		public static void onPlayerChangedDimensionSyncPlayerVariables(PlayerEvent.PlayerChangedDimensionEvent event) {
-			if (!event.getEntity().level.isClientSide())
+			if (!event.getEntity().level().isClientSide())
 				((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(event.getEntity());
 		}
 
@@ -79,9 +79,9 @@ public class BendymodModVariables {
 
 		@SubscribeEvent
 		public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
-			if (!event.getEntity().level.isClientSide()) {
-				SavedData mapdata = MapVariables.get(event.getEntity().level);
-				SavedData worlddata = WorldVariables.get(event.getEntity().level);
+			if (!event.getEntity().level().isClientSide()) {
+				SavedData mapdata = MapVariables.get(event.getEntity().level());
+				SavedData worlddata = WorldVariables.get(event.getEntity().level());
 				if (mapdata != null)
 					BendymodMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getEntity()), new SavedDataSyncMessage(0, mapdata));
 				if (worlddata != null)
@@ -91,8 +91,8 @@ public class BendymodModVariables {
 
 		@SubscribeEvent
 		public static void onPlayerChangedDimension(PlayerEvent.PlayerChangedDimensionEvent event) {
-			if (!event.getEntity().level.isClientSide()) {
-				SavedData worlddata = WorldVariables.get(event.getEntity().level);
+			if (!event.getEntity().level().isClientSide()) {
+				SavedData worlddata = WorldVariables.get(event.getEntity().level());
 				if (worlddata != null)
 					BendymodMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getEntity()), new SavedDataSyncMessage(1, worlddata));
 			}
@@ -198,16 +198,19 @@ public class BendymodModVariables {
 	}
 
 	public static class SavedDataSyncMessage {
-		public int type;
-		public SavedData data;
+		private final int type;
+		private SavedData data;
 
 		public SavedDataSyncMessage(FriendlyByteBuf buffer) {
 			this.type = buffer.readInt();
-			this.data = this.type == 0 ? new MapVariables() : new WorldVariables();
-			if (this.data instanceof MapVariables _mapvars)
-				_mapvars.read(buffer.readNbt());
-			else if (this.data instanceof WorldVariables _worldvars)
-				_worldvars.read(buffer.readNbt());
+			CompoundTag nbt = buffer.readNbt();
+			if (nbt != null) {
+				this.data = this.type == 0 ? new MapVariables() : new WorldVariables();
+				if (this.data instanceof MapVariables mapVariables)
+					mapVariables.read(nbt);
+				else if (this.data instanceof WorldVariables worldVariables)
+					worldVariables.read(nbt);
+			}
 		}
 
 		public SavedDataSyncMessage(int type, SavedData data) {
@@ -217,13 +220,14 @@ public class BendymodModVariables {
 
 		public static void buffer(SavedDataSyncMessage message, FriendlyByteBuf buffer) {
 			buffer.writeInt(message.type);
-			buffer.writeNbt(message.data.save(new CompoundTag()));
+			if (message.data != null)
+				buffer.writeNbt(message.data.save(new CompoundTag()));
 		}
 
 		public static void handler(SavedDataSyncMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
 			NetworkEvent.Context context = contextSupplier.get();
 			context.enqueueWork(() -> {
-				if (!context.getDirection().getReceptionSide().isServer()) {
+				if (!context.getDirection().getReceptionSide().isServer() && message.data != null) {
 					if (message.type == 0)
 						MapVariables.clientSide = (MapVariables) message.data;
 					else
@@ -278,14 +282,14 @@ public class BendymodModVariables {
 			return nbt;
 		}
 
-		public void readNBT(Tag Tag) {
-			CompoundTag nbt = (CompoundTag) Tag;
+		public void readNBT(Tag tag) {
+			CompoundTag nbt = (CompoundTag) tag;
 			EnteredStudio = nbt.getBoolean("EnteredStudio");
 		}
 	}
 
 	public static class PlayerVariablesSyncMessage {
-		public PlayerVariables data;
+		private final PlayerVariables data;
 
 		public PlayerVariablesSyncMessage(FriendlyByteBuf buffer) {
 			this.data = new PlayerVariables();

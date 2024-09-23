@@ -1,11 +1,11 @@
 {
   "replace": false,
   "values": [
+    "bendymod:record_rl",
     "bendymod:inkwell_rl",
-    "bendymod:illusion_of_living_rl",
+    "bendymod:gear_rl",
     "bendymod:bendy_doll_rl",
     "bendymod:wrench_rl",
-    "bendymod:record_rl",
-    "bendymod:gear_rl"
+    "bendymod:illusion_of_living_rl"
   ]
 }

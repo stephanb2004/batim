@@ -1,12 +1,12 @@
 package net.mcreator.bendymod.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.bendymod.block.entity.ProjectionBlankTileEntity;
 
-public class ProjectionBlankBlockModel extends AnimatedGeoModel<ProjectionBlankTileEntity> {
+public class ProjectionBlankBlockModel extends GeoModel<ProjectionBlankTileEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(ProjectionBlankTileEntity animatable) {
 		return new ResourceLocation("bendymod", "animations/projection_normal.animation.json");
@@ -18,7 +18,7 @@ public class ProjectionBlankBlockModel extends AnimatedGeoModel<ProjectionBlankT
 	}
 
 	@Override
-	public ResourceLocation getTextureResource(ProjectionBlankTileEntity entity) {
-		return new ResourceLocation("bendymod", "textures/blocks/projection_blank.png");
+	public ResourceLocation getTextureResource(ProjectionBlankTileEntity animatable) {
+		return new ResourceLocation("bendymod", "textures/block/projection_blank.png");
 	}
 }

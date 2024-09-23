@@ -15,7 +15,7 @@
     "hidden": true
   },
   "criteria": {
-    "moving_pictures": {
+    "moving_pictures_0": {
       "trigger": "minecraft:impossible"
     }
   },

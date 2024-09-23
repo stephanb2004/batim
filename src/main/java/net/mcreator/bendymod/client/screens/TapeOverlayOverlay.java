@@ -27,15 +27,13 @@ public class TapeOverlayOverlay {
 	public static void eventHandler(RenderGuiEvent.Pre event) {
 		int w = event.getWindow().getGuiScaledWidth();
 		int h = event.getWindow().getGuiScaledHeight();
-		int posX = w / 2;
-		int posY = h / 2;
 		Level world = null;
 		double x = 0;
 		double y = 0;
 		double z = 0;
 		Player entity = Minecraft.getInstance().player;
 		if (entity != null) {
-			world = entity.level;
+			world = entity.level();
 			x = entity.getX();
 			y = entity.getY();
 			z = entity.getZ();
@@ -47,10 +45,9 @@ public class TapeOverlayOverlay {
 		RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		if (TapeOverlayDisplayOverlayIngameProcedure.execute()) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("bendymod:textures/screens/tape_gui.png"));
-			Minecraft.getInstance().gui.blit(event.getPoseStack(), posX + -210, posY + 56, 0, 0, 116, 62, 116, 62);
+			event.getGuiGraphics().blit(new ResourceLocation("bendymod:textures/screens/tape_gui.png"), w / 2 + -210, h / 2 + 56, 0, 0, 116, 62, 116, 62);
 
-			Minecraft.getInstance().font.draw(event.getPoseStack(), Component.translatable("gui.bendymod.tape_overlay.label_sammy_lawrence"), posX + -200, posY + 103, -16777216);
+			event.getGuiGraphics().drawString(Minecraft.getInstance().font, Component.translatable("gui.bendymod.tape_overlay.label_sammy_lawrence"), w / 2 + -200, h / 2 + 103, -16777216, false);
 		}
 		RenderSystem.depthMask(true);
 		RenderSystem.defaultBlendFunc();

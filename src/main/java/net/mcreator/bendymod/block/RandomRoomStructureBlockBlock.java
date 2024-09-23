@@ -1,8 +1,7 @@
 
 package net.mcreator.bendymod.block;
 
-import net.minecraft.world.level.storage.loot.LootContext;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.BlockState;
@@ -17,7 +16,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.util.RandomSource;
 import net.minecraft.server.level.ServerLevel;
@@ -28,14 +26,11 @@ import net.mcreator.bendymod.procedures.StructureBlockUpdateTickProcedure;
 import net.mcreator.bendymod.procedures.StructureBlockBlockAddedProcedure;
 import net.mcreator.bendymod.block.entity.RandomRoomStructureBlockBlockEntity;
 
-import java.util.List;
-import java.util.Collections;
-
 public class RandomRoomStructureBlockBlock extends Block implements EntityBlock {
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
 	public RandomRoomStructureBlockBlock() {
-		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1f, 10f));
+		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(1f, 10f));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 
@@ -60,14 +55,6 @@ public class RandomRoomStructureBlockBlock extends Block implements EntityBlock 
 
 	public BlockState mirror(BlockState state, Mirror mirrorIn) {
 		return state.rotate(mirrorIn.getRotation(state.getValue(FACING)));
-	}
-
-	@Override
-	public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
-		if (!dropsOriginal.isEmpty())
-			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(this, 1));
 	}
 
 	@Override

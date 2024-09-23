@@ -15,7 +15,7 @@
     "hidden": true
   },
   "criteria": {
-    "you_cannot_hide_forever": {
+    "you_cannot_hide_forever_0": {
       "trigger": "minecraft:impossible"
     }
   },

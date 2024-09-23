@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "bendymod:blocks/studio_door_basic",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "bendymod:studio_door_basic",
+          "conditions": [
+            {
+              "block": "bendymod:studio_door_basic",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "half": "lower"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "parent": "bendymod:custom/baconsoup",
   "textures": {
-    "0": "bendymod:blocks/baconsoup_empty",
-    "particle": "bendymod:items/baconsoup_empty"
+    "0": "bendymod:block/baconsoup_empty",
+    "particle": "bendymod:item/baconsoup_empty"
   }
 }

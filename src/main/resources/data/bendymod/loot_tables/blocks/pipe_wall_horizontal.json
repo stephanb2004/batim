@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "bendymod:blocks/pipe_wall_horizontal",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "bendymod:pipe_wall_horizontal"
+        }
+      ]
+    }
+  ]
+}

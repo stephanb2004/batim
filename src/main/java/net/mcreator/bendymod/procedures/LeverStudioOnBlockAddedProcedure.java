@@ -40,10 +40,10 @@ public class LeverStudioOnBlockAddedProcedure {
 				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
 				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
 			}
-		}.getDirection(blockstate)) == Direction.NORTH && (world.getBlockState(new BlockPos(x + 4, y, z - 1))).getBlock() == BendymodModBlocks.INKWELL.get()
-				&& (world.getBlockState(new BlockPos(x + 4, y, z - 3))).getBlock() == BendymodModBlocks.RECORD.get() && (world.getBlockState(new BlockPos(x + 4, y, z - 5))).getBlock() == BendymodModBlocks.BENDY_DOLL.get()
-				&& (world.getBlockState(new BlockPos(x - 4, y, z - 1))).getBlock() == BendymodModBlocks.GEAR.get() && (world.getBlockState(new BlockPos(x - 4, y, z - 3))).getBlock() == BendymodModBlocks.WRENCH.get()
-				&& (world.getBlockState(new BlockPos(x - 4, y, z - 5))).getBlock() == BendymodModBlocks.ILLUSION_OF_LIVING.get()) {
+		}.getDirection(blockstate)) == Direction.NORTH && (world.getBlockState(BlockPos.containing(x + 4, y, z - 1))).getBlock() == BendymodModBlocks.INKWELL.get()
+				&& (world.getBlockState(BlockPos.containing(x + 4, y, z - 3))).getBlock() == BendymodModBlocks.RECORD.get() && (world.getBlockState(BlockPos.containing(x + 4, y, z - 5))).getBlock() == BendymodModBlocks.BENDY_DOLL.get()
+				&& (world.getBlockState(BlockPos.containing(x - 4, y, z - 1))).getBlock() == BendymodModBlocks.GEAR.get() && (world.getBlockState(BlockPos.containing(x - 4, y, z - 3))).getBlock() == BendymodModBlocks.WRENCH.get()
+				&& (world.getBlockState(BlockPos.containing(x - 4, y, z - 5))).getBlock() == BendymodModBlocks.ILLUSION_OF_LIVING.get()) {
 			can_tp = true;
 		} else if ((new Object() {
 			public Direction getDirection(BlockState _bs) {
@@ -53,10 +53,10 @@ public class LeverStudioOnBlockAddedProcedure {
 				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
 				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
 			}
-		}.getDirection(blockstate)) == Direction.SOUTH && (world.getBlockState(new BlockPos(x - 4, y, z + 1))).getBlock() == BendymodModBlocks.INKWELL.get()
-				&& (world.getBlockState(new BlockPos(x - 4, y, z + 3))).getBlock() == BendymodModBlocks.RECORD.get() && (world.getBlockState(new BlockPos(x - 4, y, z + 5))).getBlock() == BendymodModBlocks.BENDY_DOLL.get()
-				&& (world.getBlockState(new BlockPos(x + 4, y, z + 1))).getBlock() == BendymodModBlocks.GEAR.get() && (world.getBlockState(new BlockPos(x + 4, y, z + 3))).getBlock() == BendymodModBlocks.WRENCH.get()
-				&& (world.getBlockState(new BlockPos(x + 4, y, z + 5))).getBlock() == BendymodModBlocks.ILLUSION_OF_LIVING.get()) {
+		}.getDirection(blockstate)) == Direction.SOUTH && (world.getBlockState(BlockPos.containing(x - 4, y, z + 1))).getBlock() == BendymodModBlocks.INKWELL.get()
+				&& (world.getBlockState(BlockPos.containing(x - 4, y, z + 3))).getBlock() == BendymodModBlocks.RECORD.get() && (world.getBlockState(BlockPos.containing(x - 4, y, z + 5))).getBlock() == BendymodModBlocks.BENDY_DOLL.get()
+				&& (world.getBlockState(BlockPos.containing(x + 4, y, z + 1))).getBlock() == BendymodModBlocks.GEAR.get() && (world.getBlockState(BlockPos.containing(x + 4, y, z + 3))).getBlock() == BendymodModBlocks.WRENCH.get()
+				&& (world.getBlockState(BlockPos.containing(x + 4, y, z + 5))).getBlock() == BendymodModBlocks.ILLUSION_OF_LIVING.get()) {
 			can_tp = true;
 		} else if ((new Object() {
 			public Direction getDirection(BlockState _bs) {
@@ -66,10 +66,10 @@ public class LeverStudioOnBlockAddedProcedure {
 				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
 				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
 			}
-		}.getDirection(blockstate)) == Direction.EAST && (world.getBlockState(new BlockPos(x + 1, y, z + 4))).getBlock() == BendymodModBlocks.INKWELL.get()
-				&& (world.getBlockState(new BlockPos(x + 3, y, z + 4))).getBlock() == BendymodModBlocks.RECORD.get() && (world.getBlockState(new BlockPos(x + 5, y, z + 4))).getBlock() == BendymodModBlocks.BENDY_DOLL.get()
-				&& (world.getBlockState(new BlockPos(x + 1, y, z - 4))).getBlock() == BendymodModBlocks.GEAR.get() && (world.getBlockState(new BlockPos(x + 3, y, z - 4))).getBlock() == BendymodModBlocks.WRENCH.get()
-				&& (world.getBlockState(new BlockPos(x + 5, y, z - 4))).getBlock() == BendymodModBlocks.ILLUSION_OF_LIVING.get()) {
+		}.getDirection(blockstate)) == Direction.EAST && (world.getBlockState(BlockPos.containing(x + 1, y, z + 4))).getBlock() == BendymodModBlocks.INKWELL.get()
+				&& (world.getBlockState(BlockPos.containing(x + 3, y, z + 4))).getBlock() == BendymodModBlocks.RECORD.get() && (world.getBlockState(BlockPos.containing(x + 5, y, z + 4))).getBlock() == BendymodModBlocks.BENDY_DOLL.get()
+				&& (world.getBlockState(BlockPos.containing(x + 1, y, z - 4))).getBlock() == BendymodModBlocks.GEAR.get() && (world.getBlockState(BlockPos.containing(x + 3, y, z - 4))).getBlock() == BendymodModBlocks.WRENCH.get()
+				&& (world.getBlockState(BlockPos.containing(x + 5, y, z - 4))).getBlock() == BendymodModBlocks.ILLUSION_OF_LIVING.get()) {
 			can_tp = true;
 		} else if ((new Object() {
 			public Direction getDirection(BlockState _bs) {
@@ -79,10 +79,10 @@ public class LeverStudioOnBlockAddedProcedure {
 				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
 				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
 			}
-		}.getDirection(blockstate)) == Direction.WEST && (world.getBlockState(new BlockPos(x - 1, y, z - 4))).getBlock() == BendymodModBlocks.INKWELL.get()
-				&& (world.getBlockState(new BlockPos(x - 3, y, z - 4))).getBlock() == BendymodModBlocks.RECORD.get() && (world.getBlockState(new BlockPos(x - 5, y, z - 4))).getBlock() == BendymodModBlocks.BENDY_DOLL.get()
-				&& (world.getBlockState(new BlockPos(x - 1, y, z + 4))).getBlock() == BendymodModBlocks.GEAR.get() && (world.getBlockState(new BlockPos(x - 3, y, z + 4))).getBlock() == BendymodModBlocks.WRENCH.get()
-				&& (world.getBlockState(new BlockPos(x - 5, y, z + 4))).getBlock() == BendymodModBlocks.ILLUSION_OF_LIVING.get()) {
+		}.getDirection(blockstate)) == Direction.WEST && (world.getBlockState(BlockPos.containing(x - 1, y, z - 4))).getBlock() == BendymodModBlocks.INKWELL.get()
+				&& (world.getBlockState(BlockPos.containing(x - 3, y, z - 4))).getBlock() == BendymodModBlocks.RECORD.get() && (world.getBlockState(BlockPos.containing(x - 5, y, z - 4))).getBlock() == BendymodModBlocks.BENDY_DOLL.get()
+				&& (world.getBlockState(BlockPos.containing(x - 1, y, z + 4))).getBlock() == BendymodModBlocks.GEAR.get() && (world.getBlockState(BlockPos.containing(x - 3, y, z + 4))).getBlock() == BendymodModBlocks.WRENCH.get()
+				&& (world.getBlockState(BlockPos.containing(x - 5, y, z + 4))).getBlock() == BendymodModBlocks.ILLUSION_OF_LIVING.get()) {
 			can_tp = true;
 		}
 		if (can_tp == true) {
@@ -96,9 +96,9 @@ public class LeverStudioOnBlockAddedProcedure {
 						return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 					}
 				}.compareDistOf(x, y, z)).findFirst().orElse(null);
-				if (cur_entity instanceof ServerPlayer _player && !_player.level.isClientSide()) {
+				if (cur_entity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
 					ResourceKey<Level> destinationType = Level.OVERWORLD;
-					if (_player.level.dimension() == destinationType)
+					if (_player.level().dimension() == destinationType)
 						return;
 					ServerLevel nextLevel = _player.server.getLevel(destinationType);
 					if (nextLevel != null) {
@@ -113,32 +113,32 @@ public class LeverStudioOnBlockAddedProcedure {
 				{
 					Entity _ent = cur_entity;
 					_ent.teleportTo(
-							((cur_entity instanceof ServerPlayer _player && !_player.level.isClientSide())
-									? ((_player.getRespawnDimension().equals(_player.level.dimension()) && _player.getRespawnPosition() != null) ? _player.getRespawnPosition().getX() : _player.level.getLevelData().getXSpawn())
+							((cur_entity instanceof ServerPlayer _player && !_player.level().isClientSide())
+									? ((_player.getRespawnDimension().equals(_player.level().dimension()) && _player.getRespawnPosition() != null) ? _player.getRespawnPosition().getX() : _player.level().getLevelData().getXSpawn())
 									: 0),
-							((cur_entity instanceof ServerPlayer _player && !_player.level.isClientSide())
-									? ((_player.getRespawnDimension().equals(_player.level.dimension()) && _player.getRespawnPosition() != null) ? _player.getRespawnPosition().getY() : _player.level.getLevelData().getYSpawn())
+							((cur_entity instanceof ServerPlayer _player && !_player.level().isClientSide())
+									? ((_player.getRespawnDimension().equals(_player.level().dimension()) && _player.getRespawnPosition() != null) ? _player.getRespawnPosition().getY() : _player.level().getLevelData().getYSpawn())
 									: 0),
-							((cur_entity instanceof ServerPlayer _player && !_player.level.isClientSide())
-									? ((_player.getRespawnDimension().equals(_player.level.dimension()) && _player.getRespawnPosition() != null) ? _player.getRespawnPosition().getZ() : _player.level.getLevelData().getZSpawn())
+							((cur_entity instanceof ServerPlayer _player && !_player.level().isClientSide())
+									? ((_player.getRespawnDimension().equals(_player.level().dimension()) && _player.getRespawnPosition() != null) ? _player.getRespawnPosition().getZ() : _player.level().getLevelData().getZSpawn())
 									: 0));
 					if (_ent instanceof ServerPlayer _serverPlayer)
 						_serverPlayer.connection.teleport(
-								((cur_entity instanceof ServerPlayer _player && !_player.level.isClientSide())
-										? ((_player.getRespawnDimension().equals(_player.level.dimension()) && _player.getRespawnPosition() != null) ? _player.getRespawnPosition().getX() : _player.level.getLevelData().getXSpawn())
+								((cur_entity instanceof ServerPlayer _player && !_player.level().isClientSide())
+										? ((_player.getRespawnDimension().equals(_player.level().dimension()) && _player.getRespawnPosition() != null) ? _player.getRespawnPosition().getX() : _player.level().getLevelData().getXSpawn())
 										: 0),
-								((cur_entity instanceof ServerPlayer _player && !_player.level.isClientSide())
-										? ((_player.getRespawnDimension().equals(_player.level.dimension()) && _player.getRespawnPosition() != null) ? _player.getRespawnPosition().getY() : _player.level.getLevelData().getYSpawn())
+								((cur_entity instanceof ServerPlayer _player && !_player.level().isClientSide())
+										? ((_player.getRespawnDimension().equals(_player.level().dimension()) && _player.getRespawnPosition() != null) ? _player.getRespawnPosition().getY() : _player.level().getLevelData().getYSpawn())
 										: 0),
-								((cur_entity instanceof ServerPlayer _player && !_player.level.isClientSide())
-										? ((_player.getRespawnDimension().equals(_player.level.dimension()) && _player.getRespawnPosition() != null) ? _player.getRespawnPosition().getZ() : _player.level.getLevelData().getZSpawn())
+								((cur_entity instanceof ServerPlayer _player && !_player.level().isClientSide())
+										? ((_player.getRespawnDimension().equals(_player.level().dimension()) && _player.getRespawnPosition() != null) ? _player.getRespawnPosition().getZ() : _player.level().getLevelData().getZSpawn())
 										: 0),
 								_ent.getYRot(), _ent.getXRot());
 				}
 			}
 			BendymodMod.queueServerWork(20, () -> {
 				{
-					BlockPos _bp = new BlockPos(x, y, z);
+					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = BendymodModBlocks.LEVER_POWER_OFF.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {

@@ -7,7 +7,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.AxeItem;
 
-import net.mcreator.bendymod.init.BendymodModTabs;
 import net.mcreator.bendymod.init.BendymodModBlocks;
 
 public class StudioAxeItem extends AxeItem {
@@ -36,6 +35,6 @@ public class StudioAxeItem extends AxeItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.of(new ItemStack(BendymodModBlocks.STUDIO_FLOOR.get()));
 			}
-		}, 1, -3f, new Item.Properties().tab(BendymodModTabs.TAB_BENDY_PROPS));
+		}, 1, -3f, new Item.Properties());
 	}
 }

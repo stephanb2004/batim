@@ -1,6 +1,6 @@
 {
   "parent": "bendymod:displaysettings/ink_machine.item",
   "textures": {
-    "particle": "bendymod:blocks/wallwriting_thecreatorliedtous"
+    "particle": "bendymod:block/wallwriting_thecreatorliedtous"
   }
 }

@@ -1,9 +1,9 @@
 {
   "parent": "bendymod:custom/stool",
   "textures": {
-    "all": "bendymod:blocks/stool",
-    "particle": "bendymod:blocks/stool",
-    "1": "bendymod:blocks/stool"
+    "all": "bendymod:block/stool",
+    "particle": "bendymod:block/stool",
+    "1": "bendymod:block/stool"
   },
   "render_type": "cutout"
 }

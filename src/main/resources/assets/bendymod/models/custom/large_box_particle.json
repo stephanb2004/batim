@@ -1,6 +1,6 @@
 {
   "parent": "bendymod:displaysettings/big_block.item",
   "textures": {
-    "particle": "bendymod:blocks/large_box"
+    "particle": "bendymod:block/large_box"
   }
 }

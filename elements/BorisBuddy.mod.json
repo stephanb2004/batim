@@ -1,5 +1,5 @@
 {
-  "_fv": 43,
+  "_fv": 66,
   "_type": "animatedentity",
   "definition": {
     "mobName": "Buddy Boris",
@@ -12,10 +12,12 @@
     "boundingBoxScale": {
       "fixedValue": 0.875
     },
+    "entityDataEntries": [],
     "modelWidth": 0.75,
     "modelHeight": 2.1875,
     "modelShadowSize": 0.312,
     "mountedYOffset": 0.0,
+    "stepHeight": 0.6,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
       "value": -15724785,
@@ -28,6 +30,7 @@
     "creativeTab": {
       "value": "CUSTOM:BendyEntities"
     },
+    "creativeTabs": [],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -144,6 +147,15 @@
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 10.0,
     "height": 1.9375,
+    "raidSpawnsCount": [
+      4,
+      3,
+      3,
+      4,
+      4,
+      4,
+      2
+    ],
     "spawnThisMob": false,
     "doesDespawnWhenIdle": false,
     "spawningProbability": 20,

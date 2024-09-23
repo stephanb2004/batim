@@ -1,9 +1,9 @@
 {
   "parent": "bendymod:custom/pipe_straight",
   "textures": {
-    "all": "bendymod:blocks/pipe_straight",
-    "particle": "bendymod:blocks/pipe_straight",
-    "1": "bendymod:blocks/pipe_straight"
+    "all": "bendymod:block/pipe_straight",
+    "particle": "bendymod:block/pipe_straight",
+    "1": "bendymod:block/pipe_straight"
   },
   "render_type": "solid"
 }

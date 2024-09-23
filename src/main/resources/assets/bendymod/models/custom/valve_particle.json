@@ -1,6 +1,6 @@
 {
   "parent": "bendymod:displaysettings/lever.item",
   "textures": {
-    "particle": "bendymod:blocks/valve"
+    "particle": "bendymod:block/valve"
   }
 }

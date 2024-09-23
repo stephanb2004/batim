@@ -1,12 +1,12 @@
 package net.mcreator.bendymod.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.bendymod.block.display.SoupCandleDisplayItem;
 
-public class SoupCandleDisplayModel extends AnimatedGeoModel<SoupCandleDisplayItem> {
+public class SoupCandleDisplayModel extends GeoModel<SoupCandleDisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(SoupCandleDisplayItem animatable) {
 		return new ResourceLocation("bendymod", "animations/baconsoup_candle.animation.json");
@@ -19,6 +19,6 @@ public class SoupCandleDisplayModel extends AnimatedGeoModel<SoupCandleDisplayIt
 
 	@Override
 	public ResourceLocation getTextureResource(SoupCandleDisplayItem entity) {
-		return new ResourceLocation("bendymod", "textures/blocks/baconsoup_candle.png");
+		return new ResourceLocation("bendymod", "textures/block/baconsoup_candle.png");
 	}
 }

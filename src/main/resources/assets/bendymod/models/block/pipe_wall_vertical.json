@@ -1,9 +1,9 @@
 {
   "parent": "bendymod:custom/pipe_vertical",
   "textures": {
-    "all": "bendymod:blocks/pipe_vertical",
-    "particle": "bendymod:blocks/pipe_vertical",
-    "2": "bendymod:blocks/pipe_vertical"
+    "all": "bendymod:block/pipe_vertical",
+    "particle": "bendymod:block/pipe_vertical",
+    "2": "bendymod:block/pipe_vertical"
   },
   "render_type": "solid"
 }

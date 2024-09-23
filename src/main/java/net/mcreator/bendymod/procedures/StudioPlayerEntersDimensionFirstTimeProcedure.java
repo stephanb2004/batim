@@ -23,7 +23,7 @@ import net.mcreator.bendymod.BendymodMod;
 import java.util.Map;
 
 public class StudioPlayerEntersDimensionFirstTimeProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
 		if ((entity.getCapability(BendymodModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BendymodModVariables.PlayerVariables())).EnteredStudio == false) {
@@ -98,7 +98,7 @@ public class StudioPlayerEntersDimensionFirstTimeProcedure {
 							world.setBlock(_bp, _bs, 3);
 						}
 					}
-					SetStructureBlocksProcedure.execute(world, (-8), 304, (-9));
+					SetStructureBlocksProcedure.execute(world, -8, 304, -9);
 				});
 				BendymodModVariables.MapVariables.get(world).studio_generated = true;
 				BendymodModVariables.MapVariables.get(world).syncData(world);
@@ -112,9 +112,9 @@ public class StudioPlayerEntersDimensionFirstTimeProcedure {
 			}
 			{
 				Entity _ent = entity;
-				if (!_ent.level.isClientSide() && _ent.getServer() != null) {
-					_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4,
-							_ent.getName().getString(), _ent.getDisplayName(), _ent.level.getServer(), _ent), "spawnpoint @s 1 306 -2");
+				if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+					_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
+							_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "spawnpoint @s 1 306 -2");
 				}
 			}
 			BendymodMod.queueServerWork(15, () -> {
@@ -196,9 +196,9 @@ public class StudioPlayerEntersDimensionFirstTimeProcedure {
 			}
 			{
 				Entity _ent = entity;
-				if (!_ent.level.isClientSide() && _ent.getServer() != null) {
-					_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4,
-							_ent.getName().getString(), _ent.getDisplayName(), _ent.level.getServer(), _ent), "spawnpoint @s 1 306 -2");
+				if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+					_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
+							_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "spawnpoint @s 1 306 -2");
 				}
 			}
 			BendymodMod.queueServerWork(15, () -> {

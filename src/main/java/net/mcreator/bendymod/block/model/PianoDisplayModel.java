@@ -1,12 +1,12 @@
 package net.mcreator.bendymod.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.bendymod.block.display.PianoDisplayItem;
 
-public class PianoDisplayModel extends AnimatedGeoModel<PianoDisplayItem> {
+public class PianoDisplayModel extends GeoModel<PianoDisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(PianoDisplayItem animatable) {
 		return new ResourceLocation("bendymod", "animations/piano.animation.json");
@@ -19,6 +19,6 @@ public class PianoDisplayModel extends AnimatedGeoModel<PianoDisplayItem> {
 
 	@Override
 	public ResourceLocation getTextureResource(PianoDisplayItem entity) {
-		return new ResourceLocation("bendymod", "textures/blocks/piano.png");
+		return new ResourceLocation("bendymod", "textures/block/piano.png");
 	}
 }

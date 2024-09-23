@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "bendymod:blocks/inactive_stairway_structure_block",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "bendymod:inactive_stairway_structure_block"
+        }
+      ]
+    }
+  ]
+}

@@ -1,7 +1,8 @@
 {
   "parent": "block/template_glass_pane_noside_alt",
   "textures": {
-    "pane": "bendymod:blocks/chainfence"
+    "particle": "bendymod:block/chainfence",
+    "pane": "bendymod:block/chainfence"
   },
   "render_type": "cutout_mipped"
 }

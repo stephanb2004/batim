@@ -15,7 +15,7 @@
     "hidden": true
   },
   "criteria": {
-    "mans_best_friend": {
+    "mans_best_friend_0": {
       "trigger": "minecraft:impossible"
     }
   },

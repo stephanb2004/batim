@@ -1,12 +1,12 @@
 package net.mcreator.bendymod.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.bendymod.block.entity.IllusionOfLivingTileEntity;
 
-public class IllusionOfLivingBlockModel extends AnimatedGeoModel<IllusionOfLivingTileEntity> {
+public class IllusionOfLivingBlockModel extends GeoModel<IllusionOfLivingTileEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(IllusionOfLivingTileEntity animatable) {
 		return new ResourceLocation("bendymod", "animations/illusionofliving.animation.json");
@@ -18,7 +18,7 @@ public class IllusionOfLivingBlockModel extends AnimatedGeoModel<IllusionOfLivin
 	}
 
 	@Override
-	public ResourceLocation getTextureResource(IllusionOfLivingTileEntity entity) {
-		return new ResourceLocation("bendymod", "textures/blocks/illusionofliving.png");
+	public ResourceLocation getTextureResource(IllusionOfLivingTileEntity animatable) {
+		return new ResourceLocation("bendymod", "textures/block/illusionofliving.png");
 	}
 }

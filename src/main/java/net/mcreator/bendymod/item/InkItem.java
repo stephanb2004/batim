@@ -6,11 +6,10 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BucketItem;
 
-import net.mcreator.bendymod.init.BendymodModTabs;
 import net.mcreator.bendymod.init.BendymodModFluids;
 
 public class InkItem extends BucketItem {
 	public InkItem() {
-		super(BendymodModFluids.INK, new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1).rarity(Rarity.COMMON).tab(BendymodModTabs.TAB_BENDY_PROPS));
+		super(BendymodModFluids.INK, new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1).rarity(Rarity.COMMON));
 	}
 }

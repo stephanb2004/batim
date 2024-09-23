@@ -1,25 +1,21 @@
 package net.mcreator.bendymod.block.renderer;
 
-import software.bernie.geckolib3.renderers.geo.GeoBlockRenderer;
+import software.bernie.geckolib.renderer.GeoBlockRenderer;
 
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.MultiBufferSource;
 
 import net.mcreator.bendymod.block.model.WritingTheCreatorLiedToUsBlockModel;
 import net.mcreator.bendymod.block.entity.WritingTheCreatorLiedToUsTileEntity;
 
-import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.blaze3d.vertex.PoseStack;
-
 public class WritingTheCreatorLiedToUsTileRenderer extends GeoBlockRenderer<WritingTheCreatorLiedToUsTileEntity> {
-	public WritingTheCreatorLiedToUsTileRenderer(BlockEntityRendererProvider.Context rendererDispatcherIn) {
-		super(rendererDispatcherIn, new WritingTheCreatorLiedToUsBlockModel());
+	public WritingTheCreatorLiedToUsTileRenderer() {
+		super(new WritingTheCreatorLiedToUsBlockModel());
 	}
 
 	@Override
-	public RenderType getRenderType(WritingTheCreatorLiedToUsTileEntity animatable, float partialTick, PoseStack poseStack, MultiBufferSource bufferSource, VertexConsumer buffer, int packedLight, ResourceLocation texture) {
+	public RenderType getRenderType(WritingTheCreatorLiedToUsTileEntity animatable, ResourceLocation texture, MultiBufferSource bufferSource, float partialTick) {
 		return RenderType.entityTranslucent(getTextureLocation(animatable));
 	}
 }

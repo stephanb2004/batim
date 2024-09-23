@@ -1,9 +1,9 @@
 {
   "parent": "bendymod:custom/plank",
   "textures": {
-    "all": "bendymod:blocks/plank_shelf",
-    "particle": "bendymod:blocks/plank_shelf",
-    "1": "bendymod:blocks/plank_shelf"
+    "all": "bendymod:block/plank_shelf",
+    "particle": "bendymod:block/plank_shelf",
+    "1": "bendymod:block/plank_shelf"
   },
   "render_type": "cutout"
 }

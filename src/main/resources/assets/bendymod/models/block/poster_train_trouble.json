@@ -1,9 +1,9 @@
 {
   "parent": "bendymod:custom/poster",
   "textures": {
-    "all": "bendymod:blocks/poster_traintrouble",
-    "particle": "bendymod:blocks/poster_traintrouble",
-    "0": "bendymod:blocks/poster_traintrouble"
+    "all": "bendymod:block/poster_traintrouble",
+    "particle": "bendymod:block/poster_traintrouble",
+    "0": "bendymod:block/poster_traintrouble"
   },
   "render_type": "solid"
 }

@@ -1,12 +1,12 @@
 package net.mcreator.bendymod.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.bendymod.block.display.RadioDisplayItem;
 
-public class RadioDisplayModel extends AnimatedGeoModel<RadioDisplayItem> {
+public class RadioDisplayModel extends GeoModel<RadioDisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(RadioDisplayItem animatable) {
 		return new ResourceLocation("bendymod", "animations/radio.animation.json");
@@ -19,6 +19,6 @@ public class RadioDisplayModel extends AnimatedGeoModel<RadioDisplayItem> {
 
 	@Override
 	public ResourceLocation getTextureResource(RadioDisplayItem entity) {
-		return new ResourceLocation("bendymod", "textures/blocks/radio.png");
+		return new ResourceLocation("bendymod", "textures/block/radio.png");
 	}
 }

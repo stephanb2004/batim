@@ -16,7 +16,7 @@
     "hidden": true
   },
   "criteria": {
-    "the_dark_puddles_awaken": {
+    "the_dark_puddles_awaken_0": {
       "trigger": "minecraft:changed_dimension",
       "conditions": {
         "to": "bendymod:studio"

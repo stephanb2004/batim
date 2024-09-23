@@ -1,6 +1,6 @@
 {
   "parent": "bendymod:displaysettings/regularblock_preset.item",
   "textures": {
-    "particle": "bendymod:blocks/record_batdr"
+    "particle": "bendymod:block/record_batdr"
   }
 }

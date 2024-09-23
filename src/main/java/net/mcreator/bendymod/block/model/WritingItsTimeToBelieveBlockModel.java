@@ -1,12 +1,12 @@
 package net.mcreator.bendymod.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.bendymod.block.entity.WritingItsTimeToBelieveTileEntity;
 
-public class WritingItsTimeToBelieveBlockModel extends AnimatedGeoModel<WritingItsTimeToBelieveTileEntity> {
+public class WritingItsTimeToBelieveBlockModel extends GeoModel<WritingItsTimeToBelieveTileEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(WritingItsTimeToBelieveTileEntity animatable) {
 		return new ResourceLocation("bendymod", "animations/wall_writings.animation.json");
@@ -18,7 +18,7 @@ public class WritingItsTimeToBelieveBlockModel extends AnimatedGeoModel<WritingI
 	}
 
 	@Override
-	public ResourceLocation getTextureResource(WritingItsTimeToBelieveTileEntity entity) {
-		return new ResourceLocation("bendymod", "textures/blocks/wallwriting_itstimetobelieve.png");
+	public ResourceLocation getTextureResource(WritingItsTimeToBelieveTileEntity animatable) {
+		return new ResourceLocation("bendymod", "textures/block/wallwriting_itstimetobelieve.png");
 	}
 }

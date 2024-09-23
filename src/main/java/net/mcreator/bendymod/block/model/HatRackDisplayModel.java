@@ -1,12 +1,12 @@
 package net.mcreator.bendymod.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.bendymod.block.display.HatRackDisplayItem;
 
-public class HatRackDisplayModel extends AnimatedGeoModel<HatRackDisplayItem> {
+public class HatRackDisplayModel extends GeoModel<HatRackDisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(HatRackDisplayItem animatable) {
 		return new ResourceLocation("bendymod", "animations/hatrack.animation.json");
@@ -19,6 +19,6 @@ public class HatRackDisplayModel extends AnimatedGeoModel<HatRackDisplayItem> {
 
 	@Override
 	public ResourceLocation getTextureResource(HatRackDisplayItem entity) {
-		return new ResourceLocation("bendymod", "textures/blocks/hatrack.png");
+		return new ResourceLocation("bendymod", "textures/block/hatrack.png");
 	}
 }

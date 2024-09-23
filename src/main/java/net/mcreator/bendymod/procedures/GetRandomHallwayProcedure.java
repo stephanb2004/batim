@@ -73,7 +73,7 @@ public class GetRandomHallwayProcedure {
 			result_x = x;
 			result_z = z + 1;
 		}
-		if ((world.getBlockState(new BlockPos(result_x, y, result_z))).getBlock() == Blocks.AIR) {
+		if ((world.getBlockState(BlockPos.containing(result_x, y, result_z))).getBlock() == Blocks.AIR) {
 			while (done_choosing == false) {
 				room_variation1 = Mth.nextInt(RandomSource.create(), 1, 6);
 				rarity = GetRoomRarityProcedure.execute();
@@ -96,7 +96,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "hallway_0"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -114,7 +114,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "hallway_0"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -132,7 +132,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "hallway_0"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -150,7 +150,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "hallway_0"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -171,7 +171,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "hallway_1"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -189,7 +189,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "hallway_1"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -207,7 +207,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "hallway_1"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -225,7 +225,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "hallway_1"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -246,7 +246,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "hallway_2"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -264,7 +264,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "hallway_2"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -282,7 +282,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "hallway_2"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -300,7 +300,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "hallway_2"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -324,7 +324,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "lhalll_basic"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -342,7 +342,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "lhalll_basic"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -360,7 +360,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "lhalll_basic"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -378,7 +378,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "lhalll_basic"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -399,7 +399,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "lhallr_basic"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -417,7 +417,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "lhallr_basic"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -435,7 +435,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "lhallr_basic"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -453,7 +453,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "lhallr_basic"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -477,7 +477,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "thall_boarded"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -495,7 +495,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "animatorsdepartment_lobby"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -513,7 +513,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "thall_boarded"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -531,7 +531,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "thall_boarded"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -552,7 +552,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "thall_ritual"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -570,7 +570,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "thall_ritual"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -588,7 +588,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "thall_ritual"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -606,7 +606,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "thall_ritual"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -630,7 +630,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "xhall_doorway"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -648,7 +648,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "xhall_doorway"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -666,7 +666,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "xhall_doorway"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -684,7 +684,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "xhall_doorway"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -705,7 +705,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "xhall_storage"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -723,7 +723,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "xhall_storage"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -741,7 +741,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "animatorsdepartment_lobby"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -759,7 +759,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "xhall_storage"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -785,7 +785,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "hallway_3"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -803,7 +803,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "hallway_3"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -821,7 +821,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "hallway_3"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -839,7 +839,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "hallway_3"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -860,7 +860,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "hallway_4"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -878,7 +878,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "hallway_4"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -896,7 +896,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "hallway_4"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -914,7 +914,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "hallway_4"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -935,7 +935,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "hallway_5"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -953,7 +953,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "hallway_5"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -971,7 +971,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "hallway_5"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -989,7 +989,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "hallway_5"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1009,7 +1009,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "hallway_6"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1027,7 +1027,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "hallway_6"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1045,7 +1045,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "hallway_6"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1063,7 +1063,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "hallway_6"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1083,7 +1083,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "hallway_7"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1101,7 +1101,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "hallway_7"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1119,7 +1119,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "hallway_7"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1137,7 +1137,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "hallway_7"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1161,7 +1161,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "lhalll_bori"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1179,7 +1179,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "lhalll_bori"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1197,7 +1197,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "lhalll_bori"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1215,7 +1215,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "lhalll_bori"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1236,7 +1236,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "lhalll_cutout"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1254,7 +1254,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "lhalll_cutout"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1272,7 +1272,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "lhalll_cutout"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1290,7 +1290,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "animatorsdepartment_lobby"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1311,7 +1311,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "lhallr_basic"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1329,7 +1329,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "lhallr_basic"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1347,7 +1347,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "lhallr_basic"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1365,7 +1365,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "lhallr_basic"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1386,7 +1386,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "lhallr_bori"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1404,7 +1404,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "lhallr_bori"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1422,7 +1422,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "lhallr_bori"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1440,7 +1440,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "lhallr_bori"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1461,7 +1461,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "lhallr_cutout"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1479,7 +1479,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "lhallr_cutout"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1497,7 +1497,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "lhallr_cutout"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1515,7 +1515,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "lhallr_cutout"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1535,7 +1535,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "lhallr_messages"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1553,7 +1553,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "lhallr_messages"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1571,7 +1571,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "lhallr_messages"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1589,7 +1589,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "lhallr_messages"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1613,7 +1613,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "thall_storage"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1631,7 +1631,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "thall_storage"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1649,7 +1649,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "thall_storage"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1667,7 +1667,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "thall_storage"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1688,7 +1688,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "thall_work"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1706,7 +1706,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "thall_work"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1724,7 +1724,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "thall_work"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1742,7 +1742,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "thall_work"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1766,7 +1766,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "xhall_sacrifice"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1784,7 +1784,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "xhall_sacrifice"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1802,7 +1802,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "xhall_sacrifice"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1820,7 +1820,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "xhall_sacrifice"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1841,7 +1841,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "xhall_flood"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1859,7 +1859,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "xhall_flood"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1877,7 +1877,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "xhall_flood"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1895,7 +1895,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "xhall_flood"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -1923,7 +1923,7 @@ public class GetRandomHallwayProcedure {
 									if (world instanceof ServerLevel _serverworld) {
 										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "inkdemonroom_hall1"));
 										if (template != null) {
-											template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+											template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 													new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 										}
 									}
@@ -1941,7 +1941,7 @@ public class GetRandomHallwayProcedure {
 									if (world instanceof ServerLevel _serverworld) {
 										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "inkdemonroom_hall1"));
 										if (template != null) {
-											template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+											template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 													new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 										}
 									}
@@ -1959,7 +1959,7 @@ public class GetRandomHallwayProcedure {
 									if (world instanceof ServerLevel _serverworld) {
 										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "inkdemonroom_hall1"));
 										if (template != null) {
-											template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+											template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 													new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 										}
 									}
@@ -1977,7 +1977,7 @@ public class GetRandomHallwayProcedure {
 									if (world instanceof ServerLevel _serverworld) {
 										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "inkdemonroom_hall1"));
 										if (template != null) {
-											template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+											template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 													new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 										}
 									}
@@ -1998,7 +1998,7 @@ public class GetRandomHallwayProcedure {
 									if (world instanceof ServerLevel _serverworld) {
 										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "inkdemonroom_hall2"));
 										if (template != null) {
-											template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+											template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 													new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 										}
 									}
@@ -2016,7 +2016,7 @@ public class GetRandomHallwayProcedure {
 									if (world instanceof ServerLevel _serverworld) {
 										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "inkdemonroom_hall2"));
 										if (template != null) {
-											template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+											template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 													new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 										}
 									}
@@ -2034,7 +2034,7 @@ public class GetRandomHallwayProcedure {
 									if (world instanceof ServerLevel _serverworld) {
 										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "inkdemonroom_hall2"));
 										if (template != null) {
-											template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+											template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 													new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 										}
 									}
@@ -2052,7 +2052,7 @@ public class GetRandomHallwayProcedure {
 									if (world instanceof ServerLevel _serverworld) {
 										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "inkdemonroom_hall2"));
 										if (template != null) {
-											template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+											template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 													new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 										}
 									}
@@ -2073,7 +2073,7 @@ public class GetRandomHallwayProcedure {
 									if (world instanceof ServerLevel _serverworld) {
 										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "inkdemonroom_hall3"));
 										if (template != null) {
-											template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+											template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 													new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 										}
 									}
@@ -2091,7 +2091,7 @@ public class GetRandomHallwayProcedure {
 									if (world instanceof ServerLevel _serverworld) {
 										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "inkdemonroom_hall3"));
 										if (template != null) {
-											template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+											template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 													new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 										}
 									}
@@ -2109,7 +2109,7 @@ public class GetRandomHallwayProcedure {
 									if (world instanceof ServerLevel _serverworld) {
 										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "inkdemonroom_hall3"));
 										if (template != null) {
-											template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+											template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 													new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 										}
 									}
@@ -2127,7 +2127,7 @@ public class GetRandomHallwayProcedure {
 									if (world instanceof ServerLevel _serverworld) {
 										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "inkdemonroom_hall3"));
 										if (template != null) {
-											template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+											template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 													new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 										}
 									}
@@ -2148,7 +2148,7 @@ public class GetRandomHallwayProcedure {
 									if (world instanceof ServerLevel _serverworld) {
 										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "inkdemonroom_hall4"));
 										if (template != null) {
-											template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+											template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 													new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 										}
 									}
@@ -2166,7 +2166,7 @@ public class GetRandomHallwayProcedure {
 									if (world instanceof ServerLevel _serverworld) {
 										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "inkdemonroom_hall4"));
 										if (template != null) {
-											template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+											template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 													new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 										}
 									}
@@ -2184,7 +2184,7 @@ public class GetRandomHallwayProcedure {
 									if (world instanceof ServerLevel _serverworld) {
 										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "inkdemonroom_hall4"));
 										if (template != null) {
-											template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+											template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 													new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 										}
 									}
@@ -2202,7 +2202,7 @@ public class GetRandomHallwayProcedure {
 									if (world instanceof ServerLevel _serverworld) {
 										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "inkdemonroom_hall3"));
 										if (template != null) {
-											template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+											template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 													new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 										}
 									}
@@ -2223,7 +2223,7 @@ public class GetRandomHallwayProcedure {
 									if (world instanceof ServerLevel _serverworld) {
 										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "inkdemonroom_hall5"));
 										if (template != null) {
-											template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+											template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 													new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 										}
 									}
@@ -2241,7 +2241,7 @@ public class GetRandomHallwayProcedure {
 									if (world instanceof ServerLevel _serverworld) {
 										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "inkdemonroom_hall5"));
 										if (template != null) {
-											template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+											template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 													new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 										}
 									}
@@ -2259,7 +2259,7 @@ public class GetRandomHallwayProcedure {
 									if (world instanceof ServerLevel _serverworld) {
 										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "inkdemonroom_hall5"));
 										if (template != null) {
-											template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+											template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 													new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 										}
 									}
@@ -2277,7 +2277,7 @@ public class GetRandomHallwayProcedure {
 									if (world instanceof ServerLevel _serverworld) {
 										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "inkdemonroom_hall4"));
 										if (template != null) {
-											template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+											template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 													new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 										}
 									}
@@ -2298,7 +2298,7 @@ public class GetRandomHallwayProcedure {
 									if (world instanceof ServerLevel _serverworld) {
 										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "inkdemonroom_hall6"));
 										if (template != null) {
-											template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+											template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 													new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 										}
 									}
@@ -2316,7 +2316,7 @@ public class GetRandomHallwayProcedure {
 									if (world instanceof ServerLevel _serverworld) {
 										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "inkdemonroom_hall6"));
 										if (template != null) {
-											template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+											template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 													new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 										}
 									}
@@ -2334,7 +2334,7 @@ public class GetRandomHallwayProcedure {
 									if (world instanceof ServerLevel _serverworld) {
 										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "inkdemonroom_hall6"));
 										if (template != null) {
-											template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+											template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 													new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 										}
 									}
@@ -2352,7 +2352,7 @@ public class GetRandomHallwayProcedure {
 									if (world instanceof ServerLevel _serverworld) {
 										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "inkdemonroom_hall5"));
 										if (template != null) {
-											template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+											template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 													new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 										}
 									}
@@ -2380,7 +2380,7 @@ public class GetRandomHallwayProcedure {
 									if (world instanceof ServerLevel _serverworld) {
 										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "animatorsdepartment_lobby"));
 										if (template != null) {
-											template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+											template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 													new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 										}
 									}
@@ -2398,7 +2398,7 @@ public class GetRandomHallwayProcedure {
 									if (world instanceof ServerLevel _serverworld) {
 										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "animatorsdepartment_lobby"));
 										if (template != null) {
-											template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+											template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 													new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 										}
 									}
@@ -2416,7 +2416,7 @@ public class GetRandomHallwayProcedure {
 									if (world instanceof ServerLevel _serverworld) {
 										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "animatorsdepartment_lobby"));
 										if (template != null) {
-											template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+											template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 													new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 										}
 									}
@@ -2434,7 +2434,7 @@ public class GetRandomHallwayProcedure {
 									if (world instanceof ServerLevel _serverworld) {
 										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "animatorsdepartment_lobby"));
 										if (template != null) {
-											template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+											template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 													new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 										}
 									}
@@ -2456,7 +2456,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "preritualroom_maze"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -2474,7 +2474,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "preritualroom_maze"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -2492,7 +2492,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "animatorsdepartment_lobby"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -2510,7 +2510,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "preritualroom_maze"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -2531,7 +2531,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "ritualroom_maze"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -2549,7 +2549,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "ritualroom_maze"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -2567,7 +2567,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "ritualroom_maze"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -2585,7 +2585,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "ritualroom_maze"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -2606,7 +2606,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "borisroom_1"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -2624,7 +2624,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "borisroom_1"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -2642,7 +2642,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "borisroom_1"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -2660,7 +2660,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "borisroom_1"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -2681,7 +2681,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "musicdepartment_lobby"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_180).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -2699,7 +2699,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "musicdepartment_lobby"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.COUNTERCLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -2717,7 +2717,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "musicdepartment_lobby"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.CLOCKWISE_90).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}
@@ -2735,7 +2735,7 @@ public class GetRandomHallwayProcedure {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "musicdepartment_lobby"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(result_x, y, result_z), new BlockPos(result_x, y, result_z),
+										template.placeInWorld(_serverworld, BlockPos.containing(result_x, y, result_z), BlockPos.containing(result_x, y, result_z),
 												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 									}
 								}

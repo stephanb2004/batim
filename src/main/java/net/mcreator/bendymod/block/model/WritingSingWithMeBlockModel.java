@@ -1,12 +1,12 @@
 package net.mcreator.bendymod.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.bendymod.block.entity.WritingSingWithMeTileEntity;
 
-public class WritingSingWithMeBlockModel extends AnimatedGeoModel<WritingSingWithMeTileEntity> {
+public class WritingSingWithMeBlockModel extends GeoModel<WritingSingWithMeTileEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(WritingSingWithMeTileEntity animatable) {
 		return new ResourceLocation("bendymod", "animations/wall_writings.animation.json");
@@ -18,7 +18,7 @@ public class WritingSingWithMeBlockModel extends AnimatedGeoModel<WritingSingWit
 	}
 
 	@Override
-	public ResourceLocation getTextureResource(WritingSingWithMeTileEntity entity) {
-		return new ResourceLocation("bendymod", "textures/blocks/wallwriting_singwithme.png");
+	public ResourceLocation getTextureResource(WritingSingWithMeTileEntity animatable) {
+		return new ResourceLocation("bendymod", "textures/block/wallwriting_singwithme.png");
 	}
 }

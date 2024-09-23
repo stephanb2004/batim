@@ -1,9 +1,9 @@
 {
   "parent": "bendymod:custom/table_big",
   "textures": {
-    "all": "bendymod:blocks/table_big",
-    "particle": "bendymod:blocks/table_big",
-    "2": "bendymod:blocks/table_big"
+    "all": "bendymod:block/table_big",
+    "particle": "bendymod:block/table_big",
+    "2": "bendymod:block/table_big"
   },
   "render_type": "cutout"
 }

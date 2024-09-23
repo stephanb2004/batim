@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "bendymod:joey_drew_apartment",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 101,
+    "separation": 100,
+    "salt": 971990096
+  }
+}

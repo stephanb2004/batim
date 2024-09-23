@@ -1,12 +1,12 @@
 package net.mcreator.bendymod.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.bendymod.block.entity.LargeBoxTileEntity;
 
-public class LargeBoxBlockModel extends AnimatedGeoModel<LargeBoxTileEntity> {
+public class LargeBoxBlockModel extends GeoModel<LargeBoxTileEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(LargeBoxTileEntity animatable) {
 		return new ResourceLocation("bendymod", "animations/large_box.animation.json");
@@ -18,7 +18,7 @@ public class LargeBoxBlockModel extends AnimatedGeoModel<LargeBoxTileEntity> {
 	}
 
 	@Override
-	public ResourceLocation getTextureResource(LargeBoxTileEntity entity) {
-		return new ResourceLocation("bendymod", "textures/blocks/large_box.png");
+	public ResourceLocation getTextureResource(LargeBoxTileEntity animatable) {
+		return new ResourceLocation("bendymod", "textures/block/large_box.png");
 	}
 }

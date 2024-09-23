@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "bendymod:items/studio_axe"
+    "layer0": "bendymod:item/studio_axe"
   }
 }

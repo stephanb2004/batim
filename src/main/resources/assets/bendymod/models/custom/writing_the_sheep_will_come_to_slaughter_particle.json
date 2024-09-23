@@ -1,6 +1,6 @@
 {
   "parent": "bendymod:displaysettings/ink_machine.item",
   "textures": {
-    "particle": "bendymod:blocks/wallwriting_thesheepwillcometoslaughter"
+    "particle": "bendymod:block/wallwriting_thesheepwillcometoslaughter"
   }
 }

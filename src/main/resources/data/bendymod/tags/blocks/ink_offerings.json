@@ -1,10 +1,10 @@
 {
   "replace": false,
   "values": [
-    "bendymod:wrench",
-    "bendymod:bendy_doll",
-    "bendymod:inkwell",
     "bendymod:record",
+    "bendymod:inkwell",
+    "bendymod:bendy_doll",
+    "bendymod:wrench",
     "bendymod:illusion_of_living",
     "bendymod:gear"
   ]

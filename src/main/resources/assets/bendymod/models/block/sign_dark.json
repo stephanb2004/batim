@@ -1,9 +1,9 @@
 {
   "parent": "bendymod:custom/sign_dark",
   "textures": {
-    "all": "bendymod:blocks/sign_dark",
-    "particle": "bendymod:blocks/sign_dark",
-    "1": "bendymod:blocks/sign_dark"
+    "all": "bendymod:block/sign_dark",
+    "particle": "bendymod:block/sign_dark",
+    "1": "bendymod:block/sign_dark"
   },
   "render_type": "solid"
 }

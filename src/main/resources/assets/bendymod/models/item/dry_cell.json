@@ -1,7 +1,7 @@
 {
   "parent": "bendymod:custom/drycell",
   "textures": {
-    "2": "bendymod:blocks/drycell",
-    "particle": "bendymod:items/studio_segmenteddoor_item"
+    "2": "bendymod:block/drycell",
+    "particle": "bendymod:item/studio_segmenteddoor_item"
   }
 }

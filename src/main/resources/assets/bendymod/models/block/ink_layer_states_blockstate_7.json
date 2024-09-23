@@ -1,0 +1,9 @@
+{
+  "parent": "bendymod:custom/ink_layer",
+  "textures": {
+    "all": "bendymod:block/ink_fluid",
+    "particle": "bendymod:block/ink_fluid",
+    "1": "bendymod:block/ink_layer9"
+  },
+  "render_type": "cutout"
+}

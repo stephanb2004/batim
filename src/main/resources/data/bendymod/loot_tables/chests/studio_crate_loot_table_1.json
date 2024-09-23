@@ -179,5 +179,6 @@
         }
       ]
     }
-  ]
+  ],
+  "random_sequence": "bendymod:chests/studio_crate_loot_table_1"
 }

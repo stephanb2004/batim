@@ -1,9 +1,9 @@
 {
   "parent": "bendymod:custom/large_chains",
   "textures": {
-    "all": "bendymod:blocks/large_chains",
-    "particle": "bendymod:blocks/large_chains",
-    "0": "bendymod:blocks/large_chains"
+    "all": "bendymod:block/large_chains",
+    "particle": "bendymod:block/large_chains",
+    "0": "bendymod:block/large_chains"
   },
   "render_type": "cutout"
 }

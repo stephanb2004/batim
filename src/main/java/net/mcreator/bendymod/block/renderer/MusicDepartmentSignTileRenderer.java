@@ -1,25 +1,21 @@
 package net.mcreator.bendymod.block.renderer;
 
-import software.bernie.geckolib3.renderers.geo.GeoBlockRenderer;
+import software.bernie.geckolib.renderer.GeoBlockRenderer;
 
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.MultiBufferSource;
 
 import net.mcreator.bendymod.block.model.MusicDepartmentSignBlockModel;
 import net.mcreator.bendymod.block.entity.MusicDepartmentSignTileEntity;
 
-import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.blaze3d.vertex.PoseStack;
-
 public class MusicDepartmentSignTileRenderer extends GeoBlockRenderer<MusicDepartmentSignTileEntity> {
-	public MusicDepartmentSignTileRenderer(BlockEntityRendererProvider.Context rendererDispatcherIn) {
-		super(rendererDispatcherIn, new MusicDepartmentSignBlockModel());
+	public MusicDepartmentSignTileRenderer() {
+		super(new MusicDepartmentSignBlockModel());
 	}
 
 	@Override
-	public RenderType getRenderType(MusicDepartmentSignTileEntity animatable, float partialTick, PoseStack poseStack, MultiBufferSource bufferSource, VertexConsumer buffer, int packedLight, ResourceLocation texture) {
+	public RenderType getRenderType(MusicDepartmentSignTileEntity animatable, ResourceLocation texture, MultiBufferSource bufferSource, float partialTick) {
 		return RenderType.entityTranslucent(getTextureLocation(animatable));
 	}
 }

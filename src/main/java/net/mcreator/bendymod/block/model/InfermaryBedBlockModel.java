@@ -1,12 +1,12 @@
 package net.mcreator.bendymod.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.bendymod.block.entity.InfermaryBedTileEntity;
 
-public class InfermaryBedBlockModel extends AnimatedGeoModel<InfermaryBedTileEntity> {
+public class InfermaryBedBlockModel extends GeoModel<InfermaryBedTileEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(InfermaryBedTileEntity animatable) {
 		return new ResourceLocation("bendymod", "animations/infermary_bed.animation.json");
@@ -18,7 +18,7 @@ public class InfermaryBedBlockModel extends AnimatedGeoModel<InfermaryBedTileEnt
 	}
 
 	@Override
-	public ResourceLocation getTextureResource(InfermaryBedTileEntity entity) {
-		return new ResourceLocation("bendymod", "textures/blocks/infermary_bed.png");
+	public ResourceLocation getTextureResource(InfermaryBedTileEntity animatable) {
+		return new ResourceLocation("bendymod", "textures/block/infermary_bed.png");
 	}
 }

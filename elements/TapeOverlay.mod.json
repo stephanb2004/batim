@@ -1,5 +1,5 @@
 {
-  "_fv": 43,
+  "_fv": 66,
   "_type": "overlay",
   "definition": {
     "priority": "NORMAL",
@@ -9,6 +9,7 @@
         "data": {
           "image": "tape_gui.png",
           "use1Xscale": true,
+          "anchorPoint": "CENTER",
           "x": 3,
           "y": 176
         }
@@ -24,6 +25,7 @@
             "value": -16777216,
             "falpha": 0.0
           },
+          "anchorPoint": "CENTER",
           "x": 13,
           "y": 223
         }

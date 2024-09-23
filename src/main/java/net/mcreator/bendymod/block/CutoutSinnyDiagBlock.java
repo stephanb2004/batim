@@ -3,7 +3,6 @@ package net.mcreator.bendymod.block;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -32,7 +31,7 @@ public class CutoutSinnyDiagBlock extends BaseEntityBlock implements EntityBlock
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
 	public CutoutSinnyDiagBlock() {
-		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.WOOD).strength(-1, 3600000).noOcclusion().isRedstoneConductor((bs, br, bp) -> false).noLootTable());
+		super(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(-1, 3600000).noOcclusion().isRedstoneConductor((bs, br, bp) -> false).noLootTable());
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 

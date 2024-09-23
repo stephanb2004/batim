@@ -1,9 +1,9 @@
 {
   "parent": "bendymod:custom/bendy_head",
   "textures": {
-    "all": "bendymod:blocks/bendy_head",
-    "particle": "bendymod:blocks/bendy_head",
-    "1": "bendymod:blocks/bendy_head"
+    "all": "bendymod:block/bendy_head",
+    "particle": "bendymod:block/bendy_head",
+    "1": "bendymod:block/bendy_head"
   },
   "render_type": "cutout_mipped"
 }

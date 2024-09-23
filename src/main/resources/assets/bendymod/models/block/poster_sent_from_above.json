@@ -1,9 +1,9 @@
 {
   "parent": "bendymod:custom/poster",
   "textures": {
-    "all": "bendymod:blocks/poster_sentfromabove",
-    "particle": "bendymod:blocks/poster_sentfromabove",
-    "0": "bendymod:blocks/poster_sentfromabove"
+    "all": "bendymod:block/poster_sentfromabove",
+    "particle": "bendymod:block/poster_sentfromabove",
+    "0": "bendymod:block/poster_sentfromabove"
   },
   "render_type": "solid"
 }

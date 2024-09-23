@@ -1,6 +1,6 @@
 package net.mcreator.bendymod.block.renderer;
 
-import software.bernie.geckolib3.renderers.geo.GeoItemRenderer;
+import software.bernie.geckolib.renderer.GeoItemRenderer;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.RenderType;
@@ -9,16 +9,13 @@ import net.minecraft.client.renderer.MultiBufferSource;
 import net.mcreator.bendymod.block.model.DresserDisplayModel;
 import net.mcreator.bendymod.block.display.DresserDisplayItem;
 
-import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.blaze3d.vertex.PoseStack;
-
 public class DresserDisplayItemRenderer extends GeoItemRenderer<DresserDisplayItem> {
 	public DresserDisplayItemRenderer() {
 		super(new DresserDisplayModel());
 	}
 
 	@Override
-	public RenderType getRenderType(DresserDisplayItem animatable, float partialTick, PoseStack poseStack, MultiBufferSource bufferSource, VertexConsumer buffer, int packedLight, ResourceLocation texture) {
+	public RenderType getRenderType(DresserDisplayItem animatable, ResourceLocation texture, MultiBufferSource bufferSource, float partialTick) {
 		return RenderType.entityTranslucent(getTextureLocation(animatable));
 	}
 }

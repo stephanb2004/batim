@@ -1,12 +1,12 @@
 package net.mcreator.bendymod.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.bendymod.block.entity.DeskOldTileEntity;
 
-public class DeskOldBlockModel extends AnimatedGeoModel<DeskOldTileEntity> {
+public class DeskOldBlockModel extends GeoModel<DeskOldTileEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(DeskOldTileEntity animatable) {
 		return new ResourceLocation("bendymod", "animations/desk.animation.json");
@@ -18,7 +18,7 @@ public class DeskOldBlockModel extends AnimatedGeoModel<DeskOldTileEntity> {
 	}
 
 	@Override
-	public ResourceLocation getTextureResource(DeskOldTileEntity entity) {
-		return new ResourceLocation("bendymod", "textures/blocks/desk_henry.png");
+	public ResourceLocation getTextureResource(DeskOldTileEntity animatable) {
+		return new ResourceLocation("bendymod", "textures/block/desk_henry.png");
 	}
 }

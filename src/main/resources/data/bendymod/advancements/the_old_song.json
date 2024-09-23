@@ -15,7 +15,7 @@
     "hidden": true
   },
   "criteria": {
-    "the_old_song": {
+    "the_old_song_0": {
       "trigger": "minecraft:impossible"
     }
   },

@@ -1,12 +1,12 @@
 package net.mcreator.bendymod.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.bendymod.block.entity.SheetHolderTileEntity;
 
-public class SheetHolderBlockModel extends AnimatedGeoModel<SheetHolderTileEntity> {
+public class SheetHolderBlockModel extends GeoModel<SheetHolderTileEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(SheetHolderTileEntity animatable) {
 		return new ResourceLocation("bendymod", "animations/sheetholder.animation.json");
@@ -18,7 +18,7 @@ public class SheetHolderBlockModel extends AnimatedGeoModel<SheetHolderTileEntit
 	}
 
 	@Override
-	public ResourceLocation getTextureResource(SheetHolderTileEntity entity) {
-		return new ResourceLocation("bendymod", "textures/blocks/sheetholder.png");
+	public ResourceLocation getTextureResource(SheetHolderTileEntity animatable) {
+		return new ResourceLocation("bendymod", "textures/block/sheetholder.png");
 	}
 }

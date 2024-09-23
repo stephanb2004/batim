@@ -1,8 +1,9 @@
 {
   "parent": "block/door_top_left",
   "textures": {
-    "bottom": "bendymod:blocks/studio_basicdoor_bottom",
-    "top": "bendymod:blocks/studio_basicdoor_top"
+    "particle": "bendymod:block/studio_basicdoor_bottom",
+    "bottom": "bendymod:block/studio_basicdoor_bottom",
+    "top": "bendymod:block/studio_basicdoor_top"
   },
   "render_type": "solid"
 }

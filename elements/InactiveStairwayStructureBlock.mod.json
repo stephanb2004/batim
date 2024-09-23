@@ -1,5 +1,5 @@
 {
-  "_fv": 43,
+  "_fv": 66,
   "_type": "block",
   "definition": {
     "texture": "structureblock_top",
@@ -34,14 +34,14 @@
       }
     ],
     "name": "Inactive Stairway Structure Block",
-    "specialInfo": [],
+    "specialInformation": {
+      "fixedValue": []
+    },
     "hardness": 1.0,
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
-    "creativeTab": {
-      "value": "No creative tab entry"
-    },
+    "creativeTabs": [],
     "destroyTool": "Not specified",
     "customDrop": {
       "value": ""
@@ -98,7 +98,7 @@
     },
     "luminance": 0,
     "unbreakable": false,
-    "breakHarvestLevel": 1,
+    "vanillaToolTier": "STONE",
     "isBonemealable": false,
     "hasInventory": true,
     "guiBoundTo": "<NONE>",
@@ -117,7 +117,7 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "spawnWorldTypes": [],
+    "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
       {

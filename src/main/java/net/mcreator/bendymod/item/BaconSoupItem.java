@@ -9,12 +9,11 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 
-import net.mcreator.bendymod.init.BendymodModTabs;
 import net.mcreator.bendymod.init.BendymodModItems;
 
 public class BaconSoupItem extends Item {
 	public BaconSoupItem() {
-		super(new Item.Properties().tab(BendymodModTabs.TAB_BENDY_PROPS).stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(4).saturationMod(0.3f).alwaysEat().meat().build()));
+		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(4).saturationMod(0.3f).alwaysEat().meat().build()));
 	}
 
 	@Override

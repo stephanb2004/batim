@@ -13,7 +13,7 @@ import net.mcreator.bendymod.init.BendymodModGameRules;
 public class InkPuddleSpawnerBlockAddedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		if (!world.isClientSide()) {
-			BlockPos _bp = new BlockPos(x, y, z);
+			BlockPos _bp = BlockPos.containing(x, y, z);
 			BlockEntity _blockEntity = world.getBlockEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_blockEntity != null)

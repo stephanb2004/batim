@@ -1,5 +1,5 @@
 {
-  "_fv": 43,
+  "_fv": 66,
   "_type": "dimension",
   "definition": {
     "biomesInDimension": [
@@ -36,9 +36,11 @@
     },
     "enableIgniter": false,
     "igniterName": "Studio Portal Igniter",
-    "igniterTab": {
-      "value": "No creative tab entry"
+    "igniterRarity": "COMMON",
+    "specialInformation": {
+      "fixedValue": []
     },
+    "creativeTabs": [],
     "texture": "",
     "portalTexture": "",
     "enablePortal": false

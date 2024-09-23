@@ -13,9 +13,9 @@ import java.util.Map;
 
 public class LeverOnBlockRightClickedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == BendymodModBlocks.LEVER_STUDIO_OFF.get()) {
+		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == BendymodModBlocks.LEVER_STUDIO_OFF.get()) {
 			{
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = BendymodModBlocks.LEVER_STUDIO_ON.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -43,9 +43,9 @@ public class LeverOnBlockRightClickedProcedure {
 					}
 				}
 			}
-		} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == BendymodModBlocks.LEVER_STUDIO_ON.get()) {
+		} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == BendymodModBlocks.LEVER_STUDIO_ON.get()) {
 			{
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = BendymodModBlocks.LEVER_STUDIO_OFF.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -73,9 +73,9 @@ public class LeverOnBlockRightClickedProcedure {
 					}
 				}
 			}
-		} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == BendymodModBlocks.LEVER_POWER_OFF.get()) {
+		} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == BendymodModBlocks.LEVER_POWER_OFF.get()) {
 			{
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = BendymodModBlocks.LEVER_POWER_ON.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -103,9 +103,9 @@ public class LeverOnBlockRightClickedProcedure {
 					}
 				}
 			}
-		} else if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == BendymodModBlocks.LEVER_POWER_ON.get()) {
+		} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == BendymodModBlocks.LEVER_POWER_ON.get()) {
 			{
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = BendymodModBlocks.LEVER_POWER_OFF.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {

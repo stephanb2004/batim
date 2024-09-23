@@ -15,9 +15,9 @@ import java.util.Map;
 
 public class PedestalNeighbourBlockChangesProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == BendymodModBlocks.PEDESTAL.get() && (world.getBlockState(new BlockPos(x, y + 1, z))).is(BlockTags.create(new ResourceLocation("bendymod:ink_offerings")))) {
+		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == BendymodModBlocks.PEDESTAL.get() && (world.getBlockState(BlockPos.containing(x, y + 1, z))).is(BlockTags.create(new ResourceLocation("bendymod:ink_offerings")))) {
 			{
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = BendymodModBlocks.PEDESTAL_ON.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -46,9 +46,9 @@ public class PedestalNeighbourBlockChangesProcedure {
 				}
 			}
 		}
-		if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == BendymodModBlocks.PEDESTAL_RL.get() && (world.getBlockState(new BlockPos(x, y + 1, z))).is(BlockTags.create(new ResourceLocation("bendymod:rl_offerings")))) {
+		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == BendymodModBlocks.PEDESTAL_RL.get() && (world.getBlockState(BlockPos.containing(x, y + 1, z))).is(BlockTags.create(new ResourceLocation("bendymod:rl_offerings")))) {
 			{
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = BendymodModBlocks.PEDESTAL_RL_ON.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -77,9 +77,9 @@ public class PedestalNeighbourBlockChangesProcedure {
 				}
 			}
 		}
-		if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == BendymodModBlocks.PEDESTAL_ON.get() && !(world.getBlockState(new BlockPos(x, y + 1, z))).is(BlockTags.create(new ResourceLocation("bendymod:ink_offerings")))) {
+		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == BendymodModBlocks.PEDESTAL_ON.get() && !(world.getBlockState(BlockPos.containing(x, y + 1, z))).is(BlockTags.create(new ResourceLocation("bendymod:ink_offerings")))) {
 			{
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = BendymodModBlocks.PEDESTAL.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -108,9 +108,9 @@ public class PedestalNeighbourBlockChangesProcedure {
 				}
 			}
 		}
-		if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == BendymodModBlocks.PEDESTAL_RL_ON.get() && !(world.getBlockState(new BlockPos(x, y + 1, z))).is(BlockTags.create(new ResourceLocation("bendymod:rl_offerings")))) {
+		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == BendymodModBlocks.PEDESTAL_RL_ON.get() && !(world.getBlockState(BlockPos.containing(x, y + 1, z))).is(BlockTags.create(new ResourceLocation("bendymod:rl_offerings")))) {
 			{
-				BlockPos _bp = new BlockPos(x, y, z);
+				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = BendymodModBlocks.PEDESTAL_RL.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {

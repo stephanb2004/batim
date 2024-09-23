@@ -23,7 +23,7 @@ import javax.annotation.Nullable;
 public class AchievementTitleShowProcedure {
 	@SubscribeEvent
 	public static void onAdvancement(AdvancementEvent event) {
-		execute(event, event.getEntity().level, event.getAdvancement(), event.getEntity());
+		execute(event, event.getEntity().level(), event.getAdvancement(), event.getEntity());
 	}
 
 	public static void execute(LevelAccessor world, Advancement advancement, Entity entity) {
@@ -33,12 +33,12 @@ public class AchievementTitleShowProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Advancement advancement, Entity entity) {
 		if (advancement == null || entity == null)
 			return;
-		if (world instanceof Level _lvl && _lvl.getServer() != null ? _lvl.getServer().getAdvancements().getAdvancement(new ResourceLocation("bendymod:moving_pictures")).equals(advancement) : false) {
+		if (world instanceof Level _lvl0 && _lvl0.getServer() != null && _lvl0.getServer().getAdvancements().getAdvancement(new ResourceLocation("bendymod:moving_pictures")).equals(advancement)) {
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(
 						new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 						"title @p title {\"text\":\"MOVING PICTURES\",\"bold\":true,\"italic\":true}");
-		} else if (world instanceof Level _lvl && _lvl.getServer() != null ? _lvl.getServer().getAdvancements().getAdvancement(new ResourceLocation("bendymod:the_old_song")).equals(advancement) : false) {
+		} else if (world instanceof Level _lvl5 && _lvl5.getServer() != null && _lvl5.getServer().getAdvancements().getAdvancement(new ResourceLocation("bendymod:the_old_song")).equals(advancement)) {
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(
 						new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),

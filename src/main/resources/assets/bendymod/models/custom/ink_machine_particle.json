@@ -1,6 +1,6 @@
 {
   "parent": "bendymod:displaysettings/ink_machine.item",
   "textures": {
-    "particle": "bendymod:blocks/ink_machine"
+    "particle": "bendymod:block/ink_machine"
   }
 }

@@ -4,8 +4,7 @@ package net.mcreator.bendymod.block;
 import net.minecraftforge.network.NetworkHooks;
 
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.level.storage.loot.LootContext;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -14,7 +13,6 @@ import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -30,27 +28,16 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.bendymod.world.inventory.CrateInventoryMenu;
 import net.mcreator.bendymod.block.entity.CrateBlockEntity;
 
-import java.util.List;
-import java.util.Collections;
-
 import io.netty.buffer.Unpooled;
 
 public class CrateBlock extends Block implements EntityBlock {
 	public CrateBlock() {
-		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.WOOD).strength(1f, 10f));
+		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.WOOD).strength(1f, 10f));
 	}
 
 	@Override
 	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
 		return 15;
-	}
-
-	@Override
-	public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
-		if (!dropsOriginal.isEmpty())
-			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(this, 1));
 	}
 
 	@Override

@@ -14,7 +14,7 @@ public class InactiveGentStructureBlockUpdateTickProcedure {
 		if (world instanceof ServerLevel _serverworld) {
 			StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("bendymod", "joeys_apartment"));
 			if (template != null) {
-				template.placeInWorld(_serverworld, new BlockPos(x, y - 2, z), new BlockPos(x, y - 2, z), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+				template.placeInWorld(_serverworld, BlockPos.containing(x, y - 2, z), BlockPos.containing(x, y - 2, z), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 			}
 		}
 	}

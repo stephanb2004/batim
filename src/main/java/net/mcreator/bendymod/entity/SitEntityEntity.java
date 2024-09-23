@@ -5,7 +5,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 
-import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ThrownPotion;
@@ -14,17 +13,17 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.AreaEffectCloud;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
 import net.mcreator.bendymod.procedures.SitEntityOnEntityTickUpdateProcedure;
@@ -37,19 +36,25 @@ public class SitEntityEntity extends Monster {
 
 	public SitEntityEntity(EntityType<SitEntityEntity> type, Level world) {
 		super(type, world);
-		maxUpStep = 0.6f;
+		setMaxUpStep(0.6f);
 		xpReward = 0;
 		setNoAi(true);
+		setPersistenceRequired();
 	}
 
 	@Override
-	public Packet<?> getAddEntityPacket() {
+	public Packet<ClientGamePacketListener> getAddEntityPacket() {
 		return NetworkHooks.getEntitySpawningPacket(this);
 	}
 
 	@Override
 	public MobType getMobType() {
 		return MobType.UNDEFINED;
+	}
+
+	@Override
+	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
+		return false;
 	}
 
 	@Override
@@ -63,40 +68,50 @@ public class SitEntityEntity extends Monster {
 	}
 
 	@Override
-	public boolean hurt(DamageSource source, float amount) {
-		if (source.getDirectEntity() instanceof AbstractArrow)
+	public boolean hurt(DamageSource damagesource, float amount) {
+		if (damagesource.is(DamageTypes.IN_FIRE))
 			return false;
-		if (source.getDirectEntity() instanceof Player)
+		if (damagesource.getDirectEntity() instanceof AbstractArrow)
 			return false;
-		if (source.getDirectEntity() instanceof ThrownPotion || source.getDirectEntity() instanceof AreaEffectCloud)
+		if (damagesource.getDirectEntity() instanceof Player)
 			return false;
-		if (source == DamageSource.FALL)
+		if (damagesource.getDirectEntity() instanceof ThrownPotion || damagesource.getDirectEntity() instanceof AreaEffectCloud)
 			return false;
-		if (source == DamageSource.CACTUS)
+		if (damagesource.is(DamageTypes.FALL))
 			return false;
-		if (source == DamageSource.DROWN)
+		if (damagesource.is(DamageTypes.CACTUS))
 			return false;
-		if (source == DamageSource.LIGHTNING_BOLT)
+		if (damagesource.is(DamageTypes.DROWN))
 			return false;
-		if (source.isExplosion())
+		if (damagesource.is(DamageTypes.LIGHTNING_BOLT))
 			return false;
-		if (source.getMsgId().equals("trident"))
+		if (damagesource.is(DamageTypes.EXPLOSION) || damagesource.is(DamageTypes.PLAYER_EXPLOSION))
 			return false;
-		if (source == DamageSource.ANVIL)
+		if (damagesource.is(DamageTypes.TRIDENT))
 			return false;
-		if (source == DamageSource.DRAGON_BREATH)
+		if (damagesource.is(DamageTypes.FALLING_ANVIL))
 			return false;
-		if (source == DamageSource.WITHER)
+		if (damagesource.is(DamageTypes.DRAGON_BREATH))
 			return false;
-		if (source.getMsgId().equals("witherSkull"))
+		if (damagesource.is(DamageTypes.WITHER) || damagesource.is(DamageTypes.WITHER_SKULL))
 			return false;
-		return super.hurt(source, amount);
+		return super.hurt(damagesource, amount);
+	}
+
+	@Override
+	public boolean ignoreExplosion() {
+		return true;
+	}
+
+	@Override
+	public boolean fireImmune() {
+		return true;
 	}
 
 	@Override
 	public InteractionResult mobInteract(Player sourceentity, InteractionHand hand) {
 		ItemStack itemstack = sourceentity.getItemInHand(hand);
-		InteractionResult retval = InteractionResult.sidedSuccess(this.level.isClientSide());
+		InteractionResult retval = InteractionResult.sidedSuccess(this.level().isClientSide());
 		super.mobInteract(sourceentity, hand);
 		sourceentity.startRiding(this);
 		return retval;
@@ -109,8 +124,6 @@ public class SitEntityEntity extends Monster {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(BendymodModEntities.SIT_ENTITY.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {

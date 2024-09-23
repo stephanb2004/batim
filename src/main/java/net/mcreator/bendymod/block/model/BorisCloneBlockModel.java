@@ -1,12 +1,12 @@
 package net.mcreator.bendymod.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.bendymod.block.entity.BorisCloneTileEntity;
 
-public class BorisCloneBlockModel extends AnimatedGeoModel<BorisCloneTileEntity> {
+public class BorisCloneBlockModel extends GeoModel<BorisCloneTileEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(BorisCloneTileEntity animatable) {
 		return new ResourceLocation("bendymod", "animations/boris_clone.animation.json");
@@ -18,7 +18,7 @@ public class BorisCloneBlockModel extends AnimatedGeoModel<BorisCloneTileEntity>
 	}
 
 	@Override
-	public ResourceLocation getTextureResource(BorisCloneTileEntity entity) {
-		return new ResourceLocation("bendymod", "textures/blocks/boris_clone.png");
+	public ResourceLocation getTextureResource(BorisCloneTileEntity animatable) {
+		return new ResourceLocation("bendymod", "textures/block/boris_clone.png");
 	}
 }

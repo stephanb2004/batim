@@ -1,12 +1,12 @@
 package net.mcreator.bendymod.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.bendymod.block.display.DrumDisplayItem;
 
-public class DrumDisplayModel extends AnimatedGeoModel<DrumDisplayItem> {
+public class DrumDisplayModel extends GeoModel<DrumDisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(DrumDisplayItem animatable) {
 		return new ResourceLocation("bendymod", "animations/drum.animation.json");
@@ -19,6 +19,6 @@ public class DrumDisplayModel extends AnimatedGeoModel<DrumDisplayItem> {
 
 	@Override
 	public ResourceLocation getTextureResource(DrumDisplayItem entity) {
-		return new ResourceLocation("bendymod", "textures/blocks/drum.png");
+		return new ResourceLocation("bendymod", "textures/block/drum.png");
 	}
 }

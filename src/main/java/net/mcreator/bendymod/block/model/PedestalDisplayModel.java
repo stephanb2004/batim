@@ -1,12 +1,12 @@
 package net.mcreator.bendymod.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.bendymod.block.display.PedestalDisplayItem;
 
-public class PedestalDisplayModel extends AnimatedGeoModel<PedestalDisplayItem> {
+public class PedestalDisplayModel extends GeoModel<PedestalDisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(PedestalDisplayItem animatable) {
 		return new ResourceLocation("bendymod", "animations/pedestal.animation.json");
@@ -19,6 +19,6 @@ public class PedestalDisplayModel extends AnimatedGeoModel<PedestalDisplayItem> 
 
 	@Override
 	public ResourceLocation getTextureResource(PedestalDisplayItem entity) {
-		return new ResourceLocation("bendymod", "textures/blocks/pedestal.png");
+		return new ResourceLocation("bendymod", "textures/block/pedestal.png");
 	}
 }

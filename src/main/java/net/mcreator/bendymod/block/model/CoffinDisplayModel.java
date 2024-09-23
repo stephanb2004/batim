@@ -1,12 +1,12 @@
 package net.mcreator.bendymod.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.bendymod.block.display.CoffinDisplayItem;
 
-public class CoffinDisplayModel extends AnimatedGeoModel<CoffinDisplayItem> {
+public class CoffinDisplayModel extends GeoModel<CoffinDisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(CoffinDisplayItem animatable) {
 		return new ResourceLocation("bendymod", "animations/coffin.animation.json");
@@ -19,6 +19,6 @@ public class CoffinDisplayModel extends AnimatedGeoModel<CoffinDisplayItem> {
 
 	@Override
 	public ResourceLocation getTextureResource(CoffinDisplayItem entity) {
-		return new ResourceLocation("bendymod", "textures/blocks/coffin.png");
+		return new ResourceLocation("bendymod", "textures/block/coffin.png");
 	}
 }

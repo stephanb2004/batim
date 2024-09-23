@@ -1,12 +1,12 @@
 package net.mcreator.bendymod.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.bendymod.block.display.HeavyGateClosedDisplayItem;
 
-public class HeavyGateClosedDisplayModel extends AnimatedGeoModel<HeavyGateClosedDisplayItem> {
+public class HeavyGateClosedDisplayModel extends GeoModel<HeavyGateClosedDisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(HeavyGateClosedDisplayItem animatable) {
 		return new ResourceLocation("bendymod", "animations/gate_closed.animation.json");
@@ -19,6 +19,6 @@ public class HeavyGateClosedDisplayModel extends AnimatedGeoModel<HeavyGateClose
 
 	@Override
 	public ResourceLocation getTextureResource(HeavyGateClosedDisplayItem entity) {
-		return new ResourceLocation("bendymod", "textures/blocks/gate.png");
+		return new ResourceLocation("bendymod", "textures/block/gate.png");
 	}
 }

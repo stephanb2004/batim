@@ -1,6 +1,6 @@
 {
   "parent": "bendymod:displaysettings/regularblock_preset_low.item",
   "textures": {
-    "particle": "bendymod:blocks/wall_gash1"
+    "particle": "bendymod:block/wall_gash1"
   }
 }

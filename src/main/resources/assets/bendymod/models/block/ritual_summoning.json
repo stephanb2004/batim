@@ -1,9 +1,9 @@
 {
   "parent": "bendymod:custom/ritual",
   "textures": {
-    "all": "bendymod:blocks/ritual_1",
-    "particle": "bendymod:blocks/ritual_1",
-    "0": "bendymod:blocks/ritual_1"
+    "all": "bendymod:block/ritual_1",
+    "particle": "bendymod:block/ritual_1",
+    "0": "bendymod:block/ritual_1"
   },
   "render_type": "cutout"
 }

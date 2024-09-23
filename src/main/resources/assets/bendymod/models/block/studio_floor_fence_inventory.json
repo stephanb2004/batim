@@ -1,8 +1,8 @@
 {
   "parent": "block/fence_inventory",
   "textures": {
-    "texture": "bendymod:blocks/studio_floor1",
-    "particle": "bendymod:blocks/studio_floor1"
+    "texture": "bendymod:block/studio_floor1",
+    "particle": "bendymod:block/studio_floor1"
   },
   "render_type": "solid"
 }

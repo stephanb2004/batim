@@ -1,12 +1,12 @@
 package net.mcreator.bendymod.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.bendymod.block.display.LeverPowerOffDisplayItem;
 
-public class LeverPowerOffDisplayModel extends AnimatedGeoModel<LeverPowerOffDisplayItem> {
+public class LeverPowerOffDisplayModel extends GeoModel<LeverPowerOffDisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(LeverPowerOffDisplayItem animatable) {
 		return new ResourceLocation("bendymod", "animations/switch_power_off.animation.json");
@@ -19,6 +19,6 @@ public class LeverPowerOffDisplayModel extends AnimatedGeoModel<LeverPowerOffDis
 
 	@Override
 	public ResourceLocation getTextureResource(LeverPowerOffDisplayItem entity) {
-		return new ResourceLocation("bendymod", "textures/blocks/switch_power.png");
+		return new ResourceLocation("bendymod", "textures/block/switch_power.png");
 	}
 }

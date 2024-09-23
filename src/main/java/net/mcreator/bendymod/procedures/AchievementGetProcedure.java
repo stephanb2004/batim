@@ -17,7 +17,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.network.chat.Component;
-import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 import net.minecraft.advancements.AdvancementProgress;
@@ -28,7 +28,6 @@ import net.mcreator.bendymod.entity.InkBendyEntity;
 
 import javax.annotation.Nullable;
 
-import java.util.Iterator;
 import java.util.Comparator;
 
 @Mod.EventBusSubscriber
@@ -36,7 +35,7 @@ public class AchievementGetProcedure {
 	@SubscribeEvent
 	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
 		if (event.phase == TickEvent.Phase.END) {
-			execute(event, event.player.level, event.player);
+			execute(event, event.player.level(), event.player);
 		}
 	}
 
@@ -47,16 +46,16 @@ public class AchievementGetProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.level.dimension()) == (ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("bendymod:studio")))) {
+		if ((entity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, new ResourceLocation("bendymod:studio"))) {
 			if (entity.getY() == 306 && !(entity.getPersistentData().getDouble("floor") == 1)) {
-				if (!(entity instanceof ServerPlayer _plr5 && _plr5.level instanceof ServerLevel && _plr5.getAdvancements().getOrStartProgress(_plr5.server.getAdvancements().getAdvancement(new ResourceLocation("bendymod:the_old_song"))).isDone())) {
+				if (!(entity instanceof ServerPlayer _plr5 && _plr5.level() instanceof ServerLevel
+						&& _plr5.getAdvancements().getOrStartProgress(_plr5.server.getAdvancements().getAdvancement(new ResourceLocation("bendymod:the_old_song"))).isDone())) {
 					if (entity instanceof ServerPlayer _player) {
 						Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("bendymod:moving_pictures"));
 						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 						if (!_ap.isDone()) {
-							Iterator _iterator = _ap.getRemainingCriteria().iterator();
-							while (_iterator.hasNext())
-								_player.getAdvancements().award(_adv, (String) _iterator.next());
+							for (String criteria : _ap.getRemainingCriteria())
+								_player.getAdvancements().award(_adv, criteria);
 						}
 					}
 				}
@@ -66,15 +65,14 @@ public class AchievementGetProcedure {
 							"title @p actionbar {\"text\":\"LEVEL 0\",\"bold\":true}");
 				entity.getPersistentData().putDouble("floor", 1);
 			} else if (entity.getY() == 290 && !(entity.getPersistentData().getDouble("floor") == 2)) {
-				if (!(entity instanceof ServerPlayer _plr14 && _plr14.level instanceof ServerLevel
+				if (!(entity instanceof ServerPlayer _plr14 && _plr14.level() instanceof ServerLevel
 						&& _plr14.getAdvancements().getOrStartProgress(_plr14.server.getAdvancements().getAdvancement(new ResourceLocation("bendymod:the_old_song"))).isDone())) {
 					if (entity instanceof ServerPlayer _player) {
 						Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("bendymod:the_old_song"));
 						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 						if (!_ap.isDone()) {
-							Iterator _iterator = _ap.getRemainingCriteria().iterator();
-							while (_iterator.hasNext())
-								_player.getAdvancements().award(_adv, (String) _iterator.next());
+							for (String criteria : _ap.getRemainingCriteria())
+								_player.getAdvancements().award(_adv, criteria);
 						}
 					}
 				}
@@ -109,15 +107,14 @@ public class AchievementGetProcedure {
 								}
 							}.compareDistOf(BendymodModVariables.MapVariables.get(world).cur_inkdemon_x, BendymodModVariables.MapVariables.get(world).cur_inkdemon_y, BendymodModVariables.MapVariables.get(world).cur_inkdemon_z)).findFirst()
 							.orElse(null)) instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == entity) {
-						if (!(entity instanceof ServerPlayer _plr29 && _plr29.level instanceof ServerLevel
+						if (!(entity instanceof ServerPlayer _plr29 && _plr29.level() instanceof ServerLevel
 								&& _plr29.getAdvancements().getOrStartProgress(_plr29.server.getAdvancements().getAdvancement(new ResourceLocation("bendymod:you_cannot_hide_forever"))).isDone())) {
 							if (entity instanceof ServerPlayer _player) {
 								Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("bendymod:you_cannot_hide_forever"));
 								AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 								if (!_ap.isDone()) {
-									Iterator _iterator = _ap.getRemainingCriteria().iterator();
-									while (_iterator.hasNext())
-										_player.getAdvancements().award(_adv, (String) _iterator.next());
+									for (String criteria : _ap.getRemainingCriteria())
+										_player.getAdvancements().award(_adv, criteria);
 								}
 							}
 						}

@@ -1,6 +1,6 @@
 {
   "parent": "bendymod:displaysettings/average_block_bottom.item",
   "textures": {
-    "particle": "bendymod:blocks/dresser"
+    "particle": "bendymod:block/dresser"
   }
 }

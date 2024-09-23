@@ -1,6 +1,6 @@
 {
   "parent": "bendymod:displaysettings/regularblock_preset_low.item",
   "textures": {
-    "particle": "bendymod:blocks/trash_bin"
+    "particle": "bendymod:block/trash_bin"
   }
 }

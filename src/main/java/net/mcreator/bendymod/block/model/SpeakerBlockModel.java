@@ -1,12 +1,12 @@
 package net.mcreator.bendymod.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.bendymod.block.entity.SpeakerTileEntity;
 
-public class SpeakerBlockModel extends AnimatedGeoModel<SpeakerTileEntity> {
+public class SpeakerBlockModel extends GeoModel<SpeakerTileEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(SpeakerTileEntity animatable) {
 		return new ResourceLocation("bendymod", "animations/speaker.animation.json");
@@ -18,7 +18,7 @@ public class SpeakerBlockModel extends AnimatedGeoModel<SpeakerTileEntity> {
 	}
 
 	@Override
-	public ResourceLocation getTextureResource(SpeakerTileEntity entity) {
-		return new ResourceLocation("bendymod", "textures/blocks/speaker.png");
+	public ResourceLocation getTextureResource(SpeakerTileEntity animatable) {
+		return new ResourceLocation("bendymod", "textures/block/speaker.png");
 	}
 }

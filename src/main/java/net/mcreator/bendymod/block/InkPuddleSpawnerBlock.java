@@ -4,8 +4,7 @@ package net.mcreator.bendymod.block;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.level.material.MaterialColor;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.BlockState;
@@ -36,7 +35,7 @@ public class InkPuddleSpawnerBlock extends Block implements EntityBlock {
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
 	public InkPuddleSpawnerBlock() {
-		super(BlockBehaviour.Properties.of(Material.WATER, MaterialColor.COLOR_BLACK).sound(SoundType.SCULK).strength(1f, 10f).noCollission().noOcclusion().isRedstoneConductor((bs, br, bp) -> false).noLootTable());
+		super(BlockBehaviour.Properties.of().liquid().mapColor(MapColor.COLOR_BLACK).sound(SoundType.SCULK).strength(1f, 10f).noCollission().noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 

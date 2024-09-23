@@ -1,12 +1,12 @@
 package net.mcreator.bendymod.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.bendymod.block.entity.TrashBinTileEntity;
 
-public class TrashBinBlockModel extends AnimatedGeoModel<TrashBinTileEntity> {
+public class TrashBinBlockModel extends GeoModel<TrashBinTileEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(TrashBinTileEntity animatable) {
 		return new ResourceLocation("bendymod", "animations/trashbin.animation.json");
@@ -18,7 +18,7 @@ public class TrashBinBlockModel extends AnimatedGeoModel<TrashBinTileEntity> {
 	}
 
 	@Override
-	public ResourceLocation getTextureResource(TrashBinTileEntity entity) {
-		return new ResourceLocation("bendymod", "textures/blocks/trash_bin.png");
+	public ResourceLocation getTextureResource(TrashBinTileEntity animatable) {
+		return new ResourceLocation("bendymod", "textures/block/trash_bin.png");
 	}
 }

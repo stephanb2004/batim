@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "bendymod:walkable_studio_blank_wall_slab",
+    "bendymod:walkable_studio_floor_slab",
+    "bendymod:studio_floor_tiled_slab",
+    "bendymod:studio_brick_slab",
+    "bendymod:studio_blank_wall_slab",
+    "bendymod:studio_floor_slab"
+  ]
+}

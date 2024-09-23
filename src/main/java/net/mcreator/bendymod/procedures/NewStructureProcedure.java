@@ -32,7 +32,7 @@ public class NewStructureProcedure {
 				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
 				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
 			}
-		}.getDirection((world.getBlockState(new BlockPos(x, y, z))))) == Direction.NORTH) {
+		}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.NORTH) {
 			result_x = x;
 			result_z = z - 1;
 		} else if ((new Object() {
@@ -43,7 +43,7 @@ public class NewStructureProcedure {
 				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
 				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
 			}
-		}.getDirection((world.getBlockState(new BlockPos(x, y, z))))) == Direction.EAST) {
+		}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.EAST) {
 			result_x = x + 1;
 			result_z = z;
 		} else if ((new Object() {
@@ -54,7 +54,7 @@ public class NewStructureProcedure {
 				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
 				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
 			}
-		}.getDirection((world.getBlockState(new BlockPos(x, y, z))))) == Direction.WEST) {
+		}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.WEST) {
 			result_x = x - 1;
 			result_z = z;
 		} else if ((new Object() {
@@ -65,7 +65,7 @@ public class NewStructureProcedure {
 				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
 				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
 			}
-		}.getDirection((world.getBlockState(new BlockPos(x, y, z))))) == Direction.SOUTH) {
+		}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.SOUTH) {
 			result_x = x;
 			result_z = z + 1;
 		}
@@ -76,30 +76,31 @@ public class NewStructureProcedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos(x, y, z), "time") > 2) {
-			if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == BendymodModBlocks.HALLWAYS_STRUCTURE_BLOCK.get() || (world.getBlockState(new BlockPos(x, y, z))).getBlock() == BendymodModBlocks.RANDOM_ROOM_STRUCTURE_BLOCK.get()
-					|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == BendymodModBlocks.STAIRWAY_STRUCTURE_BLOCK.get()) {
+		}.getValue(world, BlockPos.containing(x, y, z), "time") > 2) {
+			if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == BendymodModBlocks.HALLWAYS_STRUCTURE_BLOCK.get()
+					|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == BendymodModBlocks.RANDOM_ROOM_STRUCTURE_BLOCK.get()
+					|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == BendymodModBlocks.STAIRWAY_STRUCTURE_BLOCK.get()) {
 				GetRandomStructureProcedure.execute(world, x, y, z, blockstate);
 			}
 		}
 		for (int index0 = 0; index0 < 1; index0++) {
 			SetStructureBlocksProcedure.execute(world, x, y, z);
-			SetStructureBlocksProcedure.execute(world, x, y, (z + 17));
-			SetStructureBlocksProcedure.execute(world, x, y, (z - 17));
-			SetStructureBlocksProcedure.execute(world, x, y, (z + 16));
-			SetStructureBlocksProcedure.execute(world, x, y, (z - 16));
-			SetStructureBlocksProcedure.execute(world, (x - 17), y, z);
-			SetStructureBlocksProcedure.execute(world, (x + 17), y, z);
-			SetStructureBlocksProcedure.execute(world, (x - 16), y, z);
-			SetStructureBlocksProcedure.execute(world, (x + 16), y, z);
-			SetStructureBlocksProcedure.execute(world, (x - 17), y, (z - 17));
-			SetStructureBlocksProcedure.execute(world, (x - 17), y, (z + 17));
-			SetStructureBlocksProcedure.execute(world, (x - 16), y, (z - 16));
-			SetStructureBlocksProcedure.execute(world, (x - 16), y, (z + 16));
-			SetStructureBlocksProcedure.execute(world, (x + 17), y, (z + 17));
-			SetStructureBlocksProcedure.execute(world, (x + 17), y, (z - 17));
-			SetStructureBlocksProcedure.execute(world, (x + 16), y, (z + 16));
-			SetStructureBlocksProcedure.execute(world, (x + 16), y, (z - 16));
+			SetStructureBlocksProcedure.execute(world, x, y, z + 17);
+			SetStructureBlocksProcedure.execute(world, x, y, z - 17);
+			SetStructureBlocksProcedure.execute(world, x, y, z + 16);
+			SetStructureBlocksProcedure.execute(world, x, y, z - 16);
+			SetStructureBlocksProcedure.execute(world, x - 17, y, z);
+			SetStructureBlocksProcedure.execute(world, x + 17, y, z);
+			SetStructureBlocksProcedure.execute(world, x - 16, y, z);
+			SetStructureBlocksProcedure.execute(world, x + 16, y, z);
+			SetStructureBlocksProcedure.execute(world, x - 17, y, z - 17);
+			SetStructureBlocksProcedure.execute(world, x - 17, y, z + 17);
+			SetStructureBlocksProcedure.execute(world, x - 16, y, z - 16);
+			SetStructureBlocksProcedure.execute(world, x - 16, y, z + 16);
+			SetStructureBlocksProcedure.execute(world, x + 17, y, z + 17);
+			SetStructureBlocksProcedure.execute(world, x + 17, y, z - 17);
+			SetStructureBlocksProcedure.execute(world, x + 16, y, z + 16);
+			SetStructureBlocksProcedure.execute(world, x + 16, y, z - 16);
 		}
 	}
 }

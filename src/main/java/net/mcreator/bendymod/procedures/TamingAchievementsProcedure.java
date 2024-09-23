@@ -16,8 +16,6 @@ import net.mcreator.bendymod.entity.BorisBuddyEntity;
 
 import javax.annotation.Nullable;
 
-import java.util.Iterator;
-
 @Mod.EventBusSubscriber
 public class TamingAchievementsProcedure {
 	@SubscribeEvent
@@ -33,15 +31,14 @@ public class TamingAchievementsProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		if (entity instanceof BorisBuddyEntity) {
-			if (!(sourceentity instanceof ServerPlayer _plr1 && _plr1.level instanceof ServerLevel
+			if (!(sourceentity instanceof ServerPlayer _plr1 && _plr1.level() instanceof ServerLevel
 					&& _plr1.getAdvancements().getOrStartProgress(_plr1.server.getAdvancements().getAdvancement(new ResourceLocation("bendymod:mans_best_friend"))).isDone())) {
 				if (sourceentity instanceof ServerPlayer _player) {
 					Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("bendymod:mans_best_friend"));
 					AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 					if (!_ap.isDone()) {
-						Iterator _iterator = _ap.getRemainingCriteria().iterator();
-						while (_iterator.hasNext())
-							_player.getAdvancements().award(_adv, (String) _iterator.next());
+						for (String criteria : _ap.getRemainingCriteria())
+							_player.getAdvancements().award(_adv, criteria);
 					}
 				}
 			}

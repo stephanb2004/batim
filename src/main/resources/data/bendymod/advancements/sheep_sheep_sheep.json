@@ -15,7 +15,7 @@
     "hidden": true
   },
   "criteria": {
-    "sheep_sheep_sheep": {
+    "sheep_sheep_sheep_0": {
       "trigger": "minecraft:impossible"
     }
   },

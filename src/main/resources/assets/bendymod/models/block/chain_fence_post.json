@@ -1,8 +1,9 @@
 {
   "parent": "block/template_glass_pane_post",
   "textures": {
-    "edge": "bendymod:blocks/chainfence",
-    "pane": "bendymod:blocks/chainfence"
+    "particle": "bendymod:block/chainfence",
+    "edge": "bendymod:block/chainfence",
+    "pane": "bendymod:block/chainfence"
   },
   "render_type": "cutout_mipped"
 }

@@ -1,6 +1,6 @@
 {
   "parent": "bendymod:displaysettings/regularblock_preset.item",
   "textures": {
-    "particle": "bendymod:blocks/gearbox"
+    "particle": "bendymod:block/gearbox"
   }
 }

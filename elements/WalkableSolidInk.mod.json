@@ -1,5 +1,5 @@
 {
-  "_fv": 43,
+  "_fv": 66,
   "_type": "block",
   "definition": {
     "texture": "ink_fluid",
@@ -34,14 +34,18 @@
       }
     ],
     "name": "Solid Ink",
-    "specialInfo": [],
+    "specialInformation": {
+      "fixedValue": []
+    },
     "hardness": 1.0,
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
-    "creativeTab": {
-      "value": "CUSTOM:BendyBlocks"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:BendyBlocks"
+      }
+    ],
     "destroyTool": "Not specified",
     "customDrop": {
       "value": ""
@@ -98,7 +102,7 @@
     },
     "luminance": 0,
     "unbreakable": true,
-    "breakHarvestLevel": 1,
+    "vanillaToolTier": "STONE",
     "isBonemealable": false,
     "hasInventory": false,
     "guiBoundTo": "<NONE>",
@@ -120,7 +124,7 @@
     "onEntityCollides": {
       "name": "WalkableBlockEntityCollidesInTheBlock"
     },
-    "spawnWorldTypes": [],
+    "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
       {

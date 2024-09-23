@@ -1,12 +1,12 @@
 package net.mcreator.bendymod.block.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.bendymod.block.display.WritingTheCreatorLiedToUsDisplayItem;
 
-public class WritingTheCreatorLiedToUsDisplayModel extends AnimatedGeoModel<WritingTheCreatorLiedToUsDisplayItem> {
+public class WritingTheCreatorLiedToUsDisplayModel extends GeoModel<WritingTheCreatorLiedToUsDisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(WritingTheCreatorLiedToUsDisplayItem animatable) {
 		return new ResourceLocation("bendymod", "animations/wall_writings.animation.json");
@@ -19,6 +19,6 @@ public class WritingTheCreatorLiedToUsDisplayModel extends AnimatedGeoModel<Writ
 
 	@Override
 	public ResourceLocation getTextureResource(WritingTheCreatorLiedToUsDisplayItem entity) {
-		return new ResourceLocation("bendymod", "textures/blocks/wallwriting_thecreatorliedtous.png");
+		return new ResourceLocation("bendymod", "textures/block/wallwriting_thecreatorliedtous.png");
 	}
 }

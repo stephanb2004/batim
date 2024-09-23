@@ -1,6 +1,6 @@
 {
   "parent": "bendymod:displaysettings/average_block_bottom.item",
   "textures": {
-    "particle": "bendymod:blocks/infermary_bed"
+    "particle": "bendymod:block/infermary_bed"
   }
 }

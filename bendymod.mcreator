@@ -5501,6 +5501,33 @@
         ]
       },
       "path": "~/Mod Stuff/Blocks/Props/Furniture"
+    },
+    {
+      "name": "TapeOverlay",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tape_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/client/screens/TapeOverlayOverlay.java"
+        ]
+      }
+    },
+    {
+      "name": "TapeOverlayDisplayOverlayIngame",
+      "type": "procedure",
+      "sortid": 262,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tape_overlay_display_overlay_ingame",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/TapeOverlayDisplayOverlayIngameProcedure.java"
+        ],
+        "dependencies": []
+      }
     }
   ],
   "variable_elements": [
@@ -5884,6 +5911,7 @@
       "block.bendymod.soup_candle": "Soup Candle",
       "block.bendymod.studio_lamp": "Studio Lamp",
       "block.bendymod.studio_floor_slab": "Studio Floor Slab",
+      "gui.bendymod.tape_overlay.label_sammy_lawrence": "Sammy Lawrence",
       "block.bendymod.gent_structure_block": "Gent Structure Block",
       "subtitles.sammy_hit": "Sammy is hit",
       "block.bendymod.reel": "Reel",

@@ -1,0 +1,45 @@
+{
+  "_fv": 43,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "tape_gui.png",
+          "use1Xscale": true,
+          "x": 3,
+          "y": 176
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_sammy_lawrence",
+          "text": {
+            "fixedValue": "Sammy Lawrence"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "x": 13,
+          "y": 223
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "TapeOverlayDisplayOverlayIngame"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

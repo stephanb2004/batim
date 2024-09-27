@@ -33,14 +33,18 @@
       }
     ],
     "name": "Cutout Bendy",
+    "specialInformation": {
+      "fixedValue": []
+    },
     "hardness": 1.0,
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
-    "creativeTab": {
-      "value": "CUSTOM:BendyProps"
-    },
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:BendyProps"
+      }
+    ],
     "destroyTool": "Not specified",
     "customDrop": {
       "value": ""
@@ -98,7 +102,7 @@
     },
     "luminance": 0,
     "unbreakable": false,
-    "breakHarvestLevel": 1,
+    "breakHarvestLevel": 0,
     "hasInventory": false,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,
@@ -134,6 +138,25 @@
     "normal": "cutout_bendy.geo.json",
     "displaySettings": "cutouts.item.json",
     "vanillaToolTier": "NONE",
-    "blockstateList": []
+    "blockstateList": [
+      {
+        "texture": "cutout_bendy",
+        "particleTexture": "",
+        "renderType": 0,
+        "customModelName": "bendy_cutout_diag.geo.json",
+        "luminance": 0,
+        "boundingBoxes": [
+          {
+            "mx": 6.0,
+            "my": 0.0,
+            "mz": 6.0,
+            "Mx": 16.0,
+            "My": 40.0,
+            "Mz": 16.0,
+            "subtract": false
+          }
+        ]
+      }
+    ]
   }
 }

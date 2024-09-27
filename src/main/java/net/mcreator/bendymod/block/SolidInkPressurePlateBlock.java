@@ -11,7 +11,7 @@ import net.minecraft.core.BlockPos;
 
 public class SolidInkPressurePlateBlock extends PressurePlateBlock {
 	public SolidInkPressurePlateBlock() {
-		super(Sensitivity.MOBS, BlockBehaviour.Properties.of().liquid().sound(SoundType.HONEY_BLOCK).strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false).forceSolidOn(), BlockSetType.IRON);
+		super(Sensitivity.MOBS, BlockBehaviour.Properties.of().liquid().sound(SoundType.HONEY_BLOCK).strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false).dynamicShape().forceSolidOn(), BlockSetType.IRON);
 	}
 
 	@Override

@@ -17,7 +17,7 @@ import net.mcreator.bendymod.procedures.WalkableBlockEntityCollidesInTheBlockPro
 
 public class WalkableStudioBlankWallSlabBlock extends SlabBlock {
 	public WalkableStudioBlankWallSlabBlock() {
-		super(BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(-1, 3600000).noCollission());
+		super(BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(-1, 3600000).noCollission().dynamicShape());
 	}
 
 	@Override

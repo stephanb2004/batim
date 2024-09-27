@@ -27,10 +27,11 @@
       "value": -3365807,
       "falpha": 0.0
     },
-    "creativeTab": {
-      "value": "CUSTOM:BendyEntities"
-    },
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:BendyEntities"
+      }
+    ],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -102,8 +103,14 @@
     "stepSound": {
       "value": "CUSTOM:sammy_footstep"
     },
+    "raidCelebrationSound": {
+      "value": ""
+    },
     "whenMobDies": {
       "name": "AchievementEntityDies"
+    },
+    "onMobTickUpdate": {
+      "name": "SammyLawrenceOnEntityTickUpdate"
     },
     "hasAI": true,
     "aiBase": "(none)",

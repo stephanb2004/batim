@@ -11,7 +11,7 @@ import net.minecraft.core.BlockPos;
 
 public class StiffStudioDoorSegmentedBlock extends DoorBlock {
 	public StiffStudioDoorSegmentedBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(-1, 3600000).noOcclusion().isRedstoneConductor((bs, br, bp) -> false), BlockSetType.IRON);
+		super(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(-1, 3600000).noOcclusion().isRedstoneConductor((bs, br, bp) -> false).dynamicShape(), BlockSetType.IRON);
 	}
 
 	@Override

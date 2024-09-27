@@ -15,4 +15,5 @@ public class BendymodModGameRules {
 	public static final GameRules.Key<GameRules.IntegerValue> INK_DEMON_TIMER_MAXIMUM = GameRules.register("inkDemonTimerMaximum", GameRules.Category.PLAYER, GameRules.IntegerValue.create(15600));
 	public static final GameRules.Key<GameRules.BooleanValue> ALLOW_MULTIPLE_INK_BENDYS = GameRules.register("allowMultipleInkBendys", GameRules.Category.MOBS, GameRules.BooleanValue.create(false));
 	public static final GameRules.Key<GameRules.IntegerValue> SEARCHER_SPAWN_MAX = GameRules.register("searcherSpawnMax", GameRules.Category.PLAYER, GameRules.IntegerValue.create(5));
+	public static final GameRules.Key<GameRules.BooleanValue> ALLOW_MULTIPLE_PROJECTIONISTS = GameRules.register("allowMultipleProjectionists", GameRules.Category.MOBS, GameRules.BooleanValue.create(false));
 }

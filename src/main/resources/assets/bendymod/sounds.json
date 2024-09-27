@@ -207,5 +207,100 @@
         "stream": false
       }
     ]
+  },
+  "butchergang_ambience": {
+    "subtitle": "subtitles.butchergang_ambience",
+    "sounds": [
+      {
+        "name": "bendymod:butchergang_ambience6",
+        "stream": false
+      },
+      {
+        "name": "bendymod:butchergang_ambience5",
+        "stream": false
+      },
+      {
+        "name": "bendymod:butchergang_ambience3",
+        "stream": false
+      },
+      {
+        "name": "bendymod:butchergang_ambience2",
+        "stream": false
+      },
+      {
+        "name": "bendymod:butchergang_ambience1",
+        "stream": false
+      }
+    ]
+  },
+  "butchergang_death": {
+    "subtitle": "subtitles.butchergang_death",
+    "sounds": [
+      {
+        "name": "bendymod:butchergang_death",
+        "stream": false
+      }
+    ]
+  },
+  "butchergang_hit": {
+    "subtitle": "subtitles.butchergang_hit",
+    "sounds": [
+      {
+        "name": "bendymod:butchergang_hit2",
+        "stream": false
+      },
+      {
+        "name": "bendymod:butchergang_hit1",
+        "stream": false
+      }
+    ]
+  },
+  "projectionist_step": {
+    "subtitle": "subtitles.projectionist_step",
+    "sounds": [
+      {
+        "name": "bendymod:projectionist_step4",
+        "stream": false
+      },
+      {
+        "name": "bendymod:projectionist_step3",
+        "stream": false
+      },
+      {
+        "name": "bendymod:projectionist_step2",
+        "stream": false
+      },
+      {
+        "name": "bendymod:projectionist_step1",
+        "stream": false
+      }
+    ]
+  },
+  "projectionist_death": {
+    "subtitle": "subtitles.projectionist_death",
+    "sounds": [
+      {
+        "name": "bendymod:projectionist_death",
+        "stream": false
+      }
+    ]
+  },
+  "projectionist_yell": {
+    "subtitle": "subtitles.projectionist_yell",
+    "sounds": [
+      {
+        "name": "bendymod:projectionist_yell",
+        "stream": false
+      }
+    ]
+  },
+  "projectionist_chase": {
+    "subtitle": "subtitles.projectionist_chase",
+    "sounds": [
+      {
+        "name": "bendymod:music_realfear",
+        "stream": true
+      }
+    ]
   }
 }

@@ -145,6 +145,10 @@ public class BendymodModVariables {
 		public boolean cur_inkdemon_selected = false;
 		public boolean inkmachine_spawned = false;
 		public boolean studio_generated = false;
+		public boolean cur_projectionist_selected = false;
+		public double cur_projectionist_x = 0;
+		public double cur_projectionist_y = 0;
+		public double cur_projectionist_z = 0;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -163,6 +167,10 @@ public class BendymodModVariables {
 			cur_inkdemon_selected = nbt.getBoolean("cur_inkdemon_selected");
 			inkmachine_spawned = nbt.getBoolean("inkmachine_spawned");
 			studio_generated = nbt.getBoolean("studio_generated");
+			cur_projectionist_selected = nbt.getBoolean("cur_projectionist_selected");
+			cur_projectionist_x = nbt.getDouble("cur_projectionist_x");
+			cur_projectionist_y = nbt.getDouble("cur_projectionist_y");
+			cur_projectionist_z = nbt.getDouble("cur_projectionist_z");
 		}
 
 		@Override
@@ -177,6 +185,10 @@ public class BendymodModVariables {
 			nbt.putBoolean("cur_inkdemon_selected", cur_inkdemon_selected);
 			nbt.putBoolean("inkmachine_spawned", inkmachine_spawned);
 			nbt.putBoolean("studio_generated", studio_generated);
+			nbt.putBoolean("cur_projectionist_selected", cur_projectionist_selected);
+			nbt.putDouble("cur_projectionist_x", cur_projectionist_x);
+			nbt.putDouble("cur_projectionist_y", cur_projectionist_y);
+			nbt.putDouble("cur_projectionist_z", cur_projectionist_z);
 			return nbt;
 		}
 

@@ -16,11 +16,15 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
+import net.mcreator.bendymod.entity.StrikerEntity;
 import net.mcreator.bendymod.entity.SitEntityEntity;
 import net.mcreator.bendymod.entity.SearcherEntity;
 import net.mcreator.bendymod.entity.SammyLawrenceEntity;
+import net.mcreator.bendymod.entity.ProjectionistEntity;
+import net.mcreator.bendymod.entity.PiperEntity;
 import net.mcreator.bendymod.entity.LMSSitEntityEntity;
 import net.mcreator.bendymod.entity.InkBendyEntity;
+import net.mcreator.bendymod.entity.FisherEntity;
 import net.mcreator.bendymod.entity.BorisBuddyEntity;
 import net.mcreator.bendymod.entity.BendyEntity;
 import net.mcreator.bendymod.entity.BaconSoupEmptyProjectileEntity;
@@ -54,6 +58,22 @@ public class BendymodModEntities {
 					.setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<LMSSitEntityEntity>> LMS_SIT_ENTITY = register("lms_sit_entity", EntityType.Builder.<LMSSitEntityEntity>of(LMSSitEntityEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LMSSitEntityEntity::new).fireImmune().sized(0.5f, 0.35f));
+	public static final RegistryObject<EntityType<FisherEntity>> FISHER = register("fisher",
+			EntityType.Builder.<FisherEntity>of(FisherEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FisherEntity::new)
+
+					.sized(0.5f, 1.25f));
+	public static final RegistryObject<EntityType<ProjectionistEntity>> PROJECTIONIST = register("projectionist",
+			EntityType.Builder.<ProjectionistEntity>of(ProjectionistEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ProjectionistEntity::new)
+
+					.sized(0.5f, 2f));
+	public static final RegistryObject<EntityType<PiperEntity>> PIPER = register("piper",
+			EntityType.Builder.<PiperEntity>of(PiperEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PiperEntity::new)
+
+					.sized(0.5f, 1.875f));
+	public static final RegistryObject<EntityType<StrikerEntity>> STRIKER = register("striker",
+			EntityType.Builder.<StrikerEntity>of(StrikerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(StrikerEntity::new)
+
+					.sized(0.5f, 1f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -69,6 +89,10 @@ public class BendymodModEntities {
 			BorisBuddyEntity.init();
 			SitEntityEntity.init();
 			LMSSitEntityEntity.init();
+			FisherEntity.init();
+			ProjectionistEntity.init();
+			PiperEntity.init();
+			StrikerEntity.init();
 		});
 	}
 
@@ -81,5 +105,9 @@ public class BendymodModEntities {
 		event.put(BORIS_BUDDY.get(), BorisBuddyEntity.createAttributes().build());
 		event.put(SIT_ENTITY.get(), SitEntityEntity.createAttributes().build());
 		event.put(LMS_SIT_ENTITY.get(), LMSSitEntityEntity.createAttributes().build());
+		event.put(FISHER.get(), FisherEntity.createAttributes().build());
+		event.put(PROJECTIONIST.get(), ProjectionistEntity.createAttributes().build());
+		event.put(PIPER.get(), PiperEntity.createAttributes().build());
+		event.put(STRIKER.get(), StrikerEntity.createAttributes().build());
 	}
 }

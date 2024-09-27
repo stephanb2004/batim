@@ -8,6 +8,6 @@ import net.minecraft.world.level.block.SlabBlock;
 
 public class StudioFloorTiledSlabBlock extends SlabBlock {
 	public StudioFloorTiledSlabBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(-1, 3600000));
+		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(-1, 3600000).dynamicShape());
 	}
 }

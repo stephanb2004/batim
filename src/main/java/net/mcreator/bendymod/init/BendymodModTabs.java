@@ -65,6 +65,8 @@ public class BendymodModTabs {
 				tabData.accept(BendymodModBlocks.STUDIO_TILES.get().asItem());
 				tabData.accept(BendymodModBlocks.WALKABLE_STUDIO_TILES.get().asItem());
 				tabData.accept(BendymodModBlocks.INK_LAYER.get().asItem());
+				tabData.accept(BendymodModBlocks.INDUSTRIAL_WALL_PANEL.get().asItem());
+				tabData.accept(BendymodModBlocks.STUDIO_FLOOR_GRATE.get().asItem());
 			})
 
 					.build());
@@ -75,6 +77,10 @@ public class BendymodModTabs {
 				tabData.accept(BendymodModItems.INK_BENDY_SPAWN_EGG.get());
 				tabData.accept(BendymodModItems.SEARCHER_SPAWN_EGG.get());
 				tabData.accept(BendymodModItems.BORIS_BUDDY_SPAWN_EGG.get());
+				tabData.accept(BendymodModItems.PIPER_SPAWN_EGG.get());
+				tabData.accept(BendymodModItems.FISHER_SPAWN_EGG.get());
+				tabData.accept(BendymodModItems.PROJECTIONIST_SPAWN_EGG.get());
+				tabData.accept(BendymodModItems.STRIKER_SPAWN_EGG.get());
 			})
 
 					.build());
@@ -135,7 +141,6 @@ public class BendymodModTabs {
 				tabData.accept(BendymodModBlocks.WRITING_DOWN_HERE_WERE_ALL_SINNERS.get().asItem());
 				tabData.accept(BendymodModBlocks.HAT_RACK.get().asItem());
 				tabData.accept(BendymodModBlocks.CURTAIN_RAGGETY.get().asItem());
-				tabData.accept(BendymodModBlocks.RECORDING_SIGN_OFF.get().asItem());
 				tabData.accept(BendymodModBlocks.PUNCH_IN_CARD.get().asItem());
 				tabData.accept(BendymodModBlocks.PEDESTAL.get().asItem());
 				tabData.accept(BendymodModBlocks.POSTER_DONT_FORGET_TO_PUNCH_IN.get().asItem());
@@ -193,13 +198,14 @@ public class BendymodModTabs {
 				tabData.accept(BendymodModBlocks.TABLE.get().asItem());
 				tabData.accept(BendymodModBlocks.TABLE_BIG.get().asItem());
 				tabData.accept(BendymodModBlocks.WALL_GASH_1.get().asItem());
-				tabData.accept(BendymodModBlocks.CUTOUT_BENDY_DIAG.get().asItem());
 				tabData.accept(BendymodModBlocks.DESK_OLD.get().asItem());
 				tabData.accept(BendymodModBlocks.PLANK_SHELF.get().asItem());
 				tabData.accept(BendymodModBlocks.PLANK.get().asItem());
 				tabData.accept(BendymodModBlocks.STOOL.get().asItem());
 				tabData.accept(BendymodModItems.BACON_SOUP_EMPTY.get());
 				tabData.accept(BendymodModBlocks.LITTLE_MIRACLE_STATION.get().asItem());
+				tabData.accept(BendymodModBlocks.SOFA.get().asItem());
+				tabData.accept(BendymodModBlocks.FILE_CABINET.get().asItem());
 			})
 
 					.build());
@@ -208,7 +214,6 @@ public class BendymodModTabs {
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
 		if (tabData.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
 			tabData.accept(BendymodModBlocks.CUTOUT_SINNY.get().asItem());
-			tabData.accept(BendymodModBlocks.RECORDING_SIGN_ON.get().asItem());
 			tabData.accept(BendymodModBlocks.CELLBOX_1.get().asItem());
 			tabData.accept(BendymodModBlocks.CELLBOX_2.get().asItem());
 			tabData.accept(BendymodModBlocks.HEAVY_GATE_OPEN.get().asItem());
@@ -218,7 +223,6 @@ public class BendymodModTabs {
 			tabData.accept(BendymodModBlocks.PEDESTAL_RL_ON.get().asItem());
 			tabData.accept(BendymodModBlocks.PROJECTION_BLANK.get().asItem());
 			tabData.accept(BendymodModBlocks.PROJECTION_BENDY_DANCE.get().asItem());
-			tabData.accept(BendymodModBlocks.CUTOUT_SINNY_DIAG.get().asItem());
 		}
 	}
 }

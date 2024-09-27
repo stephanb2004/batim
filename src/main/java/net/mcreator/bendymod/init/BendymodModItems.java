@@ -38,12 +38,12 @@ import net.mcreator.bendymod.block.display.ToolboxDisplayItem;
 import net.mcreator.bendymod.block.display.StudioChairDisplayItem;
 import net.mcreator.bendymod.block.display.SpeakerDisplayItem;
 import net.mcreator.bendymod.block.display.SoupCandleDisplayItem;
+import net.mcreator.bendymod.block.display.SofaDisplayItem;
 import net.mcreator.bendymod.block.display.ShelfDisplayItem;
 import net.mcreator.bendymod.block.display.SheetHolderDisplayItem;
 import net.mcreator.bendymod.block.display.ReelDisplayItem;
 import net.mcreator.bendymod.block.display.ReelBendyDanceDisplayItem;
-import net.mcreator.bendymod.block.display.RecordingSignOnDisplayItem;
-import net.mcreator.bendymod.block.display.RecordingSignOffDisplayItem;
+import net.mcreator.bendymod.block.display.RecordingSignDisplayItem;
 import net.mcreator.bendymod.block.display.RecordRLDisplayItem;
 import net.mcreator.bendymod.block.display.RecordDisplayItem;
 import net.mcreator.bendymod.block.display.RadioDisplayItem;
@@ -69,6 +69,7 @@ import net.mcreator.bendymod.block.display.InkMachineRLDisplayItem;
 import net.mcreator.bendymod.block.display.InkMachineDisplayItem;
 import net.mcreator.bendymod.block.display.InkBarrelDisplayItem;
 import net.mcreator.bendymod.block.display.InfermaryBedDisplayItem;
+import net.mcreator.bendymod.block.display.IndustrialWallPanelDisplayItem;
 import net.mcreator.bendymod.block.display.IllusionOfLivingRLDisplayItem;
 import net.mcreator.bendymod.block.display.IllusionOfLivingDisplayItem;
 import net.mcreator.bendymod.block.display.HeavyGateOpenDisplayItem;
@@ -76,15 +77,14 @@ import net.mcreator.bendymod.block.display.HeavyGateClosedDisplayItem;
 import net.mcreator.bendymod.block.display.HatRackDisplayItem;
 import net.mcreator.bendymod.block.display.HangingMicDisplayItem;
 import net.mcreator.bendymod.block.display.GearboxDisplayItem;
+import net.mcreator.bendymod.block.display.FileCabinetDisplayItem;
 import net.mcreator.bendymod.block.display.DrumDisplayItem;
 import net.mcreator.bendymod.block.display.DresserDisplayItem;
 import net.mcreator.bendymod.block.display.DeskOldDisplayItem;
 import net.mcreator.bendymod.block.display.DeskFancyDisplayItem;
 import net.mcreator.bendymod.block.display.DeskDisplayItem;
 import net.mcreator.bendymod.block.display.CutoutSinnyDisplayItem;
-import net.mcreator.bendymod.block.display.CutoutSinnyDiagDisplayItem;
 import net.mcreator.bendymod.block.display.CutoutBendyDisplayItem;
-import net.mcreator.bendymod.block.display.CutoutBendyDiagDisplayItem;
 import net.mcreator.bendymod.block.display.CoffinDisplayItem;
 import net.mcreator.bendymod.block.display.Cellbox2DisplayItem;
 import net.mcreator.bendymod.block.display.Cellbox1DisplayItem;
@@ -193,8 +193,6 @@ public class BendymodModItems {
 			() -> new WritingDownHereWereAllSinnersDisplayItem(BendymodModBlocks.WRITING_DOWN_HERE_WERE_ALL_SINNERS.get(), new Item.Properties()));
 	public static final RegistryObject<Item> HAT_RACK = REGISTRY.register(BendymodModBlocks.HAT_RACK.getId().getPath(), () -> new HatRackDisplayItem(BendymodModBlocks.HAT_RACK.get(), new Item.Properties()));
 	public static final RegistryObject<Item> CURTAIN_RAGGETY = block(BendymodModBlocks.CURTAIN_RAGGETY);
-	public static final RegistryObject<Item> RECORDING_SIGN_OFF = REGISTRY.register(BendymodModBlocks.RECORDING_SIGN_OFF.getId().getPath(), () -> new RecordingSignOffDisplayItem(BendymodModBlocks.RECORDING_SIGN_OFF.get(), new Item.Properties()));
-	public static final RegistryObject<Item> RECORDING_SIGN_ON = REGISTRY.register(BendymodModBlocks.RECORDING_SIGN_ON.getId().getPath(), () -> new RecordingSignOnDisplayItem(BendymodModBlocks.RECORDING_SIGN_ON.get(), new Item.Properties()));
 	public static final RegistryObject<Item> PUNCH_IN_CARD = REGISTRY.register(BendymodModBlocks.PUNCH_IN_CARD.getId().getPath(), () -> new PunchInCardDisplayItem(BendymodModBlocks.PUNCH_IN_CARD.get(), new Item.Properties()));
 	public static final RegistryObject<Item> PEDESTAL = REGISTRY.register(BendymodModBlocks.PEDESTAL.getId().getPath(), () -> new PedestalDisplayItem(BendymodModBlocks.PEDESTAL.get(), new Item.Properties()));
 	public static final RegistryObject<Item> POSTER_DONT_FORGET_TO_PUNCH_IN = block(BendymodModBlocks.POSTER_DONT_FORGET_TO_PUNCH_IN);
@@ -290,8 +288,6 @@ public class BendymodModItems {
 	public static final RegistryObject<Item> WALKABLE_STUDIO_CEILING = block(BendymodModBlocks.WALKABLE_STUDIO_CEILING);
 	public static final RegistryObject<Item> WALKABLE_STUDIO_TILED_WALL = block(BendymodModBlocks.WALKABLE_STUDIO_TILED_WALL);
 	public static final RegistryObject<Item> WALKABLE_SOLID_INK = block(BendymodModBlocks.WALKABLE_SOLID_INK);
-	public static final RegistryObject<Item> CUTOUT_BENDY_DIAG = REGISTRY.register(BendymodModBlocks.CUTOUT_BENDY_DIAG.getId().getPath(), () -> new CutoutBendyDiagDisplayItem(BendymodModBlocks.CUTOUT_BENDY_DIAG.get(), new Item.Properties()));
-	public static final RegistryObject<Item> CUTOUT_SINNY_DIAG = REGISTRY.register(BendymodModBlocks.CUTOUT_SINNY_DIAG.getId().getPath(), () -> new CutoutSinnyDiagDisplayItem(BendymodModBlocks.CUTOUT_SINNY_DIAG.get(), new Item.Properties()));
 	public static final RegistryObject<Item> DESK_OLD = REGISTRY.register(BendymodModBlocks.DESK_OLD.getId().getPath(), () -> new DeskOldDisplayItem(BendymodModBlocks.DESK_OLD.get(), new Item.Properties()));
 	public static final RegistryObject<Item> PLANK_SHELF = block(BendymodModBlocks.PLANK_SHELF);
 	public static final RegistryObject<Item> PLANK = block(BendymodModBlocks.PLANK);
@@ -302,6 +298,16 @@ public class BendymodModItems {
 	public static final RegistryObject<Item> INK_LAYER = block(BendymodModBlocks.INK_LAYER);
 	public static final RegistryObject<Item> LITTLE_MIRACLE_STATION = REGISTRY.register(BendymodModBlocks.LITTLE_MIRACLE_STATION.getId().getPath(),
 			() -> new LittleMiracleStationDisplayItem(BendymodModBlocks.LITTLE_MIRACLE_STATION.get(), new Item.Properties()));
+	public static final RegistryObject<Item> RECORDING_SIGN = REGISTRY.register(BendymodModBlocks.RECORDING_SIGN.getId().getPath(), () -> new RecordingSignDisplayItem(BendymodModBlocks.RECORDING_SIGN.get(), new Item.Properties()));
+	public static final RegistryObject<Item> SOFA = REGISTRY.register(BendymodModBlocks.SOFA.getId().getPath(), () -> new SofaDisplayItem(BendymodModBlocks.SOFA.get(), new Item.Properties()));
+	public static final RegistryObject<Item> FISHER_SPAWN_EGG = REGISTRY.register("fisher_spawn_egg", () -> new ForgeSpawnEggItem(BendymodModEntities.FISHER, -2254296, -15594240, new Item.Properties()));
+	public static final RegistryObject<Item> PROJECTIONIST_SPAWN_EGG = REGISTRY.register("projectionist_spawn_egg", () -> new ForgeSpawnEggItem(BendymodModEntities.PROJECTIONIST, -15594240, -12955, new Item.Properties()));
+	public static final RegistryObject<Item> PIPER_SPAWN_EGG = REGISTRY.register("piper_spawn_egg", () -> new ForgeSpawnEggItem(BendymodModEntities.PIPER, -2254296, -15594240, new Item.Properties()));
+	public static final RegistryObject<Item> STRIKER_SPAWN_EGG = REGISTRY.register("striker_spawn_egg", () -> new ForgeSpawnEggItem(BendymodModEntities.STRIKER, -2254296, -15594240, new Item.Properties()));
+	public static final RegistryObject<Item> INDUSTRIAL_WALL_PANEL = REGISTRY.register(BendymodModBlocks.INDUSTRIAL_WALL_PANEL.getId().getPath(),
+			() -> new IndustrialWallPanelDisplayItem(BendymodModBlocks.INDUSTRIAL_WALL_PANEL.get(), new Item.Properties()));
+	public static final RegistryObject<Item> STUDIO_FLOOR_GRATE = block(BendymodModBlocks.STUDIO_FLOOR_GRATE);
+	public static final RegistryObject<Item> FILE_CABINET = REGISTRY.register(BendymodModBlocks.FILE_CABINET.getId().getPath(), () -> new FileCabinetDisplayItem(BendymodModBlocks.FILE_CABINET.get(), new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

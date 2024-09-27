@@ -1,6 +1,0 @@
-{
-  "parent": "bendymod:displaysettings/cutouts.item",
-  "textures": {
-    "particle": "bendymod:block/cutout_bendy"
-  }
-}

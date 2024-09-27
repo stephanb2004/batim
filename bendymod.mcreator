@@ -238,7 +238,7 @@
           "src/main/java/net/mcreator/bendymod/entity/model/SammyLawrenceModel.java"
         ]
       },
-      "path": "~/Mod Stuff/Entities"
+      "path": "~/Mod Stuff/Entities/Sammy"
     },
     {
       "name": "CutoutBendy",
@@ -253,6 +253,7 @@
           "src/main/java/net/mcreator/bendymod/block/model/CutoutBendyBlockModel.java",
           "src/main/resources/assets/bendymod/models/item/cutout_bendy.json",
           "src/main/java/net/mcreator/bendymod/block/display/CutoutBendyDisplayItem.java",
+          "src/main/resources/assets/bendymod/models/block/cutout_bendy_blockstate_0.json",
           "src/main/java/net/mcreator/bendymod/block/entity/CutoutBendyTileEntity.java",
           "src/main/resources/assets/bendymod/blockstates/cutout_bendy.json",
           "src/main/resources/assets/bendymod/models/custom/cutout_bendy_particle.json",
@@ -729,6 +730,7 @@
           "src/main/resources/assets/bendymod/models/item/projector.json",
           "src/main/java/net/mcreator/bendymod/block/model/ProjectorDisplayModel.java",
           "src/main/resources/assets/bendymod/models/custom/projector_particle.json",
+          "src/main/resources/assets/bendymod/models/block/projector_blockstate_0.json",
           "src/main/java/net/mcreator/bendymod/block/entity/ProjectorTileEntity.java",
           "src/main/java/net/mcreator/bendymod/block/model/ProjectorBlockModel.java",
           "src/main/java/net/mcreator/bendymod/block/renderer/ProjectorTileRenderer.java"
@@ -1723,50 +1725,6 @@
       "path": "~/Mod Stuff/Blocks/Props"
     },
     {
-      "name": "RecordingSignOff",
-      "type": "animatedblock",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "recording_sign_off",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/bendymod/block/model/RecordingSignOffBlockModel.java",
-          "src/main/resources/assets/bendymod/models/custom/recording_sign_off_particle.json",
-          "src/main/java/net/mcreator/bendymod/block/renderer/RecordingSignOffDisplayItemRenderer.java",
-          "src/main/resources/assets/bendymod/models/item/recording_sign_off.json",
-          "src/main/java/net/mcreator/bendymod/block/model/RecordingSignOffDisplayModel.java",
-          "src/main/java/net/mcreator/bendymod/block/RecordingSignOffBlock.java",
-          "src/main/resources/assets/bendymod/blockstates/recording_sign_off.json",
-          "src/main/java/net/mcreator/bendymod/block/display/RecordingSignOffDisplayItem.java",
-          "src/main/java/net/mcreator/bendymod/block/renderer/RecordingSignOffTileRenderer.java",
-          "src/main/java/net/mcreator/bendymod/block/entity/RecordingSignOffTileEntity.java"
-        ]
-      },
-      "path": "~/Mod Stuff/Blocks/Props/Functional Props/RecordingSign"
-    },
-    {
-      "name": "RecordingSignOn",
-      "type": "animatedblock",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "recording_sign_on",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/bendymod/blockstates/recording_sign_on.json",
-          "src/main/java/net/mcreator/bendymod/block/display/RecordingSignOnDisplayItem.java",
-          "src/main/java/net/mcreator/bendymod/block/RecordingSignOnBlock.java",
-          "src/main/java/net/mcreator/bendymod/block/renderer/RecordingSignOnTileRenderer.java",
-          "src/main/java/net/mcreator/bendymod/block/model/RecordingSignOnBlockModel.java",
-          "src/main/java/net/mcreator/bendymod/block/entity/RecordingSignOnTileEntity.java",
-          "src/main/java/net/mcreator/bendymod/block/model/RecordingSignOnDisplayModel.java",
-          "src/main/resources/assets/bendymod/models/item/recording_sign_on.json",
-          "src/main/resources/assets/bendymod/models/custom/recording_sign_on_particle.json",
-          "src/main/java/net/mcreator/bendymod/block/renderer/RecordingSignOnDisplayItemRenderer.java"
-        ]
-      },
-      "path": "~/Mod Stuff/Blocks/Props/Functional Props/RecordingSign"
-    },
-    {
       "name": "RecordingSignOnRedstoneOff",
       "type": "procedure",
       "compiles": true,
@@ -1929,6 +1887,10 @@
           "src/main/java/net/mcreator/bendymod/procedures/SittingRightClickedProcedure.java"
         ],
         "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
           {
             "name": "entity",
             "type": "entity"
@@ -4210,6 +4172,10 @@
         ],
         "dependencies": [
           {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
             "name": "entity",
             "type": "entity"
           },
@@ -5070,50 +5036,6 @@
       "path": "~/Mod Stuff/Blocks/WalkableBlocks"
     },
     {
-      "name": "CutoutBendyDiag",
-      "type": "animatedblock",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cutout_bendy_diag",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/bendymod/block/renderer/CutoutBendyDiagDisplayItemRenderer.java",
-          "src/main/java/net/mcreator/bendymod/block/CutoutBendyDiagBlock.java",
-          "src/main/resources/assets/bendymod/blockstates/cutout_bendy_diag.json",
-          "src/main/resources/assets/bendymod/models/custom/cutout_bendy_diag_particle.json",
-          "src/main/java/net/mcreator/bendymod/block/model/CutoutBendyDiagDisplayModel.java",
-          "src/main/resources/assets/bendymod/models/item/cutout_bendy_diag.json",
-          "src/main/java/net/mcreator/bendymod/block/model/CutoutBendyDiagBlockModel.java",
-          "src/main/java/net/mcreator/bendymod/block/entity/CutoutBendyDiagTileEntity.java",
-          "src/main/java/net/mcreator/bendymod/block/display/CutoutBendyDiagDisplayItem.java",
-          "src/main/java/net/mcreator/bendymod/block/renderer/CutoutBendyDiagTileRenderer.java"
-        ]
-      },
-      "path": "~/Mod Stuff/Blocks/Props/Cutouts"
-    },
-    {
-      "name": "CutoutSinnyDiag",
-      "type": "animatedblock",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cutout_sinny_diag",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/bendymod/block/model/CutoutSinnyDiagBlockModel.java",
-          "src/main/resources/assets/bendymod/blockstates/cutout_sinny_diag.json",
-          "src/main/java/net/mcreator/bendymod/block/renderer/CutoutSinnyDiagDisplayItemRenderer.java",
-          "src/main/java/net/mcreator/bendymod/block/CutoutSinnyDiagBlock.java",
-          "src/main/java/net/mcreator/bendymod/block/entity/CutoutSinnyDiagTileEntity.java",
-          "src/main/resources/assets/bendymod/models/item/cutout_sinny_diag.json",
-          "src/main/java/net/mcreator/bendymod/block/renderer/CutoutSinnyDiagTileRenderer.java",
-          "src/main/java/net/mcreator/bendymod/block/model/CutoutSinnyDiagDisplayModel.java",
-          "src/main/java/net/mcreator/bendymod/block/display/CutoutSinnyDiagDisplayItem.java",
-          "src/main/resources/assets/bendymod/models/custom/cutout_sinny_diag_particle.json"
-        ]
-      },
-      "path": "~/Mod Stuff/Blocks/Props/Cutouts"
-    },
-    {
       "name": "DeskOld",
       "type": "animatedblock",
       "compiles": true,
@@ -5254,6 +5176,7 @@
       "registry_name": "bacon_soup_empty_projectile",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/bendymod/client/renderer/BaconSoupEmptyProjectileRenderer.java",
           "src/main/java/net/mcreator/bendymod/entity/BaconSoupEmptyProjectileEntity.java"
         ]
       },
@@ -5296,6 +5219,7 @@
       "registry_name": "ink_layer",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/bendymod/block/entity/InkLayerBlockEntity.java",
           "src/main/java/net/mcreator/bendymod/block/InkLayerBlock.java",
           "src/main/resources/assets/bendymod/models/item/ink_layer.json",
           "src/main/resources/assets/bendymod/models/block/ink_layer.json",
@@ -5476,6 +5400,423 @@
         ]
       },
       "path": "~/Mod Stuff/Entities"
+    },
+    {
+      "name": "GetNoEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_no_entity",
+      "metadata": {
+        "return_type": "entity",
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/GetNoEntityProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Mod Stuff/Entities/InkBendy"
+    },
+    {
+      "name": "IsPlayerRiding",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_player_riding",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/IsPlayerRidingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff"
+    },
+    {
+      "name": "SammyLawrenceOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sammy_lawrence_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/SammyLawrenceOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/Entities/Sammy"
+    },
+    {
+      "name": "SearcherOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "searcher_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/SearcherOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/Entities/Searcher"
+    },
+    {
+      "name": "RecordingSign",
+      "type": "animatedblock",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "recording_sign",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/block/renderer/RecordingSignDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/display/RecordingSignDisplayItem.java",
+          "src/main/java/net/mcreator/bendymod/block/model/RecordingSignBlockModel.java",
+          "src/main/java/net/mcreator/bendymod/block/model/RecordingSignDisplayModel.java",
+          "src/main/resources/assets/bendymod/models/block/recording_sign_blockstate_0.json",
+          "src/main/java/net/mcreator/bendymod/block/RecordingSignBlock.java",
+          "src/main/resources/assets/bendymod/models/item/recording_sign.json",
+          "src/main/java/net/mcreator/bendymod/block/entity/RecordingSignTileEntity.java",
+          "src/main/resources/assets/bendymod/models/custom/recording_sign_particle.json",
+          "src/main/resources/assets/bendymod/blockstates/recording_sign.json",
+          "src/main/java/net/mcreator/bendymod/block/renderer/RecordingSignTileRenderer.java"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props/Functional Props/RecordingSign"
+    },
+    {
+      "name": "Sofa",
+      "type": "animatedblock",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sofa",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/models/custom/sofa_particle.json",
+          "src/main/java/net/mcreator/bendymod/block/SofaBlock.java",
+          "src/main/java/net/mcreator/bendymod/block/entity/SofaTileEntity.java",
+          "src/main/resources/assets/bendymod/models/item/sofa.json",
+          "src/main/java/net/mcreator/bendymod/block/renderer/SofaDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/SofaTileRenderer.java",
+          "src/main/resources/assets/bendymod/blockstates/sofa.json",
+          "src/main/java/net/mcreator/bendymod/block/display/SofaDisplayItem.java",
+          "src/main/java/net/mcreator/bendymod/block/model/SofaDisplayModel.java",
+          "src/main/java/net/mcreator/bendymod/block/model/SofaBlockModel.java"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props"
+    },
+    {
+      "name": "CutoutOnBlockRightClicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cutout_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/CutoutOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props/Cutouts"
+    },
+    {
+      "name": "Fisher",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fisher",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/models/item/fisher_spawn_egg.json",
+          "src/main/java/net/mcreator/bendymod/client/renderer/FisherRenderer.java",
+          "src/main/java/net/mcreator/bendymod/entity/model/FisherModel.java",
+          "src/main/java/net/mcreator/bendymod/entity/FisherEntity.java"
+        ]
+      },
+      "path": "~/Mod Stuff/Entities/Butcher Gang"
+    },
+    {
+      "name": "ButcherGangOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "butcher_gang_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/ButcherGangOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/Entities/Butcher Gang"
+    },
+    {
+      "name": "InkLayerOnTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ink_layer_on_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/InkLayerOnTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks"
+    },
+    {
+      "name": "Projectionist",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "projectionist",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/client/renderer/ProjectionistRenderer.java",
+          "src/main/resources/assets/bendymod/models/item/projectionist_spawn_egg.json",
+          "src/main/java/net/mcreator/bendymod/entity/model/ProjectionistModel.java",
+          "src/main/java/net/mcreator/bendymod/entity/ProjectionistEntity.java"
+        ]
+      },
+      "path": "~/Mod Stuff/Entities/Projectionist"
+    },
+    {
+      "name": "ProjectionistOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "projectionist_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/ProjectionistOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/Entities/Projectionist"
+    },
+    {
+      "name": "AllowMultipleProjectionists",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "allow_multiple_projectionists",
+      "metadata": {
+        "files": [],
+        "type": "logic"
+      },
+      "path": "~/Mod Stuff/Entities/Projectionist"
+    },
+    {
+      "name": "ProjectionistOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "projectionist_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/ProjectionistOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/Entities/Projectionist"
+    },
+    {
+      "name": "Piper",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "piper",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/client/renderer/PiperRenderer.java",
+          "src/main/java/net/mcreator/bendymod/entity/PiperEntity.java",
+          "src/main/resources/assets/bendymod/models/item/piper_spawn_egg.json",
+          "src/main/java/net/mcreator/bendymod/entity/model/PiperModel.java"
+        ]
+      },
+      "path": "~/Mod Stuff/Entities/Butcher Gang"
+    },
+    {
+      "name": "Striker",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "striker",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/entity/model/StrikerModel.java",
+          "src/main/java/net/mcreator/bendymod/entity/StrikerEntity.java",
+          "src/main/java/net/mcreator/bendymod/client/renderer/StrikerRenderer.java",
+          "src/main/resources/assets/bendymod/models/item/striker_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mod Stuff/Entities/Butcher Gang"
+    },
+    {
+      "name": "IndustrialWallPanel",
+      "type": "animatedblock",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "industrial_wall_panel",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/block/model/IndustrialWallPanelDisplayModel.java",
+          "src/main/resources/assets/bendymod/models/custom/industrial_wall_panel_particle.json",
+          "src/main/java/net/mcreator/bendymod/block/IndustrialWallPanelBlock.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/IndustrialWallPanelTileRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/display/IndustrialWallPanelDisplayItem.java",
+          "src/main/java/net/mcreator/bendymod/block/entity/IndustrialWallPanelTileEntity.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/IndustrialWallPanelDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/model/IndustrialWallPanelBlockModel.java",
+          "src/main/resources/assets/bendymod/models/item/industrial_wall_panel.json",
+          "src/main/resources/assets/bendymod/blockstates/industrial_wall_panel.json"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props"
+    },
+    {
+      "name": "StudioFloorGrate",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "studio_floor_grate",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/models/item/studio_floor_grate.json",
+          "src/main/java/net/mcreator/bendymod/block/StudioFloorGrateBlock.java",
+          "src/main/resources/data/bendymod/loot_tables/blocks/studio_floor_grate.json",
+          "src/main/resources/assets/bendymod/models/block/studio_floor_grate.json",
+          "src/main/resources/assets/bendymod/blockstates/studio_floor_grate.json"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks"
+    },
+    {
+      "name": "FileCabinet",
+      "type": "animatedblock",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "file_cabinet",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/blockstates/file_cabinet.json",
+          "src/main/resources/assets/bendymod/models/custom/file_cabinet_particle.json",
+          "src/main/java/net/mcreator/bendymod/block/entity/FileCabinetTileEntity.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/FileCabinetDisplayItemRenderer.java",
+          "src/main/resources/assets/bendymod/models/item/file_cabinet.json",
+          "src/main/java/net/mcreator/bendymod/block/renderer/FileCabinetTileRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/FileCabinetBlock.java",
+          "src/main/java/net/mcreator/bendymod/block/model/FileCabinetBlockModel.java",
+          "src/main/java/net/mcreator/bendymod/block/model/FileCabinetDisplayModel.java",
+          "src/main/java/net/mcreator/bendymod/block/display/FileCabinetDisplayItem.java"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props"
     }
   ],
   "variable_elements": [
@@ -5544,6 +5885,30 @@
       "type": "logic",
       "scope": "map",
       "value": "false"
+    },
+    {
+      "name": "cur_projectionist_selected",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "cur_projectionist_x",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "cur_projectionist_y",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "cur_projectionist_z",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -5708,6 +6073,70 @@
       ],
       "category": "neutral",
       "subtitle": "Radio playing \"Sammy\u0027s Jam\""
+    },
+    {
+      "name": "butchergang_ambience",
+      "files": [
+        "butchergang_ambience6",
+        "butchergang_ambience5",
+        "butchergang_ambience3",
+        "butchergang_ambience2",
+        "butchergang_ambience1"
+      ],
+      "category": "hostile",
+      "subtitle": "Butcher Gang member speaks."
+    },
+    {
+      "name": "butchergang_death",
+      "files": [
+        "butchergang_death"
+      ],
+      "category": "hostile",
+      "subtitle": "Butcher Gang member dies."
+    },
+    {
+      "name": "butchergang_hit",
+      "files": [
+        "butchergang_hit2",
+        "butchergang_hit1"
+      ],
+      "category": "hostile",
+      "subtitle": "Butcher Gang member is hit."
+    },
+    {
+      "name": "projectionist_step",
+      "files": [
+        "projectionist_step4",
+        "projectionist_step3",
+        "projectionist_step2",
+        "projectionist_step1"
+      ],
+      "category": "hostile",
+      "subtitle": "The Projectionist steps"
+    },
+    {
+      "name": "projectionist_death",
+      "files": [
+        "projectionist_death"
+      ],
+      "category": "hostile",
+      "subtitle": "The Projectionist Dies"
+    },
+    {
+      "name": "projectionist_yell",
+      "files": [
+        "projectionist_yell"
+      ],
+      "category": "hostile",
+      "subtitle": "The Projectionist yells"
+    },
+    {
+      "name": "projectionist_chase",
+      "files": [
+        "music_realfear"
+      ],
+      "category": "music",
+      "subtitle": "Projectionist chases"
     }
   ],
   "tag_elements": {
@@ -5730,19 +6159,7 @@
       "~CUSTOM:InkRL",
       "~CUSTOM:Ink"
     ],
-    "BLOCKS:minecraft:slabs": [
-      "~CUSTOM:WalkableStudioBlankWallSlab",
-      "~CUSTOM:WalkableStudioFloorSlab",
-      "~CUSTOM:StudioFloorTiledSlab",
-      "~CUSTOM:StudioBrickSlab",
-      "~CUSTOM:StudioBlankWallSlab",
-      "~CUSTOM:StudioFloorSlab"
-    ],
     "BLOCKS:minecraft:wooden_fences": [
-      "CUSTOM:StudioBlankWallFence",
-      "CUSTOM:StudioFloorFence"
-    ],
-    "BLOCKS:minecraft:fences": [
       "CUSTOM:StudioBlankWallFence",
       "CUSTOM:StudioFloorFence"
     ],
@@ -5753,6 +6170,38 @@
       "CUSTOM:BendyDollRL",
       "CUSTOM:WrenchRL",
       "CUSTOM:IllusionOfLivingRL"
+    ],
+    "BLOCKS:minecraft:overworld_carver_replaceables": [
+      "~Blocks.AIR"
+    ],
+    "BLOCKS:mod:posters": [
+      "CUSTOM:PosterLittleDevilDarlin",
+      "CUSTOM:PosterDancingDemon",
+      "CUSTOM:PosterSheepSongs",
+      "CUSTOM:PosterLargeLittleDevilDarlin",
+      "CUSTOM:PosterLargeDancingDemon",
+      "CUSTOM:PosterLargeSheepSongs",
+      "CUSTOM:PosterDontForgetToPunchIn",
+      "CUSTOM:PosterLargeDontForgetToPunchIn",
+      "CUSTOM:PosterDelicious",
+      "CUSTOM:PosterLargeDelicious",
+      "CUSTOM:PosterLargeWorkHardWorkHappy",
+      "CUSTOM:PosterTrainTrouble",
+      "CUSTOM:PosterLargeTrainTrouble",
+      "CUSTOM:PosterSentFromAbove",
+      "CUSTOM:PosterLargeSentFromAbove"
+    ],
+    "BLOCKS:minecraft:slabs": [
+      "~CUSTOM:WalkableStudioBlankWallSlab",
+      "~CUSTOM:WalkableStudioFloorSlab",
+      "~CUSTOM:StudioFloorTiledSlab",
+      "~CUSTOM:StudioBrickSlab",
+      "~CUSTOM:StudioBlankWallSlab",
+      "~CUSTOM:StudioFloorSlab"
+    ],
+    "BLOCKS:minecraft:fences": [
+      "CUSTOM:StudioBlankWallFence",
+      "CUSTOM:StudioFloorFence"
     ],
     "BLOCKS:mod:projections": [
       "CUSTOM:ProjectionBlank",
@@ -5769,8 +6218,10 @@
       "~CUSTOM:StudioBlankWallStairs",
       "~CUSTOM:StudioFloorStairs"
     ],
-    "BLOCKS:minecraft:overworld_carver_replaceables": [
-      "~Blocks.AIR"
+    "ENTITIES:mod:butcher_gang": [
+      "CUSTOM:Fisher",
+      "CUSTOM:Piper",
+      "CUSTOM:Striker"
     ],
     "BLOCKS:mod:ink_offerings": [
       "CUSTOM:Record",
@@ -5781,11 +6232,22 @@
       "CUSTOM:Gear"
     ]
   },
-  "tab_element_order": {},
+  "tab_element_order": {
+    "CUSTOM:BendyEntities": [
+      "Bendy",
+      "SammyLawrence",
+      "InkBendy",
+      "Searcher",
+      "BorisBuddy",
+      "Piper",
+      "Fisher",
+      "Projectionist",
+      "Striker"
+    ]
+  },
   "language_map": {
     "en_us": {
       "block.bendymod.studio_door_basic": "Studio Basic Door",
-      "block.bendymod.recording_sign_off": "Recording Sign",
       "gamerule.inkDemonTeleportMode.description": "If this is on, then the Ink Demon can only teleport to players in Survival.",
       "block.bendymod.desk_fancy": "Fancy Desk",
       "block.bendymod.bendy_doll_rl": "Bendy Doll (RL)",
@@ -5795,9 +6257,10 @@
       "block.bendymod.studio_blank_wall_slab": "Studio Blank Wall Slab",
       "item.bendymod.bacon_soup": "Bacon Soup",
       "entity.bendymod.sammy_lawrence": "Sammy Lawrence",
-      "block.bendymod.pipe_wall_vertical": "Wall Pipe (Vertical)",
       "block.bendymod.walkable_studio_blank_wall_slab": "Studio Blank Wall Slab (Walkable)",
+      "block.bendymod.pipe_wall_vertical": "Wall Pipe (Vertical)",
       "block.bendymod.plank": "Plank",
+      "entity.bendymod.fisher": "The Fisher",
       "gamerule.inkDemonTimerMinimum": "Ink Demon Timer Minimum",
       "subtitles.studioambience_creepysounds": "The Studio Calls",
       "gamerule.searcherSpawnMax": "Searcher Spawn Maximum",
@@ -5808,8 +6271,8 @@
       "block.bendymod.poster_sent_from_above": "Poster (Sent From Above)",
       "block.bendymod.pipe_straight": "Pipe Straight",
       "block.bendymod.cutout_bendy": "Cutout Bendy",
-      "block.bendymod.ink_machine": "Ink Machine",
       "block.bendymod.walkable_studio_blank_wall": "Studio Blank Wall (Walkable)",
+      "block.bendymod.ink_machine": "Ink Machine",
       "advancements.the_old_song.descr": "Reach the second floor of the Studio, The Music Department.",
       "block.bendymod.bendy_book_stack": "Bendy Book Stack",
       "subtitles.radio_2": "Radio playing \"Build Our Machine\" by DAGames",
@@ -5819,30 +6282,33 @@
       "subtitles.radio_4": "Radio playing \"Sammy\u0027s Jam\"",
       "subtitles.radio_3": "Radio playing \u0027Ode To Bendy\u0027",
       "block.bendymod.walkable_studio_floor_stairs": "Studio Floor Stairs (Walkable)",
-      "block.bendymod.cutout_sinny_diag": "Cutout Sinny (Diagonal)",
       "advancements.moving_pictures.descr": "Reach the first floor of the studio, The Animator\u0027s Department.",
+      "subtitles.projectionist_yell": "The Projectionist yells",
       "gui.bendymod.crate_inventory.label_crate": "Crate",
       "entity.bendymod.boris_buddy": "Buddy Boris",
       "entity.bendymod.searcher": "Searcher",
       "block.bendymod.walkable_studio_tiled_wall": "Studio Tiled Wall (Walkable)",
+      "block.bendymod.file_cabinet": "File Cabinet",
       "block.bendymod.sign_dark": "Sign (Dark)",
       "block.bendymod.solid_ink_rl": "Solid Ink (RL)",
       "block.bendymod.ink_barrel": "Ink Barrel",
       "block.bendymod.painting_book": "Painting (Book)",
-      "item.bendymod.searcher_spawn_egg": "Searcher Spawn Egg",
       "item.bendymod.bendy_spawn_egg": "Bendy Spawn Egg",
+      "item.bendymod.searcher_spawn_egg": "Searcher Spawn Egg",
       "block.bendymod.random_room_structure_block": "Random Room Structure Block",
       "block.bendymod.heavy_gate_closed": "Heavy Gate",
       "block.bendymod.stairway_structure_block": "Stairway Structure Block",
       "block.bendymod.inactive_random_room_structure_block": "Inactive Random Room Structure Block",
       "gamerule.inkDemonTimerMinimum.description": "This, will be the minimum time (in ticks) of how often the Ink Demon spawns.",
       "block.bendymod.music_department_sign": "Music Department Sign",
-      "subtitles.studioambience_loop": "",
       "block.bendymod.shelf": "Shelf",
+      "subtitles.studioambience_loop": "",
       "block.bendymod.ink_puddle": "Ink Puddle",
       "block.bendymod.cassette_player": "Cassette Player",
+      "subtitles.butchergang_ambience": "Butcher Gang member speaks.",
       "block.bendymod.punch_in_card": "Punch In Card",
       "subtitles.violin_note": "Violin plays",
+      "subtitles.projectionist_step": "The Projectionist steps",
       "block.bendymod.poster_dont_forget_to_punch_in": "Poster (Dont Forget To Punch In)",
       "block.bendymod.projection_bendy_dance": "Projection (Bendy Dance)",
       "gamerule.searcherSpawnMax.description": "This is the max amount of searchers that a single ink puddle spawner block can spawn.",
@@ -5855,6 +6321,7 @@
       "block.bendymod.coffin": "Coffin",
       "block.bendymod.stiff_studio_door_segmented": "Stiff Studio Segmented Door",
       "block.bendymod.lever_studio_on": "Studio Lever",
+      "block.bendymod.recording_sign": "Recording Sign",
       "subtitles.searcher_hit": "Searcher is hit",
       "block.bendymod.heavy_gate_open": "Heavy Gate",
       "block.bendymod.walkable_studio_floor_slab": "Studio Floor Slab (Walkable)",
@@ -5869,6 +6336,7 @@
       "entity.bendymod.ink_bendy": "Ink Bendy",
       "block.bendymod.poster_dancing_demon": "Poster (Dancing Demon)",
       "block.bendymod.ink_puddle_wall": "Ink Puddle (Wall)",
+      "gamerule.allowMultipleProjectionists.description": "If turned off, Only one Projectionist will exist.",
       "block.bendymod.large_chains": "Large Chains",
       "block.bendymod.ink_layer": "Ink Layer",
       "block.bendymod.boards": "Boards",
@@ -5903,8 +6371,11 @@
       "block.bendymod.inactive_gent_structure_block": "Inactive Gent Structure Block",
       "block.bendymod.studio_floor_stairs": "Studio Floor Stairs",
       "block.bendymod.walkable_studio_blank_wall_stairs": "Studio Blank Wall Stairs (Walkable)",
+      "item.bendymod.striker_spawn_egg": "The Striker Spawn Egg",
       "item.bendymod.studio_axe": "Studio Axe",
       "block.bendymod.illusion_of_living_rl": "The Illusion Of Living (RL)",
+      "item.bendymod.fisher_spawn_egg": "The Fisher Spawn Egg",
+      "block.bendymod.industrial_wall_panel": "Industrial Wall Panel",
       "block.bendymod.hallways_structure_block": "Hallways Structure Block",
       "block.bendymod.bendy_head": "Bendy Head",
       "block.bendymod.walkable_solid_ink": "Solid Ink",
@@ -5916,6 +6387,7 @@
       "block.bendymod.pedestal_on": "Pedestal",
       "block.bendymod.jumbled_paper": "Jumbled Paper",
       "block.bendymod.poster_large_little_devil_darlin": "Large Poster (Little Devil Darlin)",
+      "block.bendymod.studio_floor_grate": "Studio Floor Grate",
       "block.bendymod.speaker": "Speaker",
       "advancements.the_dark_puddles_awaken.title": "The Dark Puddles Awaken",
       "subtitles.bendydoll_squeak": "Bendy Doll squeaks",
@@ -5923,7 +6395,6 @@
       "block.bendymod.writing_its_time_to_believe": "Ink Writing (Its Time To Believe)",
       "itemGroup.tabbendy_props": "Bendy Props",
       "block.bendymod.poster_delicious": "Poster (Delicious!)",
-      "block.bendymod.cutout_bendy_diag": "Cutout Bendy (Diagonal)",
       "block.bendymod.infermary_bed": "Infermary Bed",
       "block.bendymod.poster_large_work_hard_work_happy": "Large Poster (Work Hard Work Happy)",
       "block.bendymod.inkwell_rl": "Inkwell (IRL)",
@@ -5936,9 +6407,11 @@
       "block.bendymod.studio_floor_slab": "Studio Floor Slab",
       "gui.bendymod.tape_overlay.label_sammy_lawrence": "Sammy Lawrence",
       "block.bendymod.gent_structure_block": "Gent Structure Block",
+      "subtitles.butchergang_death": "Butcher Gang member dies.",
       "subtitles.sammy_hit": "Sammy is hit",
       "block.bendymod.reel": "Reel",
       "block.bendymod.wall_gash_1": "Wall Gash 1",
+      "block.bendymod.sofa": "Sofa",
       "block.bendymod.pedestal_rl_on": "Pedestal",
       "block.bendymod.writing_whos_laughing_now": "Ink Writing (Who\u0027s Laughing Now)",
       "itemGroup.tabbendy_entities": "Bendy Entities",
@@ -5947,6 +6420,7 @@
       "subtitles.sammy_ambience": "Sammy is near.",
       "block.bendymod.reel_bendy_dance": "Reel (Bendy Dance)",
       "block.bendymod.hanging_mic": "Hanging Mic",
+      "item.bendymod.projectionist_spawn_egg": "The Projectionist Spawn Egg",
       "block.bendymod.boris_clone": "Boris Clone",
       "block.bendymod.poster_sheep_songs": "Poster (Sheep Songs)",
       "item.bendymod.boris_buddy_spawn_egg": "Buddy Boris Spawn Egg",
@@ -5955,14 +6429,17 @@
       "block.bendymod.violin": "Violin",
       "subtitles.studioambience_industrialechoes": "",
       "block.bendymod.wrench_rl": "Wrench (RL)",
+      "item.bendymod.piper_spawn_egg": "The Piper Spawn Egg",
       "item_group.bendymod.bendy_blocks": "Bendy Blocks",
       "itemGroup.tabbendy_blocks": "Bendy Blocks",
       "block.bendymod.inkwell": "Ink Well",
       "block.bendymod.studio_door_segmented": "Studio Segmented Door",
+      "subtitles.projectionist_chase": "Projectionist chases",
       "item.bendymod.sammy_lawrence_spawn_egg": "Sammy Lawrence Spawn Egg",
       "advancements.you_cannot_hide_forever.title": "You Cannot Hide Forever!",
       "item_group.bendymod.bendy_entities": "Bendy Entities",
       "block.bendymod.little_miracle_station": "Little Miracle Station",
+      "entity.bendymod.piper": "The Piper",
       "block.bendymod.projector": "Projector",
       "entity.bendymod.bendy": "Bendy",
       "block.bendymod.bendy_wall": "Wall Bendy",
@@ -5972,6 +6449,7 @@
       "entity.bendymod.sit_entity": "Sit Entity",
       "block.bendymod.illusion_of_living": "The Illusion Of Living",
       "biome.bendymod.the_studio": "The Studio",
+      "gamerule.allowMultipleProjectionists": "Allow Mutliple Projectionists",
       "subtitles.studio_ambience": "The Studio Calls.",
       "block.bendymod.work_table": "Work Table",
       "subtitles.searcher_ambient": "Searcher groans",
@@ -5982,10 +6460,12 @@
       "subtitles.searcher_appear": "Searcher appears",
       "block.bendymod.record": "Record",
       "block.bendymod.poster_large_delicious": "Large Poster (Delicious!)",
+      "subtitles.butchergang_hit": "Butcher Gang member is hit.",
       "block.bendymod.pedestal": "Pedestal",
       "block.bendymod.studio_planked_wall_broken": "Studio Planked Wall (Broken)",
       "block.bendymod.poster_large_train_trouble": "Large Poster (Train Trouble)",
       "block.bendymod.lever_power_on": "Power Lever",
+      "entity.bendymod.projectionist": "The Projectionist",
       "fluid.bendymod.ink": "Ink",
       "fluid.bendymod.ink_rl": "Ink (RL)",
       "block.bendymod.jds_sign": "Joey Drew Studios Sign",
@@ -6021,9 +6501,10 @@
       "block.bendymod.inactive_stairway_structure_block": "Inactive Stairway Structure Block",
       "block.bendymod.writing_down_here_were_all_sinners": "Ink Writing (Down Here We\u0027re All Sinners)",
       "subtitles.inkdemon_chase": "Ink Demon chases",
-      "block.bendymod.recording_sign_on": "Recording Sign",
       "advancements.sheep_sheep_sheep.descr": "Kill Sammy Lawrence",
+      "entity.bendymod.striker": "The Striker",
       "item.bendymod.ink_bucket": "Ink Bucket",
+      "subtitles.projectionist_death": "The Projectionist Dies",
       "block.bendymod.writing_sing_with_me": "Ink Writing (Sing With Me)",
       "block.bendymod.painting_music": "Painting (Music)",
       "block.bendymod.cellbox_0": "Cellbox",
@@ -6037,7 +6518,8 @@
       "block.bendymod.crate": "Crate",
       "block.bendymod.cellbox_1": "Cellbox",
       "block.bendymod.cutout_sinny": "Cutout Sinny",
-      "block.bendymod.cellbox_2": "Cellbox"
+      "block.bendymod.cellbox_2": "Cellbox",
+      "subtitles.realfear": "Real Fear"
     }
   },
   "foldersRoot": {
@@ -6067,6 +6549,18 @@
               },
               {
                 "name": "BorisBuddy",
+                "children": []
+              },
+              {
+                "name": "Sammy",
+                "children": []
+              },
+              {
+                "name": "Butcher Gang",
+                "children": []
+              },
+              {
+                "name": "Projectionist",
                 "children": []
               }
             ]

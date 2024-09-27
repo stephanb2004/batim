@@ -13,7 +13,7 @@
     "power": 1.0,
     "damage": 2.0,
     "knockback": 1,
-    "entityModel": "Default",
-    "customModelTexture": ""
+    "entityModel": "Modelbaconsoup",
+    "customModelTexture": "baconsoup_empty.png"
   }
 }

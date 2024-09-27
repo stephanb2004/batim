@@ -8,6 +8,6 @@ import net.minecraft.world.level.block.FenceBlock;
 
 public class StudioFloorFenceBlock extends FenceBlock {
 	public StudioFloorFenceBlock() {
-		super(BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(-1, 3600000).forceSolidOn());
+		super(BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(-1, 3600000).dynamicShape().forceSolidOn());
 	}
 }

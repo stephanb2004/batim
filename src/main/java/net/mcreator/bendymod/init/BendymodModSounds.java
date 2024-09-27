@@ -34,4 +34,11 @@ public class BendymodModSounds {
 	public static final RegistryObject<SoundEvent> STUDIOAMBIENCE_ADDITIONALSOUNDS = REGISTRY.register("studioambience_additionalsounds", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("bendymod", "studioambience_additionalsounds")));
 	public static final RegistryObject<SoundEvent> RADIO_3 = REGISTRY.register("radio_3", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("bendymod", "radio_3")));
 	public static final RegistryObject<SoundEvent> RADIO_4 = REGISTRY.register("radio_4", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("bendymod", "radio_4")));
+	public static final RegistryObject<SoundEvent> BUTCHERGANG_AMBIENCE = REGISTRY.register("butchergang_ambience", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("bendymod", "butchergang_ambience")));
+	public static final RegistryObject<SoundEvent> BUTCHERGANG_DEATH = REGISTRY.register("butchergang_death", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("bendymod", "butchergang_death")));
+	public static final RegistryObject<SoundEvent> BUTCHERGANG_HIT = REGISTRY.register("butchergang_hit", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("bendymod", "butchergang_hit")));
+	public static final RegistryObject<SoundEvent> PROJECTIONIST_STEP = REGISTRY.register("projectionist_step", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("bendymod", "projectionist_step")));
+	public static final RegistryObject<SoundEvent> PROJECTIONIST_DEATH = REGISTRY.register("projectionist_death", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("bendymod", "projectionist_death")));
+	public static final RegistryObject<SoundEvent> PROJECTIONIST_YELL = REGISTRY.register("projectionist_yell", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("bendymod", "projectionist_yell")));
+	public static final RegistryObject<SoundEvent> PROJECTIONIST_CHASE = REGISTRY.register("projectionist_chase", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("bendymod", "projectionist_chase")));
 }

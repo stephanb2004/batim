@@ -10,7 +10,7 @@ import net.minecraft.world.level.block.Blocks;
 
 public class StudioBlankWallStairsBlock extends StairBlock {
 	public StudioBlankWallStairsBlock() {
-		super(() -> Blocks.AIR.defaultBlockState(), BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(-1, 3600000));
+		super(() -> Blocks.AIR.defaultBlockState(), BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(-1, 3600000).dynamicShape());
 	}
 
 	@Override

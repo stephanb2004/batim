@@ -122,7 +122,7 @@ public class StudioChairBlock extends BaseEntityBlock implements EntityBlock {
 		double hitZ = hit.getLocation().z;
 		Direction direction = hit.getDirection();
 
-		SittingRightClickedProcedure.execute(world, x, y, z, entity);
+		SittingRightClickedProcedure.execute(world, x, y, z, blockstate, entity);
 		return InteractionResult.SUCCESS;
 	}
 }

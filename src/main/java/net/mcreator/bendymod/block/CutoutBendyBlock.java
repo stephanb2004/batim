@@ -1,6 +1,8 @@
 
 package net.mcreator.bendymod.block;
 
+import org.checkerframework.checker.units.qual.s;
+
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
@@ -30,11 +32,18 @@ import net.mcreator.bendymod.init.BendymodModBlockEntities;
 import javax.annotation.Nullable;
 
 public class CutoutBendyBlock extends BaseEntityBlock implements EntityBlock {
+	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 1);
 	public static final IntegerProperty ANIMATION = IntegerProperty.create("animation", 0, (int) 1);
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
 	public CutoutBendyBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false).noLootTable());
+		super(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(1f, 10f).lightLevel(s -> (new Object() {
+			public int getLightLevel() {
+				if (s.getValue(BLOCKSTATE) == 1)
+					return 0;
+				return 0;
+			}
+		}.getLightLevel())).noOcclusion().isRedstoneConductor((bs, br, bp) -> false).noLootTable());
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 
@@ -61,6 +70,15 @@ public class CutoutBendyBlock extends BaseEntityBlock implements EntityBlock {
 
 	@Override
 	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		if (state.getValue(BLOCKSTATE) == 1) {
+
+			return switch (state.getValue(FACING)) {
+				default -> box(0, 0, 0, 10, 40, 10);
+				case NORTH -> box(6, 0, 6, 16, 40, 16);
+				case EAST -> box(0, 0, 6, 10, 40, 16);
+				case WEST -> box(6, 0, 0, 16, 40, 10);
+			};
+		}
 
 		return switch (state.getValue(FACING)) {
 			default -> box(0, 0, 0, 16, 40, 2);
@@ -72,7 +90,7 @@ public class CutoutBendyBlock extends BaseEntityBlock implements EntityBlock {
 
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-		builder.add(ANIMATION, FACING);
+		builder.add(ANIMATION, FACING, BLOCKSTATE);
 	}
 
 	@Override

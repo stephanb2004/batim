@@ -10,7 +10,7 @@ import net.minecraft.world.level.block.Blocks;
 
 public class StudioFloorTiledStairsBlock extends StairBlock {
 	public StudioFloorTiledStairsBlock() {
-		super(() -> Blocks.AIR.defaultBlockState(), BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(-1, 3600000));
+		super(() -> Blocks.AIR.defaultBlockState(), BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(-1, 3600000).dynamicShape());
 	}
 
 	@Override

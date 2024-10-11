@@ -1,6 +1,7 @@
 
 package net.mcreator.bendymod.block;
 
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.SoundType;
@@ -14,7 +15,7 @@ import net.mcreator.bendymod.procedures.WalkableBlockEntityCollidesInTheBlockPro
 
 public class WalkableSolidInkBlock extends Block {
 	public WalkableSolidInkBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.HONEY_BLOCK).strength(-1, 3600000).noCollission());
+		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.HONEY_BLOCK).strength(-1, 3600000).noCollission());
 	}
 
 	@Override

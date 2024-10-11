@@ -14,6 +14,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.monster.Monster;
@@ -26,6 +27,7 @@ import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.goal.AvoidEntityGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.Mob;
@@ -44,6 +46,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.bendymod.procedures.ButcherGangOnEntityTickUpdateProcedure;
+import net.mcreator.bendymod.procedures.ButcherGangNaturalEntitySpawningConditionProcedure;
 import net.mcreator.bendymod.init.BendymodModEntities;
 
 public class StrikerEntity extends Monster implements GeoEntity {
@@ -97,24 +100,25 @@ public class StrikerEntity extends Monster implements GeoEntity {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new AvoidEntityGoal<>(this, InkBendyEntity.class, (float) 6, 1, 1.2));
-		this.goalSelector.addGoal(2, new LookAtPlayerGoal(this, InkBendyEntity.class, (float) 16));
-		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.2, false) {
+		this.goalSelector.addGoal(1, new AvoidEntityGoal<>(this, LMSSitEntityEntity.class, (float) 6, 1, 1.2));
+		this.goalSelector.addGoal(2, new AvoidEntityGoal<>(this, InkBendyEntity.class, (float) 6, 1, 1.2));
+		this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, InkBendyEntity.class, (float) 16));
+		this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 1.2, false) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
 			}
 		});
-		this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 1.2, false) {
+		this.goalSelector.addGoal(5, new MeleeAttackGoal(this, 1.2, false) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return 9;
 			}
 		});
-		this.goalSelector.addGoal(5, new RandomStrollGoal(this, 1));
-		this.targetSelector.addGoal(6, new HurtByTargetGoal(this));
-		this.goalSelector.addGoal(7, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(8, new FloatGoal(this));
+		this.goalSelector.addGoal(6, new RandomStrollGoal(this, 1));
+		this.targetSelector.addGoal(7, new HurtByTargetGoal(this));
+		this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(9, new FloatGoal(this));
 	}
 
 	@Override
@@ -163,7 +167,7 @@ public class StrikerEntity extends Monster implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		ButcherGangOnEntityTickUpdateProcedure.execute(this);
+		ButcherGangOnEntityTickUpdateProcedure.execute(this.level(), this.getY(), this);
 		this.refreshDimensions();
 	}
 
@@ -173,6 +177,12 @@ public class StrikerEntity extends Monster implements GeoEntity {
 	}
 
 	public static void init() {
+		SpawnPlacements.register(BendymodModEntities.STRIKER.get(), SpawnPlacements.Type.NO_RESTRICTIONS, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			return ButcherGangNaturalEntitySpawningConditionProcedure.execute(world, x, y, z);
+		});
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {

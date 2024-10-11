@@ -22,7 +22,7 @@ public class SetStructureBlocksProcedure {
 		double result_x = 0;
 		double current_y = 0;
 		current_y = y;
-		for (int index0 = 0; index0 < 2; index0++) {
+		for (int index0 = 0; index0 < 8; index0++) {
 			if ((new Object() {
 				public Direction getDirection(BlockState _bs) {
 					Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
@@ -1612,6 +1612,16 @@ public class SetStructureBlocksProcedure {
 			} else if (current_y == y - 16) {
 				current_y = y + 16;
 			} else if (current_y == y + 16) {
+				current_y = y - 32;
+			} else if (current_y == y - 32) {
+				current_y = y - 48;
+			} else if (current_y == y - 48) {
+				current_y = y - 64;
+			} else if (current_y == y - 64) {
+				current_y = y - 80;
+			} else if (current_y == y - 80) {
+				current_y = y - 96;
+			} else if (current_y == y - 96) {
 				current_y = y;
 			}
 		}

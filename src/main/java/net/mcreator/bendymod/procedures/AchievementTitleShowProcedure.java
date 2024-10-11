@@ -43,6 +43,11 @@ public class AchievementTitleShowProcedure {
 				_level.getServer().getCommands().performPrefixedCommand(
 						new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 						"title @p title {\"text\":\"THE OLD SONG\",\"bold\":true,\"italic\":true}");
+		} else if (world instanceof Level _lvl10 && _lvl10.getServer() != null && _lvl10.getServer().getAdvancements().getAdvancement(new ResourceLocation("bendymod:rise_and_fall")).equals(advancement)) {
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(
+						new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"title @p title {\"text\":\"RISE AND FALL\",\"bold\":true,\"italic\":true}");
 		}
 	}
 }

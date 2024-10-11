@@ -13,6 +13,9 @@
     "bendymod:cutout_bendy",
     "bendymod:walkable_solid_ink",
     "bendymod:walkable_studio_tiles",
-    "bendymod:boards"
+    "bendymod:boards",
+    "bendymod:walkable_studio_cut_wall",
+    "bendymod:walkable_studio_cut_wall_stairs",
+    "bendymod:walkable_studio_cut_wall_slab"
   ]
 }

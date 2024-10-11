@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "bendymod:block/sign_level_k"
+    },
+    "facing=east": {
+      "model": "bendymod:block/sign_level_k",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "bendymod:block/sign_level_k",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "bendymod:block/sign_level_k",
+      "y": 270
+    }
+  }
+}

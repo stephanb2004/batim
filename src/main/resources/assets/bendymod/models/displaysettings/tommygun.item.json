@@ -1,0 +1,97 @@
+{
+  "credit": "Made with Blockbench",
+  "parent": "builtin/entity",
+  "texture_size": [
+    64,
+    64
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "translation": [
+        0,
+        1.75,
+        -2.5
+      ],
+      "scale": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    "thirdperson_lefthand": {
+      "translation": [
+        0,
+        1.75,
+        -2.5
+      ],
+      "scale": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        3.47,
+        -1.25,
+        0.59
+      ],
+      "translation": [
+        4.75,
+        2.5,
+        0
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        3.47,
+        -1.25,
+        0.59
+      ],
+      "translation": [
+        4.75,
+        2.5,
+        0
+      ]
+    },
+    "ground": {
+      "rotation": [
+        0,
+        0,
+        90
+      ],
+      "scale": [
+        0.875,
+        0.875,
+        0.875
+      ]
+    },
+    "gui": {
+      "rotation": [
+        177.57,
+        -32.99,
+        179.65
+      ],
+      "translation": [
+        0.5,
+        2,
+        0
+      ],
+      "scale": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    "head": {
+      "translation": [
+        0,
+        -1.75,
+        -0.25
+      ]
+    }
+  },
+  "textures": {
+    "particle": "tommygun"
+  }
+}

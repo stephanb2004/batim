@@ -1,0 +1,9 @@
+{
+  "parent": "bendymod:custom/level_sign",
+  "textures": {
+    "all": "bendymod:block/sign_levelblank",
+    "particle": "bendymod:block/sign_levelblank",
+    "2": "bendymod:block/sign_levelk"
+  },
+  "render_type": "solid"
+}

@@ -21,6 +21,8 @@ public class SearcherOnEntityTickUpdateProcedure {
 		boolean checked_target = false;
 		if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof LivingEntity) {
 			if (IsTargetHidingProcedure.execute(entity) == true) {
+				if (entity instanceof Mob _entity)
+					_entity.getNavigation().moveTo(0, y, 0, 1);
 				if (entity instanceof Mob) {
 					try {
 						((Mob) entity).setTarget(null);
@@ -28,9 +30,14 @@ public class SearcherOnEntityTickUpdateProcedure {
 						e.printStackTrace();
 					}
 				}
+				BendymodMod.queueServerWork(40, () -> {
+					if (entity instanceof Mob _entity)
+						_entity.getNavigation().stop();
+				});
 			}
 		}
-		if (!world.getBlockState(BlockPos.containing(x, y, z)).canOcclude() && world.getBlockState(BlockPos.containing(x, y - 1, z)).canOcclude()) {
+		if (!world.getBlockState(BlockPos.containing(x, y, z)).canOcclude() && world.getBlockState(BlockPos.containing(x, y - 1, z)).canOcclude()
+				&& !((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == BendymodModBlocks.INK_PUDDLE_SPAWNER.get())) {
 			world.setBlock(BlockPos.containing(x, y, z), BendymodModBlocks.INK_LAYER.get().defaultBlockState(), 3);
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(x, y, z);
@@ -42,12 +49,12 @@ public class SearcherOnEntityTickUpdateProcedure {
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 		} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == BendymodModBlocks.INK_LAYER.get()) {
-			if (!(((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip10
-					? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip10)
+			if (!(((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip15
+					? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip15)
 					: -1) == 15)) {
 				{
-					int _value = (int) (((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip12
-							? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip12)
+					int _value = (int) (((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip17
+							? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip17)
 							: -1) + 1);
 					BlockPos _pos = BlockPos.containing(x, y, z);
 					BlockState _bs = world.getBlockState(_pos);

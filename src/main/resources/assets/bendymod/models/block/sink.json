@@ -1,0 +1,9 @@
+{
+  "parent": "bendymod:custom/sink",
+  "textures": {
+    "all": "bendymod:block/sink",
+    "particle": "bendymod:block/sink",
+    "0": "bendymod:block/sink"
+  },
+  "render_type": "cutout"
+}

@@ -30,6 +30,7 @@ import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.OpenDoorGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.BreakDoorGoal;
+import net.minecraft.world.entity.ai.goal.AvoidEntityGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.SpawnGroupData;
@@ -116,26 +117,27 @@ public class InkBendyEntity extends Monster implements GeoEntity {
 		this.goalSelector.addGoal(1, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1));
 		this.goalSelector.addGoal(3, new RandomSwimmingGoal(this, 2, 40));
-		this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 2, false) {
+		this.goalSelector.addGoal(4, new AvoidEntityGoal<>(this, LMSSitEntityEntity.class, (float) 6, 1, 1.2));
+		this.goalSelector.addGoal(5, new MeleeAttackGoal(this, 2, false) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
 			}
 		});
-		this.goalSelector.addGoal(5, new MeleeAttackGoal(this, 1.2, false) {
+		this.goalSelector.addGoal(6, new MeleeAttackGoal(this, 1.2, false) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return 9;
 			}
 		});
-		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, Player.class, true, false));
-		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, SammyLawrenceEntity.class, true, false));
-		this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, SearcherEntity.class, true, false));
-		this.goalSelector.addGoal(9, new RemoveBlockGoal(Blocks.BLACK_STAINED_GLASS, this, 1, (int) 4));
-		this.goalSelector.addGoal(10, new RemoveBlockGoal(Blocks.BLACK_STAINED_GLASS_PANE, this, 1, (int) 4));
-		this.goalSelector.addGoal(11, new OpenDoorGoal(this, true));
-		this.goalSelector.addGoal(12, new OpenDoorGoal(this, false));
-		this.goalSelector.addGoal(13, new BreakDoorGoal(this, e -> true));
+		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, Player.class, true, false));
+		this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, SammyLawrenceEntity.class, true, false));
+		this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, SearcherEntity.class, true, false));
+		this.goalSelector.addGoal(10, new RemoveBlockGoal(Blocks.BLACK_STAINED_GLASS, this, 1, (int) 4));
+		this.goalSelector.addGoal(11, new RemoveBlockGoal(Blocks.BLACK_STAINED_GLASS_PANE, this, 1, (int) 4));
+		this.goalSelector.addGoal(12, new OpenDoorGoal(this, true));
+		this.goalSelector.addGoal(13, new OpenDoorGoal(this, false));
+		this.goalSelector.addGoal(14, new BreakDoorGoal(this, e -> true));
 	}
 
 	@Override

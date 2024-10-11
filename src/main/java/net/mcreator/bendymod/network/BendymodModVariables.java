@@ -149,6 +149,7 @@ public class BendymodModVariables {
 		public double cur_projectionist_x = 0;
 		public double cur_projectionist_y = 0;
 		public double cur_projectionist_z = 0;
+		public boolean breakerroom_spawned = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -171,6 +172,7 @@ public class BendymodModVariables {
 			cur_projectionist_x = nbt.getDouble("cur_projectionist_x");
 			cur_projectionist_y = nbt.getDouble("cur_projectionist_y");
 			cur_projectionist_z = nbt.getDouble("cur_projectionist_z");
+			breakerroom_spawned = nbt.getBoolean("breakerroom_spawned");
 		}
 
 		@Override
@@ -189,6 +191,7 @@ public class BendymodModVariables {
 			nbt.putDouble("cur_projectionist_x", cur_projectionist_x);
 			nbt.putDouble("cur_projectionist_y", cur_projectionist_y);
 			nbt.putDouble("cur_projectionist_z", cur_projectionist_z);
+			nbt.putBoolean("breakerroom_spawned", breakerroom_spawned);
 			return nbt;
 		}
 

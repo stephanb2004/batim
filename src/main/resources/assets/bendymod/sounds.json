@@ -302,5 +302,32 @@
         "stream": true
       }
     ]
+  },
+  "tommygun_fire": {
+    "subtitle": "subtitles.tommygun_fire",
+    "sounds": [
+      {
+        "name": "bendymod:tommygun_fire",
+        "stream": false
+      }
+    ]
+  },
+  "tommygun_reload": {
+    "subtitle": "subtitles.tommygun_reload",
+    "sounds": [
+      {
+        "name": "bendymod:tommygun_reload",
+        "stream": false
+      }
+    ]
+  },
+  "tommygun_out": {
+    "subtitle": "subtitles.tommygun_out",
+    "sounds": [
+      {
+        "name": "bendymod:tommygun_out",
+        "stream": false
+      }
+    ]
   }
 }

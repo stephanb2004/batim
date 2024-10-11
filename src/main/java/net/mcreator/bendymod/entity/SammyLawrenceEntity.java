@@ -25,6 +25,7 @@ import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.PanicGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
+import net.minecraft.world.entity.ai.goal.AvoidEntityGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.Pose;
@@ -46,7 +47,6 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.bendymod.procedures.SammyLawrenceOnEntityTickUpdateProcedure;
-import net.mcreator.bendymod.procedures.AchievementEntityDiesProcedure;
 import net.mcreator.bendymod.init.BendymodModItems;
 import net.mcreator.bendymod.init.BendymodModEntities;
 
@@ -98,17 +98,18 @@ public class SammyLawrenceEntity extends Monster implements GeoEntity {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
+		this.goalSelector.addGoal(1, new AvoidEntityGoal<>(this, LMSSitEntityEntity.class, (float) 6, 1, 1.2));
+		this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2, false) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
 			}
 		});
-		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, Player.class, false, false));
-		this.goalSelector.addGoal(3, new PanicGoal(this, 1.2));
-		this.goalSelector.addGoal(4, new RandomStrollGoal(this, 1));
-		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(6, new FloatGoal(this));
+		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, Player.class, false, false));
+		this.goalSelector.addGoal(4, new PanicGoal(this, 1.2));
+		this.goalSelector.addGoal(5, new RandomStrollGoal(this, 1));
+		this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(7, new FloatGoal(this));
 	}
 
 	@Override
@@ -142,12 +143,6 @@ public class SammyLawrenceEntity extends Monster implements GeoEntity {
 	}
 
 	@Override
-	public void die(DamageSource source) {
-		super.die(source);
-		AchievementEntityDiesProcedure.execute(this, source.getEntity());
-	}
-
-	@Override
 	public void addAdditionalSaveData(CompoundTag compound) {
 		super.addAdditionalSaveData(compound);
 		compound.putString("Texture", this.getTexture());
@@ -163,7 +158,7 @@ public class SammyLawrenceEntity extends Monster implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		SammyLawrenceOnEntityTickUpdateProcedure.execute(this);
+		SammyLawrenceOnEntityTickUpdateProcedure.execute(this.level(), this.getY(), this);
 		this.refreshDimensions();
 	}
 

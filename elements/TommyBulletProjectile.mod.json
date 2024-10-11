@@ -1,0 +1,19 @@
+{
+  "_fv": 66,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "CUSTOM:TommyBullet"
+    },
+    "showParticles": true,
+    "actionSound": {
+      "value": "CUSTOM:tommygun_fire"
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 5.0,
+    "knockback": 5,
+    "entityModel": "Modelbullet",
+    "customModelTexture": "bullet_modeltexture.png"
+  }
+}

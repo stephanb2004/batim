@@ -55,7 +55,9 @@ public class InstrumentOnBlockRightClickedProcedure {
 						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("bendymod:violin_note")), SoundSource.NEUTRAL, 1, (float) Mth.nextDouble(RandomSource.create(), 1, 2), false);
 					}
 				}
-			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == BendymodModBlocks.BENDY_DOLL.get() || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == BendymodModBlocks.BENDY_DOLL_RL.get()) {
+			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == BendymodModBlocks.BENDY_DOLL.get() || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == BendymodModBlocks.JUMBO_BENDY_DOLL.get()
+					|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == BendymodModBlocks.BENDY_DOLL_RL.get() || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == BendymodModBlocks.BORIS_DOLL.get()
+					|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == BendymodModBlocks.JUMBO_BORIS_DOLL.get() || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == BendymodModBlocks.ALICE_ANGEL_DOLL.get()) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("bendymod:bendydoll_squeak")), SoundSource.NEUTRAL, 1, 1);

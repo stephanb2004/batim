@@ -6,7 +6,6 @@ import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.LiquidBlock;
@@ -28,80 +27,72 @@ public class GetRandomStructureProcedure {
 		double result_z = 0;
 		double result_x = 0;
 		double top_y_level = 0;
-		if (new Object() {
-			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getDouble(tag);
-				return -1;
+		top_y_level = 304;
+		if ((new Object() {
+			public Direction getDirection(BlockState _bs) {
+				Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+				if (_prop instanceof DirectionProperty _dp)
+					return _bs.getValue(_dp);
+				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
 			}
-		}.getValue(world, BlockPos.containing(x, y, z), "time") > 3) {
-			top_y_level = 304;
-			if ((new Object() {
-				public Direction getDirection(BlockState _bs) {
-					Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (_prop instanceof DirectionProperty _dp)
-						return _bs.getValue(_dp);
-					_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-					return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-				}
-			}.getDirection(blockstate)) == Direction.NORTH) {
-				result_x = x;
-				result_z = z - 1;
-			} else if ((new Object() {
-				public Direction getDirection(BlockState _bs) {
-					Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (_prop instanceof DirectionProperty _dp)
-						return _bs.getValue(_dp);
-					_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-					return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-				}
-			}.getDirection(blockstate)) == Direction.EAST) {
-				result_x = x + 1;
-				result_z = z;
-			} else if ((new Object() {
-				public Direction getDirection(BlockState _bs) {
-					Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (_prop instanceof DirectionProperty _dp)
-						return _bs.getValue(_dp);
-					_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-					return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-				}
-			}.getDirection(blockstate)) == Direction.WEST) {
-				result_x = x - 1;
-				result_z = z;
-			} else if ((new Object() {
-				public Direction getDirection(BlockState _bs) {
-					Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (_prop instanceof DirectionProperty _dp)
-						return _bs.getValue(_dp);
-					_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-					return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-				}
-			}.getDirection(blockstate)) == Direction.SOUTH) {
-				result_x = x;
-				result_z = z + 1;
+		}.getDirection(blockstate)) == Direction.NORTH) {
+			result_x = x;
+			result_z = z - 1;
+		} else if ((new Object() {
+			public Direction getDirection(BlockState _bs) {
+				Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+				if (_prop instanceof DirectionProperty _dp)
+					return _bs.getValue(_dp);
+				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
 			}
-			if (new Object() {
-				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getDouble(tag);
-					return -1;
+		}.getDirection(blockstate)) == Direction.EAST) {
+			result_x = x + 1;
+			result_z = z;
+		} else if ((new Object() {
+			public Direction getDirection(BlockState _bs) {
+				Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+				if (_prop instanceof DirectionProperty _dp)
+					return _bs.getValue(_dp);
+				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
+			}
+		}.getDirection(blockstate)) == Direction.WEST) {
+			result_x = x - 1;
+			result_z = z;
+		} else if ((new Object() {
+			public Direction getDirection(BlockState _bs) {
+				Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+				if (_prop instanceof DirectionProperty _dp)
+					return _bs.getValue(_dp);
+				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
+			}
+		}.getDirection(blockstate)) == Direction.SOUTH) {
+			result_x = x;
+			result_z = z + 1;
+		}
+		if ((world.getBlockState(BlockPos.containing(result_x, y, result_z))).getBlock() == Blocks.AIR || (world.getBlockState(BlockPos.containing(result_x, y, result_z))).getBlock() instanceof LiquidBlock) {
+			if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == BendymodModBlocks.HALLWAYS_STRUCTURE_BLOCK.get()
+					|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == BendymodModBlocks.RANDOM_ROOM_STRUCTURE_BLOCK.get()) {
+				if (y == top_y_level) {
+					GetLevel0HallwaysProcedure.execute(world, x, y, z, blockstate);
+				} else if (y == top_y_level - 16) {
+					GetLevelAHallwayProcedure.execute(world, x, y, z, blockstate);
+				} else if (y == top_y_level - 32) {
+					GetLevelKHallwayProcedure.execute(world, x, y, z, blockstate);
+				} else if (y == top_y_level - 64) {
+					GetLevel11HallwayProcedure.execute(world, x, y, z, blockstate);
+				} else if (y == top_y_level - 80) {
+					GetLevelPHallwayProcedure.execute(world, x, y, z, blockstate);
+				} else if (y == top_y_level - 96) {
+					GetLevel9HallwaysProcedure.execute(world, x, y, z, blockstate);
+				} else if (y == top_y_level - 112) {
+					GetLevel14HallwayProcedure.execute(world, x, y, z, blockstate);
 				}
-			}.getValue(world, BlockPos.containing(x, y, z), "time") > 4
-					&& ((world.getBlockState(BlockPos.containing(result_x, y, result_z))).getBlock() == Blocks.AIR || (world.getBlockState(BlockPos.containing(result_x, y, result_z))).getBlock() instanceof LiquidBlock)) {
-				if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == BendymodModBlocks.HALLWAYS_STRUCTURE_BLOCK.get()) {
-					GetRandomHallwayProcedure.execute(world, x, y, z, blockstate);
-				}
-				if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == BendymodModBlocks.RANDOM_ROOM_STRUCTURE_BLOCK.get()) {
-					chance = Mth.nextInt(RandomSource.create(), 1, 2);
-					if (chance == 1) {
-						GetRandomHallwayProcedure.execute(world, x, y, z, blockstate);
-					} else {
-						GetRandomRoomProcedure.execute(world, x, y, z, blockstate);
-					}
-				} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == BendymodModBlocks.STAIRWAY_STRUCTURE_BLOCK.get()) {
+			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == BendymodModBlocks.STAIRWAY_STRUCTURE_BLOCK.get()) {
+				if (y == top_y_level || y == top_y_level - 16) {
 					while (done_choosing == false) {
 						chance = Mth.nextInt(RandomSource.create(), 1, 3);
 						if (chance == 1) {

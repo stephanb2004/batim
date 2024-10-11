@@ -1,0 +1,6 @@
+{
+  "parent": "bendymod:displaysettings/tommygun.item",
+  "textures": {
+    "layer0": "bendymod:item/tommygun"
+  }
+}

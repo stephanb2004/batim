@@ -1,0 +1,40 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "2": "sign_levelk"
+      },
+      "name": "default"
+    },
+    "level9": {
+      "map": {
+        "2": "sign_level9"
+      },
+      "name": "level9"
+    },
+    "level11": {
+      "map": {
+        "2": "sign_level11"
+      },
+      "name": "level11"
+    },
+    "levelp": {
+      "map": {
+        "2": "sign_levelp"
+      },
+      "name": "levelp"
+    },
+    "level14": {
+      "map": {
+        "2": "sign_level14"
+      },
+      "name": "level14"
+    },
+    "levela": {
+      "map": {
+        "2": "sign_levela"
+      },
+      "name": "levela"
+    }
+  }
+}

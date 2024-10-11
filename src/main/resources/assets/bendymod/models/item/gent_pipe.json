@@ -1,0 +1,7 @@
+{
+  "parent": "bendymod:custom/gent_pipe",
+  "textures": {
+    "0": "bendymod:block/gent_pipe",
+    "particle": "bendymod:item/studio_axe"
+  }
+}

@@ -41,4 +41,7 @@ public class BendymodModSounds {
 	public static final RegistryObject<SoundEvent> PROJECTIONIST_DEATH = REGISTRY.register("projectionist_death", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("bendymod", "projectionist_death")));
 	public static final RegistryObject<SoundEvent> PROJECTIONIST_YELL = REGISTRY.register("projectionist_yell", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("bendymod", "projectionist_yell")));
 	public static final RegistryObject<SoundEvent> PROJECTIONIST_CHASE = REGISTRY.register("projectionist_chase", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("bendymod", "projectionist_chase")));
+	public static final RegistryObject<SoundEvent> TOMMYGUN_FIRE = REGISTRY.register("tommygun_fire", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("bendymod", "tommygun_fire")));
+	public static final RegistryObject<SoundEvent> TOMMYGUN_RELOAD = REGISTRY.register("tommygun_reload", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("bendymod", "tommygun_reload")));
+	public static final RegistryObject<SoundEvent> TOMMYGUN_OUT = REGISTRY.register("tommygun_out", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("bendymod", "tommygun_out")));
 }

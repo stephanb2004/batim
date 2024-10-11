@@ -77,6 +77,8 @@ public class InkBendyOnEntityTickUpdateProcedure {
 			_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 60, 9999, false, false));
 		if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof LivingEntity) {
 			if (IsTargetHidingProcedure.execute(entity) == true && (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof Player) {
+				if (entity instanceof Mob _entity)
+					_entity.getNavigation().moveTo(0, y, 0, 1);
 				if (entity instanceof Mob) {
 					try {
 						((Mob) entity).setTarget(null);
@@ -84,6 +86,10 @@ public class InkBendyOnEntityTickUpdateProcedure {
 						e.printStackTrace();
 					}
 				}
+				BendymodMod.queueServerWork(40, () -> {
+					if (entity instanceof Mob _entity)
+						_entity.getNavigation().stop();
+				});
 			}
 			if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.DARKNESS, 20, 1, false, false));

@@ -1,0 +1,7 @@
+{
+  "parent": "bendymod:custom/plunger",
+  "textures": {
+    "0": "bendymod:block/plunger",
+    "particle": "bendymod:item/studio_axe"
+  }
+}

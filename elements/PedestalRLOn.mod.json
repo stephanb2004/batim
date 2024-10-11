@@ -33,13 +33,13 @@
       }
     ],
     "name": "Pedestal",
+    "specialInformation": {
+      "fixedValue": []
+    },
     "hardness": 1.0,
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
-    "creativeTab": {
-      "value": "No creative tab entry"
-    },
     "creativeTabs": [],
     "destroyTool": "Not specified",
     "customDrop": {
@@ -53,7 +53,7 @@
     "canRedstoneConnect": false,
     "lightOpacity": 0,
     "material": {
-      "value": "IRON"
+      "value": "ROCK"
     },
     "tickRate": 0,
     "tickRandomly": false,
@@ -98,7 +98,7 @@
     },
     "luminance": 0,
     "unbreakable": true,
-    "breakHarvestLevel": 1,
+    "breakHarvestLevel": 0,
     "hasInventory": false,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,

@@ -33,7 +33,7 @@
         "subtract": false
       }
     ],
-    "name": "Solid Ink",
+    "name": "Solid Ink (Walkable)",
     "specialInformation": {
       "fixedValue": []
     },
@@ -58,7 +58,7 @@
     "canRedstoneConnect": false,
     "lightOpacity": 15,
     "material": {
-      "value": "EARTH"
+      "value": "ROCK"
     },
     "tickRate": 0,
     "tickRandomly": false,

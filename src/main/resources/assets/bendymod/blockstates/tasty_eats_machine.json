@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "bendymod:custom/tasty_eats_machine_particle"
+    },
+    "facing=east": {
+      "model": "bendymod:custom/tasty_eats_machine_particle",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "bendymod:custom/tasty_eats_machine_particle",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "bendymod:custom/tasty_eats_machine_particle",
+      "y": 270
+    }
+  }
+}

@@ -143,7 +143,7 @@ public class ReelBendyDanceTileEntity extends RandomizableContainerBlockEntity i
 
 	@Override
 	public Component getDisplayName() {
-		return Component.literal("Reel (Bendy Dance)");
+		return Component.literal("Reel");
 	}
 
 	@Override

@@ -9,6 +9,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.mcreator.bendymod.client.renderer.TommyBulletProjectileRenderer;
 import net.mcreator.bendymod.client.renderer.StrikerRenderer;
 import net.mcreator.bendymod.client.renderer.SitEntityRenderer;
 import net.mcreator.bendymod.client.renderer.SearcherRenderer;
@@ -38,5 +39,6 @@ public class BendymodModEntityRenderers {
 		event.registerEntityRenderer(BendymodModEntities.PROJECTIONIST.get(), ProjectionistRenderer::new);
 		event.registerEntityRenderer(BendymodModEntities.PIPER.get(), PiperRenderer::new);
 		event.registerEntityRenderer(BendymodModEntities.STRIKER.get(), StrikerRenderer::new);
+		event.registerEntityRenderer(BendymodModEntities.TOMMY_BULLET_PROJECTILE.get(), TommyBulletProjectileRenderer::new);
 	}
 }

@@ -16,6 +16,7 @@ import net.minecraft.commands.CommandSource;
 import net.mcreator.bendymod.network.BendymodModVariables;
 import net.mcreator.bendymod.init.BendymodModGameRules;
 import net.mcreator.bendymod.entity.ProjectionistEntity;
+import net.mcreator.bendymod.BendymodMod;
 
 import java.util.Comparator;
 
@@ -57,6 +58,12 @@ public class ProjectionistOnEntityTickUpdateProcedure {
 						e.printStackTrace();
 					}
 				}
+				if (entity instanceof Mob _entity)
+					_entity.getNavigation().moveTo(0, y, 0, 1);
+				BendymodMod.queueServerWork(40, () -> {
+					if (entity instanceof Mob _entity)
+						_entity.getNavigation().stop();
+				});
 			}
 		}
 		if (entity.getPersistentData().getBoolean("cur_projectionist") == true) {

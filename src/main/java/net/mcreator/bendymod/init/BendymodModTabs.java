@@ -6,19 +6,14 @@ package net.mcreator.bendymod.init;
 
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
 
 import net.mcreator.bendymod.BendymodMod;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class BendymodModTabs {
 	public static final DeferredRegister<CreativeModeTab> REGISTRY = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, BendymodMod.MODID);
 	public static final RegistryObject<CreativeModeTab> BENDY_BLOCKS = REGISTRY.register("bendy_blocks",
@@ -36,6 +31,10 @@ public class BendymodModTabs {
 				tabData.accept(BendymodModBlocks.STUDIO_DOOR_SEGMENTED.get().asItem());
 				tabData.accept(BendymodModBlocks.STUDIO_BROKEN_FLOOR.get().asItem());
 				tabData.accept(BendymodModBlocks.STUDIO_TILED_WALL.get().asItem());
+				tabData.accept(BendymodModBlocks.STUDIO_TILES.get().asItem());
+				tabData.accept(BendymodModBlocks.STUDIO_CUT_WALL.get().asItem());
+				tabData.accept(BendymodModBlocks.STUDIO_CUT_WALL_STAIRS.get().asItem());
+				tabData.accept(BendymodModBlocks.STUDIO_CUT_WALL_SLAB.get().asItem());
 				tabData.accept(BendymodModBlocks.STUDIO_DIRT.get().asItem());
 				tabData.accept(BendymodModBlocks.CHAIN_FENCE.get().asItem());
 				tabData.accept(BendymodModBlocks.STUDIO_BLANK_WALL_FENCE.get().asItem());
@@ -44,7 +43,11 @@ public class BendymodModTabs {
 				tabData.accept(BendymodModBlocks.STUDIO_BRICK_STAIRS.get().asItem());
 				tabData.accept(BendymodModBlocks.STUDIO_BRICK_SLAB.get().asItem());
 				tabData.accept(BendymodModBlocks.PLANKED_TRAPDOOR.get().asItem());
+				tabData.accept(BendymodModBlocks.STUDIO_FLOOR_GRATE.get().asItem());
+				tabData.accept(BendymodModBlocks.INDUSTRIAL_WALL_PANEL.get().asItem());
 				tabData.accept(BendymodModBlocks.SOLID_INK.get().asItem());
+				tabData.accept(BendymodModBlocks.INK_LAYER.get().asItem());
+				tabData.accept(BendymodModBlocks.ENCASED_INK.get().asItem());
 				tabData.accept(BendymodModBlocks.STIFF_STUDIO_DOOR_BASIC.get().asItem());
 				tabData.accept(BendymodModBlocks.STIFF_STUDIO_DOOR_SEGMENTED.get().asItem());
 				tabData.accept(BendymodModBlocks.HEAVY_GATE_CLOSED.get().asItem());
@@ -61,12 +64,11 @@ public class BendymodModTabs {
 				tabData.accept(BendymodModBlocks.WALKABLE_STUDIO_PLANKED_WALL.get().asItem());
 				tabData.accept(BendymodModBlocks.WALKABLE_STUDIO_CEILING.get().asItem());
 				tabData.accept(BendymodModBlocks.WALKABLE_STUDIO_TILED_WALL.get().asItem());
-				tabData.accept(BendymodModBlocks.WALKABLE_SOLID_INK.get().asItem());
-				tabData.accept(BendymodModBlocks.STUDIO_TILES.get().asItem());
 				tabData.accept(BendymodModBlocks.WALKABLE_STUDIO_TILES.get().asItem());
-				tabData.accept(BendymodModBlocks.INK_LAYER.get().asItem());
-				tabData.accept(BendymodModBlocks.INDUSTRIAL_WALL_PANEL.get().asItem());
-				tabData.accept(BendymodModBlocks.STUDIO_FLOOR_GRATE.get().asItem());
+				tabData.accept(BendymodModBlocks.WALKABLE_STUDIO_CUT_WALL.get().asItem());
+				tabData.accept(BendymodModBlocks.WALKABLE_STUDIO_CUT_WALL_STAIRS.get().asItem());
+				tabData.accept(BendymodModBlocks.WALKABLE_STUDIO_CUT_WALL_SLAB.get().asItem());
+				tabData.accept(BendymodModBlocks.WALKABLE_SOLID_INK.get().asItem());
 			})
 
 					.build());
@@ -87,6 +89,11 @@ public class BendymodModTabs {
 	public static final RegistryObject<CreativeModeTab> BENDY_PROPS = REGISTRY.register("bendy_props",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.bendymod.bendy_props")).icon(() -> new ItemStack(BendymodModItems.STUDIO_AXE.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(BendymodModItems.STUDIO_AXE.get());
+				tabData.accept(BendymodModItems.GENT_PIPE.get());
+				tabData.accept(BendymodModItems.STUDIO_PLUNGER.get());
+				tabData.accept(BendymodModItems.TOMMY_GUN.get());
+				tabData.accept(BendymodModItems.TOMMY_BULLET.get());
+				tabData.accept(BendymodModItems.BENDY_MASK_HELMET.get());
 				tabData.accept(BendymodModBlocks.CUTOUT_BENDY.get().asItem());
 				tabData.accept(BendymodModBlocks.INK_MACHINE.get().asItem());
 				tabData.accept(BendymodModBlocks.SPEAKER.get().asItem());
@@ -151,6 +158,7 @@ public class BendymodModTabs {
 				tabData.accept(BendymodModItems.DRY_CELL.get());
 				tabData.accept(BendymodModBlocks.INFERMARY_BED.get().asItem());
 				tabData.accept(BendymodModBlocks.INKWELL.get().asItem());
+				tabData.accept(BendymodModBlocks.GEAR.get().asItem());
 				tabData.accept(BendymodModBlocks.BENDY_DOLL.get().asItem());
 				tabData.accept(BendymodModBlocks.WRENCH.get().asItem());
 				tabData.accept(BendymodModBlocks.ILLUSION_OF_LIVING.get().asItem());
@@ -182,14 +190,16 @@ public class BendymodModTabs {
 				tabData.accept(BendymodModBlocks.PAINTING_PLUSH.get().asItem());
 				tabData.accept(BendymodModBlocks.PAINTING_WRENCH.get().asItem());
 				tabData.accept(BendymodModBlocks.LARGE_CHAINS.get().asItem());
-				tabData.accept(BendymodModItems.BENDY_MASK_HELMET.get());
 				tabData.accept(BendymodModBlocks.RECORD_RL.get().asItem());
 				tabData.accept(BendymodModBlocks.INKWELL_RL.get().asItem());
-				tabData.accept(BendymodModBlocks.GEAR.get().asItem());
 				tabData.accept(BendymodModBlocks.GEAR_RL.get().asItem());
 				tabData.accept(BendymodModBlocks.BENDY_DOLL_RL.get().asItem());
 				tabData.accept(BendymodModBlocks.WRENCH_RL.get().asItem());
 				tabData.accept(BendymodModBlocks.ILLUSION_OF_LIVING_RL.get().asItem());
+				tabData.accept(BendymodModBlocks.JUMBO_BENDY_DOLL.get().asItem());
+				tabData.accept(BendymodModBlocks.BORIS_DOLL.get().asItem());
+				tabData.accept(BendymodModBlocks.JUMBO_BORIS_DOLL.get().asItem());
+				tabData.accept(BendymodModBlocks.ALICE_ANGEL_DOLL.get().asItem());
 				tabData.accept(BendymodModBlocks.PEDESTAL_RL.get().asItem());
 				tabData.accept(BendymodModBlocks.INK_MACHINE_RL.get().asItem());
 				tabData.accept(BendymodModBlocks.BOOK_BENDY.get().asItem());
@@ -206,23 +216,26 @@ public class BendymodModTabs {
 				tabData.accept(BendymodModBlocks.LITTLE_MIRACLE_STATION.get().asItem());
 				tabData.accept(BendymodModBlocks.SOFA.get().asItem());
 				tabData.accept(BendymodModBlocks.FILE_CABINET.get().asItem());
+				tabData.accept(BendymodModBlocks.GENT_VALVES.get().asItem());
+				tabData.accept(BendymodModBlocks.CAGED_LAMP.get().asItem());
+				tabData.accept(BendymodModBlocks.FLOOR_PIPE.get().asItem());
+				tabData.accept(BendymodModBlocks.FAN.get().asItem());
+				tabData.accept(BendymodModBlocks.SINK.get().asItem());
+				tabData.accept(BendymodModBlocks.STUDIO_TOILET.get().asItem());
+				tabData.accept(BendymodModBlocks.STUDIO_TV.get().asItem());
+				tabData.accept(BendymodModBlocks.RECORDING_SIGN.get().asItem());
+				tabData.accept(BendymodModBlocks.TASTY_EATS_MACHINE.get().asItem());
+				tabData.accept(BendymodModBlocks.GEARSHIFT.get().asItem());
+				tabData.accept(BendymodModBlocks.BENDY_CLOCK.get().asItem());
+				tabData.accept(BendymodModBlocks.STOVE.get().asItem());
+				tabData.accept(BendymodModBlocks.WRITING_I_DONT_WANT_TO_WORK_HERE_ANYMORE.get().asItem());
+				tabData.accept(BendymodModBlocks.SIGN_LEVEL_K.get().asItem());
+				tabData.accept(BendymodModBlocks.SIGN_LEVEL_11.get().asItem());
+				tabData.accept(BendymodModBlocks.SIGN_LEVEL_P.get().asItem());
+				tabData.accept(BendymodModBlocks.SIGN_LEVEL_9.get().asItem());
+				tabData.accept(BendymodModBlocks.SIGN_LEVEL_14.get().asItem());
+				tabData.accept(BendymodModBlocks.SIGN_LEVEL_A.get().asItem());
 			})
 
 					.build());
-
-	@SubscribeEvent
-	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
-		if (tabData.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-			tabData.accept(BendymodModBlocks.CUTOUT_SINNY.get().asItem());
-			tabData.accept(BendymodModBlocks.CELLBOX_1.get().asItem());
-			tabData.accept(BendymodModBlocks.CELLBOX_2.get().asItem());
-			tabData.accept(BendymodModBlocks.HEAVY_GATE_OPEN.get().asItem());
-			tabData.accept(BendymodModBlocks.LEVER_STUDIO_ON.get().asItem());
-			tabData.accept(BendymodModBlocks.LEVER_POWER_ON.get().asItem());
-			tabData.accept(BendymodModBlocks.PEDESTAL_ON.get().asItem());
-			tabData.accept(BendymodModBlocks.PEDESTAL_RL_ON.get().asItem());
-			tabData.accept(BendymodModBlocks.PROJECTION_BLANK.get().asItem());
-			tabData.accept(BendymodModBlocks.PROJECTION_BENDY_DANCE.get().asItem());
-		}
-	}
 }

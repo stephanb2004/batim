@@ -16,6 +16,7 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
+import net.mcreator.bendymod.entity.TommyBulletProjectileEntity;
 import net.mcreator.bendymod.entity.StrikerEntity;
 import net.mcreator.bendymod.entity.SitEntityEntity;
 import net.mcreator.bendymod.entity.SearcherEntity;
@@ -71,9 +72,11 @@ public class BendymodModEntities {
 
 					.sized(0.5f, 1.875f));
 	public static final RegistryObject<EntityType<StrikerEntity>> STRIKER = register("striker",
-			EntityType.Builder.<StrikerEntity>of(StrikerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(StrikerEntity::new)
+			EntityType.Builder.<StrikerEntity>of(StrikerEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(StrikerEntity::new)
 
 					.sized(0.5f, 1f));
+	public static final RegistryObject<EntityType<TommyBulletProjectileEntity>> TOMMY_BULLET_PROJECTILE = register("tommy_bullet_projectile", EntityType.Builder.<TommyBulletProjectileEntity>of(TommyBulletProjectileEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(TommyBulletProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

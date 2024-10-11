@@ -1,0 +1,6 @@
+{
+  "parent": "bendymod:displaysettings/big_block.item",
+  "textures": {
+    "particle": "bendymod:block/bendy_plush_big"
+  }
+}

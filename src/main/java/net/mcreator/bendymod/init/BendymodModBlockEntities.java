@@ -16,6 +16,7 @@ import net.mcreator.bendymod.block.entity.WritingTheSheepWillComeToSlaughterTile
 import net.mcreator.bendymod.block.entity.WritingTheCreatorLiedToUsTileEntity;
 import net.mcreator.bendymod.block.entity.WritingSingWithMeTileEntity;
 import net.mcreator.bendymod.block.entity.WritingItsTimeToBelieveTileEntity;
+import net.mcreator.bendymod.block.entity.WritingIDontWantToWorkHereAnymoreTileEntity;
 import net.mcreator.bendymod.block.entity.WritingDreamsComeTrueTileEntity;
 import net.mcreator.bendymod.block.entity.WritingDownHereWereAllSinnersTileEntity;
 import net.mcreator.bendymod.block.entity.WrenchTileEntity;
@@ -26,7 +27,13 @@ import net.mcreator.bendymod.block.entity.ViolinTileEntity;
 import net.mcreator.bendymod.block.entity.ValveTileEntity;
 import net.mcreator.bendymod.block.entity.TrashBinTileEntity;
 import net.mcreator.bendymod.block.entity.ToolboxTileEntity;
+import net.mcreator.bendymod.block.entity.TastyEatsMachineTileEntity;
+import net.mcreator.bendymod.block.entity.StudioToiletTileEntity;
+import net.mcreator.bendymod.block.entity.StudioTVTileEntity;
+import net.mcreator.bendymod.block.entity.StudioSwitchOnTileEntity;
+import net.mcreator.bendymod.block.entity.StudioSwitchOffTileEntity;
 import net.mcreator.bendymod.block.entity.StudioChairTileEntity;
+import net.mcreator.bendymod.block.entity.StoveTileEntity;
 import net.mcreator.bendymod.block.entity.StairwayStructureBlockBlockEntity;
 import net.mcreator.bendymod.block.entity.SpeakerTileEntity;
 import net.mcreator.bendymod.block.entity.SoupCandleTileEntity;
@@ -42,8 +49,7 @@ import net.mcreator.bendymod.block.entity.RandomRoomStructureBlockBlockEntity;
 import net.mcreator.bendymod.block.entity.RadioTileEntity;
 import net.mcreator.bendymod.block.entity.PunchInCardTileEntity;
 import net.mcreator.bendymod.block.entity.ProjectorTileEntity;
-import net.mcreator.bendymod.block.entity.ProjectionBlankTileEntity;
-import net.mcreator.bendymod.block.entity.ProjectionBendyDanceTileEntity;
+import net.mcreator.bendymod.block.entity.ProjectionTileEntity;
 import net.mcreator.bendymod.block.entity.PianoTileEntity;
 import net.mcreator.bendymod.block.entity.PedestalTileEntity;
 import net.mcreator.bendymod.block.entity.PedestalRLTileEntity;
@@ -56,6 +62,8 @@ import net.mcreator.bendymod.block.entity.LeverStudioOffTileEntity;
 import net.mcreator.bendymod.block.entity.LeverPowerOnTileEntity;
 import net.mcreator.bendymod.block.entity.LeverPowerOffTileEntity;
 import net.mcreator.bendymod.block.entity.LargeBoxTileEntity;
+import net.mcreator.bendymod.block.entity.JumboBorisDollTileEntity;
+import net.mcreator.bendymod.block.entity.JumboBendyDollTileEntity;
 import net.mcreator.bendymod.block.entity.JumbledPaperTileEntity;
 import net.mcreator.bendymod.block.entity.JDSSignTileEntity;
 import net.mcreator.bendymod.block.entity.InkPuddleSpawnerBlockEntity;
@@ -76,9 +84,13 @@ import net.mcreator.bendymod.block.entity.HeavyGateClosedTileEntity;
 import net.mcreator.bendymod.block.entity.HatRackTileEntity;
 import net.mcreator.bendymod.block.entity.HangingMicTileEntity;
 import net.mcreator.bendymod.block.entity.HallwaysStructureBlockBlockEntity;
+import net.mcreator.bendymod.block.entity.GentValvesTileEntity;
 import net.mcreator.bendymod.block.entity.GentStructureBlockBlockEntity;
+import net.mcreator.bendymod.block.entity.GearshiftTileEntity;
 import net.mcreator.bendymod.block.entity.GearboxTileEntity;
+import net.mcreator.bendymod.block.entity.FloorPipeTileEntity;
 import net.mcreator.bendymod.block.entity.FileCabinetTileEntity;
+import net.mcreator.bendymod.block.entity.FanTileEntity;
 import net.mcreator.bendymod.block.entity.DrumTileEntity;
 import net.mcreator.bendymod.block.entity.DresserTileEntity;
 import net.mcreator.bendymod.block.entity.DeskTileEntity;
@@ -92,15 +104,19 @@ import net.mcreator.bendymod.block.entity.Cellbox2TileEntity;
 import net.mcreator.bendymod.block.entity.Cellbox1TileEntity;
 import net.mcreator.bendymod.block.entity.Cellbox0TileEntity;
 import net.mcreator.bendymod.block.entity.CassettePlayerTileEntity;
+import net.mcreator.bendymod.block.entity.CagedLampTileEntity;
+import net.mcreator.bendymod.block.entity.BorisDollTileEntity;
 import net.mcreator.bendymod.block.entity.BorisCloneTileEntity;
 import net.mcreator.bendymod.block.entity.BookBendyTileEntity;
 import net.mcreator.bendymod.block.entity.BoardsTileEntity;
 import net.mcreator.bendymod.block.entity.BendyStatueTileEntity;
 import net.mcreator.bendymod.block.entity.BendyDollTileEntity;
 import net.mcreator.bendymod.block.entity.BendyDollRLTileEntity;
+import net.mcreator.bendymod.block.entity.BendyClockTileEntity;
 import net.mcreator.bendymod.block.entity.BendyBookStackTileEntity;
 import net.mcreator.bendymod.block.entity.BassTileEntity;
 import net.mcreator.bendymod.block.entity.BanjoTileEntity;
+import net.mcreator.bendymod.block.entity.AliceAngelDollTileEntity;
 import net.mcreator.bendymod.BendymodMod;
 
 public class BendymodModBlockEntities {
@@ -200,10 +216,6 @@ public class BendymodModBlockEntities {
 	public static final RegistryObject<BlockEntityType<BookBendyTileEntity>> BOOK_BENDY = REGISTRY.register("book_bendy", () -> BlockEntityType.Builder.of(BookBendyTileEntity::new, BendymodModBlocks.BOOK_BENDY.get()).build(null));
 	public static final RegistryObject<BlockEntityType<BendyBookStackTileEntity>> BENDY_BOOK_STACK = REGISTRY.register("bendy_book_stack",
 			() -> BlockEntityType.Builder.of(BendyBookStackTileEntity::new, BendymodModBlocks.BENDY_BOOK_STACK.get()).build(null));
-	public static final RegistryObject<BlockEntityType<ProjectionBlankTileEntity>> PROJECTION_BLANK = REGISTRY.register("projection_blank",
-			() -> BlockEntityType.Builder.of(ProjectionBlankTileEntity::new, BendymodModBlocks.PROJECTION_BLANK.get()).build(null));
-	public static final RegistryObject<BlockEntityType<ProjectionBendyDanceTileEntity>> PROJECTION_BENDY_DANCE = REGISTRY.register("projection_bendy_dance",
-			() -> BlockEntityType.Builder.of(ProjectionBendyDanceTileEntity::new, BendymodModBlocks.PROJECTION_BENDY_DANCE.get()).build(null));
 	public static final RegistryObject<BlockEntityType<ReelBendyDanceTileEntity>> REEL_BENDY_DANCE = REGISTRY.register("reel_bendy_dance",
 			() -> BlockEntityType.Builder.of(ReelBendyDanceTileEntity::new, BendymodModBlocks.REEL_BENDY_DANCE.get()).build(null));
 	public static final RegistryObject<BlockEntityType<WallGash1TileEntity>> WALL_GASH_1 = REGISTRY.register("wall_gash_1", () -> BlockEntityType.Builder.of(WallGash1TileEntity::new, BendymodModBlocks.WALL_GASH_1.get()).build(null));
@@ -218,6 +230,31 @@ public class BendymodModBlockEntities {
 	public static final RegistryObject<BlockEntityType<IndustrialWallPanelTileEntity>> INDUSTRIAL_WALL_PANEL = REGISTRY.register("industrial_wall_panel",
 			() -> BlockEntityType.Builder.of(IndustrialWallPanelTileEntity::new, BendymodModBlocks.INDUSTRIAL_WALL_PANEL.get()).build(null));
 	public static final RegistryObject<BlockEntityType<FileCabinetTileEntity>> FILE_CABINET = REGISTRY.register("file_cabinet", () -> BlockEntityType.Builder.of(FileCabinetTileEntity::new, BendymodModBlocks.FILE_CABINET.get()).build(null));
+	public static final RegistryObject<BlockEntityType<GentValvesTileEntity>> GENT_VALVES = REGISTRY.register("gent_valves", () -> BlockEntityType.Builder.of(GentValvesTileEntity::new, BendymodModBlocks.GENT_VALVES.get()).build(null));
+	public static final RegistryObject<BlockEntityType<CagedLampTileEntity>> CAGED_LAMP = REGISTRY.register("caged_lamp", () -> BlockEntityType.Builder.of(CagedLampTileEntity::new, BendymodModBlocks.CAGED_LAMP.get()).build(null));
+	public static final RegistryObject<BlockEntityType<FloorPipeTileEntity>> FLOOR_PIPE = REGISTRY.register("floor_pipe", () -> BlockEntityType.Builder.of(FloorPipeTileEntity::new, BendymodModBlocks.FLOOR_PIPE.get()).build(null));
+	public static final RegistryObject<BlockEntityType<ProjectionTileEntity>> PROJECTION = REGISTRY.register("projection", () -> BlockEntityType.Builder.of(ProjectionTileEntity::new, BendymodModBlocks.PROJECTION.get()).build(null));
+	public static final RegistryObject<BlockEntityType<FanTileEntity>> FAN = REGISTRY.register("fan", () -> BlockEntityType.Builder.of(FanTileEntity::new, BendymodModBlocks.FAN.get()).build(null));
+	public static final RegistryObject<BlockEntityType<StudioSwitchOffTileEntity>> STUDIO_SWITCH_OFF = REGISTRY.register("studio_switch_off",
+			() -> BlockEntityType.Builder.of(StudioSwitchOffTileEntity::new, BendymodModBlocks.STUDIO_SWITCH_OFF.get()).build(null));
+	public static final RegistryObject<BlockEntityType<StudioSwitchOnTileEntity>> STUDIO_SWITCH_ON = REGISTRY.register("studio_switch_on",
+			() -> BlockEntityType.Builder.of(StudioSwitchOnTileEntity::new, BendymodModBlocks.STUDIO_SWITCH_ON.get()).build(null));
+	public static final RegistryObject<BlockEntityType<JumboBendyDollTileEntity>> JUMBO_BENDY_DOLL = REGISTRY.register("jumbo_bendy_doll",
+			() -> BlockEntityType.Builder.of(JumboBendyDollTileEntity::new, BendymodModBlocks.JUMBO_BENDY_DOLL.get()).build(null));
+	public static final RegistryObject<BlockEntityType<BorisDollTileEntity>> BORIS_DOLL = REGISTRY.register("boris_doll", () -> BlockEntityType.Builder.of(BorisDollTileEntity::new, BendymodModBlocks.BORIS_DOLL.get()).build(null));
+	public static final RegistryObject<BlockEntityType<JumboBorisDollTileEntity>> JUMBO_BORIS_DOLL = REGISTRY.register("jumbo_boris_doll",
+			() -> BlockEntityType.Builder.of(JumboBorisDollTileEntity::new, BendymodModBlocks.JUMBO_BORIS_DOLL.get()).build(null));
+	public static final RegistryObject<BlockEntityType<AliceAngelDollTileEntity>> ALICE_ANGEL_DOLL = REGISTRY.register("alice_angel_doll",
+			() -> BlockEntityType.Builder.of(AliceAngelDollTileEntity::new, BendymodModBlocks.ALICE_ANGEL_DOLL.get()).build(null));
+	public static final RegistryObject<BlockEntityType<StudioToiletTileEntity>> STUDIO_TOILET = REGISTRY.register("studio_toilet", () -> BlockEntityType.Builder.of(StudioToiletTileEntity::new, BendymodModBlocks.STUDIO_TOILET.get()).build(null));
+	public static final RegistryObject<BlockEntityType<StudioTVTileEntity>> STUDIO_TV = REGISTRY.register("studio_tv", () -> BlockEntityType.Builder.of(StudioTVTileEntity::new, BendymodModBlocks.STUDIO_TV.get()).build(null));
+	public static final RegistryObject<BlockEntityType<TastyEatsMachineTileEntity>> TASTY_EATS_MACHINE = REGISTRY.register("tasty_eats_machine",
+			() -> BlockEntityType.Builder.of(TastyEatsMachineTileEntity::new, BendymodModBlocks.TASTY_EATS_MACHINE.get()).build(null));
+	public static final RegistryObject<BlockEntityType<GearshiftTileEntity>> GEARSHIFT = REGISTRY.register("gearshift", () -> BlockEntityType.Builder.of(GearshiftTileEntity::new, BendymodModBlocks.GEARSHIFT.get()).build(null));
+	public static final RegistryObject<BlockEntityType<BendyClockTileEntity>> BENDY_CLOCK = REGISTRY.register("bendy_clock", () -> BlockEntityType.Builder.of(BendyClockTileEntity::new, BendymodModBlocks.BENDY_CLOCK.get()).build(null));
+	public static final RegistryObject<BlockEntityType<StoveTileEntity>> STOVE = REGISTRY.register("stove", () -> BlockEntityType.Builder.of(StoveTileEntity::new, BendymodModBlocks.STOVE.get()).build(null));
+	public static final RegistryObject<BlockEntityType<WritingIDontWantToWorkHereAnymoreTileEntity>> WRITING_I_DONT_WANT_TO_WORK_HERE_ANYMORE = REGISTRY.register("writing_i_dont_want_to_work_here_anymore",
+			() -> BlockEntityType.Builder.of(WritingIDontWantToWorkHereAnymoreTileEntity::new, BendymodModBlocks.WRITING_I_DONT_WANT_TO_WORK_HERE_ANYMORE.get()).build(null));
 
 	private static RegistryObject<BlockEntityType<?>> register(String registryname, RegistryObject<Block> block, BlockEntityType.BlockEntitySupplier<?> supplier) {
 		return REGISTRY.register(registryname, () -> BlockEntityType.Builder.of(supplier, block.get()).build(null));

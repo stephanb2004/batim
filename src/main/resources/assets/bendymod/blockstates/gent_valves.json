@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "bendymod:custom/gent_valves_particle"
+    },
+    "facing=east": {
+      "model": "bendymod:custom/gent_valves_particle",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "bendymod:custom/gent_valves_particle",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "bendymod:custom/gent_valves_particle",
+      "y": 270
+    }
+  }
+}

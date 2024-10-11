@@ -669,7 +669,7 @@
           "src/main/resources/assets/bendymod/models/custom/cassette_player_particle.json"
         ]
       },
-      "path": "~/Mod Stuff/Blocks/Props"
+      "path": "~/Mod Stuff/Blocks/Props/CassetePlayer"
     },
     {
       "name": "Desk",
@@ -1088,7 +1088,7 @@
           "src/main/resources/assets/bendymod/models/custom/reel_particle.json"
         ]
       },
-      "path": "~/Mod Stuff/Blocks/Props"
+      "path": "~/Mod Stuff/Blocks/Props/Reels"
     },
     {
       "name": "SoupCandle",
@@ -3273,41 +3273,6 @@
       "path": "~/Mod Stuff/StructureBlocks/StructureSpawningTypes"
     },
     {
-      "name": "GetRandomRoom",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "get_random_room",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/bendymod/procedures/GetRandomRoomProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "blockstate",
-            "type": "blockstate"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Mod Stuff/StructureBlocks/StructureSpawningTypes"
-    },
-    {
       "name": "SetStructureBlocks",
       "type": "procedure",
       "compiles": true,
@@ -4093,50 +4058,6 @@
         ]
       },
       "path": "~/Mod Stuff/Blocks/Props/Offerings"
-    },
-    {
-      "name": "ProjectionBlank",
-      "type": "animatedblock",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "projection_blank",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/bendymod/block/display/ProjectionBlankDisplayItem.java",
-          "src/main/java/net/mcreator/bendymod/block/model/ProjectionBlankBlockModel.java",
-          "src/main/resources/assets/bendymod/blockstates/projection_blank.json",
-          "src/main/resources/assets/bendymod/models/item/projection_blank.json",
-          "src/main/java/net/mcreator/bendymod/block/model/ProjectionBlankDisplayModel.java",
-          "src/main/java/net/mcreator/bendymod/block/renderer/ProjectionBlankDisplayItemRenderer.java",
-          "src/main/java/net/mcreator/bendymod/block/ProjectionBlankBlock.java",
-          "src/main/java/net/mcreator/bendymod/block/renderer/ProjectionBlankTileRenderer.java",
-          "src/main/java/net/mcreator/bendymod/block/entity/ProjectionBlankTileEntity.java",
-          "src/main/resources/assets/bendymod/models/custom/projection_blank_particle.json"
-        ]
-      },
-      "path": "~/Mod Stuff/Blocks/Props/Functional Props/Projector/Projection"
-    },
-    {
-      "name": "ProjectionBendyDance",
-      "type": "animatedblock",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "projection_bendy_dance",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/bendymod/models/item/projection_bendy_dance.json",
-          "src/main/java/net/mcreator/bendymod/block/model/ProjectionBendyDanceDisplayModel.java",
-          "src/main/java/net/mcreator/bendymod/block/renderer/ProjectionBendyDanceTileRenderer.java",
-          "src/main/resources/assets/bendymod/models/custom/projection_bendy_dance_particle.json",
-          "src/main/java/net/mcreator/bendymod/block/display/ProjectionBendyDanceDisplayItem.java",
-          "src/main/java/net/mcreator/bendymod/block/entity/ProjectionBendyDanceTileEntity.java",
-          "src/main/java/net/mcreator/bendymod/block/renderer/ProjectionBendyDanceDisplayItemRenderer.java",
-          "src/main/java/net/mcreator/bendymod/block/model/ProjectionBendyDanceBlockModel.java",
-          "src/main/java/net/mcreator/bendymod/block/ProjectionBendyDanceBlock.java",
-          "src/main/resources/assets/bendymod/blockstates/projection_bendy_dance.json"
-        ]
-      },
-      "path": "~/Mod Stuff/Blocks/Props/Functional Props/Projector/Projection"
     },
     {
       "name": "ReelBendyDance",
@@ -5143,32 +5064,6 @@
       "path": "~/Mod Stuff/Blocks/Props/Furniture"
     },
     {
-      "name": "TapeOverlay",
-      "type": "overlay",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "tape_overlay",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/bendymod/client/screens/TapeOverlayOverlay.java"
-        ]
-      }
-    },
-    {
-      "name": "TapeOverlayDisplayOverlayIngame",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "tape_overlay_display_overlay_ingame",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/bendymod/procedures/TapeOverlayDisplayOverlayIngameProcedure.java"
-        ],
-        "dependencies": []
-      }
-    },
-    {
       "name": "BaconSoupEmptyProjectile",
       "type": "projectile",
       "compiles": true,
@@ -5265,20 +5160,6 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/bendymod/procedures/InkLayerOnBlockRightClickedProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Mod Stuff/Blocks"
-    },
-    {
-      "name": "RightClickBlockProcedure",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "right_click_block_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/bendymod/procedures/RightClickBlockProcedureProcedure.java"
         ],
         "dependencies": [
           {
@@ -5449,6 +5330,14 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -5599,6 +5488,14 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -5752,7 +5649,8 @@
           "src/main/java/net/mcreator/bendymod/entity/model/StrikerModel.java",
           "src/main/java/net/mcreator/bendymod/entity/StrikerEntity.java",
           "src/main/java/net/mcreator/bendymod/client/renderer/StrikerRenderer.java",
-          "src/main/resources/assets/bendymod/models/item/striker_spawn_egg.json"
+          "src/main/resources/assets/bendymod/models/item/striker_spawn_egg.json",
+          "src/main/resources/data/bendymod/forge/biome_modifier/striker_biome_modifier.json"
         ]
       },
       "path": "~/Mod Stuff/Entities/Butcher Gang"
@@ -5817,6 +5715,1220 @@
         ]
       },
       "path": "~/Mod Stuff/Blocks/Props"
+    },
+    {
+      "name": "EncasedInk",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "encased_ink",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/models/item/encased_ink.json",
+          "src/main/resources/data/bendymod/loot_tables/blocks/encased_ink.json",
+          "src/main/resources/assets/bendymod/models/block/encased_ink.json",
+          "src/main/java/net/mcreator/bendymod/block/EncasedInkBlock.java",
+          "src/main/resources/assets/bendymod/blockstates/encased_ink.json"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks"
+    },
+    {
+      "name": "EncasedInkBlockDestroyed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "encased_ink_block_destroyed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/EncasedInkBlockDestroyedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks"
+    },
+    {
+      "name": "TommyGun",
+      "type": "animateditem",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tommy_gun",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/item/renderer/TommyGunItemRenderer.java",
+          "src/main/java/net/mcreator/bendymod/item/model/TommyGunItemModel.java",
+          "src/main/java/net/mcreator/bendymod/item/TommyGunItem.java",
+          "src/main/resources/assets/bendymod/models/item/tommy_gun.json"
+        ]
+      },
+      "path": "~/Mod Stuff/Weapons"
+    },
+    {
+      "name": "TommyBullet",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tommy_bullet",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/item/TommyBulletItem.java",
+          "src/main/resources/assets/bendymod/models/item/tommy_bullet.json"
+        ]
+      },
+      "path": "~/Mod Stuff/Weapons"
+    },
+    {
+      "name": "TommyBulletProjectile",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tommy_bullet_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/entity/TommyBulletProjectileEntity.java",
+          "src/main/java/net/mcreator/bendymod/client/renderer/TommyBulletProjectileRenderer.java"
+        ]
+      },
+      "path": "~/Mod Stuff/Weapons"
+    },
+    {
+      "name": "TommyGunPlayerFinishesUsingItem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tommy_gun_player_finishes_using_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/TommyGunPlayerFinishesUsingItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/Weapons"
+    },
+    {
+      "name": "GentValves",
+      "type": "animatedblock",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gent_valves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/block/model/GentValvesBlockModel.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/GentValvesTileRenderer.java",
+          "src/main/resources/assets/bendymod/models/custom/gent_valves_particle.json",
+          "src/main/resources/assets/bendymod/blockstates/gent_valves.json",
+          "src/main/java/net/mcreator/bendymod/block/GentValvesBlock.java",
+          "src/main/resources/assets/bendymod/models/item/gent_valves.json",
+          "src/main/java/net/mcreator/bendymod/block/model/GentValvesDisplayModel.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/GentValvesDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/display/GentValvesDisplayItem.java",
+          "src/main/java/net/mcreator/bendymod/block/entity/GentValvesTileEntity.java"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props"
+    },
+    {
+      "name": "StudioPlunger",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "studio_plunger",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/item/StudioPlungerItem.java",
+          "src/main/resources/assets/bendymod/models/item/studio_plunger.json"
+        ]
+      },
+      "path": "~/Mod Stuff/Weapons"
+    },
+    {
+      "name": "GentPipe",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gent_pipe",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/item/GentPipeItem.java",
+          "src/main/resources/assets/bendymod/models/item/gent_pipe.json"
+        ]
+      },
+      "path": "~/Mod Stuff/Weapons"
+    },
+    {
+      "name": "CagedLamp",
+      "type": "animatedblock",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "caged_lamp",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/block/model/CagedLampBlockModel.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/CagedLampDisplayItemRenderer.java",
+          "src/main/resources/assets/bendymod/models/custom/caged_lamp_particle.json",
+          "src/main/java/net/mcreator/bendymod/block/entity/CagedLampTileEntity.java",
+          "src/main/java/net/mcreator/bendymod/block/display/CagedLampDisplayItem.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/CagedLampTileRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/CagedLampBlock.java",
+          "src/main/resources/assets/bendymod/blockstates/caged_lamp.json",
+          "src/main/resources/assets/bendymod/models/item/caged_lamp.json",
+          "src/main/java/net/mcreator/bendymod/block/model/CagedLampDisplayModel.java"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks"
+    },
+    {
+      "name": "FloorPipe",
+      "type": "animatedblock",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "floor_pipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/models/custom/floor_pipe_particle.json",
+          "src/main/java/net/mcreator/bendymod/block/model/FloorPipeBlockModel.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/FloorPipeTileRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/FloorPipeBlock.java",
+          "src/main/resources/assets/bendymod/blockstates/floor_pipe.json",
+          "src/main/java/net/mcreator/bendymod/block/entity/FloorPipeTileEntity.java",
+          "src/main/java/net/mcreator/bendymod/block/model/FloorPipeDisplayModel.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/FloorPipeDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/display/FloorPipeDisplayItem.java",
+          "src/main/resources/assets/bendymod/models/item/floor_pipe.json"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks"
+    },
+    {
+      "name": "Projection",
+      "type": "animatedblock",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "projection",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/models/custom/projection_particle.json",
+          "src/main/resources/assets/bendymod/blockstates/projection.json",
+          "src/main/java/net/mcreator/bendymod/block/model/ProjectionDisplayModel.java",
+          "src/main/java/net/mcreator/bendymod/block/display/ProjectionDisplayItem.java",
+          "src/main/resources/assets/bendymod/models/item/projection.json",
+          "src/main/java/net/mcreator/bendymod/block/entity/ProjectionTileEntity.java",
+          "src/main/resources/assets/bendymod/models/block/projection_blockstate_0.json",
+          "src/main/java/net/mcreator/bendymod/block/renderer/ProjectionTileRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/ProjectionDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/ProjectionBlock.java",
+          "src/main/java/net/mcreator/bendymod/block/model/ProjectionBlockModel.java"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props/Functional Props/Projector"
+    },
+    {
+      "name": "Fan",
+      "type": "animatedblock",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fan",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/block/display/FanDisplayItem.java",
+          "src/main/resources/assets/bendymod/blockstates/fan.json",
+          "src/main/resources/assets/bendymod/models/custom/fan_particle.json",
+          "src/main/java/net/mcreator/bendymod/block/renderer/FanTileRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/model/FanDisplayModel.java",
+          "src/main/resources/assets/bendymod/models/item/fan.json",
+          "src/main/java/net/mcreator/bendymod/block/FanBlock.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/FanDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/model/FanBlockModel.java",
+          "src/main/java/net/mcreator/bendymod/block/entity/FanTileEntity.java"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks"
+    },
+    {
+      "name": "StudioSwitchOff",
+      "type": "animatedblock",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "studio_switch_off",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/block/display/StudioSwitchOffDisplayItem.java",
+          "src/main/java/net/mcreator/bendymod/block/model/StudioSwitchOffBlockModel.java",
+          "src/main/java/net/mcreator/bendymod/block/entity/StudioSwitchOffTileEntity.java",
+          "src/main/resources/assets/bendymod/blockstates/studio_switch_off.json",
+          "src/main/java/net/mcreator/bendymod/block/renderer/StudioSwitchOffTileRenderer.java",
+          "src/main/resources/assets/bendymod/models/custom/studio_switch_off_particle.json",
+          "src/main/java/net/mcreator/bendymod/block/renderer/StudioSwitchOffDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/model/StudioSwitchOffDisplayModel.java",
+          "src/main/resources/assets/bendymod/models/item/studio_switch_off.json",
+          "src/main/java/net/mcreator/bendymod/block/StudioSwitchOffBlock.java"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props/Switches"
+    },
+    {
+      "name": "StudioSwitchOn",
+      "type": "animatedblock",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "studio_switch_on",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/models/item/studio_switch_on.json",
+          "src/main/java/net/mcreator/bendymod/block/model/StudioSwitchOnBlockModel.java",
+          "src/main/java/net/mcreator/bendymod/block/entity/StudioSwitchOnTileEntity.java",
+          "src/main/resources/assets/bendymod/models/custom/studio_switch_on_particle.json",
+          "src/main/java/net/mcreator/bendymod/block/renderer/StudioSwitchOnDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/StudioSwitchOnBlock.java",
+          "src/main/resources/assets/bendymod/blockstates/studio_switch_on.json",
+          "src/main/java/net/mcreator/bendymod/block/model/StudioSwitchOnDisplayModel.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/StudioSwitchOnTileRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/display/StudioSwitchOnDisplayItem.java"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props/Switches"
+    },
+    {
+      "name": "StudioSwitchOnBlockRightClicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "studio_switch_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/StudioSwitchOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props/Switches"
+    },
+    {
+      "name": "JumboBendyDoll",
+      "type": "animatedblock",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jumbo_bendy_doll",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/models/custom/jumbo_bendy_doll_particle.json",
+          "src/main/java/net/mcreator/bendymod/block/renderer/JumboBendyDollTileRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/model/JumboBendyDollBlockModel.java",
+          "src/main/java/net/mcreator/bendymod/block/display/JumboBendyDollDisplayItem.java",
+          "src/main/java/net/mcreator/bendymod/block/model/JumboBendyDollDisplayModel.java",
+          "src/main/java/net/mcreator/bendymod/block/JumboBendyDollBlock.java",
+          "src/main/java/net/mcreator/bendymod/block/entity/JumboBendyDollTileEntity.java",
+          "src/main/resources/assets/bendymod/models/item/jumbo_bendy_doll.json",
+          "src/main/resources/assets/bendymod/blockstates/jumbo_bendy_doll.json",
+          "src/main/java/net/mcreator/bendymod/block/renderer/JumboBendyDollDisplayItemRenderer.java"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props/Plushies"
+    },
+    {
+      "name": "BorisDoll",
+      "type": "animatedblock",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boris_doll",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/block/model/BorisDollBlockModel.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/BorisDollTileRenderer.java",
+          "src/main/resources/assets/bendymod/models/custom/boris_doll_particle.json",
+          "src/main/java/net/mcreator/bendymod/block/renderer/BorisDollDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/display/BorisDollDisplayItem.java",
+          "src/main/resources/assets/bendymod/blockstates/boris_doll.json",
+          "src/main/java/net/mcreator/bendymod/block/BorisDollBlock.java",
+          "src/main/java/net/mcreator/bendymod/block/entity/BorisDollTileEntity.java",
+          "src/main/java/net/mcreator/bendymod/block/model/BorisDollDisplayModel.java",
+          "src/main/resources/assets/bendymod/models/item/boris_doll.json"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props/Plushies"
+    },
+    {
+      "name": "JumboBorisDoll",
+      "type": "animatedblock",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jumbo_boris_doll",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/block/entity/JumboBorisDollTileEntity.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/JumboBorisDollTileRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/JumboBorisDollDisplayItemRenderer.java",
+          "src/main/resources/assets/bendymod/blockstates/jumbo_boris_doll.json",
+          "src/main/java/net/mcreator/bendymod/block/model/JumboBorisDollDisplayModel.java",
+          "src/main/java/net/mcreator/bendymod/block/JumboBorisDollBlock.java",
+          "src/main/resources/assets/bendymod/models/custom/jumbo_boris_doll_particle.json",
+          "src/main/java/net/mcreator/bendymod/block/model/JumboBorisDollBlockModel.java",
+          "src/main/resources/assets/bendymod/models/item/jumbo_boris_doll.json",
+          "src/main/java/net/mcreator/bendymod/block/display/JumboBorisDollDisplayItem.java"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props/Plushies"
+    },
+    {
+      "name": "AliceAngelDoll",
+      "type": "animatedblock",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "alice_angel_doll",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/block/model/AliceAngelDollBlockModel.java",
+          "src/main/java/net/mcreator/bendymod/block/display/AliceAngelDollDisplayItem.java",
+          "src/main/resources/assets/bendymod/blockstates/alice_angel_doll.json",
+          "src/main/java/net/mcreator/bendymod/block/renderer/AliceAngelDollTileRenderer.java",
+          "src/main/resources/assets/bendymod/models/item/alice_angel_doll.json",
+          "src/main/java/net/mcreator/bendymod/block/AliceAngelDollBlock.java",
+          "src/main/java/net/mcreator/bendymod/block/entity/AliceAngelDollTileEntity.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/AliceAngelDollDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/model/AliceAngelDollDisplayModel.java",
+          "src/main/resources/assets/bendymod/models/custom/alice_angel_doll_particle.json"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props/Plushies"
+    },
+    {
+      "name": "Sink",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sink",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/bendymod/loot_tables/blocks/sink.json",
+          "src/main/resources/assets/bendymod/models/item/sink.json",
+          "src/main/resources/assets/bendymod/blockstates/sink.json",
+          "src/main/resources/assets/bendymod/models/block/sink.json",
+          "src/main/java/net/mcreator/bendymod/block/SinkBlock.java"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props"
+    },
+    {
+      "name": "StudioToilet",
+      "type": "animatedblock",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "studio_toilet",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/models/custom/studio_toilet_particle.json",
+          "src/main/java/net/mcreator/bendymod/block/renderer/StudioToiletDisplayItemRenderer.java",
+          "src/main/resources/assets/bendymod/models/item/studio_toilet.json",
+          "src/main/java/net/mcreator/bendymod/block/renderer/StudioToiletTileRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/display/StudioToiletDisplayItem.java",
+          "src/main/resources/assets/bendymod/blockstates/studio_toilet.json",
+          "src/main/java/net/mcreator/bendymod/block/model/StudioToiletDisplayModel.java",
+          "src/main/java/net/mcreator/bendymod/block/entity/StudioToiletTileEntity.java",
+          "src/main/java/net/mcreator/bendymod/block/StudioToiletBlock.java",
+          "src/main/java/net/mcreator/bendymod/block/model/StudioToiletBlockModel.java"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props"
+    },
+    {
+      "name": "StudioTV",
+      "type": "animatedblock",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "studio_tv",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/block/renderer/StudioTVTileRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/model/StudioTVDisplayModel.java",
+          "src/main/java/net/mcreator/bendymod/block/model/StudioTVBlockModel.java",
+          "src/main/resources/assets/bendymod/blockstates/studio_tv.json",
+          "src/main/java/net/mcreator/bendymod/block/entity/StudioTVTileEntity.java",
+          "src/main/java/net/mcreator/bendymod/block/display/StudioTVDisplayItem.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/StudioTVDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/StudioTVBlock.java",
+          "src/main/resources/assets/bendymod/models/custom/studio_tv_particle.json",
+          "src/main/resources/assets/bendymod/models/item/studio_tv.json"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props"
+    },
+    {
+      "name": "TastyEatsMachine",
+      "type": "animatedblock",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tasty_eats_machine",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/block/model/TastyEatsMachineBlockModel.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/TastyEatsMachineTileRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/TastyEatsMachineBlock.java",
+          "src/main/java/net/mcreator/bendymod/block/model/TastyEatsMachineDisplayModel.java",
+          "src/main/java/net/mcreator/bendymod/block/display/TastyEatsMachineDisplayItem.java",
+          "src/main/resources/assets/bendymod/blockstates/tasty_eats_machine.json",
+          "src/main/resources/assets/bendymod/models/item/tasty_eats_machine.json",
+          "src/main/resources/assets/bendymod/models/custom/tasty_eats_machine_particle.json",
+          "src/main/java/net/mcreator/bendymod/block/renderer/TastyEatsMachineDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/entity/TastyEatsMachineTileEntity.java"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props"
+    },
+    {
+      "name": "StudioCutWall",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "studio_cut_wall",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/models/block/studio_cut_wall.json",
+          "src/main/resources/assets/bendymod/blockstates/studio_cut_wall.json",
+          "src/main/resources/data/bendymod/loot_tables/blocks/studio_cut_wall.json",
+          "src/main/resources/assets/bendymod/models/item/studio_cut_wall.json",
+          "src/main/java/net/mcreator/bendymod/block/StudioCutWallBlock.java"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks"
+    },
+    {
+      "name": "StudioCutWallStairs",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "studio_cut_wall_stairs",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/bendymod/loot_tables/blocks/studio_cut_wall_stairs.json",
+          "src/main/resources/assets/bendymod/models/item/studio_cut_wall_stairs.json",
+          "src/main/resources/assets/bendymod/blockstates/studio_cut_wall_stairs.json",
+          "src/main/resources/assets/bendymod/models/block/studio_cut_wall_stairs_inner.json",
+          "src/main/resources/assets/bendymod/models/block/studio_cut_wall_stairs_outer.json",
+          "src/main/resources/assets/bendymod/models/block/studio_cut_wall_stairs.json",
+          "src/main/java/net/mcreator/bendymod/block/StudioCutWallStairsBlock.java"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks"
+    },
+    {
+      "name": "StudioCutWallSlab",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "studio_cut_wall_slab",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/models/block/studio_cut_wall_slab_top.json",
+          "src/main/java/net/mcreator/bendymod/block/StudioCutWallSlabBlock.java",
+          "src/main/resources/assets/bendymod/blockstates/studio_cut_wall_slab.json",
+          "src/main/resources/assets/bendymod/models/item/studio_cut_wall_slab.json",
+          "src/main/resources/data/bendymod/loot_tables/blocks/studio_cut_wall_slab.json",
+          "src/main/resources/assets/bendymod/models/block/studio_cut_wall_slab.json",
+          "src/main/resources/assets/bendymod/models/block/studio_cut_wall_slab_full.json"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks"
+    },
+    {
+      "name": "WalkableStudioCutWall",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "walkable_studio_cut_wall",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/bendymod/loot_tables/blocks/walkable_studio_cut_wall.json",
+          "src/main/java/net/mcreator/bendymod/block/WalkableStudioCutWallBlock.java",
+          "src/main/resources/assets/bendymod/models/item/walkable_studio_cut_wall.json",
+          "src/main/resources/assets/bendymod/blockstates/walkable_studio_cut_wall.json",
+          "src/main/resources/assets/bendymod/models/block/walkable_studio_cut_wall.json"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/WalkableBlocks"
+    },
+    {
+      "name": "WalkableStudioCutWallStairs",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "walkable_studio_cut_wall_stairs",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/models/block/walkable_studio_cut_wall_stairs_inner.json",
+          "src/main/resources/assets/bendymod/models/item/walkable_studio_cut_wall_stairs.json",
+          "src/main/resources/assets/bendymod/models/block/walkable_studio_cut_wall_stairs.json",
+          "src/main/resources/data/bendymod/loot_tables/blocks/walkable_studio_cut_wall_stairs.json",
+          "src/main/resources/assets/bendymod/blockstates/walkable_studio_cut_wall_stairs.json",
+          "src/main/resources/assets/bendymod/models/block/walkable_studio_cut_wall_stairs_outer.json",
+          "src/main/java/net/mcreator/bendymod/block/WalkableStudioCutWallStairsBlock.java"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/WalkableBlocks"
+    },
+    {
+      "name": "WalkableStudioCutWallSlab",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "walkable_studio_cut_wall_slab",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/models/item/walkable_studio_cut_wall_slab.json",
+          "src/main/resources/assets/bendymod/models/block/walkable_studio_cut_wall_slab_top.json",
+          "src/main/resources/assets/bendymod/models/block/walkable_studio_cut_wall_slab.json",
+          "src/main/resources/assets/bendymod/models/block/walkable_studio_cut_wall_slab_full.json",
+          "src/main/resources/data/bendymod/loot_tables/blocks/walkable_studio_cut_wall_slab.json",
+          "src/main/resources/assets/bendymod/blockstates/walkable_studio_cut_wall_slab.json",
+          "src/main/java/net/mcreator/bendymod/block/WalkableStudioCutWallSlabBlock.java"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/WalkableBlocks"
+    },
+    {
+      "name": "Gearshift",
+      "type": "animatedblock",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gearshift",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/block/display/GearshiftDisplayItem.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/GearshiftTileRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/GearshiftDisplayItemRenderer.java",
+          "src/main/resources/assets/bendymod/blockstates/gearshift.json",
+          "src/main/resources/assets/bendymod/models/custom/gearshift_particle.json",
+          "src/main/java/net/mcreator/bendymod/block/model/GearshiftDisplayModel.java",
+          "src/main/java/net/mcreator/bendymod/block/GearshiftBlock.java",
+          "src/main/java/net/mcreator/bendymod/block/entity/GearshiftTileEntity.java",
+          "src/main/java/net/mcreator/bendymod/block/model/GearshiftBlockModel.java",
+          "src/main/resources/assets/bendymod/models/item/gearshift.json"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks"
+    },
+    {
+      "name": "BendyClock",
+      "type": "animatedblock",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bendy_clock",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/blockstates/bendy_clock.json",
+          "src/main/java/net/mcreator/bendymod/block/model/BendyClockDisplayModel.java",
+          "src/main/resources/assets/bendymod/models/item/bendy_clock.json",
+          "src/main/java/net/mcreator/bendymod/block/BendyClockBlock.java",
+          "src/main/java/net/mcreator/bendymod/block/model/BendyClockBlockModel.java",
+          "src/main/java/net/mcreator/bendymod/block/display/BendyClockDisplayItem.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/BendyClockDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/entity/BendyClockTileEntity.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/BendyClockTileRenderer.java",
+          "src/main/resources/assets/bendymod/models/custom/bendy_clock_particle.json"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props"
+    },
+    {
+      "name": "Stove",
+      "type": "animatedblock",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stove",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/block/StoveBlock.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/StoveDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/renderer/StoveTileRenderer.java",
+          "src/main/java/net/mcreator/bendymod/block/display/StoveDisplayItem.java",
+          "src/main/resources/assets/bendymod/models/custom/stove_particle.json",
+          "src/main/resources/assets/bendymod/models/item/stove.json",
+          "src/main/java/net/mcreator/bendymod/block/model/StoveBlockModel.java",
+          "src/main/java/net/mcreator/bendymod/block/entity/StoveTileEntity.java",
+          "src/main/java/net/mcreator/bendymod/block/model/StoveDisplayModel.java",
+          "src/main/resources/assets/bendymod/blockstates/stove.json"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props"
+    },
+    {
+      "name": "GetLevelKHallway",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_level_k_hallway",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/GetLevelKHallwayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/StructureBlocks/StructureSpawningTypes"
+    },
+    {
+      "name": "CheckIfCanSpawnLargeRoom",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "check_if_can_spawn_large_room",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/CheckIfCanSpawnLargeRoomProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/StructureBlocks/StructureSpawningTypes"
+    },
+    {
+      "name": "GetLevel11Hallway",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_level_11_hallway",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/GetLevel11HallwayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/StructureBlocks/StructureSpawningTypes"
+    },
+    {
+      "name": "CheckIfCanSpawnBigRoom",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "check_if_can_spawn_big_room",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/CheckIfCanSpawnBigRoomProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/StructureBlocks/StructureSpawningTypes"
+    },
+    {
+      "name": "RiseAndFall",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rise_and_fall",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/bendymod/advancements/rise_and_fall.json"
+        ]
+      },
+      "path": "~/Mod Stuff/Achievement"
+    },
+    {
+      "name": "NormansFate",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "normans_fate",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/bendymod/advancements/normans_fate.json"
+        ]
+      },
+      "path": "~/Mod Stuff/Achievement"
+    },
+    {
+      "name": "ProjectionistEntityDies",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "projectionist_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/ProjectionistEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/Entities/Projectionist"
+    },
+    {
+      "name": "WritingIDontWantToWorkHereAnymore",
+      "type": "animatedblock",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "writing_i_dont_want_to_work_here_anymore",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/models/item/writing_i_dont_want_to_work_here_anymore.json",
+          "src/main/java/net/mcreator/bendymod/block/model/WritingIDontWantToWorkHereAnymoreBlockModel.java",
+          "src/main/java/net/mcreator/bendymod/block/model/WritingIDontWantToWorkHereAnymoreDisplayModel.java",
+          "src/main/java/net/mcreator/bendymod/block/WritingIDontWantToWorkHereAnymoreBlock.java",
+          "src/main/java/net/mcreator/bendymod/block/display/WritingIDontWantToWorkHereAnymoreDisplayItem.java",
+          "src/main/java/net/mcreator/bendymod/block/entity/WritingIDontWantToWorkHereAnymoreTileEntity.java",
+          "src/main/resources/assets/bendymod/models/custom/writing_i_dont_want_to_work_here_anymore_particle.json",
+          "src/main/java/net/mcreator/bendymod/block/renderer/WritingIDontWantToWorkHereAnymoreTileRenderer.java",
+          "src/main/resources/assets/bendymod/blockstates/writing_i_dont_want_to_work_here_anymore.json",
+          "src/main/java/net/mcreator/bendymod/block/renderer/WritingIDontWantToWorkHereAnymoreDisplayItemRenderer.java"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props/Wall Writitings"
+    },
+    {
+      "name": "GetLevelPHallway",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_level_p_hallway",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/GetLevelPHallwayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/StructureBlocks/StructureSpawningTypes"
+    },
+    {
+      "name": "SignLevelK",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sign_level_k",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/bendymod/loot_tables/blocks/sign_level_k.json",
+          "src/main/java/net/mcreator/bendymod/block/SignLevelKBlock.java",
+          "src/main/resources/assets/bendymod/models/block/sign_level_k.json",
+          "src/main/resources/assets/bendymod/models/item/sign_level_k.json",
+          "src/main/resources/assets/bendymod/blockstates/sign_level_k.json"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props"
+    },
+    {
+      "name": "SignLevel11",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sign_level_11",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/blockstates/sign_level_11.json",
+          "src/main/java/net/mcreator/bendymod/block/SignLevel11Block.java",
+          "src/main/resources/assets/bendymod/models/item/sign_level_11.json",
+          "src/main/resources/data/bendymod/loot_tables/blocks/sign_level_11.json",
+          "src/main/resources/assets/bendymod/models/block/sign_level_11.json"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props"
+    },
+    {
+      "name": "SignLevelP",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sign_level_p",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/blockstates/sign_level_p.json",
+          "src/main/resources/assets/bendymod/models/block/sign_level_p.json",
+          "src/main/resources/data/bendymod/loot_tables/blocks/sign_level_p.json",
+          "src/main/java/net/mcreator/bendymod/block/SignLevelPBlock.java",
+          "src/main/resources/assets/bendymod/models/item/sign_level_p.json"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props"
+    },
+    {
+      "name": "SignLevel9",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sign_level_9",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/models/block/sign_level_9.json",
+          "src/main/resources/assets/bendymod/blockstates/sign_level_9.json",
+          "src/main/java/net/mcreator/bendymod/block/SignLevel9Block.java",
+          "src/main/resources/data/bendymod/loot_tables/blocks/sign_level_9.json",
+          "src/main/resources/assets/bendymod/models/item/sign_level_9.json"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props"
+    },
+    {
+      "name": "SignLevel14",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sign_level_14",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/block/SignLevel14Block.java",
+          "src/main/resources/assets/bendymod/models/block/sign_level_14.json",
+          "src/main/resources/assets/bendymod/models/item/sign_level_14.json",
+          "src/main/resources/assets/bendymod/blockstates/sign_level_14.json",
+          "src/main/resources/data/bendymod/loot_tables/blocks/sign_level_14.json"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props"
+    },
+    {
+      "name": "GetLevelAHallway",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_level_a_hallway",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/GetLevelAHallwayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/StructureBlocks/StructureSpawningTypes"
+    },
+    {
+      "name": "ButcherGangNaturalEntitySpawningCondition",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "butcher_gang_natural_entity_spawning_condition",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/ButcherGangNaturalEntitySpawningConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/Entities/Butcher Gang"
+    },
+    {
+      "name": "GetLevel0Hallways",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_level_0_hallways",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/GetLevel0HallwaysProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/StructureBlocks/StructureSpawningTypes"
+    },
+    {
+      "name": "SignLevelA",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sign_level_a",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bendymod/models/item/sign_level_a.json",
+          "src/main/java/net/mcreator/bendymod/block/SignLevelABlock.java",
+          "src/main/resources/assets/bendymod/models/block/sign_level_a.json",
+          "src/main/resources/assets/bendymod/blockstates/sign_level_a.json",
+          "src/main/resources/data/bendymod/loot_tables/blocks/sign_level_a.json"
+        ]
+      },
+      "path": "~/Mod Stuff/Blocks/Props"
+    },
+    {
+      "name": "GetLevel9Hallways",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_level_9_hallways",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/GetLevel9HallwaysProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/StructureBlocks/StructureSpawningTypes"
+    },
+    {
+      "name": "GetLevel14Hallway",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_level_14_hallway",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/bendymod/procedures/GetLevel14HallwayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mod Stuff/StructureBlocks/StructureSpawningTypes"
     }
   ],
   "variable_elements": [
@@ -5909,6 +7021,12 @@
       "type": "number",
       "scope": "map",
       "value": "0"
+    },
+    {
+      "name": "breakerroom_spawned",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -6137,6 +7255,30 @@
       ],
       "category": "music",
       "subtitle": "Projectionist chases"
+    },
+    {
+      "name": "tommygun_fire",
+      "files": [
+        "tommygun_fire"
+      ],
+      "category": "neutral",
+      "subtitle": "Tommy Gun fires"
+    },
+    {
+      "name": "tommygun_reload",
+      "files": [
+        "tommygun_reload"
+      ],
+      "category": "neutral",
+      "subtitle": "Tommy Gun reloads"
+    },
+    {
+      "name": "tommygun_out",
+      "files": [
+        "tommygun_out"
+      ],
+      "category": "neutral",
+      "subtitle": "Tommy Gun out of bullets"
     }
   ],
   "tag_elements": {
@@ -6153,7 +7295,10 @@
       "CUSTOM:CutoutBendy",
       "CUSTOM:WalkableSolidInk",
       "CUSTOM:WalkableStudioTiles",
-      "CUSTOM:Boards"
+      "CUSTOM:Boards",
+      "CUSTOM:WalkableStudioCutWall",
+      "CUSTOM:WalkableStudioCutWallStairs",
+      "CUSTOM:WalkableStudioCutWallSlab"
     ],
     "BLOCKS:minecraft:replaceable": [
       "~CUSTOM:InkRL",
@@ -6191,7 +7336,13 @@
       "CUSTOM:PosterSentFromAbove",
       "CUSTOM:PosterLargeSentFromAbove"
     ],
+    "ITEMS:mod:reels": [
+      "CUSTOM:Reel",
+      "CUSTOM:ReelBendyDance"
+    ],
     "BLOCKS:minecraft:slabs": [
+      "~CUSTOM:WalkableStudioCutWallSlab",
+      "~CUSTOM:StudioCutWallSlab",
       "~CUSTOM:WalkableStudioBlankWallSlab",
       "~CUSTOM:WalkableStudioFloorSlab",
       "~CUSTOM:StudioFloorTiledSlab",
@@ -6203,14 +7354,17 @@
       "CUSTOM:StudioBlankWallFence",
       "CUSTOM:StudioFloorFence"
     ],
-    "BLOCKS:mod:projections": [
-      "CUSTOM:ProjectionBlank",
-      "CUSTOM:ProjectionBendyDance"
-    ],
     "ITEMS:minecraft:axes": [
       "~CUSTOM:StudioAxe"
     ],
+    "ENTITIES:mod:butcher_gang": [
+      "CUSTOM:Fisher",
+      "CUSTOM:Piper",
+      "CUSTOM:Striker"
+    ],
     "BLOCKS:minecraft:stairs": [
+      "~CUSTOM:WalkableStudioCutWallStairs",
+      "~CUSTOM:StudioCutWallStairs",
       "~CUSTOM:WalkableStudioBlankWallStairs",
       "~CUSTOM:WalkableStudioFloorStairs",
       "~CUSTOM:StudioFloorTiledStairs",
@@ -6218,10 +7372,9 @@
       "~CUSTOM:StudioBlankWallStairs",
       "~CUSTOM:StudioFloorStairs"
     ],
-    "ENTITIES:mod:butcher_gang": [
-      "CUSTOM:Fisher",
-      "CUSTOM:Piper",
-      "CUSTOM:Striker"
+    "ITEMS:minecraft:swords": [
+      "~CUSTOM:GentPipe",
+      "~CUSTOM:StudioPlunger"
     ],
     "BLOCKS:mod:ink_offerings": [
       "CUSTOM:Record",
@@ -6233,6 +7386,59 @@
     ]
   },
   "tab_element_order": {
+    "CUSTOM:BendyBlocks": [
+      "StudioFloor",
+      "StudioFloorStairs",
+      "StudioFloorSlab",
+      "StudioBlankWall",
+      "StudioBlankWallStairs",
+      "StudioBlankWallSlab",
+      "StudioPlankedWall",
+      "StudioPlankedWallBroken",
+      "StudioCeiling",
+      "StudioDoorBasic",
+      "StudioDoorSegmented",
+      "StudioBrokenFloor",
+      "StudioTiledWall",
+      "StudioTiles",
+      "StudioCutWall",
+      "StudioCutWallStairs",
+      "StudioCutWallSlab",
+      "StudioDirt",
+      "ChainFence",
+      "StudioBlankWallFence",
+      "StudioFloorFence",
+      "StudioBricks",
+      "StudioBrickStairs",
+      "StudioBrickSlab",
+      "PlankedTrapdoor",
+      "StudioFloorGrate",
+      "IndustrialWallPanel",
+      "SolidInk",
+      "InkLayer",
+      "EncasedInk",
+      "StiffStudioDoorBasic",
+      "StiffStudioDoorSegmented",
+      "HeavyGateClosed",
+      "SolidInkRl",
+      "StudioFloorTiled",
+      "StudioFloorTiledStairs",
+      "StudioFloorTiledSlab",
+      "WalkableStudioFloor",
+      "WalkableStudioFloorStairs",
+      "WalkableStudioFloorSlab",
+      "WalkableStudioBlankWall",
+      "WalkableStudioBlankWallStairs",
+      "WalkableStudioBlankWallSlab",
+      "WalkableStudioPlankedWall",
+      "WalkableStudioCeiling",
+      "WalkableStudioTiledWall",
+      "WalkableStudioTiles",
+      "WalkableStudioCutWall",
+      "WalkableStudioCutWallStairs",
+      "WalkableStudioCutWallSlab",
+      "WalkableSolidInk"
+    ],
     "CUSTOM:BendyEntities": [
       "Bendy",
       "SammyLawrence",
@@ -6243,6 +7449,156 @@
       "Fisher",
       "Projectionist",
       "Striker"
+    ],
+    "CUSTOM:BendyProps": [
+      "StudioAxe",
+      "GentPipe",
+      "StudioPlunger",
+      "TommyGun",
+      "TommyBullet",
+      "BendyMask",
+      "CutoutBendy",
+      "InkMachine",
+      "Speaker",
+      "Dresser",
+      "Valve",
+      "Record",
+      "TrashBin",
+      "JumbledPaper",
+      "Boards",
+      "Radio",
+      "CassettePlayer",
+      "Desk",
+      "StudioChair",
+      "Projector",
+      "BorisClone",
+      "InkPuddle",
+      "StudioLamp",
+      "BendyStatue",
+      "InkBarrel",
+      "PosterLittleDevilDarlin",
+      "PosterDancingDemon",
+      "PosterSheepSongs",
+      "Coffin",
+      "Ink",
+      "WritingDreamsComeTrue",
+      "WritingWhosLaughingNow",
+      "WritingTheCreatorLiedToUs",
+      "Reel",
+      "SoupCandle",
+      "Crate",
+      "InkPuddleWall",
+      "RitualSummoning",
+      "PosterLargeLittleDevilDarlin",
+      "PosterLargeDancingDemon",
+      "PosterLargeSheepSongs",
+      "SignLight",
+      "SignDark",
+      "DeskFancy",
+      "Shelf",
+      "JDSSign",
+      "WorkTable",
+      "MusicDepartmentSign",
+      "PipeStraight",
+      "PipeWallVertical",
+      "PipeWallHorizontal",
+      "Gearbox",
+      "Toolbox",
+      "VentCover",
+      "WritingItsTimeToBelieve",
+      "WritingTheSheepWillComeToSlaughter",
+      "WritingSingWithMe",
+      "WritingDownHereWereAllSinners",
+      "HatRack",
+      "CurtainRaggety",
+      "PunchInCard",
+      "Pedestal",
+      "PosterDontForgetToPunchIn",
+      "PosterLargeDontForgetToPunchIn",
+      "PosterDelicious",
+      "PosterLargeDelicious",
+      "Cellbox0",
+      "DryCell",
+      "InfermaryBed",
+      "InkWell",
+      "Gear",
+      "BendyDoll",
+      "Wrench",
+      "IllusionOfLiving",
+      "HangingMic",
+      "SheetHolder",
+      "BendyHead",
+      "BendyWall",
+      "Banjo",
+      "Drum",
+      "Piano",
+      "Bass",
+      "Violin",
+      "LargeBox",
+      "PosterLargeWorkHardWorkHappy",
+      "PosterTrainTrouble",
+      "PosterLargeTrainTrouble",
+      "PosterSentFromAbove",
+      "PosterLargeSentFromAbove",
+      "InkPuddleSpawner",
+      "BaconSoup",
+      "PaintingBendyUmbrella",
+      "LeverStudioOff",
+      "LeverPowerOff",
+      "PaintingBlank",
+      "PaintingBook",
+      "PaintingCog",
+      "PaintingInkwell",
+      "PaintingMusic",
+      "PaintingPlush",
+      "PaintingWrench",
+      "LargeChains",
+      "RecordRL",
+      "InkWellRL",
+      "GearRL",
+      "BendyDollRL",
+      "WrenchRL",
+      "IllusionOfLivingRL",
+      "JumboBendyDoll",
+      "BorisDoll",
+      "JumboBorisDoll",
+      "AliceAngelDoll",
+      "PedestalRL",
+      "InkMachineRL",
+      "BookBendy",
+      "BendyBookStack",
+      "ReelBendyDance",
+      "Table",
+      "TableBig",
+      "WallGash1",
+      "DeskOld",
+      "PlankShelf",
+      "Plank",
+      "Stool",
+      "BaconSoupEmpty",
+      "LittleMiracleStation",
+      "Sofa",
+      "FileCabinet",
+      "GentValves",
+      "CagedLamp",
+      "FloorPipe",
+      "Fan",
+      "Sink",
+      "StudioToilet",
+      "StudioTV",
+      "RecordingSign",
+      "TastyEatsMachine",
+      "Gearshift",
+      "BendyClock",
+      "Stove",
+      "WritingIDontWantToWorkHereAnymore",
+      "SignLevelK",
+      "SignLevel11",
+      "SignLevelP",
+      "SignLevel9",
+      "SignLevel14",
+      "InkRL",
+      "SignLevelA"
     ]
   },
   "language_map": {
@@ -6250,17 +7606,22 @@
       "block.bendymod.studio_door_basic": "Studio Basic Door",
       "gamerule.inkDemonTeleportMode.description": "If this is on, then the Ink Demon can only teleport to players in Survival.",
       "block.bendymod.desk_fancy": "Fancy Desk",
+      "block.bendymod.walkable_studio_cut_wall_stairs": "Studio Cut Wall Stairs (Walkable)",
       "block.bendymod.bendy_doll_rl": "Bendy Doll (RL)",
+      "block.bendymod.gearshift": "Gearshift",
+      "advancements.normans_fate.descr": "Kill The Projectionist",
       "block.bendymod.ritual_summoning": "Ritual Summoning",
       "subtitles.inkdemon_footstep": "Ink Demon Steps",
       "block.bendymod.studio_planked_wall": "Studio Planked Wall",
       "block.bendymod.studio_blank_wall_slab": "Studio Blank Wall Slab",
       "item.bendymod.bacon_soup": "Bacon Soup",
+      "block.bendymod.projection": "Projection",
+      "block.bendymod.jumbo_bendy_doll": "Jumbo Bendy Doll",
       "entity.bendymod.sammy_lawrence": "Sammy Lawrence",
-      "block.bendymod.walkable_studio_blank_wall_slab": "Studio Blank Wall Slab (Walkable)",
       "block.bendymod.pipe_wall_vertical": "Wall Pipe (Vertical)",
-      "block.bendymod.plank": "Plank",
+      "block.bendymod.walkable_studio_blank_wall_slab": "Studio Blank Wall Slab (Walkable)",
       "entity.bendymod.fisher": "The Fisher",
+      "block.bendymod.plank": "Plank",
       "gamerule.inkDemonTimerMinimum": "Ink Demon Timer Minimum",
       "subtitles.studioambience_creepysounds": "The Studio Calls",
       "gamerule.searcherSpawnMax": "Searcher Spawn Maximum",
@@ -6271,10 +7632,14 @@
       "block.bendymod.poster_sent_from_above": "Poster (Sent From Above)",
       "block.bendymod.pipe_straight": "Pipe Straight",
       "block.bendymod.cutout_bendy": "Cutout Bendy",
-      "block.bendymod.walkable_studio_blank_wall": "Studio Blank Wall (Walkable)",
+      "block.bendymod.studio_cut_wall_stairs": "Studio Cut Wall Stairs",
+      "block.bendymod.sign_level_14": "Sign Level 14",
       "block.bendymod.ink_machine": "Ink Machine",
+      "block.bendymod.walkable_studio_blank_wall": "Studio Blank Wall (Walkable)",
       "advancements.the_old_song.descr": "Reach the second floor of the Studio, The Music Department.",
       "block.bendymod.bendy_book_stack": "Bendy Book Stack",
+      "block.bendymod.sign_level_11": "Sign Level 11",
+      "advancements.rise_and_fall.title": "Rise And Fall",
       "subtitles.radio_2": "Radio playing \"Build Our Machine\" by DAGames",
       "block.bendymod.poster_large_sent_from_above": "Large Poster (Sent From Above)",
       "subtitles.radio_1": "Radio playing \"Bendy And The Ink Machine\" by Kyle Allen Music",
@@ -6282,49 +7647,60 @@
       "subtitles.radio_4": "Radio playing \"Sammy\u0027s Jam\"",
       "subtitles.radio_3": "Radio playing \u0027Ode To Bendy\u0027",
       "block.bendymod.walkable_studio_floor_stairs": "Studio Floor Stairs (Walkable)",
-      "advancements.moving_pictures.descr": "Reach the first floor of the studio, The Animator\u0027s Department.",
       "subtitles.projectionist_yell": "The Projectionist yells",
+      "advancements.moving_pictures.descr": "Reach the first floor of the studio, The Animator\u0027s Department.",
       "gui.bendymod.crate_inventory.label_crate": "Crate",
       "entity.bendymod.boris_buddy": "Buddy Boris",
       "entity.bendymod.searcher": "Searcher",
       "block.bendymod.walkable_studio_tiled_wall": "Studio Tiled Wall (Walkable)",
       "block.bendymod.file_cabinet": "File Cabinet",
       "block.bendymod.sign_dark": "Sign (Dark)",
+      "block.bendymod.fan": "Fan",
       "block.bendymod.solid_ink_rl": "Solid Ink (RL)",
       "block.bendymod.ink_barrel": "Ink Barrel",
       "block.bendymod.painting_book": "Painting (Book)",
-      "item.bendymod.bendy_spawn_egg": "Bendy Spawn Egg",
       "item.bendymod.searcher_spawn_egg": "Searcher Spawn Egg",
+      "item.bendymod.bendy_spawn_egg": "Bendy Spawn Egg",
       "block.bendymod.random_room_structure_block": "Random Room Structure Block",
+      "block.bendymod.boris_doll": "Boris Doll",
       "block.bendymod.heavy_gate_closed": "Heavy Gate",
       "block.bendymod.stairway_structure_block": "Stairway Structure Block",
       "block.bendymod.inactive_random_room_structure_block": "Inactive Random Room Structure Block",
       "gamerule.inkDemonTimerMinimum.description": "This, will be the minimum time (in ticks) of how often the Ink Demon spawns.",
+      "block.bendymod.studio_cut_wall": "Studio Cut Wall",
+      "block.bendymod.sign_level_9": "Sign Level 9",
       "block.bendymod.music_department_sign": "Music Department Sign",
+      "subtitles.tommygun_out": "Tommy Gun out of bullets",
       "block.bendymod.shelf": "Shelf",
       "subtitles.studioambience_loop": "",
+      "block.bendymod.walkable_studio_cut_wall": "Studio Cut Wall (Walkable)",
       "block.bendymod.ink_puddle": "Ink Puddle",
       "block.bendymod.cassette_player": "Cassette Player",
+      "block.bendymod.tasty_eats_machine": "Tasty Eats Machine",
       "subtitles.butchergang_ambience": "Butcher Gang member speaks.",
       "block.bendymod.punch_in_card": "Punch In Card",
       "subtitles.violin_note": "Violin plays",
       "subtitles.projectionist_step": "The Projectionist steps",
       "block.bendymod.poster_dont_forget_to_punch_in": "Poster (Dont Forget To Punch In)",
-      "block.bendymod.projection_bendy_dance": "Projection (Bendy Dance)",
+      "advancements.normans_fate.title": "Norman\u0027s Fate",
       "gamerule.searcherSpawnMax.description": "This is the max amount of searchers that a single ink puddle spawner block can spawn.",
       "block.bendymod.painting_blank": "Painting (Blank)",
       "block.bendymod.sign_light": "Sign (Light)",
       "block.bendymod.studio_floor_tiled_slab": "Studio Floor Slab (Tiled)",
       "block.bendymod.studio_tiled_wall": "Studio Tiled Wall",
       "block.bendymod.book_bendy": "Bendy Book",
+      "block.bendymod.studio_switch_on": "Studio Switch Off",
+      "block.bendymod.jumbo_boris_doll": "Jumbo Boris Doll",
       "block.bendymod.painting_wrench": "Painting (Wrench)",
       "block.bendymod.coffin": "Coffin",
       "block.bendymod.stiff_studio_door_segmented": "Stiff Studio Segmented Door",
       "block.bendymod.lever_studio_on": "Studio Lever",
       "block.bendymod.recording_sign": "Recording Sign",
       "subtitles.searcher_hit": "Searcher is hit",
+      "item.bendymod.gent_pipe": "Gent Pipe",
       "block.bendymod.heavy_gate_open": "Heavy Gate",
       "block.bendymod.walkable_studio_floor_slab": "Studio Floor Slab (Walkable)",
+      "block.bendymod.gent_valves": "Gent Valves",
       "block.bendymod.studio_blank_wall": "Studio Blank Wall",
       "block.bendymod.studio_blank_wall_fence": "Studio Blank Wall Fence",
       "block.bendymod.gear": "Gear",
@@ -6333,6 +7709,7 @@
       "block.bendymod.writing_the_creator_lied_to_us": "Ink Writing (The Creator Lied To Us)",
       "block.bendymod.gearbox": "Gearbox",
       "block.bendymod.valve": "Valve",
+      "block.bendymod.writing_i_dont_want_to_work_here_anymore": "Ink Writing (I Don\u0027t Want To Work Here Anymore.)",
       "entity.bendymod.ink_bendy": "Ink Bendy",
       "block.bendymod.poster_dancing_demon": "Poster (Dancing Demon)",
       "block.bendymod.ink_puddle_wall": "Ink Puddle (Wall)",
@@ -6340,9 +7717,11 @@
       "block.bendymod.large_chains": "Large Chains",
       "block.bendymod.ink_layer": "Ink Layer",
       "block.bendymod.boards": "Boards",
+      "subtitles.tape_sammyl1": "\"Can I get an Amen\" plays",
       "block.bendymod.drum": "Drum",
       "advancements.sheep_sheep_sheep.title": "Sheep Sheep Sheep...",
       "block.bendymod.studio_blank_wall_stairs": "Studio Blank Wall Stairs",
+      "item.bendymod.studio_plunger": "Studio Plunger",
       "block.bendymod.vent_cover": "Vent Cover",
       "advancements.the_dark_puddles_awaken.descr": "Enter the studio for the very first time.",
       "block.bendymod.studio_brick_slab": "Studio Brick Slab",
@@ -6358,6 +7737,7 @@
       "block.bendymod.inactive_hallways_structure_block": "Hallways Structure Block (Inactive)",
       "advancements.mans_best_friend.descr": "Tame a Buddy Boris using Bacon Soup",
       "block.bendymod.poster_train_trouble": "Poster (Train Trouble)",
+      "item.bendymod.tommy_bullet": "Tommy Bullet",
       "block.bendymod.sheet_holder": "Sheet Holder",
       "block.bendymod.studio_floor_fence": "Studio Floor Fence",
       "block.bendymod.painting_bendy_umbrella": "Painting (Umbrella Bendy)",
@@ -6372,13 +7752,14 @@
       "block.bendymod.studio_floor_stairs": "Studio Floor Stairs",
       "block.bendymod.walkable_studio_blank_wall_stairs": "Studio Blank Wall Stairs (Walkable)",
       "item.bendymod.striker_spawn_egg": "The Striker Spawn Egg",
+      "block.bendymod.studio_cut_wall_slab": "Studio Cut Wall Slab",
       "item.bendymod.studio_axe": "Studio Axe",
       "block.bendymod.illusion_of_living_rl": "The Illusion Of Living (RL)",
       "item.bendymod.fisher_spawn_egg": "The Fisher Spawn Egg",
       "block.bendymod.industrial_wall_panel": "Industrial Wall Panel",
       "block.bendymod.hallways_structure_block": "Hallways Structure Block",
       "block.bendymod.bendy_head": "Bendy Head",
-      "block.bendymod.walkable_solid_ink": "Solid Ink",
+      "block.bendymod.walkable_solid_ink": "Solid Ink (Walkable)",
       "block.bendymod.table_big": "Big Table",
       "block.bendymod.record_rl": "Record (IRL)",
       "block.bendymod.writing_dreams_come_true": "Ink Writing (Dreams Come True)",
@@ -6386,6 +7767,7 @@
       "block.bendymod.studio_floor_tiled_stairs": "Studio Floor Stairs (Tiled)",
       "block.bendymod.pedestal_on": "Pedestal",
       "block.bendymod.jumbled_paper": "Jumbled Paper",
+      "block.bendymod.caged_lamp": "Caged Lamp",
       "block.bendymod.poster_large_little_devil_darlin": "Large Poster (Little Devil Darlin)",
       "block.bendymod.studio_floor_grate": "Studio Floor Grate",
       "block.bendymod.speaker": "Speaker",
@@ -6405,7 +7787,7 @@
       "block.bendymod.soup_candle": "Soup Candle",
       "block.bendymod.studio_lamp": "Studio Lamp",
       "block.bendymod.studio_floor_slab": "Studio Floor Slab",
-      "gui.bendymod.tape_overlay.label_sammy_lawrence": "Sammy Lawrence",
+      "subtitles.tommygun_fire": "Tommy Gun fires",
       "block.bendymod.gent_structure_block": "Gent Structure Block",
       "subtitles.butchergang_death": "Butcher Gang member dies.",
       "subtitles.sammy_hit": "Sammy is hit",
@@ -6418,7 +7800,7 @@
       "block.bendymod.bendy_statue": "Bendy Statue",
       "block.bendymod.poster_large_sheep_songs": "Large Poster (Sheep Songs)",
       "subtitles.sammy_ambience": "Sammy is near.",
-      "block.bendymod.reel_bendy_dance": "Reel (Bendy Dance)",
+      "block.bendymod.reel_bendy_dance": "Reel",
       "block.bendymod.hanging_mic": "Hanging Mic",
       "item.bendymod.projectionist_spawn_egg": "The Projectionist Spawn Egg",
       "block.bendymod.boris_clone": "Boris Clone",
@@ -6432,6 +7814,7 @@
       "item.bendymod.piper_spawn_egg": "The Piper Spawn Egg",
       "item_group.bendymod.bendy_blocks": "Bendy Blocks",
       "itemGroup.tabbendy_blocks": "Bendy Blocks",
+      "advancements.rise_and_fall.descr": "Reach the third floor of the Studio, Level K.",
       "block.bendymod.inkwell": "Ink Well",
       "block.bendymod.studio_door_segmented": "Studio Segmented Door",
       "subtitles.projectionist_chase": "Projectionist chases",
@@ -6441,6 +7824,7 @@
       "block.bendymod.little_miracle_station": "Little Miracle Station",
       "entity.bendymod.piper": "The Piper",
       "block.bendymod.projector": "Projector",
+      "block.bendymod.stove": "Stove",
       "entity.bendymod.bendy": "Bendy",
       "block.bendymod.bendy_wall": "Wall Bendy",
       "item.bendymod.ink_bendy_spawn_egg": "Ink Bendy Spawn Egg",
@@ -6450,15 +7834,21 @@
       "block.bendymod.illusion_of_living": "The Illusion Of Living",
       "biome.bendymod.the_studio": "The Studio",
       "gamerule.allowMultipleProjectionists": "Allow Mutliple Projectionists",
+      "block.bendymod.sign_level_p": "Sign Level P",
       "subtitles.studio_ambience": "The Studio Calls.",
+      "block.bendymod.sign_level_k": "Sign Level K",
       "block.bendymod.work_table": "Work Table",
       "subtitles.searcher_ambient": "Searcher groans",
       "advancements.mans_best_friend.title": "Man\u0027s Best Friend",
       "block.bendymod.walkable_studio_planked_wall": "Studio Planked Wall (Walkable)",
+      "subtitles.tommygun_reload": "Tommy Gun reloads",
       "block.bendymod.ink": "Ink",
       "gamerule.allowMultipleInkBendys": "Allow Multiple Ink Bendys",
+      "block.bendymod.sign_level_a": "Sign Level A",
       "subtitles.searcher_appear": "Searcher appears",
       "block.bendymod.record": "Record",
+      "block.bendymod.studio_switch_off": "Studio Switch Off",
+      "block.bendymod.studio_toilet": "Studio Toilet",
       "block.bendymod.poster_large_delicious": "Large Poster (Delicious!)",
       "subtitles.butchergang_hit": "Butcher Gang member is hit.",
       "block.bendymod.pedestal": "Pedestal",
@@ -6483,20 +7873,24 @@
       "block.bendymod.pipe_wall_horizontal": "Wall Pipe (Horizontal)",
       "block.bendymod.solid_ink": "Solid Ink",
       "gamerule.inkDemonTeleportMode": "Ink Demon Teleport Mode",
+      "block.bendymod.studio_tv": "Studio TV",
       "block.bendymod.solid_ink_pressure_plate": "Solid Ink Pressure Plate",
       "block.bendymod.studio_chair": "Studio Chair",
+      "block.bendymod.sink": "Sink",
       "subtitles.searcher_die": "Searcher dies.",
-      "block.bendymod.projection_blank": "Projection (Blank)",
       "block.bendymod.poster_large_dancing_demon": "Large Poster (Dancing Demon)",
       "block.bendymod.toolbox": "Toolbox",
       "block.bendymod.studio_bricks": "Studio Bricks",
       "block.bendymod.desk": "Desk",
       "block.bendymod.trash_bin": "Trash Bin",
       "block.bendymod.piano": "Piano",
+      "block.bendymod.walkable_studio_cut_wall_slab": "Studio Cut Wall Slab (Walkable)",
       "block.bendymod.ink_puddle_spawner": "Ink Puddle (Spawner)",
       "block.bendymod.gear_rl": "Gear (RL)",
       "subtitles.sammy_footstep": "Sammy Steps",
+      "block.bendymod.floor_pipe": "Floor Pipe",
       "block.bendymod.ink_rl": "Ink (RL)",
+      "item.bendymod.tommy_gun": "Tommy Gun",
       "block.bendymod.dresser": "Dresser",
       "block.bendymod.inactive_stairway_structure_block": "Inactive Stairway Structure Block",
       "block.bendymod.writing_down_here_were_all_sinners": "Ink Writing (Down Here We\u0027re All Sinners)",
@@ -6511,14 +7905,17 @@
       "subtitles.studioambience_additionalsounds": "",
       "block.bendymod.studio_tiles": "Studio Tiles",
       "block.bendymod.painting_plush": "Painting (Plush)",
+      "block.bendymod.encased_ink": "Encased Ink",
       "block.bendymod.large_box": "Large Box",
       "block.bendymod.bass": "Bass",
       "block.bendymod.studio_broken_floor": "Studio Floor (Broken)",
       "block.bendymod.writing_the_sheep_will_come_to_slaughter": "Ink Writing (The Sheep WIll Come To Slaughter)",
       "block.bendymod.crate": "Crate",
       "block.bendymod.cellbox_1": "Cellbox",
+      "block.bendymod.alice_angel_doll": "Alice Angel Doll",
       "block.bendymod.cutout_sinny": "Cutout Sinny",
       "block.bendymod.cellbox_2": "Cellbox",
+      "block.bendymod.bendy_clock": "Bendy Clock",
       "subtitles.realfear": "Real Fear"
     }
   },
@@ -6652,6 +8049,14 @@
                   {
                     "name": "Reels",
                     "children": []
+                  },
+                  {
+                    "name": "CassetePlayer",
+                    "children": []
+                  },
+                  {
+                    "name": "Plushies",
+                    "children": []
                   }
                 ]
               },
@@ -6702,7 +8107,7 @@
   "workspaceSettings": {
     "modid": "bendymod",
     "modName": "Bendy And The Crafting Machine",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "description": "Bring the world of the Bendy And The Ink Machine franchise into Minecraft!",
     "author": "DrLoganblox07, MarceloGToonz, Fredboi, MCreator",
     "websiteURL": "https://mcreator.net",

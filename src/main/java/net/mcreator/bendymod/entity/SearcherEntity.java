@@ -99,19 +99,20 @@ public class SearcherEntity extends Monster implements GeoEntity {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new FollowMobGoal(this, 1, (float) 10, (float) 5));
-		this.goalSelector.addGoal(2, new AvoidEntityGoal<>(this, InkBendyEntity.class, (float) 16, 1, 1.2));
-		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.2, false) {
+		this.goalSelector.addGoal(1, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(2, new FloatGoal(this));
+		this.goalSelector.addGoal(3, new AvoidEntityGoal<>(this, LMSSitEntityEntity.class, (float) 6, 1, 1.2));
+		this.goalSelector.addGoal(4, new FollowMobGoal(this, 1, (float) 10, (float) 5));
+		this.goalSelector.addGoal(5, new AvoidEntityGoal<>(this, InkBendyEntity.class, (float) 16, 1, 1.2));
+		this.goalSelector.addGoal(6, new MeleeAttackGoal(this, 1.2, false) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
 			}
 		});
-		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, Player.class, false, false));
-		this.goalSelector.addGoal(5, new PanicGoal(this, 1.2));
-		this.goalSelector.addGoal(6, new RandomStrollGoal(this, 1));
-		this.goalSelector.addGoal(7, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(8, new FloatGoal(this));
+		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, Player.class, false, false));
+		this.goalSelector.addGoal(8, new PanicGoal(this, 1.2));
+		this.goalSelector.addGoal(9, new RandomStrollGoal(this, 1));
 	}
 
 	@Override
